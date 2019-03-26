@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import * as jolly from '../../jolly.jpeg';
+//import {Print} from 'material-ui-icons/AccessAlarm';
+
 
 class Line extends Component{
 render(){
@@ -19,14 +20,11 @@ render(){
                     className="vertical-timeline-element--work"
                     date="1920-1940"
                     iconStyle={{ background: 'rgb(40,49,72)', color: '#fff' }}
-                
-    
-                    
+                    //icon={<Print/>}
+                        
                 >
                     <h3 className="vertical-timeline-element-title">Pre World War II</h3>
-                    <h4 className="vertical-timeline-element-subtitle"></h4>
-                    
-                
+                    <h4 className="vertical-timeline-element-subtitle">Text</h4>
                     <p>
                     
                     </p>
@@ -34,7 +32,6 @@ render(){
                 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                   
                     iconStyle={{ background: 'rgb(145,53,53)', color: '#fff' }}
                     
                 >
@@ -62,9 +59,7 @@ render(){
                     
                 >
                     <h3 className="vertical-timeline-element-title">Present</h3>
-                   
                     <p>
-                   
                     </p>
                 </VerticalTimelineElement>
                 
