@@ -1,31 +1,19 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink } from 'reactstrap';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 //import {Print} from 'material-ui-icons/AccessAlarm';
-class Line extends Component{
-    state = {
-        redirect: false
 
-    }
-    setRedirect = () => {
-        this.setState({
-            redirect: true
-        })
-    }
-    renderRedirect = () => {
-        if (this.state.redirect) {
-            return <Redirect to='/pre' />
-        }
-    }
+
+class Line extends Component{
 render(){
     return (
     <div>
        <div className="card card-default post-body">
             <div className="card-body main-nav">
                 
-                The Berelson Project: An ancestral site documenting and displaying the Berelson lineage.
+                Images and information from before World War II.
                 
             </div>
         </div>
@@ -35,15 +23,10 @@ render(){
                     date="1920-1940"
                     iconStyle={{ background: 'rgb(40,49,72)', color: '#fff' }}
                     //icon={<Print/>}
-                    
                         
                 >
                     <h3 className="vertical-timeline-element-title">Pre World War II</h3>
-                    <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>Text</h4>
-                    <div>
-                        {this.renderRedirect()}
-                        <button style={{color:'#00000'}} onClick={this.renderRedirect}>Redirect</button>
-                    </div>
+                    <h4 className="vertical-timeline-element-subtitle">Text</h4>
                     <p>
                     
                     </p>

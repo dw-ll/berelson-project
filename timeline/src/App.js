@@ -7,6 +7,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 global.jQuery=require('jquery');
 require('bootstrap');
 
+class landLayout extends Component{
+  constructor(){
+    this.routeChange = this.routeChange.bind(this);
+
+
+  }
+  routeChange(){
+    let path = 'newPath';
+    this.props.history.push(path);
+  }
+}
+
 
 class App extends Component {
   render() {
