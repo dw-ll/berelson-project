@@ -4,18 +4,7 @@ import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, I
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Pre from './pre';
-import Post from './post';
-import WWII from './ww2';
-import SvgIcon from "@material-ui/core/SvgIcon";
-import Home from '@material-ui/icons/Home.js';
 //import {Print} from 'material-ui-icons/AccessAlarm';
-const homeLink = () => {
-    return (
-        <button>
-            <Link style={{ display: 'block', height: '100%' }} to='/'> </Link> />
-    </button>
-    )
-}
 class Line extends Component{
     state = {
         redirect: false
@@ -40,30 +29,12 @@ render(){
 
                 }
             } />
-            <Route path='/ww2' exact render={
-                () => {
-                    return (<WWII />);
-
-                }
-            } />
-
-            <Route path='/post' exact render={
-                () => {
-                    return (<Post />);
-
-                }
-            } />
     <div>
-
        <div className="card card-default post-body">
             <div className="card-body main-nav">
                 
-                        <div>
-                            <Home />
-                        </div>
-                The Berelson Project: An ancestral site documenting and displaying the Berelson lineage.
-              
-            
+                Information covering the time following World War II.
+                
             </div>
         </div>
         <VerticalTimeline>
@@ -78,7 +49,10 @@ render(){
                     <h3 className="vertical-timeline-element-title">Pre World War II</h3>
                         <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>1920-1940</h4>
                     <div>
-                        <Link to='/pre'>Learn More</Link>  
+                        <Link to='/pre'>Learn More</Link>
+                       
+
+                      
                     </div>
                     <p>
                     
@@ -91,9 +65,6 @@ render(){
                     
                 >
                     <h3 className="vertical-timeline-element-title">World War II</h3>
-                        <div>
-                            <Link to='/ww2'>Learn More</Link>
-                        </div>
                   
                     <p>
 
@@ -107,9 +78,6 @@ render(){
                 >
                     <h3 className="vertical-timeline-element-title">Post World War II</h3>
                         <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>1960-1970</h4>
-                        <div>
-                            <Link to='/post'>Learn More</Link>
-                        </div>
 
                     
                     <p>
