@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink } from 'reactstrap';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import Pre from './pre';
 //import {Print} from 'material-ui-icons/AccessAlarm';
 class Line extends Component{
     state = {
@@ -16,11 +17,12 @@ class Line extends Component{
     }
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/pre' />
+  
         }
     }
 render(){
     return (
+        <Router>
     <div>
        <div className="card card-default post-body">
             <div className="card-body main-nav">
@@ -32,17 +34,19 @@ render(){
         <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="1920-1940"
+             
                     iconStyle={{ background: 'rgb(40,49,72)', color: '#fff' }}
                     //icon={<Print/>}
                     
                         
                 >
                     <h3 className="vertical-timeline-element-title">Pre World War II</h3>
-                    <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>Text</h4>
+                        <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>1920-1940</h4>
                     <div>
-                        {this.renderRedirect()}
-                        <button style={{color:'#00000'}} onClick={this.renderRedirect}>Redirect</button>
+                        <Link to='/pre'>Learn More</Link>
+                        //<Route path="/pre" component={Pre} />
+
+                      
                     </div>
                     <p>
                     
@@ -62,11 +66,13 @@ render(){
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="1960-1970"
+             
                     iconStyle={{ background: 'rgb(187,187,187)', color: '#fff' }}
                     
                 >
                     <h3 className="vertical-timeline-element-title">Post World War II</h3>
+                        <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>1960-1970</h4>
+
                     
                     <p>
                 
@@ -83,7 +89,9 @@ render(){
                 </VerticalTimelineElement>
                 
 </VerticalTimeline>
+               
     </div>
+        </Router>
     );
         
 }
