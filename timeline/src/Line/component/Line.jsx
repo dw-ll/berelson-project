@@ -23,6 +23,12 @@ class Line extends Component{
 render(){
     return (
         <Router>
+            <Route path='/pre' exact  render={
+                () => {
+                    return (<Pre />);
+
+                }
+            } />
     <div>
        <div className="card card-default post-body">
             <div className="card-body main-nav">
@@ -44,7 +50,7 @@ render(){
                         <h4 className="vertical-timeline-element-subtitle" onClick={this.renderRedirect}>1920-1940</h4>
                     <div>
                         <Link to='/pre'>Learn More</Link>
-                        //<Route path="/pre" component={Pre} />
+                       
 
                       
                     </div>

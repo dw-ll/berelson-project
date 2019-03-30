@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Pre from './Line/component/pre';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import './App.css';
@@ -14,11 +16,14 @@ class App extends Component {
   render() {
     return (
    
-
+      
       <div className="App">
+        
          <Line/>
+
       </div>
-    );
+  
+      );
+    }
   }
-}
-export default App;
+  export default App;
