@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink } from 'reactstrap';
+import { BrowserRouter as Router, Route, Link,  } from "react-router-dom";
+import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink, Navbar, NavbarBrand, NavItem, Nav, NavDropdown } from 'reactstrap';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+
 import Pre from './pre';
 import Post from './post';
 import WWII from './ww2';
@@ -54,14 +55,13 @@ render(){
                 }
             } />
     <div>
-
+              
+               
+                
        <div className="card card-default post-body">
             <div className="card-body main-nav">
                 
-                        <div>
-                            <Home />
-                        </div>
-                The Berelson Project: An ancestral site documenting and displaying the Berelson lineage.
+               <p> The Berelson Project: An ancestral site documenting and displaying the Berelson lineage.</p>
               
             
             </div>

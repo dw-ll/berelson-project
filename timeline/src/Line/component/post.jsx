@@ -30,6 +30,7 @@ render(){
                 }
             } />
     <div>
+             
        <div className="card card-default post-body">
             <div className="card-body main-nav">
                 
