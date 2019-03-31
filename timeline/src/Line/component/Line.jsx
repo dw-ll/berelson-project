@@ -61,9 +61,7 @@ render(){
        <div className="card card-default post-body">
             <div className="card-body main-nav">
                 
-               <p> The Berelson Project: An ancestral site documenting and displaying the Berelson lineage.</p>
-              
-            
+             An ancestral site documenting and displaying the Berelson lineage.
             </div>
         </div>
         <VerticalTimeline>

@@ -12,12 +12,17 @@ import {
   InputGroupAddon,
   InputGroupText,
   Row,
+  Collapse,
+  DropdownItem,
   NavLink,
   Navbar,
   NavbarBrand,
   NavItem,
   Nav,
-  NavDropdown
+  NavbarToggler,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
 } from "reactstrap";
 
 import Pre from './Line/component/pre';
@@ -40,7 +45,7 @@ class App extends Component {
       <div className="App">
      
 
-          <Navbar color="dark" variant="light">
+          <Navbar color="light" light expand="md">
             <NavbarBrand href="/">
               <img
                 alt=""
@@ -51,6 +56,36 @@ class App extends Component {
               />
               {' The Berelson Project'}
             </NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+         
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/about">About</NavLink>
+              </NavItem>
+              <NavItem>
+              <NavLink href="https://github.com/dw-ll/Berelson-Project">GitHub</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Eras
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Pre WWII
+                  </DropdownItem>
+                  <DropdownItem>
+                    WWII
+                  </DropdownItem>
+                  <DropdownItem>
+                    Post WWII
+                  </DropdownItem>
+                 <DropdownItem>
+                  Modern
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+
           </Navbar>
          <Line/>
       </div>
