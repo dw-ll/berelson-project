@@ -26,6 +26,7 @@ import {
 } from "reactstrap";
 
 import Pre from './Line/component/pre';
+import About from './Line/component/about';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import './App.css';
