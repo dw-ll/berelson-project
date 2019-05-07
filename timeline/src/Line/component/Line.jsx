@@ -8,7 +8,7 @@ import Pre from './pre';
 import Post from './post';
 import WWII from './ww2';
 import About from './about';
-import Abram from '../../gallery/component/people/abram'
+
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Home from '@material-ui/icons/Home.js';
 import Lodz from '../../Media/Pre-WWII/Lodz.Theatre426.jpeg'
@@ -71,13 +71,7 @@ render(){
               return <About />;
             }}
           />
-          <Route
-            path="/abram"
-            exact
-            render={() => {
-              return <Abram />;
-            }}
-          />
+         
           <div>
             <VerticalTimeline>
               <VerticalTimelineElement
