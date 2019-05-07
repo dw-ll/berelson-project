@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch } from "react-router";
 import {
   Button,
   Card,
@@ -19,6 +20,7 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import Abram from "../../gallery/component/people/abram.jsx";
+import Abram2 from "../../gallery/component/people/abram2.jsx";
 import "react-vertical-timeline-component/style.min.css";
 import Abram26 from "../../Media/Pre-WWII/Abram.Baigelman026.jpeg";
 import Lodz from "../../Media/Pre-WWII/Lodz.Theatre426.jpeg";
@@ -28,12 +30,13 @@ class Line extends Component {
   render() {
     return (
        <Router>
+         <Switch>
         
         <Route
-          path="/abram"
+          path="/abram2"
           exact
           render={() => {
-            return <Abram />;
+            return <Abram2 />;
           }}
         />
       <div>
@@ -54,7 +57,7 @@ class Line extends Component {
             <h3 className="vertical-timeline-element-title">Abram Baigelman</h3>
             <h4 className="vertical-timeline-element-subtitle" />
             <div>
-              <Link to="/abram">View</Link> 
+              <Link to="/abram2">View</Link> 
             </div>
             <p />
           </VerticalTimelineElement>
@@ -87,6 +90,7 @@ class Line extends Component {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
+      </Switch>
       </Router>
     );
   }

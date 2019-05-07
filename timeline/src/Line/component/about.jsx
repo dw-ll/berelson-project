@@ -11,7 +11,7 @@ import test from '../../carousel/carousel';
 
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Home from '@material-ui/icons/Home.js';
-import Gallery from '../../gallery/component/gallery.jsx'
+
 //import {Print} from 'material-ui-icons/AccessAlarm';
 const homeLink = () => {
     return (
@@ -66,7 +66,7 @@ render(){
               An ancestral site documenting and displaying the Berelson
               lineage.
             </div>
-            <Gallery style="height:250"/>
+           
             <div>
               <test />
             </div>
