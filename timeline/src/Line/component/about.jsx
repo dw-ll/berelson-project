@@ -7,9 +7,11 @@ import 'react-vertical-timeline-component/style.min.css';
 import Pre from './pre';
 import Post from './post';
 import WWII from './ww2';
+import test from '../../carousel/carousel';
 
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Home from '@material-ui/icons/Home.js';
+import Gallery from '../../gallery/component/gallery.jsx'
 //import {Print} from 'material-ui-icons/AccessAlarm';
 const homeLink = () => {
     return (
@@ -35,39 +37,42 @@ class Line extends Component{
     }
 render(){
     return (
-        <Router>
-            <Route path='/pre' exact  render={
-                () => {
-                    return (<Pre />);
+      <Router>
+        <Route
+          path="/pre"
+          exact
+          render={() => {
+            return <Pre />;
+          }}
+        />
+        <Route
+          path="/ww2"
+          exact
+          render={() => {
+            return <WWII />;
+          }}
+        />
 
-                }
-            } />
-            <Route path='/ww2' exact render={
-                () => {
-                    return (<WWII />);
-
-                }
-            } />
-
-            <Route path='/post' exact render={
-                () => {
-                    return (<Post />);
-
-                }
-            } />
-    <div>
-              
-               
-                
-       <div className="card card-default post-body">
+        <Route
+          path="/post"
+          exact
+          render={() => {
+            return <Post />;
+          }}
+        />
+        <div>
+          <div className="card card-default post-body">
             <div className="card-body main-nav">
-                
-             An ancestral site documenting and displaying the Berelson lineage.
+              An ancestral site documenting and displaying the Berelson
+              lineage.
             </div>
+            <Gallery style="height:250"/>
+            <div>
+              <test />
+            </div>
+          </div>
         </div>
-        A simple about page.
-    </div>
-        </Router>
+      </Router>
     );
         
 }
