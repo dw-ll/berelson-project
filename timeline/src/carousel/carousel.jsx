@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Carousel,
   CarouselItem,
@@ -6,10 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
-import Lodz from "../../Media/Pre-WWII/Lodz.Theatre426.jpeg";
-import HappyBoys from "../../Media/WWII (during)/HappyBoys4282.jpeg";
-import Pola from "../../Media/Post-WWII 2/pola178.jpeg";
-import Sevek from "../../Media/Modern/Sevek261.jpeg";
+import Lodz from '../Media/Pre-WWII/Lodz.Theatre426.jpeg'
 
 const items = [
   {

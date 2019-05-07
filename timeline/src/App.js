@@ -47,15 +47,9 @@ class App extends Component {
       <div className="App">
      
 
-          <Navbar color="light" light expand="md">
+          <Navbar className="navbar-header" theme="dark" light expand="md">
             <NavbarBrand href="/">
-              <img
-                alt=""
-                src="logo.svg"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-              />
+            
               {' The Berelson Project'}
             </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

@@ -72,11 +72,11 @@ render(){
             }}
           />
          
-          <div>
-            <VerticalTimeline>
+          <div >
+            <VerticalTimeline >
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
+                iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
                 //icon={<Print/>}
               >
                 <img src={Lodz} height="250" width="250" />

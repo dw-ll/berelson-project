@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #000000;
 }
 
 .App-logo {
@@ -11,6 +12,16 @@
 }
 .back {
   background-color: #ffffff;
+}
+.nav-bar {
+  color: #CDAF37;
+}
+.main-timeline{
+ 
+}
+.vertical-timeline-element--work{
+  background-color: #000000;
+ 
 }
 
 .App-header {
@@ -27,6 +38,9 @@
   font-family: Arial, sans-serif;
   margin: 0 25%;
   float: left;
+}
+.navbar-header {
+  background-color: #CDAF37;
 }
 .logo-style {
   float: left;
