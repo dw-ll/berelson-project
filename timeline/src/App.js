@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch } from "react-router";
 import {
   Button,
   Card,
@@ -43,6 +44,15 @@ class App extends Component {
   render() {
     return (
    
+      <Router>
+        <Switch>
+          <Route
+            path="#home"
+            exact
+            render={() => {
+              return <Line/>;
+            }}
+          />
       
       <div className="App">
      
@@ -86,6 +96,8 @@ class App extends Component {
         
          <Line/>
       </div>
+      </Switch>
+      </Router>
   
       );
     }
