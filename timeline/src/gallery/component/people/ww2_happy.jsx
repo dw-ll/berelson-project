@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import ImageGallery from "react-image-gallery";
 import { Slide } from "react-slideshow-image";
-import WW2 from "../../../Line/component/ww2.jsx";
+import WWII from "../../../Line/component/ww2.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/WWII%20(during)/";
-const slideImages = [`${IMGURL}HappyBoys4282.jpeg`];
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/WWII/";
+const slideImages = `${IMGURL}HappyBoys4282.jpeg`;
 const properties = {
   duration: 5000,
   transitionDuration: 500,
@@ -22,16 +22,11 @@ const Slideshow = () => {
           path="/ww2"
           exact
           render={() => {
-            return <WW2 />;
+            return <WWII />;
           }}
         />
         <div>
-          <Slide {...properties}>
-            <div className="each-slide" display="flex-container">
-              <div style={{ backgroundImage: `url(${slideImages[0]})` }} />
-            </div>
-          </Slide>
-
+          <img className="single_photo" src={slideImages} alt="" />
           <h6>
             Happy Boys was lorem ipsumdolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
