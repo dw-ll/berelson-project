@@ -4,14 +4,6 @@ import { Switch } from "react-router";
 import ImageGallery from "react-image-gallery";
 import { Slide } from "react-slideshow-image";
 import Pre from "../../../Line/component/pre"
-import Abram26 from "../../../Media/Pre-WWII/Abram.Baigelman026.jpeg";
-import Abram27 from "../../../Media/Pre-WWII/Abram.Baigelman027.jpeg";
-import Abram29 from "../../../Media/Pre-WWII/Abram.Baigelman029.jpeg";
-import Abram30 from "../../../Media/Pre-WWII/Abram.Baigelman030.jpeg";
-import Abram31 from "../../../Media/Pre-WWII/Abram.Baigelman031.jpeg";
-import Abram34 from "../../../Media/Pre-WWII/Abram.Baigelman034.jpeg";
-import Abram35 from "../../../Media/Pre-WWII/Abram.Baigelman035.jpeg";
-import Abram38 from "../../../Media/Pre-WWII/Abram.Baigelman038.jpeg";
 
 const IMGURL =
   "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Pre-WWII/";

@@ -12,7 +12,7 @@ import About from './about';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Home from '@material-ui/icons/Home.js';
 import Lodz from '../../Media/Pre-WWII/Lodz.Theatre426.jpeg'
-import HappyBoys from '../../Media/WWII (during)/HappyBoys4282.jpeg'
+import HappyBoys from '../../Media/WWII/HappyBoys4282.jpeg'
 import Pola from '../../Media/Post-WWII 2/pola178.jpeg'
 import Sevek from '../../Media/Modern/Sevek261.jpeg'
 //import {Print} from 'material-ui-icons/AccessAlarm';

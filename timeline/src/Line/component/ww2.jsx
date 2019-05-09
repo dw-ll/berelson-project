@@ -28,10 +28,10 @@ import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import GitaProfile from "../../Media/WWII (during)/gita.Baigelman144.jpeg";
-import HenryProfile from "../../Media/WWII (during)/Henry.Baigelman118.jpeg";
-import HappyProfile from "../../Media/WWII (during)/HappyBoys4282.jpeg";
-import RachellaProfile from "../../Media/WWII (during)/Rachella148.jpeg";
+import GitaProfile from "../../Media/WWII/gita.Baigelman144.jpeg";
+import HenryProfile from "../../Media/WWII/Henry.Baigelman118.jpeg";
+import HappyProfile from "../../Media/WWII/HappyBoys4282.jpeg";
+import RachellaProfile from "../../Media/WWII/Rachella148.jpeg";
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
