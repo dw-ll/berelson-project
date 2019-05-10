@@ -33,6 +33,17 @@ import Sevek from '../../Media/Modern/Sevek261.jpeg'
      height: 250
    }
  };
+ class ScrollToTop extends Component {
+   componentDidUpdate(prevProps) {
+     if (this.props.location !== prevProps.location) {
+       window.scrollTo(0, 0);
+     }
+   }
+
+   render() {
+     return this.props.children;
+   }
+ }
 
 class Line extends Component {
   state = {
@@ -59,140 +70,218 @@ class Line extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route
-            path="/pre"
-            exact
-            render={() => {
-              return <Pre />;
-            }}
-          />
-          <Route
-            path="/ww2"
-            exact
-            render={() => {
-              return <WWII />;
-            }}
-          />
+        <ScrollToTop>
+          <Switch>
+            <Route
+              path="/pre"
+              exact
+              render={() => {
+                return <Pre />;
+              }}
+            />
+            <Route
+              path="/ww2"
+              exact
+              render={() => {
+                return <WWII />;
+              }}
+            />
 
-          <Route
-            path="/post"
-            exact
-            render={() => {
-              return <Post />;
-            }}
-          />
-          <Route
-            path="/present"
-            exact
-            render={() => {
-              return <Present />;
-            }}
-          />
-          <Route
-            path="/about"
-            exact
-            render={() => {
-              return <About />;
-            }}
-          />
+            <Route
+              path="/post"
+              exact
+              render={() => {
+                return <Post />;
+              }}
+            />
+            <Route
+              path="/present"
+              exact
+              render={() => {
+                return <Present />;
+              }}
+            />
+            <Route
+              path="/about"
+              exact
+              render={() => {
+                return <About />;
+              }}
+            />
 
-          <div className="back">
-            <VerticalTimeline>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
-                paddingTop="0em"
-                
-                //icon={<Print/>}
-              >
-              <div>
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                    style = {{ height: 0, paddingTop: '50%'}}
-                    image= {require ("../../Media/Pre-WWII/Lodz.Theatre426.jpeg")}
-                  
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Pre-World War II
-                      </Typography>
-                      <Typography component="p">
-                        Photos and information spanning the time before
-                        World War II.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/pre"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-                </div>
+            <div className="back">
+              <VerticalTimeline>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                  paddingTop="0em"
 
-              </VerticalTimelineElement>
+                  //icon={<Print/>}
+                >
+                  <div>
+                    <Card className="card">
+                      <CardActionArea>
+                        <CardMedia
+                          style={{ height: 0, paddingTop: "50%" }}
+                          image={require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg")}
+                        />
+                        <CardContent>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="h2"
+                          >
+                            Pre-World War II
+                          </Typography>
+                          <Typography component="p">
+                            Photos and information spanning the time before
+                            World War II.
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          to="/pre"
+                        >
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </div>
+                </VerticalTimelineElement>
 
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(145,53,53)", color: "#fff" }}
-              >
-                <img src={HappyBoys} height="250" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  World War II
-                </h3>
-                <div>
-                  <Link to="/ww2">Learn More</Link>
-                </div>
-
-                <p />
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{
-                  background: "rgb(187,187,187)",
-                  color: "#fff"
-                }}
-              >
-                <img src={Pola} height="250" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Post World War II
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post">Learn More</Link>
-                </div>
-
-                <p />
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{
-                  background: "rgb(233,238,201)",
-                  color: "#fff"
-                }}
-              >
-                <img src={Sevek} height="250" width="350" />
-                <h3 className="vertical-timeline-element-title">Present</h3>
-                <div>
-                  <Link to="/present">Learn More</Link>
-                </div>
-                <p />
-              </VerticalTimelineElement>
-            </VerticalTimeline>
-          </div>
-        </Switch>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  iconStyle={{
+                    background: "rgb(145,53,53)",
+                    color: "#fff"
+                  }}
+                >
+                  <Card className="card">
+                    <CardActionArea>
+                      <CardMedia
+                        style={{ height: 0, paddingTop: "50%" }}
+                        image={require("../../Media/WWII/HappyBoys4282.jpeg")}
+                      />
+                      <CardContent>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                        >
+                          World War II
+                        </Typography>
+                        <Typography component="p">
+                          Photos and information spanning the time during
+                          World War II.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        size="small"
+                        color="primary"
+                        size="small"
+                        color="primary"
+                        component={Link}
+                        to="/ww2"
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  iconStyle={{
+                    background: "rgb(187,187,187)",
+                    color: "#fff"
+                  }}
+                >
+                  <Card className="card">
+                    <CardActionArea>
+                      <CardMedia
+                        style={{ height: 0, paddingTop: "50%" }}
+                        image={require("../../Media/Post-WWII 2/pola178.jpeg")}
+                      />
+                      <CardContent>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                        >
+                          Post-World War II
+                        </Typography>
+                        <Typography component="p">
+                          Photos and information spanning the time after
+                          World War II.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        size="small"
+                        color="primary"
+                        size="small"
+                        color="primary"
+                        component={Link}
+                        to="/post"
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  iconStyle={{
+                    background: "rgb(233,238,201)",
+                    color: "#fff"
+                  }}
+                >
+                  <Card className="card">
+                    <CardActionArea>
+                      <CardMedia
+                        style={{ height: 0, paddingTop: "50%" }}
+                        image={require("../../Media/Modern/Sevek261.jpeg")}
+                      />
+                      <CardContent>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                        >
+                          Present
+                        </Typography>
+                        <Typography component="p">
+                          Photos and information spanning the time after
+                          World War II.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        size="small"
+                        color="primary"
+                        size="small"
+                        color="primary"
+                        component={Link}
+                        to="/post"
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </VerticalTimelineElement>
+              </VerticalTimeline>
+            </div>
+          </Switch>
+        </ScrollToTop>
       </Router>
     );
   }
