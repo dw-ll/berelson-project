@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+
+import Typography from "@material-ui/core/Typography";
+
 import {
-  Button,
-  Card,
   CardBody,
   CardGroup,
   Col,
@@ -111,57 +118,107 @@ class Line extends Component {
             <VerticalTimeline>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="Abram Baigelman was lorem ipsum."
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img classname="profile" src={Abram26} alt="" />
-                <h3 className="vertical-timeline-element-title">
-                  Abram Baigelman
-                </h3>
-
-                <div>
-                  <Link to="/pre/abram">View</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "50%" }}
+                      image={require("../../Media/Pre-WWII/Abram.Baigelman026.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Abram Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Abram.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/abram"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
 
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(145,53,53)", color: "#fff" }}
               >
-                <img
-                  classname="profile"
-                  src={ChanaProfile}
-                  alt=""
-                  height="350"
-                />
-                <h3 className="vertical-timeline-element-title">
-                  Chana Fodeman
-                </h3>
-                <div>
-                  <Link to="/pre/chana">View</Link>
-                </div>
-
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/Chana.Fodeman025 2.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Chana Fodeman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Chana.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/chana"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="1960-1970"
                 iconStyle={{
                   background: "rgb(187,187,187)",
                   color: "#fff"
                 }}
               >
-                <img src={DavidProfile} alt="" height="350" />
-                <h3 className="vertical-timeline-element-title">
-                  David Baigelman
-                </h3>
-                <div>
-                  <Link to="/pre/david">View</Link>
-                </div>
-
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/David.Baigelman016 2.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        David Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about David.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/david"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -170,14 +227,70 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-                <img src={GitaProfile} alt="" height="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Gita Baigelman
-                </h3>
-                <div>
-                  <Link to="/pre/gita">View</Link>
-                </div>
-                <p />
+               <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/Gita.Baigelman137.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Gita Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Gita.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/gita"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+                </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                iconStyle={{
+                  background: "rgb(233,238,201)",
+                  color: "#fff"
+                }}
+              >
+                 <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/Henry.Baigelman002.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Henry Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Henry.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/henry"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -186,14 +299,34 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-                <img src={HenryProfile} alt="" height="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Henry Baigelman
-                </h3>
-                <div>
-                  <Link to="/pre/henry">View</Link>
-                </div>
-                <p />
+               <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/Jolly.Bays008.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Jolly Boys
+                      </Typography>
+                      <Typography component="p">
+                        More info about the Jolly Boys.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/jolly_boys"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -202,14 +335,34 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-                <img src={JollyProfile} alt="" height="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Jolly Boys
-                </h3>
-                <div>
-                  <Link to="/pre/jolly_boys">View</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/Leon.Glazer143.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Leon Glazer
+                      </Typography>
+                      <Typography component="p">
+                        More info about Leon.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/leon"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -218,30 +371,34 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-                <img src={LeonProfile} alt="" height="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Leon Glazer
-                </h3>
-                <div>
-                  <Link to="/pre/leon">View</Link>
-                </div>
-                <p />
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{
-                  background: "rgb(233,238,201)",
-                  color: "#fff"
-                }}
-              >
-                <img src={LodzProfile} alt="" height="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Lodz Theatre
-                </h3>
-                <div>
-                  <Link to="/pre/lodz">View</Link>
-                </div>
-                <p />
+                  <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Lodz Theatre
+                      </Typography>
+                      <Typography component="p">
+                        More info about the Lodz Theatre.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/pre/lodz"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
             </VerticalTimeline>
           </div>
