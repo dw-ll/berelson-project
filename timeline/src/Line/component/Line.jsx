@@ -259,8 +259,7 @@ class Line extends Component {
                           Present
                         </Typography>
                         <Typography component="p">
-                          Photos and information spanning the time after
-                          World War II.
+                          Photos and information about recent days.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -271,7 +270,7 @@ class Line extends Component {
                         size="small"
                         color="primary"
                         component={Link}
-                        to="/post"
+                        to="/present"
                       >
                         Learn More
                       </Button>

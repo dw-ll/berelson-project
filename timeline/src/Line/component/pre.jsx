@@ -124,7 +124,7 @@ class Line extends Component {
                 <Card className="card">
                   <CardActionArea>
                     <CardMedia
-                      style={{ height: 0, paddingTop: "50%" }}
+                      style={{ height: 0, paddingTop: "90%" }}
                       image={require("../../Media/Pre-WWII/Abram.Baigelman026.jpeg")}
                     />
                     <CardContent>

@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+
+import Typography from "@material-ui/core/Typography";
 import {
-  Button,
-  Card,
+  
   CardBody,
   CardGroup,
   Col,
@@ -182,240 +189,476 @@ class Line extends Component {
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={EdProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">Ed</h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/ed">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Ed.Silver091.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Ed
+                      </Typography>
+                      <Typography component="p">
+                        More info about Ed.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/ed"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={FoniaProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">Fonia</h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/fonia">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Fonia220.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Fonia
+                      </Typography>
+                      <Typography component="p">
+                        More info about Fonia.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/fonia"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={GitaProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Gita Baigelman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/gita">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Gita.Baigelman120.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Gita Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Gita.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/gita"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={HenryProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Henry Baigelman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/henry">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Henry.Baigelman119.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Henry Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Henry.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/henry"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={JackProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Jack Baigelman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/jack">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Jack.Baigelman057.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Jack Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Jack.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/jack"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={JustinaProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">Justina</h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/justina">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/justina197.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Justina
+                      </Typography>
+                      <Typography component="p">
+                        More info about Justina.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/justina"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={KatieProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">Katie</h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/katie">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/katie159.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Katie
+                      </Typography>
+                      <Typography component="p">
+                        More info about Katie.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/katie"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={LevinProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Levin Baigelman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/levin">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Levin.Baigelman079.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Levin Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Levin.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/levin"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={PinekProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Pinek Baigelman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/pinek">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Pinek.Baigelman041.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Pinek Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Pinek.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/pinek"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={PolaProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">Pola</h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/pola">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/pola178.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Pola
+                      </Typography>
+                      <Typography component="p">
+                        More info about Pola.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/pola"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={RachellaProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Rachella
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/rachella">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Rachella150.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Rachella
+                      </Typography>
+                      <Typography component="p">
+                        More info about Rachella.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/rachella"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={RivaProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">Riva</h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/riva">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Riva287.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Riva
+                      </Typography>
+                      <Typography component="p">
+                        More info about Riva.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/riva"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={SamProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Samuel Spielman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/sam">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Samuel181.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Samuel Spielman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Samuel.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/sam"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
                 //icon={<Print/>}
               >
-                <img src={SandyProfile} alt="" width="350" />
-                <h3 className="vertical-timeline-element-title">
-                  Sandy Baigelman
-                </h3>
-                <h4
-                  className="vertical-timeline-element-subtitle"
-                  onClick={this.renderRedirect}
-                />
-                <div>
-                  <Link to="/post/sandy">Learn More</Link>
-                </div>
-                <p />
+                <Card className="card">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "90%" }}
+                      image={require("../../Media/Post-WWII 2/Sandy.Baigelman056.jpeg")}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Sandy Baigelman
+                      </Typography>
+                      <Typography component="p">
+                        More info about Sandy.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      size="small"
+                      color="primary"
+                      component={Link}
+                      to="/post/sandy"
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
               </VerticalTimelineElement>
             </VerticalTimeline>
           </div>

@@ -110,7 +110,7 @@ class App extends Component {
                     Eras
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <LinkContainer to="/pre">
+                    <LinkContainer to="/pre/">
                       <DropdownItem>Pre WWII</DropdownItem>
                     </LinkContainer>
                     <DropdownItem>WWII</DropdownItem>
