@@ -1,19 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import ImageGallery from "react-image-gallery";
-import { Slide } from "react-slideshow-image";
 import WW2 from "../../../Line/component/ww2.jsx";
 const IMGURL =
   "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/WWII/";
 const slideImages = `${IMGURL}Rachella148.jpeg`;
-const properties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrows: true
-};
+
 const Slideshow = () => {
   return (
     <Router>
@@ -26,7 +18,12 @@ const Slideshow = () => {
           }}
         />
         <div>
-          <img className="single_photo" src={slideImages} alt="" height="500px" />
+          <img
+            className="single_photo"
+            src={slideImages}
+            alt=""
+            height="500px"
+          />
 
           <h6>
             Rachella was lorem ipsumdolor sit amet, consectetur adipiscing elit,

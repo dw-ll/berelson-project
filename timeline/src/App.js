@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import {
-  Button,
-  Card,
-  CardBody,
-  CardGroup,
-  Col,
-  Container,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  Collapse,
   DropdownItem,
   NavLink,
   Navbar,
@@ -31,14 +19,9 @@ import Pre from './Line/component/pre.jsx';
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
-
-import About from './Line/component/about';
-import firebase from 'firebase/app';
 import 'firebase/database';
 import './App.css';
-
 import Line from './Line/component/Line.jsx';
-import Wheel from './carousel/carousel.jsx'
 import 'bootstrap/dist/css/bootstrap.css';
 global.jQuery=require('jquery');
 require('bootstrap');

@@ -10,19 +10,6 @@ import Button from "@material-ui/core/Button";
 
 import Typography from "@material-ui/core/Typography";
 import {
-  
-  CardBody,
-  CardGroup,
-  Col,
-  Container,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  NavLink
-} from "reactstrap";
-import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
@@ -41,24 +28,6 @@ import Rachella from "../../gallery/component/people/post_rachella.jsx";
 import Riva from "../../gallery/component/people/post_riva.jsx";
 import Sam from "../../gallery/component/people/post_sam.jsx";
 import Sandy from "../../gallery/component/people/post_sandy.jsx";
-
-
-
-import EdProfile from "../../Media/Post-WWII 2/Ed.Silver091.jpeg";
-import FoniaProfile from "../../Media/Post-WWII 2/Fonia220.jpeg";
-import GitaProfile from "../../Media/Post-WWII 2/Gita.Baigelman120.jpeg";
-import HenryProfile from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
-import JackProfile from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
-import JustinaProfile from "../../Media/Post-WWII 2/justina197.jpeg";
-import KatieProfile from "../../Media/Post-WWII 2/katie159.jpeg";
-import LevinProfile from "../../Media/Post-WWII 2/Levin.Baigelman079.jpeg";
-import PinekProfile from "../../Media/Post-WWII 2/Pinek.Baigelman041.jpeg";
-import PolaProfile from "../../Media/Post-WWII 2/pola178.jpeg";
-import RachellaProfile from "../../Media/Post-WWII 2/Rachella150.jpeg";
-import RivaProfile from "../../Media/Post-WWII 2/Riva287.jpeg";
-import SamProfile from "../../Media/Post-WWII 2/Samuel181.jpeg";
-import SandyProfile from "../../Media/Post-WWII 2/Sandy.Baigelman056.jpeg";
-
 
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
@@ -199,15 +168,11 @@ class Line extends Component {
                       <Typography gutterBottom variant="h5" component="h2">
                         Ed
                       </Typography>
-                      <Typography component="p">
-                        More info about Ed.
-                      </Typography>
+                      <Typography component="p">More info about Ed.</Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -242,8 +207,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/post/fonia"
                     >
@@ -274,8 +237,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -310,8 +271,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/post/henry"
                     >
@@ -342,8 +301,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -378,8 +335,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/post/justina"
                     >
@@ -410,8 +365,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -446,8 +399,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/post/levin"
                     >
@@ -478,8 +429,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -514,8 +463,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/post/pola"
                     >
@@ -548,8 +495,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/post/rachella"
                     >
@@ -582,8 +528,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                  
                       component={Link}
                       to="/post/riva"
                     >
@@ -616,8 +561,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                 
                       component={Link}
                       to="/post/sam"
                     >
@@ -650,8 +594,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/post/sandy"
                     >

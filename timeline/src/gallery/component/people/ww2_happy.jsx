@@ -1,19 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import ImageGallery from "react-image-gallery";
-import { Slide } from "react-slideshow-image";
 import WWII from "../../../Line/component/ww2.jsx";
 const IMGURL =
   "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/WWII/";
 const slideImages = `${IMGURL}HappyBoys4282.jpeg`;
-const properties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrows: true
-};
+
 const Slideshow = () => {
   return (
     <Router>

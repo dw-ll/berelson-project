@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import ImageGallery from "react-image-gallery";
 import { Slide } from "react-slideshow-image";
 import Pre from "../../../Line/component/pre"
 

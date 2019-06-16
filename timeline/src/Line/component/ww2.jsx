@@ -8,19 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import {
- 
-  CardBody,
-  CardGroup,
-  Col,
-  Container,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  NavLink
-} from "reactstrap";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -31,13 +19,7 @@ import Henry from "../../gallery/component/people/ww2_henry.jsx";
 import Happy from "../../gallery/component/people/ww2_happy.jsx";
 import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
 
-
 import "react-vertical-timeline-component/style.min.css";
-
-import GitaProfile from "../../Media/WWII/gita.Baigelman144.jpeg";
-import HenryProfile from "../../Media/WWII/Henry.Baigelman118.jpeg";
-import HappyProfile from "../../Media/WWII/HappyBoys4282.jpeg";
-import RachellaProfile from "../../Media/WWII/Rachella148.jpeg";
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
@@ -106,8 +88,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/ww2/gita"
                     >
@@ -138,8 +118,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -177,8 +155,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/ww2/happy_boys"
                     >
@@ -211,8 +187,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}

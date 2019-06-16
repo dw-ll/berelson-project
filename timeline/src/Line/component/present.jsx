@@ -9,18 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 
 import Typography from "@material-ui/core/Typography";
-import {
-  CardBody,
-  CardGroup,
-  Col,
-  Container,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  NavLink
-} from "reactstrap";
+
 
 import {
   VerticalTimeline,
@@ -40,19 +29,6 @@ import Rachel from "../../gallery/component/people/present_rachel.jsx";
 import Riva from "../../gallery/component/people/present_riva.jsx";
 import Sevek from "../../gallery/component/people/present_sevek.jsx";
 import Starski from "../../gallery/component/people/present_starski.jsx";
-
-import AdolfoProfile from "../../Media/Modern/Adolfo.Szpilman098.jpeg";
-import CarolProfile from "../../Media/Modern/Carol344.jpeg";
-import EdProfile from "../../Media/Modern/Ed.Silver089.jpeg";
-import FoniaProfile from "../../Media/Modern/Fonia239.jpeg";
-import HenryProfile from "../../Media/Modern/Henry367.jpeg";
-import JackProfile from "../../Media/Modern/Jack.Baigelman061.jpeg";
-import MordecaiProfile from "../../Media/Modern/Mordecai186.jpeg";
-import PolaProfile from "../../Media/Modern/pola179.jpeg";
-import RachelProfile from "../../Media/Modern/Rachel188.jpeg";
-import RivaProfile from "../../Media/Modern/Riva346.jpeg";
-import SevekProfile from "../../Media/Modern/Sevek267.jpeg";
-import StarskiProfile from "../../Media/Modern/Starski083.jpeg";
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
 class Line extends Component {
@@ -187,8 +163,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/present/adolfo"
                     >
@@ -221,8 +195,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/carol"
                     >
@@ -255,8 +228,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/ed"
                     >
@@ -289,8 +261,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                  
                       component={Link}
                       to="/present/fonia"
                     >
@@ -323,8 +294,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                 
                       component={Link}
                       to="/present/henry"
                     >
@@ -357,8 +327,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/jack"
                     >
@@ -391,8 +360,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/mordecai"
                     >
@@ -425,8 +393,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/pola"
                     >
@@ -459,8 +426,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                  
                       component={Link}
                       to="/present/rachel"
                     >
@@ -493,8 +459,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/riva"
                     >
@@ -527,8 +492,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                    
                       component={Link}
                       to="/present/sevek"
                     >
@@ -561,8 +525,7 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
+                   
                       component={Link}
                       to="/present/starski"
                     >

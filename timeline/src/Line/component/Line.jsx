@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link  } from "react-router-dom";
 import { Switch } from "react-router";
-import {  CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink, Navbar, NavbarBrand, NavItem, Nav, NavDropdown } from 'reactstrap';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Present from "./present";
@@ -15,24 +14,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-
 import Typography from "@material-ui/core/Typography";
-
-import SvgIcon from "@material-ui/core/SvgIcon";
-import Home from '@material-ui/icons/Home.js';
-import Lodz from '../../Media/Pre-WWII/Lodz.Theatre426.jpeg'
-import HappyBoys from '../../Media/WWII/HappyBoys4282.jpeg'
-import Pola from '../../Media/Post-WWII 2/pola178.jpeg'
-import Sevek from '../../Media/Modern/Sevek261.jpeg'
-//import {Print} from 'material-ui-icons/AccessAlarm';
- const styles = {
-   card: {
-     maxWidth: 345
-   },
-   media: {
-     height: 250
-   }
- };
  class ScrollToTop extends Component {
    componentDidUpdate(prevProps) {
      if (this.props.location !== prevProps.location) {
@@ -143,8 +125,6 @@ class Line extends Component {
                         <Button
                           size="small"
                           color="primary"
-                          size="small"
-                          color="primary"
                           component={Link}
                           to="/pre"
                         >
@@ -186,8 +166,6 @@ class Line extends Component {
                       <Button
                         size="small"
                         color="primary"
-                        size="small"
-                        color="primary"
                         component={Link}
                         to="/ww2"
                       >
@@ -227,8 +205,6 @@ class Line extends Component {
                       <Button
                         size="small"
                         color="primary"
-                        size="small"
-                        color="primary"
                         component={Link}
                         to="/post"
                       >
@@ -265,8 +241,6 @@ class Line extends Component {
                     </CardActionArea>
                     <CardActions>
                       <Button
-                        size="small"
-                        color="primary"
                         size="small"
                         color="primary"
                         component={Link}

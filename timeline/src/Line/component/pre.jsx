@@ -9,19 +9,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 
 import Typography from "@material-ui/core/Typography";
-
-import {
-  CardBody,
-  CardGroup,
-  Col,
-  Container,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  NavLink
-} from "reactstrap";
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -36,16 +23,7 @@ import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
 
-
 import "react-vertical-timeline-component/style.min.css";
-import Abram26 from "../../Media/Pre-WWII/Abram.Baigelman026.jpeg";
-import ChanaProfile from "../../Media/Pre-WWII/Chana.Fodeman025 2.jpeg";
-import DavidProfile from "../../Media/Pre-WWII/David.Baigelman016 2.jpeg";
-import GitaProfile from "../../Media/Pre-WWII/Gita.Baigelman137.jpeg";
-import HenryProfile from "../../Media/Pre-WWII/Henry.Baigelman002.jpeg"
-import JollyProfile from "../../Media/Pre-WWII/Jolly.Bays008.jpeg";
-import LeonProfile from "../../Media/Pre-WWII/Leon.Glazer143.jpeg";
-import LodzProfile from "../../Media/Pre-WWII/Lodz.Theatre426.jpeg";
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
 class Line extends Component {
@@ -140,8 +118,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/pre/abram"
                     >
@@ -172,8 +148,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -210,8 +184,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/pre/david"
                     >
@@ -227,7 +199,7 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-               <Card className="card">
+                <Card className="card">
                   <CardActionArea>
                     <CardMedia
                       style={{ height: 0, paddingTop: "90%" }}
@@ -246,8 +218,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/pre/gita"
                     >
@@ -255,7 +225,7 @@ class Line extends Component {
                     </Button>
                   </CardActions>
                 </Card>
-                </VerticalTimelineElement>
+              </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{
@@ -263,7 +233,7 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-                 <Card className="card">
+                <Card className="card">
                   <CardActionArea>
                     <CardMedia
                       style={{ height: 0, paddingTop: "90%" }}
@@ -282,8 +252,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/pre/henry"
                     >
@@ -299,7 +267,7 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-               <Card className="card">
+                <Card className="card">
                   <CardActionArea>
                     <CardMedia
                       style={{ height: 0, paddingTop: "90%" }}
@@ -316,8 +284,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
@@ -354,8 +320,6 @@ class Line extends Component {
                     <Button
                       size="small"
                       color="primary"
-                      size="small"
-                      color="primary"
                       component={Link}
                       to="/pre/leon"
                     >
@@ -371,7 +335,7 @@ class Line extends Component {
                   color: "#fff"
                 }}
               >
-                  <Card className="card">
+                <Card className="card">
                   <CardActionArea>
                     <CardMedia
                       style={{ height: 0, paddingTop: "90%" }}
@@ -388,8 +352,6 @@ class Line extends Component {
                   </CardActionArea>
                   <CardActions>
                     <Button
-                      size="small"
-                      color="primary"
                       size="small"
                       color="primary"
                       component={Link}
