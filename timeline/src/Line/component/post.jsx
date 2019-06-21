@@ -29,6 +29,93 @@ import Riva from "../../gallery/component/people/post_riva.jsx";
 import Sam from "../../gallery/component/people/post_sam.jsx";
 import Sandy from "../../gallery/component/people/post_sandy.jsx";
 
+const postTimelineObjects = [
+  {
+    title: "Ed",
+    subtitle: "More info about Ed.",
+    image: require("../../Media/Post-WWII 2/Ed.Silver091.jpeg"),
+    path: "/post/ed"
+  },
+  {
+    title: "Fonia",
+    subtitle: "More info about Fonia.",
+    image: require("../../Media/Post-WWII 2/Fonia220.jpeg"),
+    path: "/post/fonia"
+  },
+  {
+    title: "Gita Baigelman",
+    subtitle: "More info about Gita.",
+    image: require("../../Media/Post-WWII 2/Gita.Baigelman120.jpeg"),
+    path: "/post/gita"
+  },
+  {
+    title: "Henry Baigelman",
+    subtitle: "More info about Henry.",
+    image: require("../../Media/Post-WWII 2/Henry.Baigelman119.jpeg"),
+    path: "/post/henry"
+  },
+  {
+    title: "Jack Baigelman",
+    subtitle: "More info about Jack.",
+    image: require("../../Media/Post-WWII 2/Jack.Baigelman057.jpeg"),
+    path: "/post/jack"
+  },
+  {
+    title: "Justina",
+    subtitle: "More info about Justina.",
+    image: require("../../Media/Post-WWII 2/justina197.jpeg"),
+    path: "/post/justina"
+  },
+  {
+    title: "Katie",
+    subtitle: "More info about Katie.",
+    image: require("../../Media/Post-WWII 2/katie159.jpeg"),
+    path: "/post/katie"
+  },
+  {
+    title: "Levin Baigelman",
+    subtitle: "More info about Levin.",
+    image: require("../../Media/Post-WWII 2/Levin.Baigelman079.jpeg"),
+    path: "/post/levin"
+  },
+  {
+    title: "Pinek Baigelman",
+    subtitle: "More info about Pinek.",
+    image: require("../../Media/Post-WWII 2/Pinek.Baigelman041.jpeg"),
+    path: "/post/pinek"
+  },
+  {
+    title: "Pola",
+    subtitle: "More info about Pola.",
+    image: require("../../Media/Post-WWII 2/pola178.jpeg"),
+    path: "/post/pola"
+  },
+  {
+    title: "Rachella",
+    subtitle: "More info about Rachella.",
+    image: require("../../Media/Post-WWII 2/Rachella150.jpeg"),
+    path: "/post/rachella"
+  },
+  {
+    title: "Riva",
+    subtitle: "More info about Riva.",
+    image: require("../../Media/Post-WWII 2/Riva287.jpeg"),
+    path: "/post/riva"
+  },
+  {
+    title: "Samuel Spielman",
+    subtitle: "More info about Samuel.",
+    image: require("../../Media/Post-WWII 2/Samuel181.jpeg"),
+    path: "/post/sam"
+  },
+  {
+    title: "Sandy Baigelman",
+    subtitle: "More info about Sandy.",
+    image: require("../../Media/Post-WWII 2/Sandy.Baigelman056.jpeg"),
+    path: "/post/sandy"
+  }
+];
+
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
 class Line extends Component {
@@ -153,456 +240,49 @@ class Line extends Component {
               </div>
             </div>
             <VerticalTimeline>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Ed.Silver091.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Ed
-                      </Typography>
-                      <Typography component="p">More info about Ed.</Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/ed"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Fonia220.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Fonia
-                      </Typography>
-                      <Typography component="p">
-                        More info about Fonia.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/fonia"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Gita.Baigelman120.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Gita Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Gita.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/gita"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Henry.Baigelman119.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Henry Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Henry.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/henry"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Jack.Baigelman057.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Jack Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Jack.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/jack"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/justina197.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Justina
-                      </Typography>
-                      <Typography component="p">
-                        More info about Justina.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/justina"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/katie159.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Katie
-                      </Typography>
-                      <Typography component="p">
-                        More info about Katie.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/katie"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Levin.Baigelman079.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Levin Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Levin.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/levin"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Pinek.Baigelman041.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Pinek Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Pinek.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/pinek"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/pola178.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Pola
-                      </Typography>
-                      <Typography component="p">
-                        More info about Pola.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/post/pola"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Rachella150.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Rachella
-                      </Typography>
-                      <Typography component="p">
-                        More info about Rachella.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/post/rachella"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Riva287.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Riva
-                      </Typography>
-                      <Typography component="p">
-                        More info about Riva.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                  
-                      component={Link}
-                      to="/post/riva"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Samuel181.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Samuel Spielman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Samuel.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                 
-                      component={Link}
-                      to="/post/sam"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Post-WWII 2/Sandy.Baigelman056.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Sandy Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Sandy.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/post/sandy"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
+              {postTimelineObjects.map((card, i) => (
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  key={i}
+                  iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                  paddingTop="0em"
+
+                  //icon={<Print/>}
+                >
+                  <div>
+                    <Card className="card">
+                      <CardActionArea>
+                        <CardMedia
+                          style={{ height: 0, paddingTop: "100%" }}
+                          image={card.image}
+                        />
+                        <CardContent>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="h2"
+                          >
+                            {card.title}
+                          </Typography>
+                          <Typography component="p">
+                            {card.subtitle}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          to={card.path}
+                        >
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </div>
+                </VerticalTimelineElement>
+              ))}
             </VerticalTimeline>
           </div>
         </Switch>

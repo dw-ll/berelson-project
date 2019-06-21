@@ -20,6 +20,32 @@ import Happy from "../../gallery/component/people/ww2_happy.jsx";
 import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
 
 import "react-vertical-timeline-component/style.min.css";
+const ww2TimelineObjects = [
+  {
+    title: "Gita Baigelman",
+    subtitle: "More info about Gita.",
+    image: require("../../Media/WWII/gita.Baigelman144.jpeg"),
+    path: "/ww2/gita"
+  },
+  {
+    title: "Happy Boys",
+    subtitle: "More info about the Happy Boys.",
+    image: require("../../Media/WWII/HappyBoys4282.jpeg"),
+    path: "/ww2/happy_boys"
+  },
+  {
+    title: "Henry Baigelman",
+    subtitle: "More info about Henry.",
+    image: require("../../Media/WWII/Henry.Baigelman118.jpeg"),
+    path: "/ww2/henry"
+  },
+  {
+    title: "Rachella",
+    subtitle: "More info about Rachella.",
+    image: require("../../Media/WWII/Rachella148.jpeg"),
+    path: "/ww2/rachella"
+  }
+];
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
@@ -64,139 +90,49 @@ class Line extends Component {
               </div>
             </div>
             <VerticalTimeline>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "50%" }}
-                      image={require("../../Media/WWII/gita.Baigelman144.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Gita Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Gita.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/ww2/gita"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
+              {ww2TimelineObjects.map((card, i) => (
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  key={i}
+                  iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                  paddingTop="0em"
 
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(145,53,53)", color: "#fff" }}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "50%" }}
-                      image={require("../../Media/WWII/HappyBoys4282.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Happy Boys
-                      </Typography>
-                      <Typography component="p">
-                        More info about the Happy Boys.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/ww2/happy_boys"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="1960-1970"
-                iconStyle={{
-                  background: "rgb(187,187,187)",
-                  color: "#fff"
-                }}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "50%" }}
-                      image={require("../../Media/WWII/Henry.Baigelman118.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Henry Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Henry
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/ww2/happy_boys"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{
-                  background: "rgb(233,238,201)",
-                  color: "#fff"
-                }}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "50%" }}
-                      image={require("../../Media/WWII/Rachella148.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Rachella
-                      </Typography>
-                      <Typography component="p">
-                        More info about Rachella.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/ww2/rachella"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
+                  //icon={<Print/>}
+                >
+                  <div>
+                    <Card className="card">
+                      <CardActionArea>
+                        <CardMedia
+                          style={{ height: 0, paddingTop: "50%" }}
+                          image={card.image}
+                        />
+                        <CardContent>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="h2"
+                          >
+                            {card.title}
+                          </Typography>
+                          <Typography component="p">
+                            {card.subtitle}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          to={card.path}
+                        >
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </div>
+                </VerticalTimelineElement>
+              ))}
             </VerticalTimeline>
           </div>
         </Switch>

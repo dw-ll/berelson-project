@@ -29,6 +29,80 @@ import Rachel from "../../gallery/component/people/present_rachel.jsx";
 import Riva from "../../gallery/component/people/present_riva.jsx";
 import Sevek from "../../gallery/component/people/present_sevek.jsx";
 import Starski from "../../gallery/component/people/present_starski.jsx";
+const presentTimelineObjects = [
+  {
+    title: "Adolfo Spzilman",
+    subtitle: "More info about Adolfo.",
+    image: require("../../Media/Modern/Adolfo.Szpilman098.jpeg"),
+    path: "/present/adolfo"
+  },
+  {
+    title: "Carol",
+    subtitle: "More info about Carol.",
+    image: require("../../Media/Modern/Carol344.jpeg"),
+    path: "/present/carol"
+  },
+  {
+    title: "Ed",
+    subtitle: "More info about Ed.",
+    image: require("../../Media/Modern/Ed.Silver089.jpeg"),
+    path: "/present/ed"
+  },
+  {
+    title: "Fonia",
+    subtitle: "More info about Fonia.",
+    image: require("../../Media/Modern/Fonia239.jpeg"),
+    path: "/present/fonia"
+  },
+  {
+    title: "Henry Baigelman",
+    subtitle: "More info about Henry.",
+    image: require("../../Media/Modern/Henry367.jpeg"),
+    path: "/present/henry"
+  },
+  {
+    title: "Jack Baigelman",
+    subtitle: "More info about Jack.",
+    image: require("../../Media/Modern/Jack.Baigelman061.jpeg"),
+    path: "/present/jack"
+  },
+  {
+    title: "Mordecai",
+    subtitle: "More info about Mordecai.",
+    image: require("../../Media/Modern/Mordecai186.jpeg"),
+    path: "/present/mordecai"
+  },
+  {
+    title: "Pola",
+    subtitle: "More info about Pola.",
+    image: require("../../Media/Modern/pola179.jpeg"),
+    path: "/present/pola"
+  },
+  {
+    title: "Rachel",
+    subtitle: "More info about Rachel.",
+    image: require("../../Media/Modern/Rachel188.jpeg"),
+    path: "/present/rachel"
+  },
+  {
+    title: "Riva",
+    subtitle: "More info about Riva.",
+    image: require("../../Media/Modern/Riva346.jpeg"),
+    path: "/present/riva"
+  },
+  {
+    title: "Sevek",
+    subtitle: "More info about Sevek.",
+    image: require("../../Media/Modern/Sevek267.jpeg"),
+    path: "/present/sevek"
+  },
+  {
+    title: "Starski",
+    subtitle: "More info about Starski.",
+    image: require("../../Media/Modern/Starski083.jpeg"),
+    path: "/present/starski"
+  }
+];
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
 class Line extends Component {
@@ -139,401 +213,49 @@ class Line extends Component {
               </div>
             </div>
             <VerticalTimeline>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Adolfo.Szpilman098.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Adolfo Spzilman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Adolfo.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      component={Link}
-                      to="/present/adolfo"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Carol344.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Carol
-                      </Typography>
-                      <Typography component="p">
-                        More info about Carol.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/carol"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Ed.Silver089.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Ed
-                      </Typography>
-                      <Typography component="p">
-                        More info about Ed.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/ed"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Fonia239.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Fonia
-                      </Typography>
-                      <Typography component="p">
-                        More info about Fonia.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                  
-                      component={Link}
-                      to="/present/fonia"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Henry367.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Henry Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Henry.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                 
-                      component={Link}
-                      to="/present/henry"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Jack.Baigelman061.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Jack Baigelman
-                      </Typography>
-                      <Typography component="p">
-                        More info about Jack.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/jack"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Mordecai186.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Mordecai
-                      </Typography>
-                      <Typography component="p">
-                        More info about Mordecai.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/mordecai"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/pola179.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Pola
-                      </Typography>
-                      <Typography component="p">
-                        More info about Pola.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/pola"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Rachel188.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Rachel
-                      </Typography>
-                      <Typography component="p">
-                        More info about Rachel.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                  
-                      component={Link}
-                      to="/present/rachel"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Riva346.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Riva
-                      </Typography>
-                      <Typography component="p">
-                        More info about Riva.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/riva"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Sevek267.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Sevek
-                      </Typography>
-                      <Typography component="p">
-                        More info about Sevek.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                    
-                      component={Link}
-                      to="/present/sevek"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: "rgb(40,49,72)", color: "#fff" }}
-                //icon={<Print/>}
-              >
-                <Card className="card">
-                  <CardActionArea>
-                    <CardMedia
-                      style={{ height: 0, paddingTop: "90%" }}
-                      image={require("../../Media/Modern/Starski083.jpeg")}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Starski
-                      </Typography>
-                      <Typography component="p">
-                        More info about Starski.
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                   
-                      component={Link}
-                      to="/present/starski"
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-              </VerticalTimelineElement>
+              {presentTimelineObjects.map((card, i) => (
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  key={i}
+                  iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                  paddingTop="0em"
+
+                  //icon={<Print/>}
+                >
+                  <div>
+                    <Card className="card">
+                      <CardActionArea>
+                        <CardMedia
+                          style={{ height: 0, paddingTop: "100%" }}
+                          image={card.image}
+                        />
+                        <CardContent>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="h2"
+                          >
+                            {card.title}
+                          </Typography>
+                          <Typography component="p">
+                            {card.subtitle}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          to={card.path}
+                        >
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </div>
+                </VerticalTimelineElement>
+              ))}
             </VerticalTimeline>
           </div>
         </Switch>
