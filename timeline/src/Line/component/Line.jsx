@@ -19,6 +19,29 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
+const routes = [
+  {
+    component: Pre,
+    path: "/pre"
+  },
+  {
+    component: WWII,
+    path: "/ww2"
+  },
+  {
+    component: Post,
+    path: "/post"
+  },
+  {
+    component: Present,
+    path: "/present"
+  },
+  {
+    component: About,
+    path: "/about"
+  }
+];
+
 const timelineObjects = [
   {
     title: " Pre-World War II",
@@ -28,27 +51,22 @@ const timelineObjects = [
   },
   {
     title: "World War II",
-    subtitle:
-      "Photos and information spanning the time during World War Two.",
+    subtitle: "Photos and information spanning the time during World War Two.",
     image: require("../../Media/WWII/HappyBoys4282.jpeg"),
     path: "/ww2"
   },
   {
     title: "Post-World War II",
-    subtitle:
-      "Photos and information spanning the time after World War Two.",
+    subtitle: "Photos and information spanning the time after World War Two.",
     image: require("../../Media/Post-WWII 2/pola178.jpeg"),
     path: "/post"
   },
   {
     title: "Present",
-    subtitle:
-      "Photos and information about recent days.",
+    subtitle: "Photos and information about recent days.",
     image: require("../../Media/Modern/Sevek261.jpeg"),
     path: "/present"
   }
- 
-  
 ];
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
@@ -89,53 +107,26 @@ class Line extends Component {
       <Router>
         <ScrollToTop>
           <Switch>
-            <Route
-              path="/pre"
-              exact
-              render={() => {
-                return <Pre />;
-              }}
-            />
-            <Route
-              path="/ww2"
-              exact
-              render={() => {
-                return <WWII />;
-              }}
-            />
-
-            <Route
-              path="/post"
-              exact
-              render={() => {
-                return <Post />;
-              }}
-            />
-            <Route
-              path="/present"
-              exact
-              render={() => {
-                return <Present />;
-              }}
-            />
-            <Route
-              path="/about"
-              exact
-              render={() => {
-                return <About />;
-              }}
-            />
+            {routes.map((route, i) => (
+              <Route
+                path={route.path}
+                exact
+                render={() => {
+                  return <route.component />;
+                }}
+              />
+            ))}
 
             <div className="back">
               <VerticalTimeline>
-                {timelineObjects.map((card,i) => (
+                {timelineObjects.map((card, i) => (
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    key = {i}
+                    key={i}
                     iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
                     paddingTop="0em"
 
-                  //icon={<Print/>}
+                    //icon={<Print/>}
                   >
                     <div>
                       <Card className="card">
@@ -145,12 +136,16 @@ class Line extends Component {
                             image={card.image}
                           />
                           <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
                               {card.title}
-                          </Typography>
+                            </Typography>
                             <Typography component="p">
                               {card.subtitle}
-                          </Typography>
+                            </Typography>
                           </CardContent>
                         </CardActionArea>
                         <CardActions>
@@ -161,13 +156,12 @@ class Line extends Component {
                             to={card.path}
                           >
                             Learn More
-                        </Button>
+                          </Button>
                         </CardActions>
                       </Card>
                     </div>
                   </VerticalTimelineElement>
                 ))}
-                
               </VerticalTimeline>
             </div>
           </Switch>

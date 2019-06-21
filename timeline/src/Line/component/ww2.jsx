@@ -20,6 +20,24 @@ import Happy from "../../gallery/component/people/ww2_happy.jsx";
 import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
 
 import "react-vertical-timeline-component/style.min.css";
+const routes = [
+  {
+    component: Gita,
+    path: "/ww2/gita"
+  },
+  {
+    component: Happy,
+    path: "/ww2/happy_boys"
+  },
+  {
+    component: Henry,
+    path: "/ww2/henry"
+  },
+  {
+    component: Rachella,
+    path: "/ww2/rachella"
+  }
+];
 const ww2TimelineObjects = [
   {
     title: "Gita Baigelman",
@@ -54,34 +72,15 @@ class Line extends Component {
     return (
       <Router>
         <Switch>
-          <Route
-            path="/ww2/gita"
-            exact
-            render={() => {
-              return <Gita />;
-            }}
-          />
-          <Route
-            path="/ww2/happy_boys"
-            exact
-            render={() => {
-              return <Happy />;
-            }}
-          />
-          <Route
-            path="/ww2/henry"
-            exact
-            render={() => {
-              return <Henry />;
-            }}
-          />
-          <Route
-            path="/ww2/rachella"
-            exact
-            render={() => {
-              return <Rachella />;
-            }}
-          />
+          {routes.map((route, i) => (
+            <Route
+              path={route.path}
+              exact
+              render={() => {
+                return <route.component />;
+              }}
+            />
+          ))}
 
           <div className="back">
             <div className="card card-default post-body">
@@ -107,16 +106,10 @@ class Line extends Component {
                           image={card.image}
                         />
                         <CardContent>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="h2"
-                          >
+                          <Typography gutterBottom variant="h5" component="h2">
                             {card.title}
                           </Typography>
-                          <Typography component="p">
-                            {card.subtitle}
-                          </Typography>
+                          <Typography component="p">{card.subtitle}</Typography>
                         </CardContent>
                       </CardActionArea>
                       <CardActions>

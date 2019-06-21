@@ -10,7 +10,6 @@ import Button from "@material-ui/core/Button";
 
 import Typography from "@material-ui/core/Typography";
 
-
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -29,6 +28,21 @@ import Rachel from "../../gallery/component/people/present_rachel.jsx";
 import Riva from "../../gallery/component/people/present_riva.jsx";
 import Sevek from "../../gallery/component/people/present_sevek.jsx";
 import Starski from "../../gallery/component/people/present_starski.jsx";
+
+const routes = [
+  { component: Adolfo, path: "/present/adolfo" },
+  { component: Carol, path: "/present/carol" },
+  { component: Ed, path: "/present/ed" },
+  { component: Fonia, path: "/present/fonia" },
+  { component: Henry, path: "/present/henry" },
+  { component: Jack, path: "/present/jack" },
+  { component: Mordecai, path: "/present/mordecai" },
+  { component: Pola, path: "/present/pola" },
+  { component: Rachel, path: "/present/rachel" },
+  { component: Riva, path: "/present/riva" },
+  { component: Sevek, path: "/present/sevek" },
+  { component: Starski, path: "/present/starski" }
+];
 const presentTimelineObjects = [
   {
     title: "Adolfo Spzilman",
@@ -122,90 +136,15 @@ class Line extends Component {
     return (
       <Router>
         <Switch>
-          <Route
-            path="/present/adolfo"
-            exact
-            render={() => {
-              return <Adolfo />;
-            }}
-          />
-          <Route
-            path="/present/carol"
-            exact
-            render={() => {
-              return <Carol />;
-            }}
-          />
-          <Route
-            path="/present/ed"
-            exact
-            render={() => {
-              return <Ed />;
-            }}
-          />
-          <Route
-            path="/present/fonia"
-            exact
-            render={() => {
-              return <Fonia />;
-            }}
-          />
-          <Route
-            path="/present/henry"
-            exact
-            render={() => {
-              return <Henry />;
-            }}
-          />
-          <Route
-            path="/present/jack"
-            exact
-            render={() => {
-              return <Jack />;
-            }}
-          />
-          <Route
-            path="/present/mordecai"
-            exact
-            render={() => {
-              return <Mordecai />;
-            }}
-          />
-          <Route
-            path="/present/pola"
-            exact
-            render={() => {
-              return <Pola />;
-            }}
-          />
-          <Route
-            path="/present/rachel"
-            exact
-            render={() => {
-              return <Rachel />;
-            }}
-          />
-          <Route
-            path="/present/riva"
-            exact
-            render={() => {
-              return <Riva />;
-            }}
-          />
-          <Route
-            path="/present/sevek"
-            exact
-            render={() => {
-              return <Sevek />;
-            }}
-          />
-          <Route
-            path="/present/starski"
-            exact
-            render={() => {
-              return <Starski />;
-            }}
-          />
+          {routes.map((route, i) => (
+            <Route
+              path={route.path}
+              exact
+              render={() => {
+                return <route.component />;
+              }}
+            />
+          ))}
           <div>
             <div className="card card-default post-body">
               <div className="card-body main-nav">
@@ -230,16 +169,10 @@ class Line extends Component {
                           image={card.image}
                         />
                         <CardContent>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="h2"
-                          >
+                          <Typography gutterBottom variant="h5" component="h2">
                             {card.title}
                           </Typography>
-                          <Typography component="p">
-                            {card.subtitle}
-                          </Typography>
+                          <Typography component="p">{card.subtitle}</Typography>
                         </CardContent>
                       </CardActionArea>
                       <CardActions>

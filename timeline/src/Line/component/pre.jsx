@@ -25,6 +25,41 @@ import Lodz from "../../gallery/component/people/pre_lodz.jsx";
 
 import "react-vertical-timeline-component/style.min.css";
 //import {Print} from 'material-ui-icons/AccessAlarm';
+
+const routes = [
+  {
+    component: Abram,
+    path: "pre/abram"
+  },
+  {
+    component: Chana,
+    path: "pre/chana"
+  },
+  {
+    component: David,
+    path: "pre/david"
+  },
+  {
+    component: Gita,
+    path: "pre/gita"
+  },
+  {
+    component: Henry,
+    path: "pre/henry"
+  },
+  {
+    component: Jolly,
+    path: "pre/jolly_boys"
+  },
+   {
+    component: Leon,
+    path: "pre/leon"
+  },
+   {
+    component: Lodz,
+    path: "pre/lodz"
+  },
+];
 const preTimelineObjects = [
   {
     title: "Abram Baigelman",
@@ -81,62 +116,15 @@ class Line extends Component {
     return (
       <Router>
         <Switch>
-          <Route
-            path="/pre/abram"
-            exact
-            render={() => {
-              return <Abram />;
-            }}
-          />
-          <Route
-            path="/pre/chana"
-            exact
-            render={() => {
-              return <Chana />;
-            }}
-          />
-          <Route
-            path="/pre/david"
-            exact
-            render={() => {
-              return <David />;
-            }}
-          />
-          <Route
-            path="/pre/gita"
-            exact
-            render={() => {
-              return <Gita />;
-            }}
-          />
-          <Route
-            path="/pre/henry"
-            exact
-            render={() => {
-              return <Henry />;
-            }}
-          />
-          <Route
-            path="/pre/jolly_boys"
-            exact
-            render={() => {
-              return <Jolly />;
-            }}
-          />
-          <Route
-            path="/pre/leon"
-            exact
-            render={() => {
-              return <Leon />;
-            }}
-          />
-          <Route
-            path="/pre/lodz"
-            exact
-            render={() => {
-              return <Lodz />;
-            }}
-          />
+          {routes.map((route, i) => (
+            <Route
+              path={route.path}
+              exact
+              render={() => {
+                return <route.component />;
+              }}
+            />
+          ))}
           <div className="back">
             <div className="card card-default post-body">
               <div className="card-body main-nav">

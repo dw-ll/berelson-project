@@ -29,6 +29,22 @@ import Riva from "../../gallery/component/people/post_riva.jsx";
 import Sam from "../../gallery/component/people/post_sam.jsx";
 import Sandy from "../../gallery/component/people/post_sandy.jsx";
 
+const routes = [
+  { component: Ed, path: "/post/ed" },
+  { component: Fonia, path: "/post/fonia" },
+  { component: Gita, path: "/post/gita" },
+  { component: Henry, path: "/post/henry" },
+  { component: Jack, path: "/post/jack" },
+  { component: Justina, path: "/post/justina" },
+  { component: Katie, path: "/post/katie" },
+  { component: Levin, path: "/post/levin" },
+  { component: Pinek, path: "/post/pinek" },
+  { component: Pola, path: "/post/pola" },
+  { component: Rachella, path: "/post/rachella" },
+  { component: Riva, path: "/post/riva" },
+  { component: Sam, path: "/post/sam" },
+  { component: Sandy, path: "/post/sandy" }
+];
 const postTimelineObjects = [
   {
     title: "Ed",
@@ -116,7 +132,6 @@ const postTimelineObjects = [
   }
 ];
 
-
 //import {Print} from 'material-ui-icons/AccessAlarm';
 class Line extends Component {
   state = {
@@ -135,104 +150,15 @@ class Line extends Component {
     return (
       <Router>
         <Switch>
-          <Route
-            path="/post/ed"
-            exact
-            render={() => {
-              return <Ed />;
-            }}
-          />
-          <Route
-            path="/post/fonia"
-            exact
-            render={() => {
-              return <Fonia />;
-            }}
-          />
-          <Route
-            path="/post/gita"
-            exact
-            render={() => {
-              return <Gita />;
-            }}
-          />
-          <Route
-            path="/post/henry"
-            exact
-            render={() => {
-              return <Henry />;
-            }}
-          />
-          <Route
-            path="/post/jack"
-            exact
-            render={() => {
-              return <Jack />;
-            }}
-          />
-          <Route
-            path="/post/justina"
-            exact
-            render={() => {
-              return <Justina />;
-            }}
-          />
-          <Route
-            path="/post/katie"
-            exact
-            render={() => {
-              return <Katie />;
-            }}
-          />
-          <Route
-            path="/post/levin"
-            exact
-            render={() => {
-              return <Levin />;
-            }}
-          />
-          <Route
-            path="/post/pinek"
-            exact
-            render={() => {
-              return <Pinek />;
-            }}
-          />
-          <Route
-            path="/post/pola"
-            exact
-            render={() => {
-              return <Pola />;
-            }}
-          />
-          <Route
-            path="/post/rachella"
-            exact
-            render={() => {
-              return <Rachella />;
-            }}
-          />
-          <Route
-            path="/post/riva"
-            exact
-            render={() => {
-              return <Riva />;
-            }}
-          />
-          <Route
-            path="/post/sam"
-            exact
-            render={() => {
-              return <Sam />;
-            }}
-          />
-          <Route
-            path="/post/sandy"
-            exact
-            render={() => {
-              return <Sandy />;
-            }}
-          />
+          {routes.map((route, i) => (
+            <Route
+              path={route.path}
+              exact
+              render={() => {
+                return <route.component />;
+              }}
+            />
+          ))}
           <div>
             <div className="card card-default post-body">
               <div className="card-body main-nav">
@@ -257,16 +183,10 @@ class Line extends Component {
                           image={card.image}
                         />
                         <CardContent>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="h2"
-                          >
+                          <Typography gutterBottom variant="h5" component="h2">
                             {card.title}
                           </Typography>
-                          <Typography component="p">
-                            {card.subtitle}
-                          </Typography>
+                          <Typography component="p">{card.subtitle}</Typography>
                         </CardContent>
                       </CardActionArea>
                       <CardActions>
