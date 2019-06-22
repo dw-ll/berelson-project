@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LazyHero from "react-lazy-hero";
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
@@ -19,6 +21,7 @@ import Pre from './Line/component/pre.jsx';
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
+import Landing from './landing.jsx'
 import 'firebase/database';
 import './App.css';
 import Line from './Line/component/Line.jsx';
@@ -37,7 +40,7 @@ class App extends Component {
             path="#home"
             exact
             render={() => {
-              return <Line />;
+              return <Landing />;
             }}
           />
           <Route
@@ -70,6 +73,13 @@ class App extends Component {
           />
 
           <div className="App">
+            <div>
+              <LazyHero className="landing" imageSrc="../src/Media/WWII/HappyBoys4282.jpeg">
+                <h1>The Berelson Project</h1>
+              </LazyHero>
+
+              {/* ... */}
+            </div>
             <Navbar
               className="navbar-header"
               theme="dark"

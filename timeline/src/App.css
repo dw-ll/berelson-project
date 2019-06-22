@@ -16,12 +16,13 @@
 .nav-bar {
   color: #ffffff;
 }
-.main-timeline{
- 
-}
+
 .vertical-timeline-element--work{
   background-color: #ffffff;
  
+}
+.landing{
+  min-height: 100vh
 }
 
 .App-header {

@@ -14,7 +14,10 @@
     "react": "^16.8.3",
     "react-create-class": "^1.0.0",
     "react-dom": "^16.8.3",
+    "react-headroom": "^2.2.8",
     "react-image-gallery": "^0.8.16",
+    "react-landing-page": "^2.0.2",
+    "react-lazy-hero": "^2.0.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.0.0",
     "react-router-scroll": "^0.4.4",
@@ -23,7 +26,9 @@
     "react-timeless": "^0.3.1",
     "react-timeline-scribble": "^1.0.14",
     "react-vertical-timeline-component": "^2.3.1",
-    "reactstrap": "^7.1.0"
+    "reactstrap": "^7.1.0",
+    "rebass": "^3.0.0-12",
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
