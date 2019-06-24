@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
@@ -12,21 +12,20 @@ import {
   NavbarToggler,
   UncontrolledDropdown,
   DropdownToggle,
-  DropdownMenu,
+  DropdownMenu
 } from "reactstrap";
 
-import Pre from './Line/component/pre.jsx';
+import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
-import 'firebase/database';
-import './App.css';
-import Line from './Line/component/Line.jsx';
-import 'bootstrap/dist/css/bootstrap.css';
-global.jQuery=require('jquery');
-require('bootstrap');
-
-
+import Archive from "./Line/component/archive.jsx";
+import "firebase/database";
+import "./App.css";
+import Line from "./Line/component/Line.jsx";
+import "bootstrap/dist/css/bootstrap.css";
+global.jQuery = require("jquery");
+require("bootstrap");
 
 class App extends Component {
   render() {
@@ -41,47 +40,52 @@ class App extends Component {
             }}
           />
           <Route
-            path="/pre"
+            path="/pre/"
             exact
             render={() => {
               return <Pre />;
             }}
           />
           <Route
-            path="/ww2"
+            path="/ww2/"
             exact
             render={() => {
               return <WW2 />;
             }}
           />
           <Route
-            path="/post"
+            path="/post/"
             exact
             render={() => {
               return <Post />;
             }}
           />
           <Route
-            path="/present"
+            path="/present/"
             exact
             render={() => {
               return <Present />;
             }}
           />
+          <Route
+            path="/archive/"
+            exact
+            render={() => {
+              return <Archive />;
+            }}
+          />
 
           <div className="App">
-            <Navbar
-              className="navbar-header"
-              theme="dark"
-              light
-              expand="md"
-            >
+            <Navbar className="navbar-header" theme="dark" light expand="md">
               <NavbarBrand href="/">{" The Berelson Project"}</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
 
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/about">About</NavLink>
+                  <NavLink href="/about/">About</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/archive/"> Archive</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/dw-ll/Berelson-Project">
@@ -109,6 +113,6 @@ class App extends Component {
         </Switch>
       </Router>
     );
-    }
   }
-  export default App;
+}
+export default App;

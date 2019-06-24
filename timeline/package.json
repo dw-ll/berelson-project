@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+    "blueimp-gallery": "^2.33.0",
     "bootstrap": "^4.3.1",
     "create-react-class": "^15.6.3",
     "firebase": "^5.8.4",
@@ -14,7 +15,10 @@
     "react": "^16.8.3",
     "react-create-class": "^1.0.0",
     "react-dom": "^16.8.3",
+    "react-grid-gallery": "^0.5.5",
     "react-image-gallery": "^0.8.16",
+    "react-images": "^1.0.0",
+    "react-photo-gallery": "^7.0.2",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.0.0",
     "react-router-scroll": "^0.4.4",
