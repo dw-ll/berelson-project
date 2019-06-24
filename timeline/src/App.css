@@ -1,8 +1,6 @@
 .App {
   text-align: center;
-  background-color: #ffffff;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -10,23 +8,11 @@
 .profile {
   height: 70%;
 }
-.back {
-  background-color: #ffffff;
-}
+
 .nav-bar {
   color: #ffffff;
 }
-
-.vertical-timeline-element--work{
-  background-color: #ffffff;
- 
-}
-.landing{
-  min-height: 100vh
-}
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +27,7 @@
   float: left;
 }
 .navbar-header {
-  background-color: #bdbdbd;
+  background-color: #ffffff;
 }
 .logo-style {
   float: left;
@@ -58,19 +44,6 @@
 
 h3 {
   text-align: center;
-}
-.overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
 }
 
 .each-slide > div {

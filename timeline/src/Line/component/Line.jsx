@@ -18,6 +18,8 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Greeting from "react-lazy-hero";
+import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
 
 const routes = [
   {
@@ -107,7 +109,6 @@ class Line extends Component {
       <Router>
         <ScrollToTop>
           <Switch>
-        
             {routes.map((route, i) => (
               <Route
                 path={route.path}
@@ -119,6 +120,24 @@ class Line extends Component {
             ))}
 
             <div className="back">
+              <div>
+                <Greeting
+                  style={{
+                    minHeight: "100vh",
+                    opacity: "1",
+                    isCentered:true,
+                    color:"#000000",
+                    parallaxOffset: "100"
+                  }}
+                  imageSrc={FoniaGreet}>
+                    <h3 style={{float:'left'}}>The Berelson Project</h3>
+                    
+                  </Greeting>
+              </div>
+              <div>
+                <h4>Timeline</h4>
+                <h6>Learn the Berelson lineage through this interactive timeline.</h6>
+              </div>
               <VerticalTimeline>
                 {timelineObjects.map((card, i) => (
                   <VerticalTimelineElement
