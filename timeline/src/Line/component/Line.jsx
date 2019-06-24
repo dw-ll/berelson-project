@@ -107,6 +107,7 @@ class Line extends Component {
       <Router>
         <ScrollToTop>
           <Switch>
+        
             {routes.map((route, i) => (
               <Route
                 path={route.path}
@@ -123,7 +124,10 @@ class Line extends Component {
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     key={i}
-                    iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                    iconStyle={{
+                      background: "rgb(40,49,72)",
+                      color: "#000"
+                    }}
                     paddingTop="0em"
 
                     //icon={<Print/>}
