@@ -22,6 +22,7 @@ import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
 import ScrollableAnchor from "react-scrollable-anchor";
 
+
 const routes = [
   {
     component: Pre,
@@ -126,18 +127,24 @@ class Line extends Component {
                   style={{
                     minHeight: "100vh",
                     opacity: "1",
-                    isCentered:true,
-                    color:"#000000",
+                    isCentered: true,
+                    color: "#000000",
                     parallaxOffset: "100"
                   }}
-                  imageSrc={FoniaGreet}>
-                    <h3 style={{float:'left'}}>The Berelson Project</h3>
-                    
-                  </Greeting>
+                  imageSrc={FoniaGreet}
+                >
+                  <h3 style={{ float: "left" }}>The Berelson Project</h3>
+                  <ScrollableAnchor id={"timeline"}>
+                    <div> Hello World </div>
+                  </ScrollableAnchor>
+                </Greeting>
               </div>
-              <div className="timeline-start">
+              <div id="timeline-start" href="/timeline">
                 <h4>Timeline</h4>
-                <h6>Learn the Berelson lineage through this interactive timeline that spans both sides of the second World War.</h6>
+                <h6>
+                  Learn the Berelson lineage through this interactive
+                  timeline that spans both sides of the second World War.
+                </h6>
               </div>
               <VerticalTimeline>
                 {timelineObjects.map((card, i) => (
