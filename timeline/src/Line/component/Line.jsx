@@ -20,6 +20,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 const routes = [
   {
@@ -134,9 +135,9 @@ class Line extends Component {
                     
                   </Greeting>
               </div>
-              <div>
+              <div className="timeline-start">
                 <h4>Timeline</h4>
-                <h6>Learn the Berelson lineage through this interactive timeline.</h6>
+                <h6>Learn the Berelson lineage through this interactive timeline that spans both sides of the second World War.</h6>
               </div>
               <VerticalTimeline>
                 {timelineObjects.map((card, i) => (
@@ -155,7 +156,7 @@ class Line extends Component {
                       <Card className="card">
                         <CardActionArea>
                           <CardMedia
-                            style={{ height: 0, paddingTop: "50%" }}
+                            style={{ height: 0, paddingTop: "100%" }}
                             image={card.image}
                           />
                           <CardContent>
