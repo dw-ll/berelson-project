@@ -22,7 +22,6 @@ import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
 import ScrollableAnchor from "react-scrollable-anchor";
 
-
 const routes = [
   {
     component: Pre,
@@ -108,95 +107,87 @@ class Line extends Component {
 
   render() {
     return (
-      <Router>
-        <ScrollToTop>
-          <Switch>
-            {routes.map((route, i) => (
-              <Route
-                path={route.path}
-                exact
-                render={() => {
-                  return <route.component />;
+      <Router onUpdate={() => window.scrollTo(0, 0)}>
+        <Switch>
+          {routes.map((route, i) => (
+            <Route
+              path={route.path}
+              exact
+              render={() => {
+                return <route.component />;
+              }}
+            />
+          ))}
+
+          <div className="back">
+            <div>
+              <Greeting
+                style={{
+                  minHeight: "100vh",
+                  opacity: "1",
+                  isCentered: true,
+                  color: "#000000",
+                  parallaxOffset: "100"
                 }}
-              />
-            ))}
-
-            <div className="back">
-              <div>
-                <Greeting
-                  style={{
-                    minHeight: "100vh",
-                    opacity: "1",
-                    isCentered: true,
-                    color: "#000000",
-                    parallaxOffset: "100"
-                  }}
-                  imageSrc={FoniaGreet}
-                >
-                  <h3 style={{ float: "left" }}>The Berelson Project</h3>
-                  <ScrollableAnchor id={"timeline"}>
-                    <div> Hello World </div>
-                  </ScrollableAnchor>
-                </Greeting>
-              </div>
-              <div id="timeline-start" href="/timeline">
-                <h4>Timeline</h4>
-                <h6>
-                  Learn the Berelson lineage through this interactive
-                  timeline that spans both sides of the second World War.
-                </h6>
-              </div>
-              <VerticalTimeline>
-                {timelineObjects.map((card, i) => (
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    key={i}
-                    iconStyle={{
-                      background: "rgb(40,49,72)",
-                      color: "#000"
-                    }}
-                    paddingTop="0em"
-
-                    //icon={<Print/>}
-                  >
-                    <div>
-                      <Card className="card">
-                        <CardActionArea>
-                          <CardMedia
-                            style={{ height: 0, paddingTop: "100%" }}
-                            image={card.image}
-                          />
-                          <CardContent>
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="h2"
-                            >
-                              {card.title}
-                            </Typography>
-                            <Typography component="p">
-                              {card.subtitle}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                          <Button
-                            size="small"
-                            color="primary"
-                            component={Link}
-                            to={card.path}
-                          >
-                            Learn More
-                          </Button>
-                        </CardActions>
-                      </Card>
-                    </div>
-                  </VerticalTimelineElement>
-                ))}
-              </VerticalTimeline>
+                imageSrc={FoniaGreet}
+              >
+                <h3 style={{ float: "left" }}>The Berelson Project</h3>
+                <ScrollableAnchor id={"timeline"}>
+                  <div> Hello World </div>
+                </ScrollableAnchor>
+              </Greeting>
             </div>
-          </Switch>
-        </ScrollToTop>
+            <div id="timeline-start" href="/timeline">
+              <h4>Timeline</h4>
+              <h6>
+                Learn the Berelson lineage through this interactive timeline
+                that spans both sides of the second World War.
+              </h6>
+            </div>
+            <VerticalTimeline>
+              {timelineObjects.map((card, i) => (
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  key={i}
+                  iconStyle={{
+                    background: "rgb(40,49,72)",
+                    color: "#000"
+                  }}
+                  paddingTop="0em"
+
+                  //icon={<Print/>}
+                >
+                  <div>
+                    <Card className="card">
+                      <CardActionArea>
+                        <CardMedia
+                          style={{ height: 0, paddingTop: "100%" }}
+                          image={card.image}
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="h2">
+                            {card.title}
+                          </Typography>
+                          <Typography component="p">{card.subtitle}</Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          to={card.path}
+                        >
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </div>
+                </VerticalTimelineElement>
+              ))}
+            </VerticalTimeline>
+          </div>
+        </Switch>
       </Router>
     );
   }

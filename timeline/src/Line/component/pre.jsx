@@ -23,6 +23,7 @@ import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
 
+
 import "react-vertical-timeline-component/style.min.css";
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
@@ -115,69 +116,73 @@ class Line extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          {routes.map((route, i) => (
-            <Route
-              path={route.path}
-              exact
-              render={() => {
-                return <route.component />;
-              }}
-            />
-          ))}
-          <div className="back">
-            <div className="card card-default post-body">
-              <div className="card-body main-nav">
-                Images and information from before World War II.
+          <Switch>
+            {routes.map((route, i) => (
+              <Route
+                path={route.path}
+                exact
+                render={() => {
+                  return <route.component />;
+                }}
+              />
+            ))}
+            <div className="back">
+              <div className="card card-default post-body">
+                <div className="card-body main-nav">
+                  Images and information from before World War II.
+                </div>
               </div>
-            </div>
-            <VerticalTimeline>
-              {preTimelineObjects.map((card, i) => (
-                <VerticalTimelineElement
-                  className="vertical-timeline-element--work"
-                  key={i}
-                  iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
-                  paddingTop="0em"
+              <VerticalTimeline>
+                {preTimelineObjects.map((card, i) => (
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    key={i}
+                    iconStyle={{
+                      background: "rgb(40,49,72)",
+                      color: "#000"
+                    }}
+                    paddingTop="0em"
 
-                  //icon={<Print/>}
-                >
-                  <div>
-                    <Card className="card">
-                      <CardActionArea>
-                        <CardMedia
-                          style={{ height: 0, paddingTop: "100%" }}
-                          image={card.image}
-                        />
-                        <CardContent>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="h2"
+                    //icon={<Print/>}
+                  >
+                    <div>
+                      <Card className="card">
+                        <CardActionArea>
+                          <CardMedia
+                            style={{ height: 0, paddingTop: "100%" }}
+                            image={card.image}
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              {card.title}
+                            </Typography>
+                            <Typography component="p">
+                              {card.subtitle}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                          <Button
+                            size="small"
+                            color="primary"
+                            component={Link}
+                            to={card.path}
                           >
-                            {card.title}
-                          </Typography>
-                          <Typography component="p">
-                            {card.subtitle}
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                      <CardActions>
-                        <Button
-                          size="small"
-                          color="primary"
-                          component={Link}
-                          to={card.path}
-                        >
-                          Learn More
-                        </Button>
-                      </CardActions>
-                    </Card>
-                  </div>
-                </VerticalTimelineElement>
-              ))}
-            </VerticalTimeline>
-          </div>
-        </Switch>
+                            Learn More
+                          </Button>
+                        </CardActions>
+                      </Card>
+                    </div>
+                  </VerticalTimelineElement>
+                ))}
+              </VerticalTimeline>
+            </div>
+          </Switch>
+       
       </Router>
     );
   }

@@ -24,6 +24,7 @@
     "react-router-dom": "^5.0.0",
     "react-router-hash-link": "^1.2.1",
     "react-router-scroll": "^0.4.4",
+    "react-router-scroll-top": "^0.2.1",
     "react-scripts": "^2.1.5",
     "react-scrollable-anchor": "^0.6.1",
     "react-slideshow-image": "^1.1.7",
