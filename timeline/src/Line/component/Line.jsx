@@ -8,7 +8,6 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Overlay from "react-bootstrap/Overlay";
 import Archive from "./archive.jsx";
 import Present from "./present";
 import Pre from "./pre";
@@ -83,10 +82,10 @@ class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
-    this.attachRef = target => this.setState({ target });
-    this.state = {
-      show: false
-    };
+    this.attachRef = target => this.setState({target});
+     this.state = {
+       show: false
+     };
   }
 
   handleScrollToElement(event) {
@@ -94,7 +93,6 @@ class Line extends Component {
   }
 
   render() {
-    const { show, target } = this.state;
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Switch>
@@ -121,8 +119,8 @@ class Line extends Component {
                 imageSrc={FoniaGreet}
               >
                 <h3>The Berelson Project</h3>
-                <Button
-                  variant="outlined"
+                <Button 
+                  variant = 'outlined'
                   onClick={() => {
                     this.scrollDiv.current.scrollIntoView({
                       behavior: "smooth"
@@ -137,8 +135,8 @@ class Line extends Component {
               <div id="timeline-start" href="/timeline">
                 <h4>Timeline</h4>
                 <h6>
-                  Learn the Berelson lineage through this interactive
-                  timeline that spans both sides of the second World War.
+                  Learn the Berelson lineage through this interactive timeline
+                  that spans both sides of the second World War.
                 </h6>
               </div>
               <VerticalTimeline>
@@ -180,8 +178,6 @@ class Line extends Component {
                             color="primary"
                             component={Link}
                             to={card.path}
-                            ref={this.attachRef}
-                            onClick={() => this.setState({ show: !show })}
                           >
                             Learn More
                           </Button>
