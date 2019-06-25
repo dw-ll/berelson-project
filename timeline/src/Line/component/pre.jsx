@@ -30,35 +30,35 @@ import "react-vertical-timeline-component/style.min.css";
 const routes = [
   {
     component: Abram,
-    path: "pre/abram"
+    path: "/pre/abram"
   },
   {
     component: Chana,
-    path: "pre/chana"
+    path: "/pre/chana"
   },
   {
     component: David,
-    path: "pre/david"
+    path: "/pre/david"
   },
   {
     component: Gita,
-    path: "pre/gita"
+    path: "/pre/gita"
   },
   {
     component: Henry,
-    path: "pre/henry"
+    path: "/pre/henry"
   },
   {
     component: Jolly,
-    path: "pre/jolly_boys"
+    path: "/pre/jolly_boys"
   },
    {
     component: Leon,
-    path: "pre/leon"
+    path: "/pre/leon"
   },
    {
     component: Lodz,
-    path: "pre/lodz"
+    path: "/pre/lodz"
   },
 ];
 const preTimelineObjects = [

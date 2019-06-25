@@ -1,13 +1,15 @@
-import React, { Component, createRef, useEffect } from "react";
+import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { render } from "react-dom";
+
 import { Switch } from "react-router";
-import Scroller from "animated-scroll-to";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import Overlay from "react-bootstrap/Overlay";
+import Archive from "./archive.jsx";
 import Present from "./present";
 import Pre from "./pre";
 import Post from "./post";
@@ -22,8 +24,6 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
-const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop);
-const useMountEffect = fun => useEffect(fun, []);
 
 const routes = [
   {
@@ -45,6 +45,10 @@ const routes = [
   {
     component: About,
     path: "/about"
+  },
+  {
+    component: Archive,
+    path: "/archive"
   }
 ];
 
@@ -75,12 +79,14 @@ const timelineObjects = [
   }
 ];
 
-
-
 class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
+    this.attachRef = target => this.setState({ target });
+    this.state = {
+      show: false
+    };
   }
 
   handleScrollToElement(event) {
@@ -88,6 +94,7 @@ class Line extends Component {
   }
 
   render() {
+    const { show, target } = this.state;
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Switch>
@@ -102,7 +109,7 @@ class Line extends Component {
           ))}
 
           <div className="back">
-            <div>
+            <div id="landing">
               <Greeting
                 style={{
                   minHeight: "100vh",
@@ -113,17 +120,17 @@ class Line extends Component {
                 }}
                 imageSrc={FoniaGreet}
               >
-                <h3 style={{ textAlign: "left" }}>The Berelson Project</h3>
-                <button
+                <h3>The Berelson Project</h3>
+                <Button
+                  variant="outlined"
                   onClick={() => {
                     this.scrollDiv.current.scrollIntoView({
                       behavior: "smooth"
-                      
                     });
                   }}
                 >
-                  Click
-                </button>
+                  Explore Timeline
+                </Button>
               </Greeting>
             </div>
             <div ref={this.scrollDiv}>
@@ -173,6 +180,8 @@ class Line extends Component {
                             color="primary"
                             component={Link}
                             to={card.path}
+                            ref={this.attachRef}
+                            onClick={() => this.setState({ show: !show })}
                           >
                             Learn More
                           </Button>
