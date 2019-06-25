@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+    "animated-scroll-to": "^1.2.2",
     "blueimp-gallery": "^2.33.0",
     "bootstrap": "^4.3.1",
     "create-react-class": "^15.6.3",
