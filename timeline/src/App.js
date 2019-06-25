@@ -24,7 +24,6 @@ import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
 import "bootstrap/dist/css/bootstrap.css";
-import Scroll from "react-router-scroll-top";
 global.jQuery = require("jquery");
 require("bootstrap");
 

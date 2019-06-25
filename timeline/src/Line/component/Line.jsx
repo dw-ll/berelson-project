@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, createRef, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { render } from "react-dom";
 import { Switch } from "react-router";
+import Scroller from "animated-scroll-to";
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -20,7 +22,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
-import ScrollableAnchor from "react-scrollable-anchor";
+const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop);
+const useMountEffect = fun => useEffect(fun, []);
 
 const routes = [
   {
@@ -71,38 +74,17 @@ const timelineObjects = [
     path: "/present"
   }
 ];
-class ScrollToTop extends Component {
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0);
-    }
-  }
 
-  render() {
-    return this.props.children;
-  }
-}
+
 
 class Line extends Component {
-  state = {
-    redirect: false
-  };
-  setRedirect = () => {
-    this.setState({
-      redirect: true
-    });
-  };
-  renderRedirect = () => {
-    if (this.state.redirect) {
-    }
-  };
-
-  constuctor() {
-    this.routeChange = this.routeChange.bind(this);
+  constructor(props) {
+    super(props);
+    this.scrollDiv = createRef();
   }
-  routeChange() {
-    let path = `newPath`;
-    this.props.history.push(path);
+
+  handleScrollToElement(event) {
+    window.scrollTo(0, this.myRef.current.offsetTop);
   }
 
   render() {
@@ -131,61 +113,76 @@ class Line extends Component {
                 }}
                 imageSrc={FoniaGreet}
               >
-                <h3 style={{ float: "left" }}>The Berelson Project</h3>
-                <ScrollableAnchor id={"timeline"}>
-                  <div> Hello World </div>
-                </ScrollableAnchor>
+                <h3 style={{ textAlign: "left" }}>The Berelson Project</h3>
+                <button
+                  onClick={() => {
+                    this.scrollDiv.current.scrollIntoView({
+                      behavior: "smooth"
+                      
+                    });
+                  }}
+                >
+                  Click
+                </button>
               </Greeting>
             </div>
-            <div id="timeline-start" href="/timeline">
-              <h4>Timeline</h4>
-              <h6>
-                Learn the Berelson lineage through this interactive timeline
-                that spans both sides of the second World War.
-              </h6>
-            </div>
-            <VerticalTimeline>
-              {timelineObjects.map((card, i) => (
-                <VerticalTimelineElement
-                  className="vertical-timeline-element--work"
-                  key={i}
-                  iconStyle={{
-                    background: "rgb(40,49,72)",
-                    color: "#000"
-                  }}
-                  paddingTop="0em"
+            <div ref={this.scrollDiv}>
+              <div id="timeline-start" href="/timeline">
+                <h4>Timeline</h4>
+                <h6>
+                  Learn the Berelson lineage through this interactive
+                  timeline that spans both sides of the second World War.
+                </h6>
+              </div>
+              <VerticalTimeline>
+                {timelineObjects.map((card, i) => (
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    key={i}
+                    iconStyle={{
+                      background: "rgb(40,49,72)",
+                      color: "#000"
+                    }}
+                    paddingTop="0em"
 
-                  //icon={<Print/>}
-                >
-                  <div>
-                    <Card className="card">
-                      <CardActionArea>
-                        <CardMedia
-                          style={{ height: 0, paddingTop: "100%" }}
-                          image={card.image}
-                        />
-                        <CardContent>
-                          <Typography gutterBottom variant="h5" component="h2">
-                            {card.title}
-                          </Typography>
-                          <Typography component="p">{card.subtitle}</Typography>
-                        </CardContent>
-                      </CardActionArea>
-                      <CardActions>
-                        <Button
-                          size="small"
-                          color="primary"
-                          component={Link}
-                          to={card.path}
-                        >
-                          Learn More
-                        </Button>
-                      </CardActions>
-                    </Card>
-                  </div>
-                </VerticalTimelineElement>
-              ))}
-            </VerticalTimeline>
+                    //icon={<Print/>}
+                  >
+                    <div>
+                      <Card className="card">
+                        <CardActionArea>
+                          <CardMedia
+                            style={{ height: 0, paddingTop: "100%" }}
+                            image={card.image}
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              {card.title}
+                            </Typography>
+                            <Typography component="p">
+                              {card.subtitle}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                          <Button
+                            size="small"
+                            color="primary"
+                            component={Link}
+                            to={card.path}
+                          >
+                            Learn More
+                          </Button>
+                        </CardActions>
+                      </Card>
+                    </div>
+                  </VerticalTimelineElement>
+                ))}
+              </VerticalTimeline>
+            </div>
           </div>
         </Switch>
       </Router>
