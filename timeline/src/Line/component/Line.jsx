@@ -20,6 +20,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
@@ -133,11 +134,22 @@ class Line extends Component {
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
-                <h4>Timeline</h4>
-                <h6>
-                  Learn the Berelson lineage through this interactive timeline
-                  that spans both sides of the second World War.
-                </h6>
+                <div>
+                  <h4>Timeline</h4>
+                  <h6>
+                    Learn the Berelson lineage through this interactive timeline
+                    that spans both sides of the second World War.
+                  </h6>
+                </div>
+                <div>
+                             <ButtonGroup size="small" aria-label="Small outlined button group">
+
+                    <Button>Pre WW2</Button>
+                    <Button>WW2</Button>
+                    <Button>Post WW2</Button>
+                    <Button>Present</Button>
+                  </ButtonGroup>
+                </div>
               </div>
 
               <VerticalTimeline>

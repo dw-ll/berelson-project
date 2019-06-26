@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import Card from "@material-ui/core/Card";
@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Greeting from "react-lazy-hero";
 
 import {
   VerticalTimeline,
@@ -18,6 +19,7 @@ import Gita from "../../gallery/component/people/ww2_gita.jsx";
 import Henry from "../../gallery/component/people/ww2_henry.jsx";
 import Happy from "../../gallery/component/people/ww2_happy.jsx";
 import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
+import GreetImage from "../../Media/WWII/HappyBoys4282.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
 const routes = [
@@ -68,6 +70,18 @@ const ww2TimelineObjects = [
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
 class Line extends Component {
+  constructor(props) {
+    super(props);
+    this.scrollDiv = createRef();
+    this.myRef = React.createRef(); // Create a ref object
+  }
+
+  componentDidMount() {
+    this.myRef.current.scrollTo(0, 0);
+  }
+  handleScrollToElement(event) {
+    window.scrollTo(0, this.myRef.current.offsetTop);
+  }
   render() {
     return (
       <Router>
@@ -82,51 +96,79 @@ class Line extends Component {
             />
           ))}
 
-          <div className="back">
-            <div className="card card-default post-body">
-              <div className="card-body main-nav">
-                Images and information during World War II.
-              </div>
-            </div>
-            <VerticalTimeline>
-              {ww2TimelineObjects.map((card, i) => (
-                <VerticalTimelineElement
-                  className="vertical-timeline-element--work"
-                  key={i}
-                  iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
-                  paddingTop="0em"
-
-                  //icon={<Print/>}
+          <div ref={this.myRef} className="back">
+            <div id="landing">
+              <Greeting
+                style={{
+                  minHeight: "100vh",
+                  opacity: "100%",
+                  isCentered: true,
+                  color: "#000000",
+                  parallaxOffset: "100"
+                }}
+                imageSrc={GreetImage}
+              >
+                <h3>The Berelson Project</h3>
+                <Button
+                  variant="outlined"
+                  onClick={() => {
+                    this.scrollDiv.current.scrollIntoView({
+                      behavior: "smooth"
+                    });
+                  }}
                 >
-                  <div>
-                    <Card className="card">
-                      <CardActionArea>
-                        <CardMedia
-                          style={{ height: 0, paddingTop: "50%" }}
-                          image={card.image}
-                        />
-                        <CardContent>
-                          <Typography gutterBottom variant="h5" component="h2">
-                            {card.title}
-                          </Typography>
-                          <Typography component="p">{card.subtitle}</Typography>
-                        </CardContent>
-                      </CardActionArea>
-                      <CardActions>
-                        <Button
-                          size="small"
-                          color="primary"
-                          component={Link}
-                          to={card.path}
-                        >
-                          Learn More
-                        </Button>
-                      </CardActions>
-                    </Card>
-                  </div>
-                </VerticalTimelineElement>
-              ))}
-            </VerticalTimeline>
+                  Explore Timeline
+                </Button>
+              </Greeting>
+            </div>
+            <div ref={this.scrollDiv}>
+              <div id="timeline-start" href="/timeline" />
+              <VerticalTimeline>
+                {ww2TimelineObjects.map((card, i) => (
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    key={i}
+                    iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                    paddingTop="0em"
+
+                    //icon={<Print/>}
+                  >
+                    <div>
+                      <Card className="card">
+                        <CardActionArea>
+                          <CardMedia
+                            style={{ height: 0, paddingTop: "50%" }}
+                            image={card.image}
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              {card.title}
+                            </Typography>
+                            <Typography component="p">
+                              {card.subtitle}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                          <Button
+                            size="small"
+                            color="primary"
+                            component={Link}
+                            to={card.path}
+                          >
+                            Learn More
+                          </Button>
+                        </CardActions>
+                      </Card>
+                    </div>
+                  </VerticalTimelineElement>
+                ))}
+              </VerticalTimeline>
+            </div>
           </div>
         </Switch>
       </Router>

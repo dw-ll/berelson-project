@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import Card from "@material-ui/core/Card";
@@ -7,7 +7,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-
+import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
 import {
   VerticalTimeline,
@@ -22,9 +22,10 @@ import Henry from "../../gallery/component/people/pre_henry.jsx";
 import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
-
+import ChanaGreet from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
+import { create } from "jss";
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
 const routes = [
@@ -52,14 +53,14 @@ const routes = [
     component: Jolly,
     path: "/pre/jolly_boys"
   },
-   {
+  {
     component: Leon,
     path: "/pre/leon"
   },
-   {
+  {
     component: Lodz,
     path: "/pre/lodz"
-  },
+  }
 ];
 const preTimelineObjects = [
   {
@@ -113,25 +114,59 @@ const preTimelineObjects = [
 ];
 
 class Line extends Component {
+  constructor(props) {
+    super(props);
+    this.scrollDiv = createRef();
+    this.myRef = React.createRef(); // Create a ref object
+  }
+
+  componentDidMount() {
+    this.myRef.current.scrollTo(0, 0);
+  }
+  handleScrollToElement(event) {
+    window.scrollTo(0, this.myRef.current.offsetTop);
+  }
+
   render() {
     return (
       <Router>
-          <Switch>
-            {routes.map((route, i) => (
-              <Route
-                path={route.path}
-                exact
-                render={() => {
-                  return <route.component />;
+        <Switch>
+          {routes.map((route, i) => (
+            <Route
+              path={route.path}
+              exact
+              render={() => {
+                return <route.component />;
+              }}
+            />
+          ))}
+          <div ref={this.myRef} className="back">
+            <div id="landing">
+              <Greeting
+                style={{
+                  minHeight: "100vh",
+                  opacity: "100%",
+                  isCentered: true,
+                  color: "#000000",
+                  parallaxOffset: "100"
                 }}
-              />
-            ))}
-            <div className="back">
-              <div className="card card-default post-body">
-                <div className="card-body main-nav">
-                  Images and information from before World War II.
-                </div>
-              </div>
+                imageSrc={ChanaGreet}
+              >
+                <h3>The Berelson Project</h3>
+                <Button
+                  variant="outlined"
+                  onClick={() => {
+                    this.scrollDiv.current.scrollIntoView({
+                      behavior: "smooth"
+                    });
+                  }}
+                >
+                  Explore Timeline
+                </Button>
+              </Greeting>
+            </div>
+            <div ref={this.scrollDiv}>
+              <div id="timeline-start" href="/timeline" />
               <VerticalTimeline>
                 {preTimelineObjects.map((card, i) => (
                   <VerticalTimelineElement
@@ -181,8 +216,8 @@ class Line extends Component {
                 ))}
               </VerticalTimeline>
             </div>
-          </Switch>
-       
+          </div>
+        </Switch>
       </Router>
     );
   }
