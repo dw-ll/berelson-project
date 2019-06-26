@@ -82,10 +82,10 @@ class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
-    this.attachRef = target => this.setState({target});
-     this.state = {
-       show: false
-     };
+    this.attachRef = target => this.setState({ target });
+    this.state = {
+      show: false
+    };
   }
 
   handleScrollToElement(event) {
@@ -119,8 +119,8 @@ class Line extends Component {
                 imageSrc={FoniaGreet}
               >
                 <h3>The Berelson Project</h3>
-                <Button 
-                  variant = 'outlined'
+                <Button
+                  variant="outlined"
                   onClick={() => {
                     this.scrollDiv.current.scrollIntoView({
                       behavior: "smooth"
@@ -139,6 +139,7 @@ class Line extends Component {
                   that spans both sides of the second World War.
                 </h6>
               </div>
+
               <VerticalTimeline>
                 {timelineObjects.map((card, i) => (
                   <VerticalTimelineElement

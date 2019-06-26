@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
+import {CircleArrow as ScrollUpButton } from "react-scroll-up-button"; 
 import {
   DropdownItem,
   NavLink,
@@ -116,6 +117,7 @@ class App extends Component {
               </Navbar>
 
               <Line />
+              <div><ScrollUpButton/></div>
             </div>
           </Switch>
         
