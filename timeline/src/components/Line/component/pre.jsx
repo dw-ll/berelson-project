@@ -9,117 +9,110 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
+
+import Abram from "../../../gallery/component/people/pre_abram.jsx";
+import Chana from "../../../gallery/component/people/pre_chana.jsx";
+import David from "../../../gallery/component/people/pre_david.jsx";
+import Gita from "../../../gallery/component/people/pre_gita.jsx";
+import Henry from "../../../gallery/component/people/pre_henry.jsx";
+import Jolly from "../../../gallery/component/people/pre_jolly.jsx";
+import Leon from "../../../gallery/component/people/pre_leon.jsx";
+import Lodz from "../../../gallery/component/people/pre_lodz.jsx";
+import ChanaGreet from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
+
 import "react-vertical-timeline-component/style.min.css";
 
-import Adolfo from "../../gallery/component/people/present_adolfo.jsx";
-import Carol from "../../gallery/component/people/present_carol.jsx";
-import Ed from "../../gallery/component/people/present_ed.jsx";
-import Fonia from "../../gallery/component/people/present_fonia.jsx";
-import Henry from "../../gallery/component/people/present_henry.jsx";
-import Jack from "../../gallery/component/people/present_jack.jsx";
-import Mordecai from "../../gallery/component/people/present_mordecai.jsx";
-import Pola from "../../gallery/component/people/present_pola.jsx";
-import Rachel from "../../gallery/component/people/present_rachel.jsx";
-import Riva from "../../gallery/component/people/present_riva.jsx";
-import Sevek from "../../gallery/component/people/present_sevek.jsx";
-import Starski from "../../gallery/component/people/present_starski.jsx";
-import GreetImage from "../../Media/Modern/Sevek259.jpeg";
+//import {Print} from 'material-ui-icons/AccessAlarm';
 
 const routes = [
-  { component: Adolfo, path: "/present/adolfo" },
-  { component: Carol, path: "/present/carol" },
-  { component: Ed, path: "/present/ed" },
-  { component: Fonia, path: "/present/fonia" },
-  { component: Henry, path: "/present/henry" },
-  { component: Jack, path: "/present/jack" },
-  { component: Mordecai, path: "/present/mordecai" },
-  { component: Pola, path: "/present/pola" },
-  { component: Rachel, path: "/present/rachel" },
-  { component: Riva, path: "/present/riva" },
-  { component: Sevek, path: "/present/sevek" },
-  { component: Starski, path: "/present/starski" }
+  {
+    component: Abram,
+    path: "/pre/abram"
+  },
+  {
+    component: Chana,
+    path: "/pre/chana"
+  },
+  {
+    component: David,
+    path: "/pre/david"
+  },
+  {
+    component: Gita,
+    path: "/pre/gita"
+  },
+  {
+    component: Henry,
+    path: "/pre/henry"
+  },
+  {
+    component: Jolly,
+    path: "/pre/jolly_boys"
+  },
+  {
+    component: Leon,
+    path: "/pre/leon"
+  },
+  {
+    component: Lodz,
+    path: "/pre/lodz"
+  }
 ];
-const presentTimelineObjects = [
+const preTimelineObjects = [
   {
-    title: "Adolfo Spzilman",
-    subtitle: "More info about Adolfo.",
-    image: require("../../Media/Modern/Adolfo.Szpilman098.jpeg"),
-    path: "/present/adolfo"
+    title: "Abram Baigelman",
+    subtitle: "More info about Abram.",
+    image: require("../../Media/Pre-WWII/Abram.Baigelman026.jpeg"),
+    path: "/pre/abram"
   },
   {
-    title: "Carol",
-    subtitle: "More info about Carol.",
-    image: require("../../Media/Modern/Carol344.jpeg"),
-    path: "/present/carol"
+    title: "Chana Fodeman",
+    subtitle: "More info about Chana.",
+    image: require("../../Media/Pre-WWII/Chana.Fodeman025 2.jpeg"),
+    path: "/pre/chana"
   },
   {
-    title: "Ed",
-    subtitle: "More info about Ed.",
-    image: require("../../Media/Modern/Ed.Silver089.jpeg"),
-    path: "/present/ed"
+    title: "David Baigelman",
+    subtitle: "More info about David.",
+    image: require("../../Media/Pre-WWII/David.Baigelman016 2.jpeg"),
+    path: "/pre/david"
   },
   {
-    title: "Fonia",
-    subtitle: "More info about Fonia.",
-    image: require("../../Media/Modern/Fonia239.jpeg"),
-    path: "/present/fonia"
+    title: "Gita Baigelman",
+    subtitle: "More info about Gita.",
+    image: require("../../Media/Pre-WWII/Gita.Baigelman137.jpeg"),
+    path: "/pre/gita"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
-    image: require("../../Media/Modern/Henry367.jpeg"),
-    path: "/present/henry"
+    image: require("../../Media/Pre-WWII/Henry.Baigelman002.jpeg"),
+    path: "/pre/henry"
   },
   {
-    title: "Jack Baigelman",
-    subtitle: "More info about Jack.",
-    image: require("../../Media/Modern/Jack.Baigelman061.jpeg"),
-    path: "/present/jack"
+    title: "Jolly Boys",
+    subtitle: "More info about the Jolly Boys.",
+    image: require("../../Media/Pre-WWII/Jolly.Bays008.jpeg"),
+    path: "/pre/jolly_boys"
   },
   {
-    title: "Mordecai",
-    subtitle: "More info about Mordecai.",
-    image: require("../../Media/Modern/Mordecai186.jpeg"),
-    path: "/present/mordecai"
+    title: "Leon Glazer",
+    subtitle: "More info about Leon.",
+    image: require("../../Media/Pre-WWII/Leon.Glazer143.jpeg"),
+    path: "/pre/leon"
   },
   {
-    title: "Pola",
-    subtitle: "More info about Pola.",
-    image: require("../../Media/Modern/pola179.jpeg"),
-    path: "/present/pola"
-  },
-  {
-    title: "Rachel",
-    subtitle: "More info about Rachel.",
-    image: require("../../Media/Modern/Rachel188.jpeg"),
-    path: "/present/rachel"
-  },
-  {
-    title: "Riva",
-    subtitle: "More info about Riva.",
-    image: require("../../Media/Modern/Riva346.jpeg"),
-    path: "/present/riva"
-  },
-  {
-    title: "Sevek",
-    subtitle: "More info about Sevek.",
-    image: require("../../Media/Modern/Sevek267.jpeg"),
-    path: "/present/sevek"
-  },
-  {
-    title: "Starski",
-    subtitle: "More info about Starski.",
-    image: require("../../Media/Modern/Starski083.jpeg"),
-    path: "/present/starski"
+    title: "Lodz Theatre",
+    subtitle: "More info about the Lodz Theatre.",
+    image: require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg"),
+    path: "/pre/lodz"
   }
 ];
 
-//import {Print} from 'material-ui-icons/AccessAlarm';
 class Line extends Component {
   constructor(props) {
     super(props);
@@ -157,7 +150,7 @@ class Line extends Component {
                   color: "#000000",
                   parallaxOffset: "100"
                 }}
-                imageSrc={GreetImage}
+                imageSrc={ChanaGreet}
               >
                 <h3>The Berelson Project</h3>
                 <Button
@@ -175,11 +168,14 @@ class Line extends Component {
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline" />
               <VerticalTimeline>
-                {presentTimelineObjects.map((card, i) => (
+                {preTimelineObjects.map((card, i) => (
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     key={i}
-                    iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
+                    iconStyle={{
+                      background: "rgb(40,49,72)",
+                      color: "#000"
+                    }}
                     paddingTop="0em"
 
                     //icon={<Print/>}

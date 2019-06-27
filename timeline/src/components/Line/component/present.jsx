@@ -7,68 +7,119 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
+import Typography from "@material-ui/core/Typography";
 
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
-
-import Gita from "../../gallery/component/people/ww2_gita.jsx";
-import Henry from "../../gallery/component/people/ww2_henry.jsx";
-import Happy from "../../gallery/component/people/ww2_happy.jsx";
-import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
-import GreetImage from "../../Media/WWII/HappyBoys4282.jpeg";
-
 import "react-vertical-timeline-component/style.min.css";
+
+import Adolfo from "../../../gallery/component/people/present_adolfo.jsx";
+import Carol from "../../../gallery/component/people/present_carol.jsx";
+import Ed from "../../../gallery/component/people/present_ed.jsx";
+import Fonia from "../../../gallery/component/people/present_fonia.jsx";
+import Henry from "../../../gallery/component/people/present_henry.jsx";
+import Jack from "../../../gallery/component/people/present_jack.jsx";
+import Mordecai from "../../../gallery/component/people/present_mordecai.jsx";
+import Pola from "../../../gallery/component/people/present_pola.jsx";
+import Rachel from "../../../gallery/component/people/present_rachel.jsx";
+import Riva from "../../../gallery/component/people/present_riva.jsx";
+import Sevek from "../../../gallery/component/people/present_sevek.jsx";
+import Starski from "../../../gallery/component/people/present_starski.jsx";
+import GreetImage from "../../Media/Modern/Sevek259.jpeg";
+
 const routes = [
-  {
-    component: Gita,
-    path: "/ww2/gita"
-  },
-  {
-    component: Happy,
-    path: "/ww2/happy_boys"
-  },
-  {
-    component: Henry,
-    path: "/ww2/henry"
-  },
-  {
-    component: Rachella,
-    path: "/ww2/rachella"
-  }
+  { component: Adolfo, path: "/present/adolfo" },
+  { component: Carol, path: "/present/carol" },
+  { component: Ed, path: "/present/ed" },
+  { component: Fonia, path: "/present/fonia" },
+  { component: Henry, path: "/present/henry" },
+  { component: Jack, path: "/present/jack" },
+  { component: Mordecai, path: "/present/mordecai" },
+  { component: Pola, path: "/present/pola" },
+  { component: Rachel, path: "/present/rachel" },
+  { component: Riva, path: "/present/riva" },
+  { component: Sevek, path: "/present/sevek" },
+  { component: Starski, path: "/present/starski" }
 ];
-const ww2TimelineObjects = [
+const presentTimelineObjects = [
   {
-    title: "Gita Baigelman",
-    subtitle: "More info about Gita.",
-    image: require("../../Media/WWII/gita.Baigelman144.jpeg"),
-    path: "/ww2/gita"
+    title: "Adolfo Spzilman",
+    subtitle: "More info about Adolfo.",
+    image: require("../../Media/Modern/Adolfo.Szpilman098.jpeg"),
+    path: "/present/adolfo"
   },
   {
-    title: "Happy Boys",
-    subtitle: "More info about the Happy Boys.",
-    image: require("../../Media/WWII/HappyBoys4282.jpeg"),
-    path: "/ww2/happy_boys"
+    title: "Carol",
+    subtitle: "More info about Carol.",
+    image: require("../../Media/Modern/Carol344.jpeg"),
+    path: "/present/carol"
+  },
+  {
+    title: "Ed",
+    subtitle: "More info about Ed.",
+    image: require("../../Media/Modern/Ed.Silver089.jpeg"),
+    path: "/present/ed"
+  },
+  {
+    title: "Fonia",
+    subtitle: "More info about Fonia.",
+    image: require("../../Media/Modern/Fonia239.jpeg"),
+    path: "/present/fonia"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
-    image: require("../../Media/WWII/Henry.Baigelman118.jpeg"),
-    path: "/ww2/henry"
+    image: require("../../Media/Modern/Henry367.jpeg"),
+    path: "/present/henry"
   },
   {
-    title: "Rachella",
-    subtitle: "More info about Rachella.",
-    image: require("../../Media/WWII/Rachella148.jpeg"),
-    path: "/ww2/rachella"
+    title: "Jack Baigelman",
+    subtitle: "More info about Jack.",
+    image: require("../../Media/Modern/Jack.Baigelman061.jpeg"),
+    path: "/present/jack"
+  },
+  {
+    title: "Mordecai",
+    subtitle: "More info about Mordecai.",
+    image: require("../../Media/Modern/Mordecai186.jpeg"),
+    path: "/present/mordecai"
+  },
+  {
+    title: "Pola",
+    subtitle: "More info about Pola.",
+    image: require("../../Media/Modern/pola179.jpeg"),
+    path: "/present/pola"
+  },
+  {
+    title: "Rachel",
+    subtitle: "More info about Rachel.",
+    image: require("../../Media/Modern/Rachel188.jpeg"),
+    path: "/present/rachel"
+  },
+  {
+    title: "Riva",
+    subtitle: "More info about Riva.",
+    image: require("../../Media/Modern/Riva346.jpeg"),
+    path: "/present/riva"
+  },
+  {
+    title: "Sevek",
+    subtitle: "More info about Sevek.",
+    image: require("../../Media/Modern/Sevek267.jpeg"),
+    path: "/present/sevek"
+  },
+  {
+    title: "Starski",
+    subtitle: "More info about Starski.",
+    image: require("../../Media/Modern/Starski083.jpeg"),
+    path: "/present/starski"
   }
 ];
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
-
 class Line extends Component {
   constructor(props) {
     super(props);
@@ -82,6 +133,7 @@ class Line extends Component {
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
+
   render() {
     return (
       <Router>
@@ -95,7 +147,6 @@ class Line extends Component {
               }}
             />
           ))}
-
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
@@ -124,7 +175,7 @@ class Line extends Component {
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline" />
               <VerticalTimeline>
-                {ww2TimelineObjects.map((card, i) => (
+                {presentTimelineObjects.map((card, i) => (
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     key={i}
@@ -137,7 +188,7 @@ class Line extends Component {
                       <Card className="card">
                         <CardActionArea>
                           <CardMedia
-                            style={{ height: 0, paddingTop: "50%" }}
+                            style={{ height: 0, paddingTop: "100%" }}
                             image={card.image}
                           />
                           <CardContent>

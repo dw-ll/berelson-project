@@ -7,111 +7,67 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
+import Greeting from "react-lazy-hero";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 
-import Abram from "../../gallery/component/people/pre_abram.jsx";
-import Chana from "../../gallery/component/people/pre_chana.jsx";
-import David from "../../gallery/component/people/pre_david.jsx";
-import Gita from "../../gallery/component/people/pre_gita.jsx";
-import Henry from "../../gallery/component/people/pre_henry.jsx";
-import Jolly from "../../gallery/component/people/pre_jolly.jsx";
-import Leon from "../../gallery/component/people/pre_leon.jsx";
-import Lodz from "../../gallery/component/people/pre_lodz.jsx";
-import ChanaGreet from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
+import Gita from "../../../gallery/component/people/ww2_gita.jsx";
+import Henry from "../../../gallery/component/people/ww2_henry.jsx";
+import Happy from "../../../gallery/component/people/ww2_happy.jsx";
+import Rachella from "../../../gallery/component/people/ww2_rachella.jsx";
+import GreetImage from "../../Media/WWII/HappyBoys4282.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
-
-//import {Print} from 'material-ui-icons/AccessAlarm';
-
 const routes = [
   {
-    component: Abram,
-    path: "/pre/abram"
-  },
-  {
-    component: Chana,
-    path: "/pre/chana"
-  },
-  {
-    component: David,
-    path: "/pre/david"
-  },
-  {
     component: Gita,
-    path: "/pre/gita"
+    path: "/ww2/gita"
+  },
+  {
+    component: Happy,
+    path: "/ww2/happy_boys"
   },
   {
     component: Henry,
-    path: "/pre/henry"
+    path: "/ww2/henry"
   },
   {
-    component: Jolly,
-    path: "/pre/jolly_boys"
-  },
-  {
-    component: Leon,
-    path: "/pre/leon"
-  },
-  {
-    component: Lodz,
-    path: "/pre/lodz"
+    component: Rachella,
+    path: "/ww2/rachella"
   }
 ];
-const preTimelineObjects = [
-  {
-    title: "Abram Baigelman",
-    subtitle: "More info about Abram.",
-    image: require("../../Media/Pre-WWII/Abram.Baigelman026.jpeg"),
-    path: "/pre/abram"
-  },
-  {
-    title: "Chana Fodeman",
-    subtitle: "More info about Chana.",
-    image: require("../../Media/Pre-WWII/Chana.Fodeman025 2.jpeg"),
-    path: "/pre/chana"
-  },
-  {
-    title: "David Baigelman",
-    subtitle: "More info about David.",
-    image: require("../../Media/Pre-WWII/David.Baigelman016 2.jpeg"),
-    path: "/pre/david"
-  },
+const ww2TimelineObjects = [
   {
     title: "Gita Baigelman",
     subtitle: "More info about Gita.",
-    image: require("../../Media/Pre-WWII/Gita.Baigelman137.jpeg"),
-    path: "/pre/gita"
+    image: require("../../Media/WWII/gita.Baigelman144.jpeg"),
+    path: "/ww2/gita"
+  },
+  {
+    title: "Happy Boys",
+    subtitle: "More info about the Happy Boys.",
+    image: require("../../Media/WWII/HappyBoys4282.jpeg"),
+    path: "/ww2/happy_boys"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
-    image: require("../../Media/Pre-WWII/Henry.Baigelman002.jpeg"),
-    path: "/pre/henry"
+    image: require("../../Media/WWII/Henry.Baigelman118.jpeg"),
+    path: "/ww2/henry"
   },
   {
-    title: "Jolly Boys",
-    subtitle: "More info about the Jolly Boys.",
-    image: require("../../Media/Pre-WWII/Jolly.Bays008.jpeg"),
-    path: "/pre/jolly_boys"
-  },
-  {
-    title: "Leon Glazer",
-    subtitle: "More info about Leon.",
-    image: require("../../Media/Pre-WWII/Leon.Glazer143.jpeg"),
-    path: "/pre/leon"
-  },
-  {
-    title: "Lodz Theatre",
-    subtitle: "More info about the Lodz Theatre.",
-    image: require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg"),
-    path: "/pre/lodz"
+    title: "Rachella",
+    subtitle: "More info about Rachella.",
+    image: require("../../Media/WWII/Rachella148.jpeg"),
+    path: "/ww2/rachella"
   }
 ];
+
+//import {Print} from 'material-ui-icons/AccessAlarm';
 
 class Line extends Component {
   constructor(props) {
@@ -126,7 +82,6 @@ class Line extends Component {
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
-
   render() {
     return (
       <Router>
@@ -140,6 +95,7 @@ class Line extends Component {
               }}
             />
           ))}
+
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
@@ -150,7 +106,7 @@ class Line extends Component {
                   color: "#000000",
                   parallaxOffset: "100"
                 }}
-                imageSrc={ChanaGreet}
+                imageSrc={GreetImage}
               >
                 <h3>The Berelson Project</h3>
                 <Button
@@ -168,14 +124,11 @@ class Line extends Component {
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline" />
               <VerticalTimeline>
-                {preTimelineObjects.map((card, i) => (
+                {ww2TimelineObjects.map((card, i) => (
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     key={i}
-                    iconStyle={{
-                      background: "rgb(40,49,72)",
-                      color: "#000"
-                    }}
+                    iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
                     paddingTop="0em"
 
                     //icon={<Print/>}
@@ -184,7 +137,7 @@ class Line extends Component {
                       <Card className="card">
                         <CardActionArea>
                           <CardMedia
-                            style={{ height: 0, paddingTop: "100%" }}
+                            style={{ height: 0, paddingTop: "50%" }}
                             image={card.image}
                           />
                           <CardContent>

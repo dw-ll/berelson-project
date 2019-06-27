@@ -14,20 +14,20 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Ed from "../../gallery/component/people/post_ed.jsx";
-import Fonia from "../../gallery/component/people/post_fonia.jsx";
-import Gita from "../../gallery/component/people/post_gita.jsx";
-import Henry from "../../gallery/component/people/post.henry.jsx";
-import Jack from "../../gallery/component/people/post_jack.jsx";
-import Justina from "../../gallery/component/people/post_justina.jsx";
-import Katie from "../../gallery/component/people/post_katie.jsx";
-import Levin from "../../gallery/component/people/post_levin.jsx";
-import Pinek from "../../gallery/component/people/post_pinek.jsx";
-import Pola from "../../gallery/component/people/post_pola.jsx";
-import Rachella from "../../gallery/component/people/post_rachella.jsx";
-import Riva from "../../gallery/component/people/post_riva.jsx";
-import Sam from "../../gallery/component/people/post_sam.jsx";
-import Sandy from "../../gallery/component/people/post_sandy.jsx";
+import Ed from "../../../gallery/component/people/post_ed.jsx";
+import Fonia from "../../../gallery/component/people/post_fonia.jsx";
+import Gita from "../../../gallery/component/people/post_gita.jsx";
+import Henry from "../../../gallery/component/people/post.henry.jsx";
+import Jack from "../../../gallery/component/people/post_jack.jsx";
+import Justina from "../../../gallery/component/people/post_justina.jsx";
+import Katie from "../../../gallery/component/people/post_katie.jsx";
+import Levin from "../../../gallery/component/people/post_levin.jsx";
+import Pinek from "../../../gallery/component/people/post_pinek.jsx";
+import Pola from "../../../gallery/component/people/post_pola.jsx";
+import Rachella from "../../../gallery/component/people/post_rachella.jsx";
+import Riva from "../../../gallery/component/people/post_riva.jsx";
+import Sam from "../../../gallery/component/people/post_sam.jsx";
+import Sandy from "../../../gallery/component/people/post_sandy.jsx";
 import GreetImage from "../../Media/Post-WWII 2/rachella156.jpeg";
 
 const routes = [
