@@ -79,6 +79,7 @@ const timelineObjects = [
   }
 ];
 
+const popSide = "left";
 export default class Line extends Component {
   constructor(props) {
     super(props);
@@ -86,7 +87,7 @@ export default class Line extends Component {
     this.attachRef = target => this.setState({ target });
     this.state = {
       popped: false,
-      side: "right"
+      side: false
     };
   }
 
@@ -102,7 +103,8 @@ export default class Line extends Component {
   };
   handleRequestClose = () => {
     this.setState({
-      popped: false
+      popped: false,
+      side: !this.state.side
     });
   };
 
@@ -180,7 +182,7 @@ export default class Line extends Component {
 
                     //icon={<Print/>}
                   >
-                    <div>
+                    <div className={this.state.side ? "right" : "left"}>
                       <Card className="card">
                         <CardActionArea>
                           <CardMedia
@@ -214,7 +216,7 @@ export default class Line extends Component {
                           open={this.state.popped}
                           anchorEl={this.state.anchorEl}
                           anchorOrigin={{
-                            horizontal: this.state.side,
+                            horizontal: !this.state.side,
                             vertical: "center "
                           }}
                           transformOrigin={{
