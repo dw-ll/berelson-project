@@ -79,7 +79,6 @@ const timelineObjects = [
   }
 ];
 
-const popSide = "left";
 export default class Line extends Component {
   constructor(props) {
     super(props);
@@ -87,7 +86,6 @@ export default class Line extends Component {
     this.attachRef = target => this.setState({ target });
     this.state = {
       popped: false,
-      side: false
     };
   }
 
@@ -104,7 +102,7 @@ export default class Line extends Component {
   handleRequestClose = () => {
     this.setState({
       popped: false,
-      side: !this.state.side
+
     });
   };
 
@@ -171,7 +169,8 @@ export default class Line extends Component {
 
               <VerticalTimeline>
                 {timelineObjects.map((card, i) => (
-                  <VerticalTimelineElement
+                  (i % 2 === 0 ?
+                     <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     key={i}
                     iconStyle={{
@@ -182,7 +181,7 @@ export default class Line extends Component {
 
                     //icon={<Print/>}
                   >
-                    <div className={this.state.side ? "right" : "left"}>
+                    <div>
                       <Card className="card">
                         <CardActionArea>
                           <CardMedia
@@ -210,17 +209,17 @@ export default class Line extends Component {
                           //to={card.path}
                           onClick={this.handlePop}
                         >
-                          Learn More
+                          Learn More, index: {i}, RIGHT
                         </Button>
                         <Popover
                           open={this.state.popped}
                           anchorEl={this.state.anchorEl}
                           anchorOrigin={{
-                            horizontal: !this.state.side,
+                            horizontal: 'right',
                             vertical: "center "
                           }}
                           transformOrigin={{
-                            horizontal: this.state.side,
+                            horizontal: 'right',
                             vertical: "bottom"
                           }}
                           onClose={this.handleRequestClose}
@@ -230,7 +229,68 @@ export default class Line extends Component {
                       </Card>
                     </div>
                   </VerticalTimelineElement>
-                ))}
+                :   // 
+                 <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    key={i}
+                    iconStyle={{
+                      background: "rgb(40,49,72)",
+                      color: "#000"
+                    }}
+                    paddingTop="0em"
+
+                    //icon={<Print/>}
+                  >
+                    <div>
+                      <Card className="card">
+                        <CardActionArea>
+                          <CardMedia
+                            style={{ height: 0, paddingTop: "100%" }}
+                            image={card.image}
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              {card.title}
+                            </Typography>
+                            <Typography component="p">
+                              {card.subtitle}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+
+                        <Button
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          //to={card.path}
+                          onClick={this.handlePop}
+                        >
+                          Learn More, index : {i}, LEFT
+                        </Button>
+                        <Popover
+                          open={this.state.popped}
+                          anchorEl={this.state.anchorEl}
+                          anchorOrigin={{
+                            horizontal: 'left',
+                            vertical: "center "
+                          }}
+                          transformOrigin={{
+                            horizontal: 'left',
+                            vertical: "bottom"
+                          }}
+                          onClose={this.handleRequestClose}
+                        >
+                          Whaddup
+                        </Popover>
+                      </Card>
+                    </div>
+                  </VerticalTimelineElement>
+                  )))}
+                 
               </VerticalTimeline>
             </div>
           </div>
