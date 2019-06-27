@@ -165,9 +165,9 @@ class Line extends Component {
               <Greeting
                 style={{
                   minHeight: "100vh",
-                  opacity: "100%",
+                  opacity: "0.9",
                   isCentered: true,
-                  color: "#000000",
+                  color: "#ffffff",
                   parallaxOffset: "100"
                 }}
                 imageSrc={GreetImage}
