@@ -1,6 +1,6 @@
 import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import { render } from "react-dom";
 import { Switch } from "react-router";
 
 import {
@@ -16,12 +16,12 @@ import WWII from "./ww2";
 import About from "./about";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
+import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
 
@@ -79,19 +79,32 @@ const timelineObjects = [
   }
 ];
 
-class Line extends Component {
+export default class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
     this.attachRef = target => this.setState({ target });
     this.state = {
-      show: false
+      popped: false,
+      side: "right"
     };
   }
 
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
+  handlePop = e => {
+    e.preventDefault();
+    this.setState({
+      popped: true,
+      anchorEl: e.currentTarget
+    });
+  };
+  handleRequestClose = () => {
+    this.setState({
+      popped: false
+    });
+  };
 
   render() {
     return (
@@ -142,8 +155,10 @@ class Line extends Component {
                   </h6>
                 </div>
                 <div>
-                             <ButtonGroup size="small" aria-label="Small outlined button group">
-
+                  <ButtonGroup
+                    size="small"
+                    aria-label="Small outlined button group"
+                  >
                     <Button>Pre WW2</Button>
                     <Button>WW2</Button>
                     <Button>Post WW2</Button>
@@ -185,16 +200,31 @@ class Line extends Component {
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <CardActions>
-                          <Button
-                            size="small"
-                            color="primary"
-                            component={Link}
-                            to={card.path}
-                          >
-                            Learn More
-                          </Button>
-                        </CardActions>
+
+                        <Button
+                          size="small"
+                          color="primary"
+                          component={Link}
+                          //to={card.path}
+                          onClick={this.handlePop}
+                        >
+                          Learn More
+                        </Button>
+                        <Popover
+                          open={this.state.popped}
+                          anchorEl={this.state.anchorEl}
+                          anchorOrigin={{
+                            horizontal: this.state.side,
+                            vertical: "center "
+                          }}
+                          transformOrigin={{
+                            horizontal: this.state.side,
+                            vertical: "bottom"
+                          }}
+                          onClose={this.handleRequestClose}
+                        >
+                          Whaddup
+                        </Popover>
                       </Card>
                     </div>
                   </VerticalTimelineElement>
@@ -207,4 +237,4 @@ class Line extends Component {
     );
   }
 }
-export default Line;
+render(<Line />, document.getElementById("root"));

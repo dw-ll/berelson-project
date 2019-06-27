@@ -25,7 +25,7 @@ import Lodz from "../../gallery/component/people/pre_lodz.jsx";
 import ChanaGreet from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
-import { create } from "jss";
+
 //import {Print} from 'material-ui-icons/AccessAlarm';
 
 const routes = [
