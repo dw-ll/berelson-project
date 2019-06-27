@@ -9,127 +9,113 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Ed from "../../../gallery/component/people/post_ed.jsx";
-import Fonia from "../../../gallery/component/people/post_fonia.jsx";
-import Gita from "../../../gallery/component/people/post_gita.jsx";
-import Henry from "../../../gallery/component/people/post.henry.jsx";
-import Jack from "../../../gallery/component/people/post_jack.jsx";
-import Justina from "../../../gallery/component/people/post_justina.jsx";
-import Katie from "../../../gallery/component/people/post_katie.jsx";
-import Levin from "../../../gallery/component/people/post_levin.jsx";
-import Pinek from "../../../gallery/component/people/post_pinek.jsx";
-import Pola from "../../../gallery/component/people/post_pola.jsx";
-import Rachella from "../../../gallery/component/people/post_rachella.jsx";
-import Riva from "../../../gallery/component/people/post_riva.jsx";
-import Sam from "../../../gallery/component/people/post_sam.jsx";
-import Sandy from "../../../gallery/component/people/post_sandy.jsx";
-import GreetImage from "../../Media/Post-WWII 2/rachella156.jpeg";
+
+import Adolfo from "../../gallery/component/people/present_adolfo.jsx";
+import Carol from "../../gallery/component/people/present_carol.jsx";
+import Ed from "../../gallery/component/people/present_ed.jsx";
+import Fonia from "../../gallery/component/people/present_fonia.jsx";
+import Henry from "../../gallery/component/people/present_henry.jsx";
+import Jack from "../../gallery/component/people/present_jack.jsx";
+import Mordecai from "../../gallery/component/people/present_mordecai.jsx";
+import Pola from "../../gallery/component/people/present_pola.jsx";
+import Rachel from "../../gallery/component/people/present_rachel.jsx";
+import Riva from "../../gallery/component/people/present_riva.jsx";
+import Sevek from "../../gallery/component/people/present_sevek.jsx";
+import Starski from "../../gallery/component/people/present_starski.jsx";
+import GreetImage from "../../Media/Modern/Sevek259.jpeg";
 
 const routes = [
-  { component: Ed, path: "/post/ed" },
-  { component: Fonia, path: "/post/fonia" },
-  { component: Gita, path: "/post/gita" },
-  { component: Henry, path: "/post/henry" },
-  { component: Jack, path: "/post/jack" },
-  { component: Justina, path: "/post/justina" },
-  { component: Katie, path: "/post/katie" },
-  { component: Levin, path: "/post/levin" },
-  { component: Pinek, path: "/post/pinek" },
-  { component: Pola, path: "/post/pola" },
-  { component: Rachella, path: "/post/rachella" },
-  { component: Riva, path: "/post/riva" },
-  { component: Sam, path: "/post/sam" },
-  { component: Sandy, path: "/post/sandy" }
+  { component: Adolfo, path: "/present/adolfo" },
+  { component: Carol, path: "/present/carol" },
+  { component: Ed, path: "/present/ed" },
+  { component: Fonia, path: "/present/fonia" },
+  { component: Henry, path: "/present/henry" },
+  { component: Jack, path: "/present/jack" },
+  { component: Mordecai, path: "/present/mordecai" },
+  { component: Pola, path: "/present/pola" },
+  { component: Rachel, path: "/present/rachel" },
+  { component: Riva, path: "/present/riva" },
+  { component: Sevek, path: "/present/sevek" },
+  { component: Starski, path: "/present/starski" }
 ];
-const postTimelineObjects = [
+const presentTimelineObjects = [
+  {
+    title: "Adolfo Spzilman",
+    subtitle: "More info about Adolfo.",
+    image: require("../../Media/Modern/Adolfo.Szpilman098.jpeg"),
+    path: "/present/adolfo"
+  },
+  {
+    title: "Carol",
+    subtitle: "More info about Carol.",
+    image: require("../../Media/Modern/Carol344.jpeg"),
+    path: "/present/carol"
+  },
   {
     title: "Ed",
     subtitle: "More info about Ed.",
-    image: require("../../Media/Post-WWII 2/Ed.Silver091.jpeg"),
-    path: "/post/ed"
+    image: require("../../Media/Modern/Ed.Silver089.jpeg"),
+    path: "/present/ed"
   },
   {
     title: "Fonia",
     subtitle: "More info about Fonia.",
-    image: require("../../Media/Post-WWII 2/Fonia220.jpeg"),
-    path: "/post/fonia"
-  },
-  {
-    title: "Gita Baigelman",
-    subtitle: "More info about Gita.",
-    image: require("../../Media/Post-WWII 2/Gita.Baigelman120.jpeg"),
-    path: "/post/gita"
+    image: require("../../Media/Modern/Fonia239.jpeg"),
+    path: "/present/fonia"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
-    image: require("../../Media/Post-WWII 2/Henry.Baigelman119.jpeg"),
-    path: "/post/henry"
+    image: require("../../Media/Modern/Henry367.jpeg"),
+    path: "/present/henry"
   },
   {
     title: "Jack Baigelman",
     subtitle: "More info about Jack.",
-    image: require("../../Media/Post-WWII 2/Jack.Baigelman057.jpeg"),
-    path: "/post/jack"
+    image: require("../../Media/Modern/Jack.Baigelman061.jpeg"),
+    path: "/present/jack"
   },
   {
-    title: "Justina",
-    subtitle: "More info about Justina.",
-    image: require("../../Media/Post-WWII 2/justina197.jpeg"),
-    path: "/post/justina"
-  },
-  {
-    title: "Katie",
-    subtitle: "More info about Katie.",
-    image: require("../../Media/Post-WWII 2/katie159.jpeg"),
-    path: "/post/katie"
-  },
-  {
-    title: "Levin Baigelman",
-    subtitle: "More info about Levin.",
-    image: require("../../Media/Post-WWII 2/Levin.Baigelman079.jpeg"),
-    path: "/post/levin"
-  },
-  {
-    title: "Pinek Baigelman",
-    subtitle: "More info about Pinek.",
-    image: require("../../Media/Post-WWII 2/Pinek.Baigelman041.jpeg"),
-    path: "/post/pinek"
+    title: "Mordecai",
+    subtitle: "More info about Mordecai.",
+    image: require("../../Media/Modern/Mordecai186.jpeg"),
+    path: "/present/mordecai"
   },
   {
     title: "Pola",
     subtitle: "More info about Pola.",
-    image: require("../../Media/Post-WWII 2/pola178.jpeg"),
-    path: "/post/pola"
+    image: require("../../Media/Modern/pola179.jpeg"),
+    path: "/present/pola"
   },
   {
-    title: "Rachella",
-    subtitle: "More info about Rachella.",
-    image: require("../../Media/Post-WWII 2/Rachella150.jpeg"),
-    path: "/post/rachella"
+    title: "Rachel",
+    subtitle: "More info about Rachel.",
+    image: require("../../Media/Modern/Rachel188.jpeg"),
+    path: "/present/rachel"
   },
   {
     title: "Riva",
     subtitle: "More info about Riva.",
-    image: require("../../Media/Post-WWII 2/Riva287.jpeg"),
-    path: "/post/riva"
+    image: require("../../Media/Modern/Riva346.jpeg"),
+    path: "/present/riva"
   },
   {
-    title: "Samuel Spielman",
-    subtitle: "More info about Samuel.",
-    image: require("../../Media/Post-WWII 2/Samuel181.jpeg"),
-    path: "/post/sam"
+    title: "Sevek",
+    subtitle: "More info about Sevek.",
+    image: require("../../Media/Modern/Sevek267.jpeg"),
+    path: "/present/sevek"
   },
   {
-    title: "Sandy Baigelman",
-    subtitle: "More info about Sandy.",
-    image: require("../../Media/Post-WWII 2/Sandy.Baigelman056.jpeg"),
-    path: "/post/sandy"
+    title: "Starski",
+    subtitle: "More info about Starski.",
+    image: require("../../Media/Modern/Starski083.jpeg"),
+    path: "/present/starski"
   }
 ];
 
@@ -147,6 +133,7 @@ class Line extends Component {
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
+
   render() {
     return (
       <Router>
@@ -165,9 +152,9 @@ class Line extends Component {
               <Greeting
                 style={{
                   minHeight: "100vh",
-                  opacity: "0.9",
+                  opacity: "100%",
                   isCentered: true,
-                  color: "#ffffff",
+                  color: "#000000",
                   parallaxOffset: "100"
                 }}
                 imageSrc={GreetImage}
@@ -187,9 +174,8 @@ class Line extends Component {
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline" />
-
               <VerticalTimeline>
-                {postTimelineObjects.map((card, i) => (
+                {presentTimelineObjects.map((card, i) => (
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     key={i}

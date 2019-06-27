@@ -14,14 +14,14 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 
-import Abram from "../../../gallery/component/people/pre_abram.jsx";
-import Chana from "../../../gallery/component/people/pre_chana.jsx";
-import David from "../../../gallery/component/people/pre_david.jsx";
-import Gita from "../../../gallery/component/people/pre_gita.jsx";
-import Henry from "../../../gallery/component/people/pre_henry.jsx";
-import Jolly from "../../../gallery/component/people/pre_jolly.jsx";
-import Leon from "../../../gallery/component/people/pre_leon.jsx";
-import Lodz from "../../../gallery/component/people/pre_lodz.jsx";
+import Abram from "../../gallery/component/people/pre_abram.jsx";
+import Chana from "../../gallery/component/people/pre_chana.jsx";
+import David from "../../gallery/component/people/pre_david.jsx";
+import Gita from "../../gallery/component/people/pre_gita.jsx";
+import Henry from "../../gallery/component/people/pre_henry.jsx";
+import Jolly from "../../gallery/component/people/pre_jolly.jsx";
+import Leon from "../../gallery/component/people/pre_leon.jsx";
+import Lodz from "../../gallery/component/people/pre_lodz.jsx";
 import ChanaGreet from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
