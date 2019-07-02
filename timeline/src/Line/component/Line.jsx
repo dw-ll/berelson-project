@@ -142,12 +142,10 @@ export default class Line extends Component {
                   size="small"
                   color="primary"
                   component={Link}
-                  //to={card.path}
-                  onClick={e => {
-                    this.handlePop(e, i);
-                  }}
+                  to={card.path}
+                
                 >
-                  Learn More, index: {i}, RIGHT
+                  Learn More
                 </Button>
                 <Popover
                   open={this.state.popped === i}
@@ -198,12 +196,10 @@ export default class Line extends Component {
                   size="small"
                   color="primary"
                   component={Link}
-                  //to={card.path}
-                  onClick={e => {
-                    this.handlePop(e, i);
-                  }}
+                  to={card.path}
+          
                 >
-                  Learn More, index : {i}, LEFT
+                  Learn More
                 </Button>
                 <Popover
                   open={this.state.popped===i}

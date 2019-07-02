@@ -9,6 +9,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
+import Popover from "@material-ui/core/Popover";
+
 
 import {
   VerticalTimeline,
@@ -74,6 +76,9 @@ class Line extends Component {
     super(props);
     this.scrollDiv = createRef();
     this.myRef = React.createRef(); // Create a ref object
+    this.state = {
+      popped: false
+    };
   }
 
   componentDidMount() {
@@ -82,7 +87,137 @@ class Line extends Component {
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
+  handlePop = (e, i) => {
+    e.preventDefault();
+
+    this.setState({
+      popped: i,
+      anchorEl: e.currentTarget
+    });
+  };
+  handleRequestClose = () => {
+    this.setState({
+      popped: null
+    });
+  };
   render() {
+     const cards = ww2TimelineObjects.map((card, i) => (
+       <React.Fragment key={i}>
+         {i % 2 === 0 ? (
+           <VerticalTimelineElement
+             className="vertical-timeline-element--work"
+             key={i}
+             iconStyle={{
+               background: "rgb(40,49,72)",
+               color: "#000"
+             }}
+             paddingTop="0em"
+
+             //icon={<Print/>}
+           >
+             <div>
+               <Card className="card">
+                 <CardActionArea>
+                   <CardMedia
+                     style={{ height: 0, paddingTop: "100%" }}
+                     image={card.image}
+                   />
+                   <CardContent>
+                     <Typography gutterBottom variant="h5" component="h2">
+                       {card.title}
+                     </Typography>
+                     <Typography component="p">{card.subtitle}</Typography>
+                   </CardContent>
+                 </CardActionArea>
+
+                 <Button
+                   size="small"
+                   color="primary"
+                   component={Link}
+                   //to={card.path}
+                   onClick={e => {
+                     this.handlePop(e, i);
+                   }}
+                 >
+                   Learn More
+                 </Button>
+                 <Popover
+                   open={this.state.popped === i}
+                   anchorEl={this.state.anchorEl}
+                   anchorOrigin={{
+                     horizontal: "right",
+                     vertical: "center "
+                   }}
+                   transformOrigin={{
+                     horizontal: "right",
+                     vertical: "bottom"
+                   }}
+                   onClose={this.handleRequestClose}
+                 >
+                   Right popover text
+                 </Popover>
+               </Card>
+             </div>
+           </VerticalTimelineElement>
+         ) : (
+           <VerticalTimelineElement
+             className="vertical-timeline-element--work"
+             key={i}
+             iconStyle={{
+               background: "rgb(40,49,72)",
+               color: "#000"
+             }}
+             paddingTop="0em"
+
+             //icon={<Print/>}
+           >
+             <div>
+               <Card className="card">
+                 <CardActionArea>
+                   <CardMedia
+                     style={{ height: 0, paddingTop: "100%" }}
+                     image={card.image}
+                   />
+                   <CardContent>
+                     <Typography gutterBottom variant="h5" component="h2">
+                       {card.title}
+                     </Typography>
+                     <Typography component="p">{card.subtitle}</Typography>
+                   </CardContent>
+                 </CardActionArea>
+
+                 <Button
+                   size="small"
+                   color="primary"
+                   component={Link}
+                   //to={card.path}
+                   onClick={e => {
+                     this.handlePop(e, i);
+                   }}
+                 >
+                   Learn More
+                 </Button>
+                 <Popover
+                   open={this.state.popped === i}
+                   anchorEl={this.state.anchorEl}
+                   anchorOrigin={{
+                     horizontal: "left",
+                     vertical: "center "
+                   }}
+                   transformOrigin={{
+                     horizontal: "left",
+                     vertical: "bottom"
+                   }}
+                   onClose={this.handleRequestClose}
+                 >
+                   Left popover text
+                 </Popover>
+               </Card>
+             </div>
+           </VerticalTimelineElement>
+         )}
+       </React.Fragment>
+     ));
     return (
       <Router>
         <Switch>
@@ -124,49 +259,7 @@ class Line extends Component {
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline" />
               <VerticalTimeline>
-                {ww2TimelineObjects.map((card, i) => (
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    key={i}
-                    iconStyle={{ background: "rgb(40,49,72)", color: "#000" }}
-                    paddingTop="0em"
-
-                    //icon={<Print/>}
-                  >
-                    <div>
-                      <Card className="card">
-                        <CardActionArea>
-                          <CardMedia
-                            style={{ height: 0, paddingTop: "50%" }}
-                            image={card.image}
-                          />
-                          <CardContent>
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="h2"
-                            >
-                              {card.title}
-                            </Typography>
-                            <Typography component="p">
-                              {card.subtitle}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                          <Button
-                            size="small"
-                            color="primary"
-                            component={Link}
-                            to={card.path}
-                          >
-                            Learn More
-                          </Button>
-                        </CardActions>
-                      </Card>
-                    </div>
-                  </VerticalTimelineElement>
-                ))}
+                <div>{cards}</div>
               </VerticalTimeline>
             </div>
           </div>
