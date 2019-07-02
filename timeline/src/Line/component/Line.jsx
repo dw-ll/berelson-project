@@ -85,8 +85,7 @@ export default class Line extends Component {
     this.scrollDiv = createRef();
     this.attachRef = target => this.setState({ target });
     this.state = {
-      popped: false,
-      anchorEl: null
+      popped: false
 
     };
   }
@@ -94,16 +93,17 @@ export default class Line extends Component {
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
-  handlePop = e => {
+  handlePop = (e,i) => {
     e.preventDefault();
+    
     this.setState({
-      popped: true,
+      popped: i,
       anchorEl: e.currentTarget
     });
   };
   handleRequestClose = () => {
     this.setState({
-      popped: false,
+      popped: null,
 
     });
   };
@@ -143,12 +143,14 @@ export default class Line extends Component {
                   color="primary"
                   component={Link}
                   //to={card.path}
-                  onClick={this.handlePop}
+                  onClick={e => {
+                    this.handlePop(e, i);
+                  }}
                 >
                   Learn More, index: {i}, RIGHT
                 </Button>
                 <Popover
-                  open={this.state.popped}
+                  open={this.state.popped === i}
                   anchorEl={this.state.anchorEl}
                   anchorOrigin={{
                     horizontal: "right",
@@ -197,12 +199,14 @@ export default class Line extends Component {
                   color="primary"
                   component={Link}
                   //to={card.path}
-                  onClick={this.handlePop}
+                  onClick={e => {
+                    this.handlePop(e, i);
+                  }}
                 >
                   Learn More, index : {i}, LEFT
                 </Button>
                 <Popover
-                  open={this.state.popped}
+                  open={this.state.popped===i}
                   anchorEl={this.state.anchorEl}
                   anchorOrigin={{
                     horizontal: "left",
