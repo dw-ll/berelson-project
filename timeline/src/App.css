@@ -84,6 +84,9 @@ h3 {
   margin: 0;
   background: #adceed;
 }
+.Popup {
+  float: right;
+}
 
 @keyframes App-logo-spin {
   from {
