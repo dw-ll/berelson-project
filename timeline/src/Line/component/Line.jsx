@@ -25,7 +25,7 @@ import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
 import { Provider, Heading, Subhead } from "rebass";
 import { Hero, CallToAction, ScrollDownIndicator } from "react-landing-page";
-import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
+import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
 
 const routes = [
   {
@@ -239,15 +239,18 @@ export default class Line extends Component {
             <div id="landing">
               <div id="hero-greet">
                 <Greeting
-                  
-                    minHeight="100vh"
-                    opacity="0.2"
-                    isCentered={true}
-                    imageSrc={FoniaGreet}
+                  minHeight="100vh"
+                  opacity="0.1"
+                  isCentered={true}
+                  imageSrc={FoniaGreet}
                 >
-                  <h3>The Berelson Project</h3>
+                  <h3 style={{ color: "white", fontFamily: "Times" }}>
+                    The Berelson Project
+                  </h3>
                   <Button
-                    variant="outlined"
+                    variant="contained"
+                    size="large"
+                    color="light"
                     onClick={() => {
                       this.scrollDiv.current.scrollIntoView({
                         behavior: "smooth"
@@ -264,8 +267,8 @@ export default class Line extends Component {
                 <div>
                   <h4>Timeline</h4>
                   <h6>
-                    Learn the Berelson lineage through this interactive timeline
-                    that spans both sides of the second World War.
+                    Learn the Berelson lineage through this interactive
+                    timeline that spans both sides of the second World War.
                   </h6>
                 </div>
                 <div>

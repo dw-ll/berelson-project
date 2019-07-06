@@ -27,7 +27,7 @@ import Henry from "../../gallery/component/people/pre_henry.jsx";
 import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
-import ChanaGreet from "../../Media/Pre-WWII/Abram.Baigelman035.jpeg";
+import ChanaGreet from "../../Media/Pre-WWII/Gita.Baigelman142.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -181,18 +181,18 @@ class Line extends Component {
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
-                style={{
-                  minHeight: "100vh",
-                  opacity: "100%",
-                  isCentered: true,
-                  color: "#000000",
-                  parallaxOffset: "100"
-                }}
+                minHeight="100vh"
+                opacity="100%"
+                isCentered={true}
                 imageSrc={ChanaGreet}
               >
-                <h3>The Berelson Project</h3>
+                <h3 style={{ color: "white", fontFamily: "Future" }}>
+                  Before The War
+                </h3>
                 <Button
-                  variant="outlined"
+                  variant="contained"
+                  size="large"
+                  color="dark"
                   onClick={() => {
                     this.scrollDiv.current.scrollIntoView({
                       behavior: "smooth"
@@ -206,12 +206,12 @@ class Line extends Component {
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
                 <div>
-                  <h4 style={{textAlign:"center"}}>Pre World War 2</h4>
-                  <h6 style={{textAlign:"center"}}>
-                    History and more information about the family prior to the beginning of the second World War.
+                  <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
+                  <h6 style={{ textAlign: "center" }}>
+                    History and more information about the family prior to
+                    the beginning of the second World War.
                   </h6>
                 </div>
-              
               </div>
               <VerticalTimeline>
                 {preTimelineObjects.map((card, i) => (

@@ -202,10 +202,10 @@ class Line extends Component {
                   size="small"
                   color="primary"
                   component={Link}
-                  //to={card.path}
-                  onClick={e => {
-                    this.handlePop(e, i);
-                  }}
+                  to={card.path}
+                  // onClick={e => {
+                  // this.handlePop(e, i);
+                  // }}
                 >
                   Learn More
                 </Button>
@@ -258,10 +258,10 @@ class Line extends Component {
                   size="small"
                   color="primary"
                   component={Link}
-                  //to={card.path}
-                  onClick={e => {
-                    this.handlePop(e, i);
-                  }}
+                  to={card.path}
+                  //onClick={e => {
+                  //this.handlePop(e, i);
+                  //}}
                 >
                   Learn More
                 </Button>
@@ -302,31 +302,39 @@ class Line extends Component {
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
-                style={{
-                  minHeight: "100vh",
-                  opacity: "1",
-                  isCentered: true,
-
-                  parallaxOffset: "100"
-                }}
+                minHeight="100vh"
+                opacity="0.1"
+                isCentered={true}
                 imageSrc={GreetImage}
               >
-                <h3>The Berelson Project</h3>
-                <Button
-                  variant="outlined"
-                  onClick={() => {
-                    this.scrollDiv.current.scrollIntoView({
-                      behavior: "smooth"
-                    });
-                  }}
-                >
-                  Explore Timeline
-                </Button>
+                <div class="hero-message" align="center">
+                  <h3 style={{ color: "white", fontFamily: "Times" }}>
+                    After The War
+                  </h3>
+                  <Button
+                    variant="outlined"
+                    size="large"
+                    color="light"
+                    onClick={() => {
+                      this.scrollDiv.current.scrollIntoView({
+                        behavior: "smooth"
+                      });
+                    }}
+                  >
+                    Explore Timeline
+                  </Button>
+                </div>
               </Greeting>
             </div>
             <div ref={this.scrollDiv}>
-              <div id="timeline-start" href="/timeline" />
-
+              <div id="timeline-start" href="/timeline">
+                <div>
+                  <h4 style={{ textAlign: "center" }}>Post World War 2</h4>
+                  <h6 style={{ textAlign: "center" }}>
+                    History and more information about the family after the second World War.
+                  </h6>
+                </div>
+              </div>
               <VerticalTimeline>
                 <div>{cards}</div>
               </VerticalTimeline>

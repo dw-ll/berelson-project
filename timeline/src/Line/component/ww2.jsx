@@ -11,7 +11,6 @@ import Typography from "@material-ui/core/Typography";
 import Greeting from "react-lazy-hero";
 import Popover from "@material-ui/core/Popover";
 
-
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -82,9 +81,9 @@ class Line extends Component {
   }
 
   componentDidMount() {
-     this.myRef.current.scrollIntoView({
-       behavior: "auto"
-     });
+    this.myRef.current.scrollIntoView({
+      behavior: "auto"
+    });
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
@@ -103,123 +102,123 @@ class Line extends Component {
     });
   };
   render() {
-     const cards = ww2TimelineObjects.map((card, i) => (
-       <React.Fragment key={i}>
-         {i % 2 === 0 ? (
-           <VerticalTimelineElement
-             className="vertical-timeline-element--work"
-             key={i}
-             iconStyle={{
-               background: "rgb(40,49,72)",
-               color: "#000"
-             }}
-             paddingTop="0em"
+    const cards = ww2TimelineObjects.map((card, i) => (
+      <React.Fragment key={i}>
+        {i % 2 === 0 ? (
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            key={i}
+            iconStyle={{
+              background: "rgb(40,49,72)",
+              color: "#000"
+            }}
+            paddingTop="0em"
 
-             //icon={<Print/>}
-           >
-             <div>
-               <Card className="card">
-                 <CardActionArea>
-                   <CardMedia
-                     style={{ height: 0, paddingTop: "100%" }}
-                     image={card.image}
-                   />
-                   <CardContent>
-                     <Typography gutterBottom variant="h5" component="h2">
-                       {card.title}
-                     </Typography>
-                     <Typography component="p">{card.subtitle}</Typography>
-                   </CardContent>
-                 </CardActionArea>
+            //icon={<Print/>}
+          >
+            <div>
+              <Card className="card">
+                <CardActionArea>
+                  <CardMedia
+                    style={{ height: 0, paddingTop: "100%" }}
+                    image={card.image}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {card.title}
+                    </Typography>
+                    <Typography component="p">{card.subtitle}</Typography>
+                  </CardContent>
+                </CardActionArea>
 
-                 <Button
-                   size="small"
-                   color="primary"
-                   component={Link}
-                   //to={card.path}
-                   onClick={e => {
-                     this.handlePop(e, i);
-                   }}
-                 >
-                   Learn More
-                 </Button>
-                 <Popover
-                   open={this.state.popped === i}
-                   anchorEl={this.state.anchorEl}
-                   anchorOrigin={{
-                     horizontal: "right",
-                     vertical: "center "
-                   }}
-                   transformOrigin={{
-                     horizontal: "right",
-                     vertical: "bottom"
-                   }}
-                   onClose={this.handleRequestClose}
-                 >
-                   Right popover text
-                 </Popover>
-               </Card>
-             </div>
-           </VerticalTimelineElement>
-         ) : (
-           <VerticalTimelineElement
-             className="vertical-timeline-element--work"
-             key={i}
-             iconStyle={{
-               background: "rgb(40,49,72)",
-               color: "#000"
-             }}
-             paddingTop="0em"
+                <Button
+                  size="small"
+                  color="primary"
+                  component={Link}
+                  to={card.path}
+                  //onClick={e => {
+                  // this.handlePop(e, i);
+                  // }}
+                >
+                  Learn More
+                </Button>
+                <Popover
+                  open={this.state.popped === i}
+                  anchorEl={this.state.anchorEl}
+                  anchorOrigin={{
+                    horizontal: "right",
+                    vertical: "center "
+                  }}
+                  transformOrigin={{
+                    horizontal: "right",
+                    vertical: "bottom"
+                  }}
+                  onClose={this.handleRequestClose}
+                >
+                  Right popover text
+                </Popover>
+              </Card>
+            </div>
+          </VerticalTimelineElement>
+        ) : (
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            key={i}
+            iconStyle={{
+              background: "rgb(40,49,72)",
+              color: "#000"
+            }}
+            paddingTop="0em"
 
-             //icon={<Print/>}
-           >
-             <div>
-               <Card className="card">
-                 <CardActionArea>
-                   <CardMedia
-                     style={{ height: 0, paddingTop: "100%" }}
-                     image={card.image}
-                   />
-                   <CardContent>
-                     <Typography gutterBottom variant="h5" component="h2">
-                       {card.title}
-                     </Typography>
-                     <Typography component="p">{card.subtitle}</Typography>
-                   </CardContent>
-                 </CardActionArea>
+            //icon={<Print/>}
+          >
+            <div>
+              <Card className="card">
+                <CardActionArea>
+                  <CardMedia
+                    style={{ height: 0, paddingTop: "100%" }}
+                    image={card.image}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {card.title}
+                    </Typography>
+                    <Typography component="p">{card.subtitle}</Typography>
+                  </CardContent>
+                </CardActionArea>
 
-                 <Button
-                   size="small"
-                   color="primary"
-                   component={Link}
-                   //to={card.path}
-                   onClick={e => {
-                     this.handlePop(e, i);
-                   }}
-                 >
-                   Learn More
-                 </Button>
-                 <Popover
-                   open={this.state.popped === i}
-                   anchorEl={this.state.anchorEl}
-                   anchorOrigin={{
-                     horizontal: "left",
-                     vertical: "center "
-                   }}
-                   transformOrigin={{
-                     horizontal: "left",
-                     vertical: "bottom"
-                   }}
-                   onClose={this.handleRequestClose}
-                 >
-                   Left popover text
-                 </Popover>
-               </Card>
-             </div>
-           </VerticalTimelineElement>
-         )}
-       </React.Fragment>
-     ));
+                <Button
+                  size="small"
+                  color="primary"
+                  component={Link}
+                  to={card.path}
+                  //onClick={e => {
+                  //  this.handlePop(e, i);
+                  //}}
+                >
+                  Learn More
+                </Button>
+                <Popover
+                  open={this.state.popped === i}
+                  anchorEl={this.state.anchorEl}
+                  anchorOrigin={{
+                    horizontal: "left",
+                    vertical: "center "
+                  }}
+                  transformOrigin={{
+                    horizontal: "left",
+                    vertical: "bottom"
+                  }}
+                  onClose={this.handleRequestClose}
+                >
+                  Left popover text
+                </Popover>
+              </Card>
+            </div>
+          </VerticalTimelineElement>
+        )}
+      </React.Fragment>
+    ));
     return (
       <Router>
         <Switch>
@@ -236,18 +235,16 @@ class Line extends Component {
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
-                style={{
-                  minHeight: "100vh",
-                  opacity: "100%",
-                  isCentered: true,
-                  color: "#000000",
-                  parallaxOffset: "100"
-                }}
+                minHeight="100vh"
+                opacity="0.4%"
+                isCentered={true}
                 imageSrc={GreetImage}
               >
-                <h3>The Berelson Project</h3>
+                <h3 style={{ color: "white" }}>World War II</h3>
                 <Button
-                  variant="outlined"
+                  variant="contained"
+                  size="large"
+                  color="light"
                   onClick={() => {
                     this.scrollDiv.current.scrollIntoView({
                       behavior: "smooth"
@@ -258,8 +255,17 @@ class Line extends Component {
                 </Button>
               </Greeting>
             </div>
+
             <div ref={this.scrollDiv}>
-              <div id="timeline-start" href="/timeline" />
+              <div id="timeline-start" href="/timeline">
+                <div>
+                  <h4 style={{ textAlign: "center" }}>World War 2</h4>
+                  <h6 style={{ textAlign: "center" }}>
+                    History and more information about the family during the
+                    second World War.
+                  </h6>
+                </div>
+              </div>
               <VerticalTimeline>
                 <div>{cards}</div>
               </VerticalTimeline>

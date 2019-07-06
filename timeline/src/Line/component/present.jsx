@@ -11,7 +11,6 @@ import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 
-
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -188,10 +187,10 @@ class Line extends Component {
                   size="small"
                   color="primary"
                   component={Link}
-                  //to={card.path}
-                  onClick={e => {
-                    this.handlePop(e, i);
-                  }}
+                  to={card.path}
+                  // onClick={e => {
+                  //this.handlePop(e, i);
+                  // </Card> }}
                 >
                   Learn More
                 </Button>
@@ -244,10 +243,10 @@ class Line extends Component {
                   size="small"
                   color="primary"
                   component={Link}
-                  //to={card.path}
-                  onClick={e => {
-                    this.handlePop(e, i);
-                  }}
+                  to={card.path}
+                  // onClick={e => {
+                  //  this.handlePop(e, i);
+                  // }}
                 >
                   Learn More
                 </Button>
@@ -287,18 +286,16 @@ class Line extends Component {
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
-                style={{
-                  minHeight: "100vh",
-                  opacity: "100%",
-                  isCentered: true,
-                  color: "#000000",
-                  parallaxOffset: "100"
-                }}
+                minHeight="100vh"
+                opacity="0.1"
+                isCentered={true}
                 imageSrc={GreetImage}
               >
-                <h3>The Berelson Project</h3>
+                <h3 style={{ fontFamily: "Times" }}>Present</h3>
                 <Button
-                  variant="outlined"
+                  variant="contained"
+                  size="large"
+                  color="dark"
                   onClick={() => {
                     this.scrollDiv.current.scrollIntoView({
                       behavior: "smooth"
@@ -310,7 +307,14 @@ class Line extends Component {
               </Greeting>
             </div>
             <div ref={this.scrollDiv}>
-              <div id="timeline-start" href="/timeline" />
+              <div id="timeline-start" href="/timeline">
+                <div>
+                  <h4 style={{ textAlign: "center" }}>Present</h4>
+                  <h6 style={{ textAlign: "center" }}>
+                    History and more information about the family up until now.
+                  </h6>
+                </div>
+              </div>
               <VerticalTimeline>
                 <div>{cards}</div>
               </VerticalTimeline>
