@@ -2,7 +2,7 @@
     "name": "timeline",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://dw-ll.github.io/Berelson-Project",
+    "homepage": "http://dw-ll.github.io/Berelson-Project/",
     "dependencies": {
         "@material-ui/core": "^3.9.3",
         "@material-ui/icons": "^3.0.2",
