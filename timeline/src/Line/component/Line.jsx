@@ -284,7 +284,7 @@ export default class Line extends Component {
                 </div>
               </div>
 
-              <VerticalTimeline>
+              <VerticalTimeline style = {{color:"black"}}>
                 <div>{cards}</div>
               </VerticalTimeline>
             </div>

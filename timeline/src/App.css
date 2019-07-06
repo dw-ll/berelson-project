@@ -9,9 +9,6 @@
   height: 70%;
 }
 
-.nav-bar {
-  color: #ffffff;
-}
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -19,19 +16,45 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 .main-nav {
   font-family: Arial, sans-serif;
   margin: 0 25%;
   float: left;
 }
-.navbar-header {
-  background-color: #ffffff;
-}
+
 .logo-style {
   float: left;
   animation: App-logo-spin infinite 20s linear;
+}
+.hero-greet{
+  opacity: 1;
+  background: transparent;
+}
+body,html{
+  height: 100%;
+}
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Media/Pre-WWII/Abram.Baigelman035.jpeg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.landing{
+  opacity:1;
+  background:transparent;
+}
+.back{
+  opacity: 1;
+  background:transparent;
 }
 
 .App-link {
@@ -59,7 +82,6 @@ h3 {
 
 .each-slide span {
   font-size: 15px;
-  background: #efefef;
   text-align: justify;
 }
 
@@ -82,11 +104,16 @@ h3 {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: #adceed;
+ 
 }
 .Popup {
   float: right;
 }
+
+.vertical-timeline::before {
+    background:grey;
+}
+
 
 @keyframes App-logo-spin {
   from {
