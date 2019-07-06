@@ -239,14 +239,11 @@ export default class Line extends Component {
             <div id="landing">
               <div id="hero-greet">
                 <Greeting
-                  style={{
-                    minHeight: "100vh",
-                    opacity: "1",
-                    isCentered: true,
-                    parallaxOffset: "100",
-                    color: "#ffffff0"
-                  }}
-                  imageSrc={FoniaGreet}
+                  
+                    minHeight="100vh"
+                    opacity="0.2"
+                    isCentered={true}
+                    imageSrc={FoniaGreet}
                 >
                   <h3>The Berelson Project</h3>
                   <Button
