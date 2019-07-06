@@ -140,14 +140,16 @@ class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
-    this.myRef = React.createRef(); // Create a ref object
+    this.myRef = createRef(); // Create a ref object
     this.state = {
       popped: false
     };
   }
 
   componentDidMount() {
-    this.myRef.current.scrollTo(0, 0);
+    this.myRef.current.scrollIntoView({
+      behavior: "auto"
+    });
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
@@ -284,7 +286,7 @@ class Line extends Component {
         )}
       </React.Fragment>
     ));
-                  
+
     return (
       <Router>
         <Switch>
@@ -302,9 +304,9 @@ class Line extends Component {
               <Greeting
                 style={{
                   minHeight: "100vh",
-                  opacity: "0.9",
+                  opacity: "1",
                   isCentered: true,
-                  color: "#ffffff",
+
                   parallaxOffset: "100"
                 }}
                 imageSrc={GreetImage}
@@ -326,7 +328,7 @@ class Line extends Component {
               <div id="timeline-start" href="/timeline" />
 
               <VerticalTimeline>
-               <div>{cards}</div>
+                <div>{cards}</div>
               </VerticalTimeline>
             </div>
           </div>

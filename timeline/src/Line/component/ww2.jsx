@@ -75,14 +75,16 @@ class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
-    this.myRef = React.createRef(); // Create a ref object
+    this.myRef = createRef(); // Create a ref object
     this.state = {
       popped: false
     };
   }
 
   componentDidMount() {
-    this.myRef.current.scrollTo(0, 0);
+     this.myRef.current.scrollIntoView({
+       behavior: "auto"
+     });
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);

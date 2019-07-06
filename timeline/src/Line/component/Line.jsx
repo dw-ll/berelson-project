@@ -23,6 +23,8 @@ import ButtonGroup from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
+import { Provider, Heading, Subhead } from "rebass";
+import { Hero, CallToAction, ScrollDownIndicator } from "react-landing-page";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia224.jpeg";
 
 const routes = [
@@ -86,16 +88,15 @@ export default class Line extends Component {
     this.attachRef = target => this.setState({ target });
     this.state = {
       popped: false
-
     };
   }
 
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
-  handlePop = (e,i) => {
+  handlePop = (e, i) => {
     e.preventDefault();
-    
+
     this.setState({
       popped: i,
       anchorEl: e.currentTarget
@@ -103,8 +104,7 @@ export default class Line extends Component {
   };
   handleRequestClose = () => {
     this.setState({
-      popped: null,
-
+      popped: null
     });
   };
 
@@ -143,7 +143,6 @@ export default class Line extends Component {
                   color="primary"
                   component={Link}
                   to={card.path}
-                
                 >
                   Learn More
                 </Button>
@@ -197,12 +196,11 @@ export default class Line extends Component {
                   color="primary"
                   component={Link}
                   to={card.path}
-          
                 >
                   Learn More
                 </Button>
                 <Popover
-                  open={this.state.popped===i}
+                  open={this.state.popped === i}
                   anchorEl={this.state.anchorEl}
                   anchorOrigin={{
                     horizontal: "left",
@@ -222,14 +220,14 @@ export default class Line extends Component {
         )}
       </React.Fragment>
     ));
-                  
+
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Switch>
           {routes.map((route, i) => (
             <Route
               path={route.path}
-              key = {i}
+              key={i}
               exact
               render={() => {
                 return <route.component />;
@@ -239,28 +237,30 @@ export default class Line extends Component {
 
           <div className="back">
             <div id="landing">
-              <Greeting
-                style={{
-                  minHeight: "100vh",
-                  opacity: "1",
-                  isCentered: true,
-                  color: "#000000",
-                  parallaxOffset: "100"
-                }}
-                imageSrc={FoniaGreet}
-              >
-                <h3>The Berelson Project</h3>
-                <Button
-                  variant="outlined"
-                  onClick={() => {
-                    this.scrollDiv.current.scrollIntoView({
-                      behavior: "smooth"
-                    });
+              <div id="hero-greet">
+                <Greeting
+                  style={{
+                    minHeight: "100vh",
+                    opacity: "1",
+                    isCentered: true,
+                    parallaxOffset: "100",
+                    color: "#ffffff0"
                   }}
+                  imageSrc={FoniaGreet}
                 >
-                  Explore Timeline
-                </Button>
-              </Greeting>
+                  <h3>The Berelson Project</h3>
+                  <Button
+                    variant="outlined"
+                    onClick={() => {
+                      this.scrollDiv.current.scrollIntoView({
+                        behavior: "smooth"
+                      });
+                    }}
+                  >
+                    Explore Timeline
+                  </Button>
+                </Greeting>
+              </div>
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
@@ -285,8 +285,7 @@ export default class Line extends Component {
               </div>
 
               <VerticalTimeline>
-              <div>{cards}</div>
-                 
+                <div>{cards}</div>
               </VerticalTimeline>
             </div>
           </div>

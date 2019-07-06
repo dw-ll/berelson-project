@@ -27,7 +27,7 @@ import Henry from "../../gallery/component/people/pre_henry.jsx";
 import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
-import ChanaGreet from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
+import ChanaGreet from "../../Media/Pre-WWII/Abram.Baigelman035.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -122,7 +122,7 @@ class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
-    this.myRef = React.createRef(); // Create a ref object
+    this.myRef = createRef(); // Create a ref object
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseOut = this.handleMouseOut.bind(this);
     this.state = {
@@ -144,7 +144,9 @@ class Line extends Component {
   };
 
   componentDidMount() {
-    this.myRef.current.scrollTo(0, 0);
+     this.myRef.current.scrollIntoView({
+       behavior: "auto"
+     });
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
@@ -202,7 +204,15 @@ class Line extends Component {
               </Greeting>
             </div>
             <div ref={this.scrollDiv}>
-              <div id="timeline-start" href="/timeline" />
+              <div id="timeline-start" href="/timeline">
+                <div>
+                  <h4 style={{textAlign:"center"}}>Pre World War 2</h4>
+                  <h6 style={{textAlign:"center"}}>
+                    History and more information about the family prior to the beginning of the second World War.
+                  </h6>
+                </div>
+              
+              </div>
               <VerticalTimeline>
                 {preTimelineObjects.map((card, i) => (
                   <React.Fragment key={i}>
@@ -240,17 +250,54 @@ class Line extends Component {
                               size="small"
                               color="primary"
                               component={Link}
-                              to={card.path}
+                              // to={card.path}
+                              onClick={e => {
+                                this.handlePop(e, i);
+                              }}
                             >
                               Learn More
                             </Button>
+                            <Popover
+                              open={this.state.popped === i}
+                              anchorEl={this.state.anchorEl}
+                              anchorReference="anchorPosition"
+                              anchorOrigin={{
+                                horizontal: "left",
+                                vertical: "center "
+                              }}
+                              transformOrigin={{
+                                horizontal: "left",
+                                vertical: "center"
+                              }}
+                              anchorPosition={{ top: "5", left: "50000" }}
+                              onClose={this.handleRequestClose}
+                            >
+                              <Card className="card">
+                                <CardActionArea>
+                                  <CardMedia
+                                    style={{
+                                      height: 0,
+                                      paddingTop: "100%"
+                                    }}
+                                    image={card.image}
+                                  />
+                                  <CardContent>
+                                    <Typography
+                                      gutterBottom
+                                      variant="h5"
+                                      component="h2"
+                                    >
+                                      {card.title}
+                                    </Typography>
+                                    <Typography>{card.subtitle}</Typography>
+                                  </CardContent>
+                                </CardActionArea>
+                              </Card>
+                            </Popover>
                             <Tooltip title="Add" placement="right">
                               <Button>right</Button>
                             </Tooltip>
                           </Card>
-                          {this.state.showDetail === i && (
-                            <div id="Popup"> o shit</div>
-                          )}
                         </div>
                       </VerticalTimelineElement>
                     ) : (
