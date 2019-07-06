@@ -34,7 +34,7 @@ class App extends Component {
       <Router>
           <Switch>
             <Route
-              path="#home"
+              path="/Berelson-Project"
               exact
               render={() => {
                 return <Line />;
