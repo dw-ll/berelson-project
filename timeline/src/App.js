@@ -27,7 +27,7 @@ import Line from "./Line/component/Line.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 global.jQuery = require("jquery");
 require("bootstrap");
-// test
+//test
 
 class App extends Component {
   render() {
