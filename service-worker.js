@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Berelson-Project/precache-manifest.057ab0f71b22c0a49030913fc8400ca3.js"
+  "/berelson-project/precache-manifest.dfbc2d05584e1599506e160b002fe29c.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Berelson-Project/index.html", {
+workbox.routing.registerNavigationRoute("/berelson-project/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
