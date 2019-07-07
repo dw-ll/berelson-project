@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Henry.David.Baigelman007.73e2fedb.jpeg"
   },
   {
-    "revision": "7172f234017ccf7a1cf3",
+    "revision": "9d493d4f453a8fdd5579",
     "url": "/berelson-project/static/css/main.55354f64.chunk.css"
   },
   {
@@ -388,8 +388,8 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Henry.Baigelman134.e49852be.jpeg"
   },
   {
-    "revision": "7172f234017ccf7a1cf3",
-    "url": "/berelson-project/static/js/main.7172f234.chunk.js"
+    "revision": "9d493d4f453a8fdd5579",
+    "url": "/berelson-project/static/js/main.9d493d4f.chunk.js"
   },
   {
     "revision": "b6b53367e6a09bc714d2cb539283dd97",
@@ -772,7 +772,7 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/css/2.2c2c9209.chunk.css"
   },
   {
-    "revision": "45468e365460c6eea1619db65dc43819",
+    "revision": "c0d6ef0a61a5d2659443bba46d9da234",
     "url": "/berelson-project/index.html"
   }
 ];
