@@ -32,45 +32,45 @@ require("bootstrap");
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/berelson-project">
         <Switch>
           <Route
-            path="/berelson-project"
+            path="/home/"
             exact
             render={() => {
               return <Line />;
             }}
           />
           <Route
-            path="/berelson-project/pre/"
+            path="/pre/"
             exact
             render={() => {
               return <Pre />;
             }}
           />
           <Route
-            path="/berelson-project/ww2/"
+            path="/ww2/"
             exact
             render={() => {
               return <WW2 />;
             }}
           />
           <Route
-            path="/berelson-project/post/"
+            path="/post/"
             exact
             render={() => {
               return <Post />;
             }}
           />
           <Route
-            path="/berelson-project/present/"
+            path="/present/"
             exact
             render={() => {
               return <Present />;
             }}
           />
           <Route
-            path="/berelson-project/archive/"
+            path="/archive/"
             exact
             render={() => {
               return <Archive />;
@@ -91,7 +91,7 @@ class App extends Component {
 
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/about/">About</NavLink>
+                  <NavLink href="/..about/">About</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/archive/"> Archive</NavLink>
