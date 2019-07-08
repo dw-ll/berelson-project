@@ -1,19 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
-import { LinkContainer } from "react-router-bootstrap";
-import {
-  DropdownItem,
-  NavLink,
-  Navbar,
-  NavbarBrand,
-  NavItem,
-  Nav,
-  NavbarToggler,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu
-} from "reactstrap";
 import Gallery from "react-grid-gallery";
 import "react-vertical-timeline-component/style.min.css";
 import Present from "./present";
@@ -1213,9 +1200,7 @@ class Line extends Component {
             <div className="App">
               <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
 
-             
               <div>
-              
                 <h6 style={{ textAlign: "center" }}>
                   An archive of the Berelson Lineage.
                 </h6>
@@ -1223,10 +1208,7 @@ class Line extends Component {
 
               <Gallery images={preImages} enableImageSelection={false} />
               <Gallery images={warImages} enableImageSelection={false} />
-              <Gallery
-                images={postWarImages}
-                enableImageSelection={false}
-              />
+              <Gallery images={postWarImages} enableImageSelection={false} />
               <Gallery images={modernImages} enableImageSelection={false} />
             </div>
           </Switch>

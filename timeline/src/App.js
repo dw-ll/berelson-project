@@ -21,6 +21,7 @@ import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
+import Footer from "./Line/component/footer.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
@@ -78,12 +79,7 @@ class App extends Component {
           />
 
           <div className="App">
-            <Navbar
-              className="navbar-header"
-              theme="dark"
-              light
-              expand="md"
-            >
+            <Navbar className="navbar-header" theme="dark" light expand="md">
               <NavbarBrand href="/berelson-project/">
                 {" The Berelson Project"}
               </NavbarBrand>
@@ -120,7 +116,13 @@ class App extends Component {
             </Navbar>
 
             <Line />
+
             <div>
+              <footer class="page-footer font-small blue">
+                <div class="footer-copyright text-center py-3">
+                  © 2019 
+                </div>
+              </footer>
               <ScrollUpButton />
             </div>
           </div>
