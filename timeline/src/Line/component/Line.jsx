@@ -23,14 +23,12 @@ import ButtonGroup from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
-import { Provider, Heading, Subhead } from "rebass";
-import { Hero, CallToAction, ScrollDownIndicator } from "react-landing-page";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
 
 const routes = [
   {
     component: Pre,
-    path: "/pre"
+    path: `${process.env.PUBLIC_URL}/pre/`
   },
   {
     component: WWII,
@@ -50,7 +48,7 @@ const routes = [
   },
   {
     component: Archive,
-    path: "/archive"
+    path: "/archive/"
   }
 ];
 
@@ -59,7 +57,7 @@ const timelineObjects = [
     title: " Pre-World War II",
     subtitle: "Photos and information spanning the time before World War Two",
     image: require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg"),
-    path: "/pre"
+    path: `${process.env.PUBLIC_URL}/pre/`
   },
   {
     title: "World War II",
@@ -247,18 +245,24 @@ export default class Line extends Component {
                   <h3 style={{ color: "white", fontFamily: "Times" }}>
                     The Berelson Project
                   </h3>
-                  <Button
-                    variant="contained"
-                    size="large"
-                    color="light"
-                    onClick={() => {
-                      this.scrollDiv.current.scrollIntoView({
-                        behavior: "smooth"
-                      });
-                    }}
-                  >
-                    Explore Timeline
-                  </Button>
+                  <div>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      color="light"
+                      onClick={() => {
+                        this.scrollDiv.current.scrollIntoView({
+                          behavior: "smooth"
+                        });
+                      }}
+                    >
+                      Explore Timeline
+                    </Button>
+                  </div>
+                  <div></div>
+                  <div>
+                    <Link to="/archive">Visit Archive</Link>
+                  </div>
                 </Greeting>
               </div>
             </div>
@@ -284,7 +288,7 @@ export default class Line extends Component {
                 </div>
               </div>
 
-              <VerticalTimeline style = {{color:"black"}}>
+              <VerticalTimeline style={{ color: "black" }}>
                 <div>{cards}</div>
               </VerticalTimeline>
             </div>

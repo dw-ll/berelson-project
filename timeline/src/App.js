@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
-import {CircleArrow as ScrollUpButton } from "react-scroll-up-button"; 
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 import {
   DropdownItem,
   NavLink,
@@ -32,46 +32,46 @@ require("bootstrap");
 class App extends Component {
   render() {
     return (
-      <Router basename="/berelson-project">
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route
-            path="/home/"
+            path="/berelson-project/"
             exact
             render={() => {
               return <Line />;
             }}
           />
           <Route
-            path="/pre/"
+            path={`/pre`}
             exact
             render={() => {
               return <Pre />;
             }}
           />
           <Route
-            path="/ww2/"
+            path={`/ww2`}
             exact
             render={() => {
               return <WW2 />;
             }}
           />
           <Route
-            path="/post/"
+            path={`/post`}
             exact
             render={() => {
               return <Post />;
             }}
           />
           <Route
-            path="/present/"
+            path={`/present`}
             exact
             render={() => {
               return <Present />;
             }}
           />
           <Route
-            path="/archive/"
             exact
+            path={`/archive`}
             render={() => {
               return <Archive />;
             }}
@@ -91,10 +91,12 @@ class App extends Component {
 
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/..about/">About</NavLink>
+                  <NavLink href="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/archive/"> Archive</NavLink>
+                  <NavLink href={`${process.env.PUBLIC_URL}/archive/`}>
+                    Archive
+                  </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/dw-ll/Berelson-Project">

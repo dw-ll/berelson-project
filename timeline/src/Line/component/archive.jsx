@@ -1213,42 +1213,20 @@ class Line extends Component {
             <div className="App">
               <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
 
-              <Navbar className="navbar-header" theme="dark" light expand="md">
-                <NavbarBrand href="/">{" The Berelson Project"}</NavbarBrand>
-                <NavbarToggler onClick={this.toggle} />
-
-                <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <NavLink href="/about/">About</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/archive/"> Archive</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                      GitHub
-                    </NavLink>
-                  </NavItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Eras
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <LinkContainer to="/pre/">
-                        <DropdownItem>Pre WWII</DropdownItem>
-                      </LinkContainer>
-                      <DropdownItem>WWII</DropdownItem>
-                      <DropdownItem>Post WWII</DropdownItem>
-                      <DropdownItem>Modern</DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </Nav>
-              </Navbar>
-              <div>An archive of the Berelson Lineage.</div>
+             
+              <div>
+              
+                <h6 style={{ textAlign: "center" }}>
+                  An archive of the Berelson Lineage.
+                </h6>
+              </div>
 
               <Gallery images={preImages} enableImageSelection={false} />
               <Gallery images={warImages} enableImageSelection={false} />
-              <Gallery images={postWarImages} enableImageSelection={false} />
+              <Gallery
+                images={postWarImages}
+                enableImageSelection={false}
+              />
               <Gallery images={modernImages} enableImageSelection={false} />
             </div>
           </Switch>
