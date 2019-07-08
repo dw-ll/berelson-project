@@ -1,11 +1,10 @@
 import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import { Popover as Popper, PopoverHeader, PopoverBody } from "reactstrap";
 import Card from "@material-ui/core/Card";
 
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
+
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
@@ -144,9 +143,9 @@ class Line extends Component {
   };
 
   componentDidMount() {
-     this.myRef.current.scrollIntoView({
-       behavior: "auto"
-     });
+    this.myRef.current.scrollIntoView({
+      behavior: "auto"
+    });
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
@@ -208,8 +207,8 @@ class Line extends Component {
                 <div>
                   <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
-                    History and more information about the family prior to
-                    the beginning of the second World War.
+                    History and more information about the family prior to the
+                    beginning of the second World War.
                   </h6>
                 </div>
               </div>

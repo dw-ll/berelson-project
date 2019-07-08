@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
-import {CircleArrow as ScrollUpButton } from "react-scroll-up-button"; 
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 import {
   DropdownItem,
   NavLink,
@@ -32,96 +32,99 @@ require("bootstrap");
 class App extends Component {
   render() {
     return (
-      <Router>
-          <Switch>
-            <Route
-              path="/Berelson-Project"
-              exact
-              render={() => {
-                return <Line />;
-              }}
-            />
-            <Route
-              path="/pre/"
-              exact
-              render={() => {
-                return <Pre />;
-              }}
-            />
-            <Route
-              path="/ww2/"
-              exact
-              render={() => {
-                return <WW2 />;
-              }}
-            />
-            <Route
-              path="/post/"
-              exact
-              render={() => {
-                return <Post />;
-              }}
-            />
-            <Route
-              path="/present/"
-              exact
-              render={() => {
-                return <Present />;
-              }}
-            />
-            <Route
-              path="/archive/"
-              exact
-              render={() => {
-                return <Archive />;
-              }}
-            />
+      <Router basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route
+            path="/berelson-project/"
+            exact
+            render={() => {
+              return <Line />;
+            }}
+          />
+          <Route
+            path={`/pre`}
+            exact
+            render={() => {
+              return <Pre />;
+            }}
+          />
+          <Route
+            path={`/ww2`}
+            exact
+            render={() => {
+              return <WW2 />;
+            }}
+          />
+          <Route
+            path={`/post`}
+            exact
+            render={() => {
+              return <Post />;
+            }}
+          />
+          <Route
+            path={`/present`}
+            exact
+            render={() => {
+              return <Present />;
+            }}
+          />
+          <Route
+            exact
+            path={`/archive`}
+            render={() => {
+              return <Archive />;
+            }}
+          />
 
-            <div className="App">
-              <Navbar
-                className="navbar-header"
-                theme="dark"
-                light
-                expand="md"
-              >
-                <NavbarBrand href="/">
-                  {" The Berelson Project"}
-                </NavbarBrand>
-                <NavbarToggler onClick={this.toggle} />
+          <div className="App">
+            <Navbar
+              className="navbar-header"
+              theme="dark"
+              light
+              expand="md"
+            >
+              <NavbarBrand href="/berelson-project/">
+                {" The Berelson Project"}
+              </NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
 
-                <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <NavLink href="/about/">About</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/archive/"> Archive</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                      GitHub
-                    </NavLink>
-                  </NavItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Eras
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <LinkContainer to="/pre/">
-                        <DropdownItem>Pre WWII</DropdownItem>
-                      </LinkContainer>
-                      <DropdownItem>WWII</DropdownItem>
-                      <DropdownItem>Post WWII</DropdownItem>
-                      <DropdownItem>Modern</DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </Nav>
-              </Navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="/about">About</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href={`${process.env.PUBLIC_URL}/archive/`}>
+                    Archive
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="https://github.com/dw-ll/Berelson-Project">
+                    GitHub
+                  </NavLink>
+                </NavItem>
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret>
+                    Eras
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    <LinkContainer to="/pre/">
+                      <DropdownItem>Pre WWII</DropdownItem>
+                    </LinkContainer>
+                    <DropdownItem>WWII</DropdownItem>
+                    <DropdownItem>Post WWII</DropdownItem>
+                    <DropdownItem>Modern</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </Nav>
+            </Navbar>
 
-              <Line />
-              <div><ScrollUpButton/></div>
+            <Line />
+            <div>
+              <ScrollUpButton />
             </div>
-          </Switch>
-        
+          </div>
+        </Switch>
       </Router>
     );
   }
