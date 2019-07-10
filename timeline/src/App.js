@@ -21,7 +21,6 @@ import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
-import Footer from "./Line/component/footer.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";

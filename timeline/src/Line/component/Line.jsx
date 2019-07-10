@@ -19,7 +19,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonBase";
+import ButtonGroup from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
@@ -246,23 +247,28 @@ export default class Line extends Component {
                     The Berelson Project
                   </h3>
                   <div>
-                    <Button
-                      variant="contained"
-                      size="small"
-                      color="light"
-                      onClick={() => {
-                        this.scrollDiv.current.scrollIntoView({
-                          behavior: "smooth"
-                        });
-                      }}
-                    >
-                      Explore Timeline
-                    </Button>
+                    <Grid item>
+                      <ButtonGroup
+                        color="yellow"
+                        aria-label="Outlined primary button group"
+                      >
+                        <Button style={{ color: "white" }}>
+                          Visit Archive
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            this.scrollDiv.current.scrollIntoView({
+                              behavior: "smooth"
+                            });
+                          }}
+                          style={{ color: "white" }}
+                        >
+                          Visit Timeline
+                        </Button>
+                      </ButtonGroup>
+                    </Grid>
                   </div>
-                  <div></div>
-                  <div>
-                    <Link to="/archive">Visit Archive</Link>
-                  </div>
+                  <div />
                 </Greeting>
               </div>
             </div>
@@ -271,8 +277,8 @@ export default class Line extends Component {
                 <div>
                   <h4>Timeline</h4>
                   <h6>
-                    Learn the Berelson lineage through this interactive
-                    timeline that spans both sides of the second World War.
+                    Learn the Berelson lineage through this interactive timeline
+                    that spans both sides of the second World War.
                   </h6>
                 </div>
                 <div>

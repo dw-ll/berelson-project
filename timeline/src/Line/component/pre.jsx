@@ -207,8 +207,8 @@ class Line extends Component {
                 <div>
                   <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
-                    History and more information about the family prior to the
-                    beginning of the second World War.
+                    History and more information about the family prior to
+                    the beginning of the second World War.
                   </h6>
                 </div>
               </div>
@@ -228,75 +228,81 @@ class Line extends Component {
                         //icon={<Print/>}
                       >
                         <div id="blimey" onMouseOver={this.handleMouseOver}>
-                          <Card className="card">
-                            <CardActionArea>
-                              <CardMedia
-                                style={{ height: 0, paddingTop: "100%" }}
-                                image={card.image}
-                              />
-                              <CardContent>
-                                <Typography
-                                  gutterBottom
-                                  variant="h5"
-                                  component="h2"
-                                >
-                                  {card.title}
-                                </Typography>
-                              </CardContent>
-                            </CardActionArea>
+                          <div>
+                            <Card className="card">
+                              <CardActionArea>
+                                <CardMedia
+                                  style={{ height: 0, paddingTop: "100%" }}
+                                  image={card.image}
+                                />
+                                <CardContent>
+                                  <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="h2"
+                                  >
+                                    {card.title}
+                                  </Typography>
+                                </CardContent>
+                              </CardActionArea>
 
-                            <Button
-                              size="small"
-                              color="primary"
-                              component={Link}
-                              // to={card.path}
-                              onClick={e => {
-                                this.handlePop(e, i);
-                              }}
-                            >
-                              Learn More
-                            </Button>
-                            <Popover
-                              open={this.state.popped === i}
-                              anchorEl={this.state.anchorEl}
-                              anchorReference="anchorPosition"
-                              anchorOrigin={{
-                                horizontal: "left",
-                                vertical: "center "
-                              }}
-                              transformOrigin={{
-                                horizontal: "left",
-                                vertical: "center"
-                              }}
-                              anchorPosition={{ top: "5", left: "50000" }}
-                              onClose={this.handleRequestClose}
-                            >
-                              <Card className="card">
-                                <CardActionArea>
-                                  <CardMedia
-                                    style={{
-                                      height: 0,
-                                      paddingTop: "100%"
-                                    }}
-                                    image={card.image}
-                                  />
-                                  <CardContent>
-                                    <Typography
-                                      gutterBottom
-                                      variant="h5"
-                                      component="h2"
-                                    >
-                                      {card.title}
-                                    </Typography>
-                                    <Typography>{card.subtitle}</Typography>
-                                  </CardContent>
-                                </CardActionArea>
-                              </Card>
-                            </Popover>
-                            <Tooltip title="Add" placement="right">
-                              <Button>right</Button>
-                            </Tooltip>
-                          </Card>
+                              <Button
+                                size="small"
+                                color="primary"
+                                component={Link}
+                                // to={card.path}
+                                onClick={e => {
+                                  this.handlePop(e, i);
+                                }}
+                              >
+                                Learn More
+                              </Button>
+                              <div>
+                                <Popover
+                                  open={this.state.popped === i}
+                                  anchorEl={this.state.anchorEl}
+                                  anchorReference="anchorPosition"
+                                  anchorOrigin={{
+                                    horizontal: "left",
+                                    vertical: "center "
+                                  }}
+                                  transformOrigin={{
+                                    horizontal: "left",
+                                    vertical: "center"
+                                  }}
+                                  anchorPosition={{
+                                    top: "-1",
+                                    left: "50000"
+                                  }}
+                                  onClose={this.handleRequestClose}
+                                >
+                                  <Card className="card">
+                                    <CardActionArea>
+                                      <CardMedia
+                                        style={{
+                                          height: 0,
+                                          paddingTop: "100%"
+                                        }}
+                                        image={card.image}
+                                      />
+                                      <CardContent>
+                                        <Typography
+                                          gutterBottom
+                                          variant="h5"
+                                          component="h2"
+                                        >
+                                          {card.title}
+                                        </Typography>
+                                        <Typography>
+                                          {card.subtitle}
+                                        </Typography>
+                                      </CardContent>
+                                    </CardActionArea>
+                                  </Card>
+                                </Popover>
+                              </div>
+                            </Card>
+                          </div>
                         </div>
                       </VerticalTimelineElement>
                     ) : (
