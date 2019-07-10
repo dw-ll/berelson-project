@@ -114,6 +114,10 @@ h3 {
     background:grey;
 }
 
+#scroll{
+  background: grey;
+}
+
 
 @keyframes App-logo-spin {
   from {

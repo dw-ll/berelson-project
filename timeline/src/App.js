@@ -78,7 +78,12 @@ class App extends Component {
           />
 
           <div className="App">
-            <Navbar className="navbar-header" theme="dark" light expand="md">
+            <Navbar
+              className="navbar-header"
+              theme="dark"
+              light
+              expand="md"
+            >
               <NavbarBrand href="/berelson-project/">
                 {" The Berelson Project"}
               </NavbarBrand>
@@ -118,11 +123,9 @@ class App extends Component {
 
             <div>
               <footer class="page-footer font-small blue">
-                <div class="footer-copyright text-center py-3">
-                  © 2019 
-                </div>
+                <div class="footer-copyright text-center py-3">© 2019</div>
               </footer>
-              <ScrollUpButton />
+              <ScrollUpButton speed="1000" />
             </div>
           </div>
         </Switch>

@@ -2,22 +2,23 @@ import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import Card from "@material-ui/core/Card";
-
 import CardActionArea from "@material-ui/core/CardActionArea";
-
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
+import Popper from "react-bootstrap/Popover";
+import Toast from "react-bootstrap/Toast";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import Tooltip from "@material-ui/core/Tooltip";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
-
 import Abram from "../../gallery/component/people/pre_abram.jsx";
 import Chana from "../../gallery/component/people/pre_chana.jsx";
 import David from "../../gallery/component/people/pre_david.jsx";
@@ -207,8 +208,8 @@ class Line extends Component {
                 <div>
                   <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
-                    History and more information about the family prior to
-                    the beginning of the second World War.
+                    History and more information about the family prior to the
+                    beginning of the second World War.
                   </h6>
                 </div>
               </div>
@@ -216,95 +217,56 @@ class Line extends Component {
                 {preTimelineObjects.map((card, i) => (
                   <React.Fragment key={i}>
                     {i % 2 === 0 ? (
-                      <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        key={i}
-                        iconStyle={{
-                          background: "rgb(40,49,72)",
-                          color: "#000"
-                        }}
-                        paddingTop="0em"
+                      <Container>
+                        <VerticalTimelineElement
+                          className="vertical-timeline-element--work"
+                          key={i}
+                          iconStyle={{
+                            background: "rgb(40,49,72)",
+                            color: "#000"
+                          }}
+                          paddingTop="0em"
 
-                        //icon={<Print/>}
-                      >
-                        <div id="blimey" onMouseOver={this.handleMouseOver}>
-                          <div>
-                            <Card className="card">
-                              <CardActionArea>
-                                <CardMedia
-                                  style={{ height: 0, paddingTop: "100%" }}
-                                  image={card.image}
-                                />
-                                <CardContent>
-                                  <Typography
-                                    gutterBottom
-                                    variant="h5"
-                                    component="h2"
-                                  >
-                                    {card.title}
-                                  </Typography>
-                                </CardContent>
-                              </CardActionArea>
+                          //icon={<Print/>}
+                        >
+                          <div id="blimey" onMouseOver={this.handleMouseOver}>
+                            <div>
+                              <Card className="card">
+                                <CardActionArea>
+                                  <CardMedia
+                                    style={{
+                                      height: 0,
+                                      paddingTop: "100%"
+                                    }}
+                                    image={card.image}
+                                  />
+                                  <CardContent>
+                                    <Typography
+                                      gutterBottom
+                                      variant="h5"
+                                      component="h2"
+                                    >
+                                      {card.title}
+                                    </Typography>
+                                  </CardContent>
+                                </CardActionArea>
 
-                              <Button
-                                size="small"
-                                color="primary"
-                                component={Link}
-                                // to={card.path}
-                                onClick={e => {
-                                  this.handlePop(e, i);
-                                }}
-                              >
-                                Learn More
-                              </Button>
-                              <div>
-                                <Popover
-                                  open={this.state.popped === i}
-                                  anchorEl={this.state.anchorEl}
-                                  anchorReference="anchorPosition"
-                                  anchorOrigin={{
-                                    horizontal: "left",
-                                    vertical: "center "
+                                <Button
+                                  size="small"
+                                  color="primary"
+                                  component={Link}
+                                  // to={card.path}
+                                  onClick={e => {
+                                    this.handlePop(e, i);
                                   }}
-                                  transformOrigin={{
-                                    horizontal: "left",
-                                    vertical: "center"
-                                  }}
-                                  anchorPosition={{
-                                    top: "-1",
-                                    left: "50000"
-                                  }}
-                                  onClose={this.handleRequestClose}
                                 >
-                                  <Card className="card">
-                                    <CardActionArea>
-                                      <CardMedia
-                                        style={{
-                                          height: 0,
-                                          paddingTop: "100%"
-                                        }}
-                                        image={card.image}
-                                      />
-                                      <CardContent>
-                                        <Typography
-                                          gutterBottom
-                                          variant="h5"
-                                          component="h2"
-                                        >
-                                          {card.title}
-                                        </Typography>
-                                        <Typography>
-                                          {card.subtitle}
-                                        </Typography>
-                                      </CardContent>
-                                    </CardActionArea>
-                                  </Card>
-                                </Popover>
-                              </div>
-                            </Card>
+                                  Learn More
+                                </Button>
+                              </Card>
+                            </div>
                           </div>
-                        </div>
-                      </VerticalTimelineElement>
+                        </VerticalTimelineElement>
+                      </Container>
                     ) : (
                       <VerticalTimelineElement
                         className="vertical-timeline-element--work"

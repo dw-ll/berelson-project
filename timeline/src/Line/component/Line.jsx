@@ -23,6 +23,7 @@ import ButtonGroup from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
+import Popper from "react-bootstrap/Popover";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
 
@@ -252,7 +253,7 @@ export default class Line extends Component {
                         color="yellow"
                         aria-label="Outlined primary button group"
                       >
-                        <Button style={{ color: "white" }}>
+                        <Button component={Link} to="/archive" style={{ color: "white" }}>
                           Visit Archive
                         </Button>
                         <Button
