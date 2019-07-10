@@ -208,8 +208,8 @@ class Line extends Component {
                 <div>
                   <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
-                    History and more information about the family prior to the
-                    beginning of the second World War.
+                    History and more information about the family prior to
+                    the beginning of the second World War.
                   </h6>
                 </div>
               </div>
@@ -229,43 +229,79 @@ class Line extends Component {
 
                           //icon={<Print/>}
                         >
-                          <div id="blimey" onMouseOver={this.handleMouseOver}>
-                            <div>
-                              <Card className="card">
-                                <CardActionArea>
-                                  <CardMedia
-                                    style={{
-                                      height: 0,
-                                      paddingTop: "100%"
-                                    }}
-                                    image={card.image}
-                                  />
-                                  <CardContent>
-                                    <Typography
-                                      gutterBottom
-                                      variant="h5"
-                                      component="h2"
-                                    >
-                                      {card.title}
-                                    </Typography>
-                                  </CardContent>
-                                </CardActionArea>
-
-                                <Button
-                                  size="small"
-                                  color="primary"
-                                  component={Link}
-                                  // to={card.path}
-                                  onClick={e => {
-                                    this.handlePop(e, i);
+                          <div
+                            id="blimey"
+                            onMouseOver={this.handleMouseOver}
+                          >
+                            <Card className="card">
+                              <CardActionArea>
+                                <CardMedia
+                                  style={{
+                                    height: 0,
+                                    paddingTop: "100%"
                                   }}
-                                >
-                                  Learn More
-                                </Button>
-                              </Card>
-                            </div>
+                                  image={card.image}
+                                />
+                                <CardContent>
+                                  <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="h2"
+                                  >
+                                    {card.title}
+                                  </Typography>
+                                </CardContent>
+                              </CardActionArea>
+
+                              <Button
+                                size="small"
+                                color="primary"
+                                component={Link}
+                                // to={card.path}
+                                onClick={e => {
+                                  this.handlePop(e, i);
+                                }}
+                              >
+                                Learn More
+                              </Button>
+                            </Card>
                           </div>
                         </VerticalTimelineElement>
+                  
+                          <div id="popup-card" lg="auto" style={{float:"right",width:"30%", height:"80" }}>
+                            <Toast
+                              show={this.state.popped === i}
+                              onClose={this.handleRequestClose}
+                              style={{
+                                position: "absolute",
+                                top: 100
+                              }}
+                            >
+                              <Toast.Header>
+                                {card.title}
+                              </Toast.Header>
+                              <Toast.Body>
+                                <Card className="card">
+                                  <CardActionArea>
+                                    <CardMedia
+                                      style={{
+                                        height: 0,
+                                        paddingTop: "100%"
+                                      }}
+                                      image={card.image}
+                                    />
+                                    <CardContent>
+                                   
+                                      <Typography>
+                                        {card.subtitle}
+                                      </Typography>
+                                    </CardContent>
+                                  </CardActionArea>
+                                </Card>
+                              </Toast.Body>
+                            </Toast>
+                          </div>
+                     
                       </Container>
                     ) : (
                       <VerticalTimelineElement
