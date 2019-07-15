@@ -14,6 +14,7 @@ import Pre from "./pre";
 import Post from "./post";
 import WWII from "./ww2";
 import About from "./about";
+import Tree from "./tree";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -51,6 +52,10 @@ const routes = [
   {
     component: Archive,
     path: "/archive/"
+  },
+  {
+    component: Tree,
+    path: "/tree/"
   }
 ];
 
@@ -253,7 +258,11 @@ export default class Line extends Component {
                         color="yellow"
                         aria-label="Outlined primary button group"
                       >
-                        <Button component={Link} to="/archive" style={{ color: "white" }}>
+                        <Button
+                          component={Link}
+                          to="/archive"
+                          style={{ color: "white" }}
+                        >
                           Visit Archive
                         </Button>
                         <Button
@@ -265,6 +274,14 @@ export default class Line extends Component {
                           style={{ color: "white" }}
                         >
                           Visit Timeline
+                        </Button>
+                        <Button
+                          component={Link}
+                          to="/tree"
+                          style={{ color: "white" }}
+                      
+                        >
+                          Visit Tree
                         </Button>
                       </ButtonGroup>
                     </Grid>
@@ -278,8 +295,8 @@ export default class Line extends Component {
                 <div>
                   <h4>Timeline</h4>
                   <h6>
-                    Learn the Berelson lineage through this interactive timeline
-                    that spans both sides of the second World War.
+                    Learn the Berelson lineage through this interactive
+                    timeline that spans both sides of the second World War.
                   </h6>
                 </div>
                 <div>

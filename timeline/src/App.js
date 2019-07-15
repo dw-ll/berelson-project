@@ -21,6 +21,7 @@ import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
+import Tree from "./Line/component/tree.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
@@ -74,6 +75,13 @@ class App extends Component {
             path={`/archive`}
             render={() => {
               return <Archive />;
+            }}
+          />
+          <Route
+            exact
+            path={`/tree`}
+            render={() => {
+              return <Tree />;
             }}
           />
 
