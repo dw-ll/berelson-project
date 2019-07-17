@@ -33,8 +33,8 @@ const myTreeData = [
 class FamilyTree extends Component {
   render() {
     return (
-      <div class="Treewrapper">
-          <div class ="treecase">
+   
+   <div class ="tree-wrapper">
         <div class="tree">
           <ul>
             <li>
@@ -167,7 +167,7 @@ class FamilyTree extends Component {
           </ul>
         </div>
         </div>
-      </div>
+    
     );
   }
 }

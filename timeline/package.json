@@ -4,6 +4,7 @@
     "private": true,
     "homepage": "http://dw-ll.github.io/berelson-project/",
     "dependencies": {
+        "@latticehr/react-org-chart": "^0.1.1",
         "@material-ui/core": "^3.9.3",
         "@material-ui/icons": "^3.0.2",
         "blueimp-gallery": "^2.33.0",
