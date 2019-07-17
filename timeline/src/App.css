@@ -236,16 +236,17 @@ right connector from last child*/
 }
 .tree-wrapper {
   margin: 0 auto;
-  margin-left: -10px;
+
   min-height: 700px;
   min-width: 950px;
+  margin-right:-400px;
+  margin-left:-400px;
 }
 .tree {
-  width: 100vw;
-  height: 30vw;
+  height: 500vw;
   white-space: nowrap;
-  min-width: 900px;
-  min-height: 700px;
+  min-width: 950px;
+  min-height: 500px;
 }
 
 #scroll {
