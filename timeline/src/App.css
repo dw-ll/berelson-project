@@ -235,19 +235,17 @@ right connector from last child*/
   border-color: #94a0b4;
 }
 .tree-wrapper {
-  margin: 0 auto;
-
-  min-height: 700px;
-  min-width: 950px;
-  margin-right:-400px;
-  margin-left:-400px;
-}
-.tree {
-  height: 500vw;
+  display: inline-block;
+  min-height: 900px;
+  width:3000px;
+ 
   white-space: nowrap;
-  min-width: 950px;
-  min-height: 500px;
+  overflow: hidden;
 }
+.tree{
+  min-height: 900px;
+}
+
 
 #scroll {
   background: grey;
