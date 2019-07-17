@@ -34,6 +34,7 @@
 body,
 html {
   height: 100%;
+  width: 100%;
 }
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
@@ -235,16 +236,18 @@ right connector from last child*/
 }
 .tree-wrapper {
   margin: 0 auto;
-  width:900px;
+  margin-left: -10px;
+  min-height: 700px;
+  min-width: 950px;
 }
-.tree{
-  width:100vw;
+.tree {
+  width: 100vw;
   height: 30vw;
-  padding: bottom 30%;
+  white-space: nowrap;
+  min-width: 900px;
+  min-height: 700px;
 }
-@media screen and (max-width: 800px) { 
 
-}
 #scroll {
   background: grey;
 }
