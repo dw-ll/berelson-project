@@ -238,13 +238,11 @@ right connector from last child*/
   display: inline-block;
   min-height: 900px;
   width:3000px;
- 
+
   white-space: nowrap;
   overflow: hidden;
 }
-.tree{
-  min-height: 900px;
-}
+
 
 
 #scroll {

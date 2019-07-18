@@ -33,8 +33,7 @@ const myTreeData = [
 class FamilyTree extends Component {
   render() {
     return (
-   
-   <div class ="tree-wrapper">
+      <div class="tree-wrapper">
         <div class="tree">
           <ul>
             <li>
@@ -116,19 +115,35 @@ class FamilyTree extends Component {
                       <a href="#">Henry (Married Greta Glazer)</a>
                       <ul>
                         <li>
-                          <a href="#">Liebel</a>
+                          <a href="#">Riva (Married David Berelson)</a>
+                          <ul>
+                            <li>
+                              <a class="short-single-child" href="#">
+                                Serj testing longer name
+                              </a>
+                            </li>
+                          </ul>
                         </li>
                         <li>
-                          <a href="#">Anja</a>
-                        </li>
-                        <li>
-                          <a href="#">Shlameck</a>
-                        </li>
-                        <li>
-                          <a href="#">Rose</a>
-                        </li>
-                        <li>
-                          <a href="#">Lola</a>
+                          <a href="#">Simon (Married Bahbi Fisher)</a>
+                          <ul>
+                            <li>
+                              <a href="#">Selina (Married Dan Wagowski)</a>
+                              <ul>
+                                <li>
+                                  <a class="short-single-child" href="#">
+                                    Eli testing longer name
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="#">Aron</a>
+                            </li>
+                            <li>
+                              <a href="#">Abby</a>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </li>
@@ -155,9 +170,46 @@ class FamilyTree extends Component {
                 </li>
                 <li>
                   <a href="#">Leizer (Married Ida)</a>
+                  <ul>
+                    <li>
+                      <a href="#">Shmuel</a>
+                    </li>
+                    <li>
+                      <a href="#">Avram</a>
+                    </li>
+                    <li>
+                      <a href="#">Chana</a>
+                    </li>
+                    <li>
+                      <a href="#">Chava</a>
+                    </li>
+                    <li>
+                      <a href="#">Sheindel</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <a href="#">Maika (Married Rochverg [Frank])</a>
+                  <ul>
+                    <li>
+                      <a href="#">Max</a>
+                    </li>
+                    <li>
+                      <a href="#">Simon</a>
+                    </li>
+                    <li>
+                      <a href="#">Phillip</a>
+                    </li>
+                    <li>
+                      <a href="#">Chana</a>
+                    </li>
+                    <li>
+                      <a href="#">Girl</a>
+                    </li>
+                    <li>
+                      <a href="#">Girl</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <a href="#">Yessel (Married Paige Laufer)</a>
@@ -166,8 +218,7 @@ class FamilyTree extends Component {
             </li>
           </ul>
         </div>
-        </div>
-    
+      </div>
     );
   }
 }
