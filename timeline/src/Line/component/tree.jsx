@@ -40,25 +40,24 @@ class FamilyTree extends Component {
               <a href="#">Koppel</a>
               <ul>
                 <li>
-                  <a href="#">Pinchas</a>
+                  <a class="family spouse" href="#">
+                    Pinchas
+                  </a>
+
+                  <a href="#">Katz</a>
                   <ul>
                     <li>
-                      <a href="#">Katz</a>
+                      <a href="#">Abram</a>
+                    </li>
+                    <li>
+                      <a href="#">? (Brother)</a>
                       <ul>
                         <li>
-                          <a href="#">Abram</a>
-                        </li>
-                        <li>
-                          <a href="#">? (Brother)</a>
+                          <a href="#">Michael</a>
                           <ul>
                             <li>
-                              <a href="#">Michael</a>
-                              <ul>
-                                <li>
-                                  <a href="#">Married?</a>
-                                  <a href="#">Putty</a>
-                                </li>
-                              </ul>
+                              <a href="#">Married?</a>
+                              <a href="#">Putty</a>
                             </li>
                           </ul>
                         </li>

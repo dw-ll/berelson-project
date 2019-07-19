@@ -190,6 +190,52 @@ right connector from last child*/
   -moz-border-radius: 5px 0 0 0;
 }
 
+.tree li .parent {
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	margin-top: 10px;
+}
+.tree li .parent::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: 3px;
+    height: 10px;
+}
+.tree li .family {
+	position: relative;
+}
+.tree li .family .spouse {
+	position: absolute;
+	top: 0;
+	left: 50%;
+    margin-left: 95px;
+}
+.tree li .family .spouse::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 10px;
+    height: 3px;
+}
+.tree li a+a {
+			margin-left: 20px;
+			position: relative;
+		}
+		.tree li a+a::before {
+			content: '';
+			position: absolute;
+			border-top: 1px solid #ccc;
+			top: 50%; left: -21px; 
+			width: 20px;
+		}
 /*Time to add downward connectors from parents*/
 .tree ul ul::before {
   content: "";
