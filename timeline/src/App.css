@@ -135,7 +135,15 @@ h3 {
 			-moz-transition: all 0.5s;
 			transition: all 0.5s;
 		}
-
+    .tree-photo{
+      position:relative;
+      width:150px;
+      height: 150px;
+      border-radius:50%;
+    }
+    .tree-info{
+      
+    }
 		/*We will use ::before and ::after to draw the connectors*/
 
 		.tree li::before, .tree li::after{

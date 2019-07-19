@@ -5,6 +5,7 @@ import Tree from "react-d3-tree";
 import Pre from "./pre";
 import Post from "./post";
 import WWII from "./ww2";
+import chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 
 const myTreeData = [
   {
@@ -77,7 +78,10 @@ class FamilyTree extends Component {
               </ul>
             </li>
             <li>
-              <a href="#">Chana</a>
+              <a href="#">
+                <img class="tree-photo" src={chana} />
+                <div class="tree-info">Chana Fodeman</div>
+              </a>
               <ul>
                 <li>
                   <a href="#">Simon (Married Riva)</a>
