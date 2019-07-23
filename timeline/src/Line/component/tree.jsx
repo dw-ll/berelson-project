@@ -5,32 +5,11 @@ import Tree from "react-d3-tree";
 import Pre from "./pre";
 import Post from "./post";
 import WWII from "./ww2";
-import chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
-
-const myTreeData = [
-  {
-    name: "Koppel Multzman",
-    attributes: {
-      keyA: "Koppel Multzman",
-      keyB: "Chana"
-    },
-    children: [
-      {
-        name: "Level 2: A",
-        attributes: {
-          keyA: "Pinchas",
-          keyB: "Freide",
-          keyC: "Pessel",
-          keyD: "Rosa"
-        }
-      },
-      {
-        name: "Level 2: B"
-      }
-    ]
-  }
-];
-
+import Missing from "../../Media/missing_profile.jpg";
+import Chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
+import Abram from "../../Media/Abram.Baigelman040.pdf";
+import DavidB from "../../Media/Pre-WWII/David.Baigelman016.jpeg";
+import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 
 class FamilyTree extends Component {
   render() {
@@ -47,20 +26,28 @@ class FamilyTree extends Component {
           <div class="tree">
             <ul>
               <li>
-                <a href="#">Koppel</a>
                 <a href="#">
+                  <img class="tree-profile" src={Missing} />
+                  <div class="tree-info">Koppel</div>
+                </a>
+                <a href="#">
+                  <img class="tree-profile" src={Chana} />
                   <div class="tree-info">Chana Fodeman</div>
                 </a>
                 <ul>
                   <li>
                     <a class="family spouse" href="#">
-                      Pinchas
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Pinchas</div>
                     </a>
 
                     <a href="#">Katz</a>
                     <ul>
                       <li>
-                        <a href="#">Abram</a>
+                        <a href="#">
+                          <img class="tree-profile" src={Abram} />
+                          <div class="tree-info">Abram</div>
+                        </a>
                       </li>
                       <li>
                         <a href="#">? (Brother)</a>
@@ -79,51 +66,105 @@ class FamilyTree extends Component {
                     </ul>
                   </li>
                   <li>
-                    <a href="#">Freide</a>
+                    <a href="#">
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Freide</div>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Pessel</a>
+                    <a href="#">
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Pessel</div>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Rosa</a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Rosa</div>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Simon</a>
-                    <a href="#">Riva</a>
+                    <a href="#">
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Simon</div>
+                    </a>
+                    <a href="#">
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Riva</div>
+                    </a>
 
                     <ul>
                       <li>
-                        <a href="#">David </a>
-                        <a href="#">Chana Federman</a>
+                        <a href="#">
+                          <img class="tree-profile" src={DavidB} />
+                          <div class="tree-info">David</div>
+                        </a>
+
+                        <a href="#">
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chana Federman</div>
+                        </a>
+
                         <ul>
                           <li>
-                            <a href="#">Dinchaz B. Lodz</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Dinchaz</div>
+                            </a>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#">Chaya</a>
+                        <a href="#">
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chaya</div>
+                        </a>
                         <ul>
                           <li>
-                            <a href="#">Liebel</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Liebel</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Anja</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Anja</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Shlameck</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Shlameck</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Rose</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Rose</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Lola</a>
+                            <a href="#">
+                           
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Lola</div>
+                            </a>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#">Henry</a>
-                        <a href="#">Greta Glazer</a>
+                        <a href="#">
+                     
+                          <img class="tree-profile" src={Henry} />
+                          <div class="tree-info">Henry</div>
+                        </a>
+                        <a href="#">
+                        
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Greta Glazer</div>
+                        </a>
                         <ul>
                           <li>
                             <a href="#">Riva</a>
