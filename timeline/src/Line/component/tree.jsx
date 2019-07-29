@@ -10,6 +10,8 @@ import Chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 import Abram from "../../Media/Abram.Baigelman040.pdf";
 import DavidB from "../../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
+import Riva from "../../Media/Modern/Riva346.jpeg";
+import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 
 class FamilyTree extends Component {
   render() {
@@ -147,7 +149,6 @@ class FamilyTree extends Component {
                           </li>
                           <li>
                             <a href="#">
-                           
                               <img class="tree-profile" src={Missing} />
                               <div class="tree-info">Lola</div>
                             </a>
@@ -156,47 +157,74 @@ class FamilyTree extends Component {
                       </li>
                       <li>
                         <a href="#">
-                     
                           <img class="tree-profile" src={Henry} />
                           <div class="tree-info">Henry</div>
                         </a>
                         <a href="#">
-                        
                           <img class="tree-profile" src={Missing} />
                           <div class="tree-info">Greta Glazer</div>
                         </a>
                         <ul>
                           <li>
-                            <a href="#">Riva</a>
-                            <a href="#">David Berelson</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Riva} />
+                              <div class="tree-info">Riva</div>
+                            </a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">David Berelson</div>
+                            </a>
                             <ul>
                               <li>
-                                <a class="short-single-child" href="#">
-                                  Serj testing longer name
+                                <a href="#">
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Serj</div>
                                 </a>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="#">Simon</a>
-                            <a href="#">Bahbi Fisher</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Simon</div>
+                            </a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Bahbi Fisher</div>
+                            </a>
                             <ul>
                               <li>
-                                <a href="#">Selina </a>
-                                <a href="#">Dan Wagowski</a>
+                                <a href="#">
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Serj</div>{" "}
+                                </a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Dan Wagowski</div>
+                                </a>
                                 <ul>
                                   <li>
                                     <a class="short-single-child" href="#">
-                                      Eli testing longer name
+                                      <img class="tree-profile" src={Missing} />
+                                      <div class="tree-info">Eli</div>
                                     </a>
                                   </li>
                                 </ul>
                               </li>
                               <li>
-                                <a href="#">Aron</a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Aron</div>
+                                </a>
                               </li>
                               <li>
-                                <a href="#">Abby</a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Abby</div>
+                                </a>
                               </li>
                             </ul>
                           </li>
@@ -204,170 +232,391 @@ class FamilyTree extends Component {
                       </li>
 
                       <li>
-                        <a href="#">Shlomo B. Lodz</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Shlomo</div>
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">Rosa</a>
-                        <a href="#">Abram (Shlomo)</a>
-                        <a href="#">Raquel</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Rosa</div>
+                        </a>
+                        <a href="#">
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Abram</div>
+                        </a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Raquel</div>
+                        </a>
                         <ul>
                           <li>
                             <a href="#">
-                              <div>Felicia</div>
-                              <div>B. Lodz, D. Auschwitz</div>
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Felicia</div>
                             </a>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#">Avram</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Avram</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Chaina</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chaina</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Chamon?</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chamon</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Eita</a>
-                        <a href="#">Shmuel</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Eita</div>
+                        </a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Shmuel</div>
+                        </a>
                         <ul>
                           <li>
-                            <a href="#">Jack</a>
-                            <a href="#">Rita Guttman</a>
+                            <a href="#">
+                              <img class="tree-profile" src={Jack} />
+                              <div class="tree-info">Jack</div>
+                            </a>
+                            <a href="#">
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Rita Guttman</div>
+                            </a>
                             <ul>
                               <li>
                                 <li>
-                                  <a href="#">Sandy</a>
+                                  <a href="#">
+                                    {" "}
+                                    <img class="tree-profile" src={Missing} />
+                                    <div class="tree-info">Sandy</div>
+                                  </a>
                                 </li>
                                 <li>
-                                  <a href="#">Mark</a>
-                                  <a href="#">Blaine</a>
+                                  <a href="#">
+                                    <img class="tree-profile" src={Missing} />
+                                    <div class="tree-info">Mark</div>
+                                  </a>
+                                  <a href="#">
+                                    <img class="tree-profile" src={Missing} />
+                                    <div class="tree-info">Blaine</div>
+                                  </a>
                                   <ul>
                                     <li>
-                                      <a href="#">Mollie</a>
+                                      <a href="#">
+                                        {" "}
+                                        <img
+                                          class="tree-profile"
+                                          src={Missing}
+                                        />
+                                        <div class="tree-info">Mollie</div>
+                                      </a>
                                     </li>
                                     <li>
-                                      <a href="#">Nina</a>
+                                      <a href="#">
+                                        {" "}
+                                        <img
+                                          class="tree-profile"
+                                          src={Missing}
+                                        />
+                                        <div class="tree-info">Nina</div>
+                                      </a>
                                     </li>
                                   </ul>
                                 </li>
                                 <li>
-                                  <a href="#">Illana</a>
+                                  <a href="#">
+                                    {" "}
+                                    <img class="tree-profile" src={Missing} />
+                                    <div class="tree-info">Illana</div>
+                                  </a>
                                 </li>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="#">Avram</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Avram</div>
+                            </a>
                           </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">Leizer</a>
-                    <a href="#">Ida</a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Leizer</div>
+                    </a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Ida</div>
+                    </a>
                     <ul>
                       <li>
-                        <a href="#">Shmuel</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Shmuel</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Avram</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Avram</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Chana</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chana</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Chava</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chava</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Sheindel</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Sheindel</div>
+                        </a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">Maika </a>
-                    <a href="#">Rochverg [Frank]</a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Maika</div>
+                    </a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Rochverg</div>
+                    </a>
                     <ul>
                       <li>
-                        <a href="#">Max</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Max</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Simon</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Simon</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Phillip</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Phillip</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Chana</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chana</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Girl</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Girl</div>
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Girl</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Girl</div>
+                        </a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">Yessel</a>
-                    <a href="#">Paige Laufer</a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Yessel</div>
+                    </a>
+                    <a href="#">
+                      {" "}
+                      <img class="tree-profile" src={Missing} />
+                      <div class="tree-info">Paige Laufer</div>
+                    </a>
                     <ul>
                       <li>
-                        <a href="#">Yitzshak Baigelman</a>
-                        <a href="#">Chana HS</a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Yitzshak Baigelman</div>
+                        </a>
+                        <a href="#">
+                          {" "}
+                          <img class="tree-profile" src={Missing} />
+                          <div class="tree-info">Chana HS</div>
+                        </a>
                         <ul>
                           <li>
-                            <a href="#">Abram (Shlomo)</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Abram</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Bryndi Blanche</a>
-                            <a href="#">Morris Rubenstein</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Bryndi</div>
+                            </a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Morris Rubenstein</div>
+                            </a>
                             <ul>
                               <li>
-                                <a href="#">Sam</a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Sam</div>
+                                </a>
                               </li>
                               <li>
-                                <a href="#">Ben</a>
-                                <a href="#">Rose</a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Ben</div>
+                                </a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Rose</div>
+                                </a>
                                 <ul>
                                   <li>
-                                    <a href="#">Joan Boarch</a>
+                                    <a href="#">
+                                      {" "}
+                                      <img class="tree-profile" src={Missing} />
+                                      <div class="tree-info">Joan Boarch</div>
+                                    </a>
                                   </li>
                                   <li>
-                                    <a href="#">Mitch</a>
+                                    <a href="#">
+                                      {" "}
+                                      <img class="tree-profile" src={Missing} />
+                                      <div class="tree-info">Mitch</div>
+                                    </a>
                                   </li>
                                   <li>
-                                    <a href="#">Dan</a>
+                                    <a href="#">
+                                      {" "}
+                                      <img class="tree-profile" src={Missing} />
+                                      <div class="tree-info">Dan</div>
+                                    </a>
                                   </li>
                                 </ul>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="#">Esther</a>
-                            <a href="#">Sherman</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Esther</div>
+                            </a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Sherman</div>
+                            </a>
                             <ul>
                               <li>
-                                <a href="#">Child</a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Child</div>
+                                </a>
                               </li>
                               <li>
-                                <a href="#">Child</a>
+                                <a href="#">
+                                  {" "}
+                                  <img class="tree-profile" src={Missing} />
+                                  <div class="tree-info">Child</div>
+                                </a>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="#">Rivka</a>
-                            <a href="#">Gottlieb</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Rivka</div>
+                            </a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Gottlieb</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Ethel</a>
-                            <a href="#">Bond</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Ethel</div>
+                            </a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Bond</div>
+                            </a>
                           </li>
                           <li>
-                            <a href="#">Avram</a>
+                            <a href="#">
+                              {" "}
+                              <img class="tree-profile" src={Missing} />
+                              <div class="tree-info">Avram</div>
+                            </a>
                           </li>
                         </ul>
                       </li>
