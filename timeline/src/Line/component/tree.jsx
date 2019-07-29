@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { createRef, Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "react-vertical-timeline-component/style.min.css";
 import Tree from "react-d3-tree";
@@ -14,9 +14,22 @@ import Riva from "../../Media/Modern/Riva346.jpeg";
 import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 
 class FamilyTree extends Component {
+  constructor(props) {
+    super(props);
+    this.topRef = createRef(); // Create a ref object
+  }
+  componentDidMount() {
+    this.topRef.current.scrollIntoView({
+      behavior: "auto"
+    });
+  }
+  handleScrollToElement(event) {
+    window.scrollTo(0, this.topRef.current.offsetTop);
+  }
+
   render() {
     return (
-      <div>
+      <div class="top" ref={this.topRef}>
         <div>
           <h4 style={{ textAlign: "center" }}>Berelson Family Tree</h4>
           <h6 style={{ textAlign: "center" }}>

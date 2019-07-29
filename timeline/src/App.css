@@ -233,7 +233,9 @@ h3 {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+  transition: transform .2s; /* Animation */
 }
+
 .tree li a + a {
   margin-left: 20px;
   position: relative;
@@ -267,12 +269,12 @@ h3 {
 .tree-wrapper {
   display: inline-block;
   min-height: 900px;
-  width: 10000px;
-  transform: scale(0.35);
-  transform-origin: -4% 0% 10px;
+  width: 12000px;
+  transform: scale(0.10);
+  transform-origin: -0.5% 2% 0px;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin-left:-200px;
+
 
 }
 .tree-profile{
