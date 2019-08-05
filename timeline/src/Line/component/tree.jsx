@@ -57,7 +57,6 @@ import RivaModern from "../../gallery/component/people/present_riva.jsx";
 import Sevek from "../../gallery/component/people/present_sevek.jsx";
 import Starski from "../../gallery/component/people/present_starski.jsx";
 
-
 const routes = [
   {
     component: AbramP,
@@ -803,6 +802,7 @@ class FamilyTree extends Component {
             </ul>
           </div>
         </div>
+  
       </div>
     );
   }
