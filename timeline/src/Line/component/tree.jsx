@@ -1,6 +1,6 @@
 import React, { createRef, Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Script from 'react-load-script'
+import Script from "react-load-script";
 import "react-vertical-timeline-component/style.min.css";
 import HorizontalScroll from "react-scroll-horizontal";
 import Tree from "react-d3-tree";
@@ -15,6 +15,125 @@ import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 import Riva from "../../Media/Modern/Riva346.jpeg";
 import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 
+// Profile Pages
+import AbramP from "../../gallery/component/people/pre_abram.jsx";
+import ChanaP from "../../gallery/component/people/pre_chana.jsx";
+import David from "../../gallery/component/people/pre_david.jsx";
+import Gita from "../../gallery/component/people/pre_gita.jsx";
+import HenryP from "../../gallery/component/people/pre_henry.jsx";
+import Jolly from "../../gallery/component/people/pre_jolly.jsx";
+import Leon from "../../gallery/component/people/pre_leon.jsx";
+import Lodz from "../../gallery/component/people/pre_lodz.jsx";
+import ChanaGreet from "../../Media/Pre-WWII/Gita.Baigelman142.jpeg";
+import Gita2 from "../../gallery/component/people/ww2_gita.jsx";
+import Henry2 from "../../gallery/component/people/ww2_henry.jsx";
+import Happy from "../../gallery/component/people/ww2_happy.jsx";
+import Rachella from "../../gallery/component/people/ww2_rachella.jsx";
+import GreetImage from "../../Media/WWII/HappyBoys4282.jpeg";
+import Ed from "../../gallery/component/people/post_ed.jsx";
+import Fonia from "../../gallery/component/people/post_fonia.jsx";
+import GitaPost from "../../gallery/component/people/post_gita.jsx";
+import HenryPost from "../../gallery/component/people/post.henry.jsx";
+import JackPost from "../../gallery/component/people/post_jack.jsx";
+import Justina from "../../gallery/component/people/post_justina.jsx";
+import Katie from "../../gallery/component/people/post_katie.jsx";
+import Levin from "../../gallery/component/people/post_levin.jsx";
+import Pinek from "../../gallery/component/people/post_pinek.jsx";
+import Pola from "../../gallery/component/people/post_pola.jsx";
+import RachellaPost from "../../gallery/component/people/post_rachella.jsx";
+import RivaPost from "../../gallery/component/people/post_riva.jsx";
+import Sam from "../../gallery/component/people/post_sam.jsx";
+import Sandy from "../../gallery/component/people/post_sandy.jsx";
+import Adolfo from "../../gallery/component/people/present_adolfo.jsx";
+import Carol from "../../gallery/component/people/present_carol.jsx";
+import EdModern from "../../gallery/component/people/present_ed.jsx";
+import FoniaModern from "../../gallery/component/people/present_fonia.jsx";
+import HenryModern from "../../gallery/component/people/present_henry.jsx";
+import JackModern from "../../gallery/component/people/present_jack.jsx";
+import Mordecai from "../../gallery/component/people/present_mordecai.jsx";
+import PolaModern from "../../gallery/component/people/present_pola.jsx";
+import Rachel from "../../gallery/component/people/present_rachel.jsx";
+import RivaModern from "../../gallery/component/people/present_riva.jsx";
+import Sevek from "../../gallery/component/people/present_sevek.jsx";
+import Starski from "../../gallery/component/people/present_starski.jsx";
+
+
+const routes = [
+  {
+    component: AbramP,
+    path: "/pre/abram"
+  },
+  {
+    component: ChanaP,
+    path: "/pre/chana"
+  },
+  {
+    component: David,
+    path: "/pre/david"
+  },
+  {
+    component: Gita,
+    path: "/pre/gita"
+  },
+  {
+    component: HenryP,
+    path: "/pre/henry"
+  },
+  {
+    component: Jolly,
+    path: "/pre/jolly_boys"
+  },
+  {
+    component: Leon,
+    path: "/pre/leon"
+  },
+  {
+    component: Lodz,
+    path: "/pre/lodz"
+  },
+  {
+    component: Gita2,
+    path: "/ww2/gita"
+  },
+  {
+    component: Happy,
+    path: "/ww2/happy_boys"
+  },
+  {
+    component: Henry2,
+    path: "/ww2/henry"
+  },
+  {
+    component: Rachella,
+    path: "/ww2/rachella"
+  },
+  { component: Ed, path: "/post/ed" },
+  { component: Fonia, path: "/post/fonia" },
+  { component: GitaPost, path: "/post/gita" },
+  { component: HenryPost, path: "/post/henry" },
+  { component: JackPost, path: "/post/jack" },
+  { component: Justina, path: "/post/justina" },
+  { component: Katie, path: "/post/katie" },
+  { component: Levin, path: "/post/levin" },
+  { component: Pinek, path: "/post/pinek" },
+  { component: Pola, path: "/post/pola" },
+  { component: Rachella, path: "/post/rachella" },
+  { component: Riva, path: "/post/riva" },
+  { component: Sam, path: "/post/sam" },
+  { component: Sandy, path: "/post/sandy" },
+  { component: Adolfo, path: "/present/adolfo" },
+  { component: Carol, path: "/present/carol" },
+  { component: Ed, path: "/present/ed" },
+  { component: Fonia, path: "/present/fonia" },
+  { component: HenryModern, path: "/present/henry" },
+  { component: Jack, path: "/present/jack" },
+  { component: Mordecai, path: "/present/mordecai" },
+  { component: Pola, path: "/present/pola" },
+  { component: Rachel, path: "/present/rachel" },
+  { component: Riva, path: "/present/riva" },
+  { component: Sevek, path: "/present/sevek" },
+  { component: Starski, path: "/present/starski" }
+];
 
 class FamilyTree extends Component {
   constructor(props) {
@@ -25,22 +144,21 @@ class FamilyTree extends Component {
     this.topRef.current.scrollIntoView({
       behavior: "auto"
     });
-     
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.topRef.current.offsetTop);
   }
-     handleScriptCreate() {
-  this.setState({ scriptLoaded: false })
-}
- 
-handleScriptError() {
-  this.setState({ scriptError: true })
-}
- 
-handleScriptLoad() {
-  this.setState({ scriptLoaded: true })
-}
+  handleScriptCreate() {
+    this.setState({ scriptLoaded: false });
+  }
+
+  handleScriptError() {
+    this.setState({ scriptError: true });
+  }
+
+  handleScriptLoad() {
+    this.setState({ scriptLoaded: true });
+  }
 
   render() {
     return (
@@ -264,10 +382,7 @@ handleScriptLoad() {
                                 <ul>
                                   <li>
                                     <a class="short-single-child" href="#">
-                                      <img
-                                        class="tree-profile"
-                                        src={Missing}
-                                      />
+                                      <img class="tree-profile" src={Missing} />
                                       <div class="tree-info">Eli</div>
                                     </a>
                                   </li>
@@ -371,26 +486,17 @@ handleScriptLoad() {
                                 <li>
                                   <a href="#" class="zoomTarget">
                                     {" "}
-                                    <img
-                                      class="tree-profile"
-                                      src={Missing}
-                                    />
+                                    <img class="tree-profile" src={Missing} />
                                     <div class="tree-info">Sandy</div>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#" class="zoomTarget">
-                                    <img
-                                      class="tree-profile"
-                                      src={Missing}
-                                    />
+                                    <img class="tree-profile" src={Missing} />
                                     <div class="tree-info">Mark</div>
                                   </a>
                                   <a href="#" class="zoomTarget">
-                                    <img
-                                      class="tree-profile"
-                                      src={Missing}
-                                    />
+                                    <img class="tree-profile" src={Missing} />
                                     <div class="tree-info">Blaine</div>
                                   </a>
                                   <ul>
@@ -419,10 +525,7 @@ handleScriptLoad() {
                                 <li>
                                   <a href="#" class="zoomTarget">
                                     {" "}
-                                    <img
-                                      class="tree-profile"
-                                      src={Missing}
-                                    />
+                                    <img class="tree-profile" src={Missing} />
                                     <div class="tree-info">Illana</div>
                                   </a>
                                 </li>
@@ -610,32 +713,21 @@ handleScriptLoad() {
                                   <li>
                                     <a href="#" class="zoomTarget">
                                       {" "}
-                                      <img
-                                        class="tree-profile"
-                                        src={Missing}
-                                      />
-                                      <div class="tree-info">
-                                        Joan Boarch
-                                      </div>
+                                      <img class="tree-profile" src={Missing} />
+                                      <div class="tree-info">Joan Boarch</div>
                                     </a>
                                   </li>
                                   <li>
                                     <a href="#" class="zoomTarget">
                                       {" "}
-                                      <img
-                                        class="tree-profile"
-                                        src={Missing}
-                                      />
+                                      <img class="tree-profile" src={Missing} />
                                       <div class="tree-info">Mitch</div>
                                     </a>
                                   </li>
                                   <li>
                                     <a href="#" class="zoomTarget">
                                       {" "}
-                                      <img
-                                        class="tree-profile"
-                                        src={Missing}
-                                      />
+                                      <img class="tree-profile" src={Missing} />
                                       <div class="tree-info">Dan</div>
                                     </a>
                                   </li>
