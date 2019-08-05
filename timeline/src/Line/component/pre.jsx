@@ -220,7 +220,6 @@ class Line extends Component {
                       <Container id={i}>
                         <VerticalTimelineElement
                           className="vertical-timeline-element--work"
-                       
                           iconStyle={{
                             background: "rgb(40,49,72)",
                             color: "#000"
@@ -229,42 +228,43 @@ class Line extends Component {
 
                           //icon={<Print/>}
                         >
-                            <Card className="card">
-                              <CardActionArea>
-                                <CardMedia
-                                  style={{
-                                    height: 0,
-                                    paddingTop: "100%"
-                                  }}
-                                  image={card.image}
-                                />
-                                <CardContent>
-                                  <Typography
-                                    gutterBottom
-                                    variant="h5"
-                                    component="h2"
-                                  >
-                                    {card.title}
-                                  </Typography>
-                                </CardContent>
-                              </CardActionArea>
+                          <Card className="card">
+                            <CardActionArea>
+                              <CardMedia
+                                style={{
+                                  height: 0,
+                                  paddingTop: "100%"
+                                }}
+                                image={card.image}
+                              />
+                              <CardContent>
+                                <Typography
+                                  gutterBottom
+                                  variant="h5"
+                                  component="h2"
+                                >
+                                  {card.title}
+                                </Typography>
+                              </CardContent>
+                            </CardActionArea>
 
-                              <Button
-                                size="small"
-                                color="primary"
-                                component={Link}
-                                // to={card.path}
-                                onClick={e => {
+                            <Button
+                              size="small"
+                              color="primary"
+                              component={Link}
+                              to={card.path}
+                              /** onClick={e => {
                                   this.handlePop(e, i);
                                   console.log(i);
-                                }}
-                              >
-                                Learn More
-                              </Button>
-                            </Card>
+                                }} */
+                            >
+                              Learn More
+                            </Button>
+                          </Card>
                         </VerticalTimelineElement>
 
-                        <div id={i}
+                        <div
+                          id={i}
                           style={{
                             float: "right",
                             width: "40%",
@@ -302,7 +302,6 @@ class Line extends Component {
                     ) : (
                       <Container id={i}>
                         <div
-                         
                           lg="auto"
                           style={{
                             float: "left",
@@ -373,10 +372,10 @@ class Line extends Component {
                                 size="small"
                                 color="primary"
                                 component={Link}
-                                //to={card.path}
-                                onClick={e => {
+                                to={card.path}
+                               /**  onClick={e => {
                                   this.handlePop(e, i);
-                                }}
+                                }}*/
                               >
                                 Learn More
                               </Button>

@@ -270,9 +270,9 @@ h3 {
   display: inline-block;
   min-height: 500px;
   width: 13000px;
-  transform: scale(0.125);
+  transform: scale(0.175);
   transform-origin: 0% 2% 0px;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: hidden;
   margin-left:10px;
 

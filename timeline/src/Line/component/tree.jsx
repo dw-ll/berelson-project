@@ -2,6 +2,7 @@ import React, { createRef, Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Script from 'react-load-script'
 import "react-vertical-timeline-component/style.min.css";
+import HorizontalScroll from "react-scroll-horizontal";
 import Tree from "react-d3-tree";
 import Pre from "./pre";
 import Post from "./post";
