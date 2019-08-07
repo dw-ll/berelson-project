@@ -6,6 +6,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
@@ -310,18 +312,27 @@ class Line extends Component {
                   <h3 style={{ color: "white", fontFamily: "Times" }}>
                     After The War
                   </h3>
-                  <Button
-                    variant="outlined"
-                    size="large"
-                    color="light"
-                    onClick={() => {
-                      this.scrollDiv.current.scrollIntoView({
-                        behavior: "smooth"
-                      });
-                    }}
-                  >
-                    Explore Timeline
-                  </Button>
+                  <div>
+                    <Grid item>
+                      <ButtonGroup
+                        color="yellow"
+                        aria-label="Outlined primary button group"
+                      >
+
+                        <Button
+                          onClick={() => {
+                            this.scrollDiv.current.scrollIntoView({
+                              behavior: "smooth"
+                            });
+                          }}
+                          style={{ color: "white" }}
+                        >
+                          Visit Timeline
+                        </Button>
+
+                      </ButtonGroup>
+                    </Grid>
+                  </div>
                 </div>
               </Greeting>
             </div>
