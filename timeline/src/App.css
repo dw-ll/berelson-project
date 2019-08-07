@@ -289,8 +289,14 @@ input[type=checkbox]:checked ~ label > img {
   overflow-x: scroll;
   overflow-y: hidden;
   margin-left:10px;
+  transition:transform 1s;
 
-
+}
+.tree {
+  transition:transform 1s;
+}
+.tree-wrapper:hover {
+  transform: scale(0.3);
 }
 .tree-profile{
       position:relative;
