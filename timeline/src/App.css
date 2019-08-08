@@ -71,6 +71,10 @@ html {
 h3 {
   text-align: center;
 }
+.profile_title{
+  font-family: 'Times New Roman', Times, serif;
+}
+
 
 .each-slide > div {
   display: block;
@@ -268,7 +272,9 @@ h3 {
 input[type=checkbox] {
   display: none;
 }
-
+.container{
+  height: 650px;
+}
 .container img {
   margin: 100px;
   transition: transform 0.25s ease;
