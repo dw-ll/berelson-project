@@ -78,7 +78,11 @@ h3 {
   font-family: 'Times New Roman', Times, serif;
 }
 
-
+.single_photo{
+  width: 600px;
+  height: 500px;
+  margin-right: 20%;
+}
 .each-slide > div {
   display: block;
   margin-left: auto;
