@@ -8,7 +8,10 @@
 .profile {
   height: 70%;
 }
-
+.profile_bio{
+  position: relative;
+  margin-top: 25%;
+}
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -272,9 +275,7 @@ h3 {
 input[type=checkbox] {
   display: none;
 }
-.container{
-  height: 650px;
-}
+
 .container img {
   margin: 100px;
   transition: transform 0.25s ease;

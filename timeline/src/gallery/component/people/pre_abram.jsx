@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Pre from "../../../Line/component/pre";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 
 const IMGURL =
   "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Pre-WWII/";
@@ -39,16 +36,16 @@ const Slideshow = () => {
             <div class="col-6">
               <h3 className="profile_title">Abram Baigelman</h3>
               <h6>B. 1900 D. 1950</h6>
-              <h6>
-                Abram Baigelman was lorem ipsumdolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-          </h6>
+              <h6 className="profile_bio">
+                Abram Baigelman was lorem ipsumdolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </h6>
             </div>
             <div class="col-6">
               <Slide {...properties}>
@@ -71,6 +68,7 @@ const Slideshow = () => {
             </div>
           </div>
         </div>
+        <Link to="/pre">Go back to Pre World War II</Link>
       </Switch>
     </Router>
   );
