@@ -34,6 +34,10 @@ const Slideshow = () => {
           }}
         />
     <div>
+      <div>
+            <h3 style={{ fontFamily: "Verdana"}}>Abram Baigelman</h3>
+        <h6>B. 1900 D. 1950</h6>
+      </div>
       <Slide {...properties}>
         <div className="each-slide" display="flex-container">
           <div style={{ backgroundImage: `url(${slideImages[0]})` }}>
