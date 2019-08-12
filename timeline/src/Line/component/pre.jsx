@@ -11,12 +11,9 @@ import Grid from "@material-ui/core/Grid";
 import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
-import Popper from "react-bootstrap/Popover";
 import Toast from "react-bootstrap/Toast";
 import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Tooltip from "@material-ui/core/Tooltip";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -197,7 +194,6 @@ class Line extends Component {
                       color="yellow"
                       aria-label="Outlined primary button group"
                     >
-                    
                       <Button
                         onClick={() => {
                           this.scrollDiv.current.scrollIntoView({
@@ -207,8 +203,7 @@ class Line extends Component {
                         style={{ color: "white" }}
                       >
                         Visit Timeline
-                        </Button>
-                  
+                      </Button>
                     </ButtonGroup>
                   </Grid>
                 </div>
@@ -219,8 +214,8 @@ class Line extends Component {
                 <div>
                   <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
-                    History and more information about the family prior to
-                    the beginning of the second World War.
+                    History and more information about the family prior to the
+                    beginning of the second World War.
                   </h6>
                 </div>
               </div>
@@ -384,7 +379,7 @@ class Line extends Component {
                                 color="primary"
                                 component={Link}
                                 to={card.path}
-                               /**  onClick={e => {
+                                /**  onClick={e => {
                                   this.handlePop(e, i);
                                 }}*/
                               >
