@@ -288,11 +288,11 @@ class Line extends Component {
             <div id="landing">
               <Greeting
                 minHeight="100vh"
-                opacity="0.1"
+                opacity="0.5"
                 isCentered={true}
                 imageSrc={GreetImage}
               >
-                <h3 style={{ fontFamily: "Times" }}>Present</h3>
+                <h3 style={{ fontFamily: "Times", color:"white" }}>Present</h3>
                 <div>
                   <Grid item>
                     <ButtonGroup

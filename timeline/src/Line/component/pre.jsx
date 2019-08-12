@@ -27,6 +27,7 @@ import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
 import ChanaGreet from "../../Media/Pre-WWII/Gita.Baigelman142.jpeg";
+import HenryGreet from "../../Media/Pre-WWII/Henry.Baigelman002.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -181,13 +182,16 @@ class Line extends Component {
             <div id="landing">
               <Greeting
                 minHeight="100vh"
-                opacity="100%"
+                opacity="0.1%"
                 isCentered={true}
-                imageSrc={ChanaGreet}
+                imageSrc={HenryGreet}
               >
                 <h3 style={{ color: "white", fontFamily: "Future" }}>
                   Before The War
                 </h3>
+                <h5 style={{ color: "white", fontFamily: "Future" }}>
+                  Some more info about the family before the war.
+                </h5>
                 <div>
                   <Grid item>
                     <ButtonGroup

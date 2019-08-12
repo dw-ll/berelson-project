@@ -63,25 +63,29 @@ const timelineObjects = [
     title: " Pre-World War II",
     subtitle: "Photos and information spanning the time before World War Two",
     image: require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg"),
-    path: `${process.env.PUBLIC_URL}/pre/`
+    path: `${process.env.PUBLIC_URL}/pre/`,
+    divID: "preDiv"
   },
   {
     title: "World War II",
     subtitle: "Photos and information spanning the time during World War Two.",
     image: require("../../Media/WWII/HappyBoys4282.jpeg"),
-    path: "/ww2"
+    path: "/ww2",
+    divID: "warDiv"
   },
   {
     title: "Post-World War II",
     subtitle: "Photos and information spanning the time after World War Two.",
     image: require("../../Media/Post-WWII 2/pola178.jpeg"),
-    path: "/post"
+    path: "/post",
+    divID: "postDiv"
   },
   {
     title: "Present",
     subtitle: "Photos and information about recent days.",
     image: require("../../Media/Modern/Sevek261.jpeg"),
-    path: "/present"
+    path: "/present",
+    divID: "modernDiv"
   }
 ];
 
@@ -89,6 +93,10 @@ export default class Line extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
+    this.preScroll = createRef();
+    this.warScroll = createRef();
+    this.postScroll = createRef();
+    this.presentScroll = createRef();
     this.attachRef = target => this.setState({ target });
     this.state = {
       popped: false
@@ -127,7 +135,7 @@ export default class Line extends Component {
 
             //icon={<Print/>}
           >
-            <div>
+            <div className={card.divID}>
               <Card className="card">
                 <CardActionArea>
                   <CardMedia
@@ -278,7 +286,6 @@ export default class Line extends Component {
                           component={Link}
                           to="/tree"
                           style={{ color: "white" }}
-                      
                         >
                           Visit Tree
                         </Button>
@@ -294,8 +301,8 @@ export default class Line extends Component {
                 <div>
                   <h4>Timeline</h4>
                   <h6>
-                    Learn the Berelson lineage through this interactive
-                    timeline that spans both sides of the second World War.
+                    Learn the Berelson lineage through this interactive timeline
+                    that spans both sides of the second World War.
                   </h6>
                 </div>
                 <div>
@@ -303,10 +310,42 @@ export default class Line extends Component {
                     size="small"
                     aria-label="Small outlined button group"
                   >
-                    <Button>Pre WW2</Button>
-                    <Button>WW2</Button>
-                    <Button>Post WW2</Button>
-                    <Button>Present</Button>
+                    <Button
+                      onClick={() => {
+                        this.preScroll.current.scrollIntoView({
+                          behavior: "smooth"
+                        });
+                      }}
+                    >
+                      Pre WW2
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        this.warScroll.current.scrollIntoView({
+                          behavior: "smooth"
+                        });
+                      }}
+                    >
+                      WW2
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        this.postScroll.current.scrollIntoView({
+                          behavior: "smooth"
+                        });
+                      }}
+                    >
+                      Post WW2
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        this.presentScroll.current.scrollIntoView({
+                          behavior: "smooth"
+                        });
+                      }}
+                    >
+                      Present
+                    </Button>
                   </ButtonGroup>
                 </div>
               </div>
