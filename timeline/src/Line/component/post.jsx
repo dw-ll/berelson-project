@@ -177,7 +177,7 @@ class Line extends Component {
             className="vertical-timeline-element--work"
             key={i}
             iconStyle={{
-              background: "rgb(40,49,72)",
+              background: "rgb(102, 102, 51)",
               color: "#000"
             }}
             paddingTop="0em"
@@ -233,7 +233,7 @@ class Line extends Component {
             className="vertical-timeline-element--work"
             key={i}
             iconStyle={{
-              background: "rgb(40,49,72)",
+              background: "rgb(102, 102, 51)",
               color: "#000"
             }}
             paddingTop="0em"

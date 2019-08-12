@@ -64,28 +64,32 @@ const timelineObjects = [
     subtitle: "Photos and information spanning the time before World War Two",
     image: require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg"),
     path: `${process.env.PUBLIC_URL}/pre/`,
-    divID: "preDiv"
+    divID: "preDiv",
+    nodeColor: "rgb(40,49,72)"
   },
   {
     title: "World War II",
     subtitle: "Photos and information spanning the time during World War Two.",
     image: require("../../Media/WWII/HappyBoys4282.jpeg"),
     path: "/ww2",
-    divID: "warDiv"
+    divID: "warDiv",
+    nodeColor: "rgb(142,39,17)"
   },
   {
     title: "Post-World War II",
     subtitle: "Photos and information spanning the time after World War Two.",
     image: require("../../Media/Post-WWII 2/pola178.jpeg"),
     path: "/post",
-    divID: "postDiv"
+    divID: "postDiv",
+    nodeColor: "rgb(102, 102, 51)"
   },
   {
     title: "Present",
     subtitle: "Photos and information about recent days.",
     image: require("../../Media/Modern/Sevek261.jpeg"),
     path: "/present",
-    divID: "modernDiv"
+    divID: "modernDiv",
+    nodeColor: "rgb(204, 153, 0)"
   }
 ];
 
@@ -128,7 +132,7 @@ export default class Line extends Component {
             className="vertical-timeline-element--work"
             key={i}
             iconStyle={{
-              background: "rgb(40,49,72)",
+              background:card.nodeColor,
               color: "#000"
             }}
             paddingTop="0em"
@@ -181,7 +185,7 @@ export default class Line extends Component {
             className="vertical-timeline-element--work"
             key={i}
             iconStyle={{
-              background: "rgb(40,49,72)",
+              background: card.nodeColor,
               color: "#000"
             }}
             paddingTop="0em"
