@@ -237,7 +237,7 @@ class Line extends Component {
             <div id="landing">
               <Greeting
                 minHeight="100vh"
-                opacity="0.4%"
+                opacity="0.2%"
                 isCentered={true}
                 imageSrc={GreetImage}
               >

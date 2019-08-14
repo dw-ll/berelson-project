@@ -15,6 +15,11 @@ import {
   DropdownToggle,
   DropdownMenu
 } from "reactstrap";
+import { css } from "@emotion/core";
+// First way to import
+import { ClipLoader } from "react-spinners";
+// Another way to import
+import Headspace from 'react-headspace';
 
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
@@ -30,7 +35,19 @@ global.jQuery = require("jquery");
 require("bootstrap");
 //test
 
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    };
+  }
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
@@ -86,12 +103,7 @@ class App extends Component {
           />
 
           <div className="App">
-            <Navbar
-              className="navbar-header"
-              theme="dark"
-              light
-              expand="md"
-            >
+            <Navbar className="navbar-header" theme="dark" light expand="md">
               <NavbarBrand href="/berelson-project/">
                 {" The Berelson Project"}
               </NavbarBrand>
@@ -111,6 +123,11 @@ class App extends Component {
                     GitHub
                   </NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink href={`${process.env.PUBLIC_URL}/tree/`}>
+                    Tree
+                  </NavLink>
+                </NavItem>
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
                     Eras
@@ -119,9 +136,15 @@ class App extends Component {
                     <LinkContainer to="/pre/">
                       <DropdownItem>Pre WWII</DropdownItem>
                     </LinkContainer>
-                    <DropdownItem>WWII</DropdownItem>
-                    <DropdownItem>Post WWII</DropdownItem>
-                    <DropdownItem>Modern</DropdownItem>
+                    <LinkContainer to="/ww2/">
+                      <DropdownItem>WWII</DropdownItem>
+                    </LinkContainer>
+                    <LinkContainer to="/post/">
+                      <DropdownItem>Post WWII</DropdownItem>
+                    </LinkContainer>
+                    <LinkContainer to="/present/">
+                      <DropdownItem>Modern</DropdownItem>
+                    </LinkContainer>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Nav>
