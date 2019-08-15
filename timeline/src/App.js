@@ -3,6 +3,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import {
   DropdownItem,
   NavLink,
@@ -19,7 +20,7 @@ import { css } from "@emotion/core";
 // First way to import
 import { ClipLoader } from "react-spinners";
 // Another way to import
-import Headspace from 'react-headspace';
+import Headspace from "react-headspace";
 
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
@@ -103,7 +104,12 @@ class App extends Component {
           />
 
           <div className="App">
-            <Navbar className="navbar-header" theme="dark" light expand="md">
+            <Navbar
+              className="navbar-header no-shadows"
+              theme="dark"
+              light
+              expand="md"
+            >
               <NavbarBrand href="/berelson-project/">
                 {" The Berelson Project"}
               </NavbarBrand>
@@ -151,13 +157,54 @@ class App extends Component {
             </Navbar>
 
             <Line />
-
-            <div>
-              <footer class="page-footer font-small blue">
-                <div class="footer-copyright text-center py-3">© 2019</div>
-              </footer>
-              <ScrollUpButton speed="1000" />
-            </div>
+            <MDBFooter color="grey" className="font-small pt-4 mt-4">
+              <MDBContainer fluid className="text-center text-md-left">
+                <MDBRow>
+                  <MDBCol md="4">
+                    <h5 className="title">The Berelson Project</h5>
+                    <p>
+                     An ancestral site built to display and document the Berelson lineage in an archival effort.
+                    </p>
+                  </MDBCol>
+                  <MDBCol md="4">
+                    <h5 className="title">Explore</h5>
+                    <ul>
+                      <li className="list-unstyled">
+                        <a href="/archive/">Archive</a>
+                      </li>
+                      <li className="list-unstyled">
+                        <a href="/tree/">Family Tree</a>
+                      </li>
+                  
+                    </ul>
+                  </MDBCol>
+                  <MDBCol md="4">
+                    <h5 className="title">Contact</h5>
+                    <ul>
+                      <li className="list-unstyled">
+                        
+                        <p>
+                        <i class="fas fa-home  mr-3"></i> Santa Cruz, CA 95062, US</p>
+                      </li>
+                      <li className="list-unstyled">
+                        <p>
+                          <i class="fas fa-envelope mr-3"></i> Email</p>
+                      </li>
+                      <li className="list-unstyled">
+                        <p>
+                          <i class="fas fa-phone mr-3"></i> Phone</p>
+                      </li>
+                    </ul>
+                  </MDBCol>
+                </MDBRow>
+              </MDBContainer>
+              <div className="footer-copyright text-center py-3">
+                <MDBContainer fluid>
+                  &copy; {new Date().getFullYear()} 
+                  
+                </MDBContainer>
+              </div>
+            </MDBFooter>
           </div>
         </Switch>
       </Router>

@@ -279,8 +279,15 @@ h3 {
 input[type=checkbox] {
   display: none;
 }
-
+.no-shadows {
+    box-shadow: none!important;
+}
+.container{
+  margin-top: 2%;
+  padding-top: 2%;
+}
 .container img {
+
   margin: 100px;
   transition: transform 0.25s ease;
   cursor: zoom-in;
