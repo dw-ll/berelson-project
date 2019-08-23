@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/js/runtime~main.df2bb8dd.js"
   },
   {
-    "revision": "94998475f6aea65f558494802416c1cf",
-    "url": "/berelson-project/static/media/Roboto-Thin.94998475.ttf"
+    "revision": "df7b648ce5356ea1ebce435b3459fd60",
+    "url": "/berelson-project/static/media/Roboto-Regular.df7b648c.ttf"
   },
   {
     "revision": "71de72107441e0f284ac",
@@ -808,24 +808,24 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/fa-solid-900.0be94a07.woff"
   },
   {
-    "revision": "b7d071b9c3c197bff4af902070622423",
-    "url": "/berelson-project/static/media/fa-brands-400.b7d071b9.ttf"
-  },
-  {
     "revision": "8e49b728413079dfd9ee45d0c58d54e4",
     "url": "/berelson-project/static/media/fa-brands-400.8e49b728.eot"
+  },
+  {
+    "revision": "b7d071b9c3c197bff4af902070622423",
+    "url": "/berelson-project/static/media/fa-brands-400.b7d071b9.ttf"
   },
   {
     "revision": "da8a235bb207c74eea21507f3a86a53b",
     "url": "/berelson-project/static/media/fa-regular-400.da8a235b.svg"
   },
   {
-    "revision": "f14c3b2ff7c821a4c838debbffd6ad2d",
-    "url": "/berelson-project/static/media/fa-solid-900.f14c3b2f.ttf"
-  },
-  {
     "revision": "e2675a616b68f446fa6284c111554c7f",
     "url": "/berelson-project/static/media/fa-solid-900.e2675a61.eot"
+  },
+  {
+    "revision": "f14c3b2ff7c821a4c838debbffd6ad2d",
+    "url": "/berelson-project/static/media/fa-solid-900.f14c3b2f.ttf"
   },
   {
     "revision": "38975343b586296e9b73e6b56cc3ec5d",
@@ -836,12 +836,12 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/fa-solid-900.7726a281.svg"
   },
   {
-    "revision": "11911410dca2de148f30954eb2fd5eab",
-    "url": "/berelson-project/static/media/arrow_left.11911410.svg"
-  },
-  {
     "revision": "8ef6a08cdc1154920165680a4edde771",
     "url": "/berelson-project/static/media/arrow_right.8ef6a08c.svg"
+  },
+  {
+    "revision": "11911410dca2de148f30954eb2fd5eab",
+    "url": "/berelson-project/static/media/arrow_left.11911410.svg"
   },
   {
     "revision": "dfe56a876d0282555d1e2458e278060f",
@@ -868,20 +868,20 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Roboto-Thin.954bbdeb.woff2"
   },
   {
-    "revision": "69f8a0617ac472f78e45841323a3df9e",
-    "url": "/berelson-project/static/media/Roboto-Light.69f8a061.woff2"
-  },
-  {
     "revision": "574fd0b50367f886d359e8264938fc37",
     "url": "/berelson-project/static/media/Roboto-Medium.574fd0b5.woff2"
+  },
+  {
+    "revision": "2751ee43015f9884c3642f103b7f70c9",
+    "url": "/berelson-project/static/media/Roboto-Regular.2751ee43.woff2"
   },
   {
     "revision": "39b2c3031be6b4ea96e2e3e95d307814",
     "url": "/berelson-project/static/media/Roboto-Bold.39b2c303.woff2"
   },
   {
-    "revision": "2751ee43015f9884c3642f103b7f70c9",
-    "url": "/berelson-project/static/media/Roboto-Regular.2751ee43.woff2"
+    "revision": "69f8a0617ac472f78e45841323a3df9e",
+    "url": "/berelson-project/static/media/Roboto-Light.69f8a061.woff2"
   },
   {
     "revision": "7500519de3d82e33d1587f8042e2afcb",
@@ -896,16 +896,16 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
-    "revision": "dc81817def276b4f21395f7ea5e88dcd",
-    "url": "/berelson-project/static/media/Roboto-Bold.dc81817d.woff"
-  },
-  {
     "revision": "fc78759e93a6cac50458610e3d9d63a0",
     "url": "/berelson-project/static/media/Roboto-Medium.fc78759e.woff"
   },
   {
-    "revision": "46e48ce0628835f68a7369d0254e4283",
-    "url": "/berelson-project/static/media/Roboto-Light.46e48ce0.ttf"
+    "revision": "dc81817def276b4f21395f7ea5e88dcd",
+    "url": "/berelson-project/static/media/Roboto-Bold.dc81817d.woff"
+  },
+  {
+    "revision": "94998475f6aea65f558494802416c1cf",
+    "url": "/berelson-project/static/media/Roboto-Thin.94998475.ttf"
   },
   {
     "revision": "e31fcf1885e371e19f5786c2bdfeae1b",
@@ -916,15 +916,15 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Roboto-Medium.894a2ede.ttf"
   },
   {
-    "revision": "df7b648ce5356ea1ebce435b3459fd60",
-    "url": "/berelson-project/static/media/Roboto-Regular.df7b648c.ttf"
+    "revision": "46e48ce0628835f68a7369d0254e4283",
+    "url": "/berelson-project/static/media/Roboto-Light.46e48ce0.ttf"
   },
   {
     "revision": "71de72107441e0f284ac",
     "url": "/berelson-project/static/css/2.1308210e.chunk.css"
   },
   {
-    "revision": "001311a6286bbb5206738f5d2675270a",
+    "revision": "4b4e1d154b1537d85cb468740103cb14",
     "url": "/berelson-project/index.html"
   }
 ];
