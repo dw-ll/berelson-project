@@ -74,6 +74,7 @@
     ],
     "devDependencies": {
         "gh-pages": "^2.0.1",
-        "popper.js": "^1.14.7"
+        "popper.js": "^1.14.7",
+        "webpack": "^4.39.2"
     }
 }
