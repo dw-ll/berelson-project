@@ -16,11 +16,7 @@ import {
   DropdownToggle,
   DropdownMenu
 } from "reactstrap";
-import { css } from "@emotion/core";
-// First way to import
-import { ClipLoader } from "react-spinners";
-// Another way to import
-import Headspace from "react-headspace";
+
 
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
@@ -36,11 +32,6 @@ global.jQuery = require("jquery");
 require("bootstrap");
 //test
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
 
 class App extends Component {
   constructor(props) {

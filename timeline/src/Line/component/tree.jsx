@@ -157,18 +157,7 @@ class FamilyTree extends Component {
   render() {
     return (
       <div class="top" ref={this.topRef}>
-        <Script
-          url="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
-          onCreate={this.handleScriptCreate.bind(this)}
-          onError={this.handleScriptError.bind(this)}
-          onLoad={this.handleScriptLoad.bind(this)}
-        />
-        <Script
-          url="jquery.zoomooz.min.js"
-          onCreate={this.handleScriptCreate.bind(this)}
-          onError={this.handleScriptError.bind(this)}
-          onLoad={this.handleScriptLoad.bind(this)}
-        />
+   
         <div>
           <h4 style={{ textAlign: "center" }}>Berelson Family Tree</h4>
           <h6 style={{ textAlign: "center" }}>
