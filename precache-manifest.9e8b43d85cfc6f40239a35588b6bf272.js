@@ -784,20 +784,20 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/fa-regular-400.7aaf5675.woff"
   },
   {
-    "revision": "f33342516f7cbe46f1d6b68f9e7bbeda",
-    "url": "/berelson-project/static/media/fa-regular-400.f3334251.ttf"
-  },
-  {
     "revision": "859001f6ae8eb0bb3878aaa971b50fc6",
     "url": "/berelson-project/static/media/fa-regular-400.859001f6.eot"
   },
   {
-    "revision": "9f4ce3dc689981a1b87faab0f5484f9e",
-    "url": "/berelson-project/static/media/fa-brands-400.9f4ce3dc.woff2"
+    "revision": "f33342516f7cbe46f1d6b68f9e7bbeda",
+    "url": "/berelson-project/static/media/fa-regular-400.f3334251.ttf"
   },
   {
     "revision": "64b3e814a66c2719b15abf8f7998bd73",
     "url": "/berelson-project/static/media/fa-solid-900.64b3e814.woff2"
+  },
+  {
+    "revision": "9f4ce3dc689981a1b87faab0f5484f9e",
+    "url": "/berelson-project/static/media/fa-brands-400.9f4ce3dc.woff2"
   },
   {
     "revision": "9f018d1025561e96439f7c0e9026301a",
@@ -808,12 +808,12 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/fa-solid-900.0be94a07.woff"
   },
   {
-    "revision": "b7d071b9c3c197bff4af902070622423",
-    "url": "/berelson-project/static/media/fa-brands-400.b7d071b9.ttf"
-  },
-  {
     "revision": "8e49b728413079dfd9ee45d0c58d54e4",
     "url": "/berelson-project/static/media/fa-brands-400.8e49b728.eot"
+  },
+  {
+    "revision": "b7d071b9c3c197bff4af902070622423",
+    "url": "/berelson-project/static/media/fa-brands-400.b7d071b9.ttf"
   },
   {
     "revision": "da8a235bb207c74eea21507f3a86a53b",
@@ -868,12 +868,12 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Roboto-Thin.954bbdeb.woff2"
   },
   {
-    "revision": "2751ee43015f9884c3642f103b7f70c9",
-    "url": "/berelson-project/static/media/Roboto-Regular.2751ee43.woff2"
-  },
-  {
     "revision": "69f8a0617ac472f78e45841323a3df9e",
     "url": "/berelson-project/static/media/Roboto-Light.69f8a061.woff2"
+  },
+  {
+    "revision": "2751ee43015f9884c3642f103b7f70c9",
+    "url": "/berelson-project/static/media/Roboto-Regular.2751ee43.woff2"
   },
   {
     "revision": "574fd0b50367f886d359e8264938fc37",
@@ -884,10 +884,6 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Roboto-Bold.39b2c303.woff2"
   },
   {
-    "revision": "7500519de3d82e33d1587f8042e2afcb",
-    "url": "/berelson-project/static/media/Roboto-Thin.7500519d.woff"
-  },
-  {
     "revision": "3b813c2ae0d04909a33a18d792912ee7",
     "url": "/berelson-project/static/media/Roboto-Light.3b813c2a.woff"
   },
@@ -896,28 +892,32 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
-    "revision": "fc78759e93a6cac50458610e3d9d63a0",
-    "url": "/berelson-project/static/media/Roboto-Medium.fc78759e.woff"
+    "revision": "7500519de3d82e33d1587f8042e2afcb",
+    "url": "/berelson-project/static/media/Roboto-Thin.7500519d.woff"
   },
   {
     "revision": "dc81817def276b4f21395f7ea5e88dcd",
     "url": "/berelson-project/static/media/Roboto-Bold.dc81817d.woff"
   },
   {
-    "revision": "94998475f6aea65f558494802416c1cf",
-    "url": "/berelson-project/static/media/Roboto-Thin.94998475.ttf"
-  },
-  {
-    "revision": "46e48ce0628835f68a7369d0254e4283",
-    "url": "/berelson-project/static/media/Roboto-Light.46e48ce0.ttf"
+    "revision": "fc78759e93a6cac50458610e3d9d63a0",
+    "url": "/berelson-project/static/media/Roboto-Medium.fc78759e.woff"
   },
   {
     "revision": "df7b648ce5356ea1ebce435b3459fd60",
     "url": "/berelson-project/static/media/Roboto-Regular.df7b648c.ttf"
   },
   {
+    "revision": "94998475f6aea65f558494802416c1cf",
+    "url": "/berelson-project/static/media/Roboto-Thin.94998475.ttf"
+  },
+  {
     "revision": "894a2ede85a483bf9bedefd4db45cdb9",
     "url": "/berelson-project/static/media/Roboto-Medium.894a2ede.ttf"
+  },
+  {
+    "revision": "46e48ce0628835f68a7369d0254e4283",
+    "url": "/berelson-project/static/media/Roboto-Light.46e48ce0.ttf"
   },
   {
     "revision": "bae7484d66d5e2a9ab8c",
