@@ -26,7 +26,6 @@ import Henry from "../../gallery/component/people/pre_henry.jsx";
 import Jolly from "../../gallery/component/people/pre_jolly.jsx";
 import Leon from "../../gallery/component/people/pre_leon.jsx";
 import Lodz from "../../gallery/component/people/pre_lodz.jsx";
-import ChanaGreet from "../../Media/Pre-WWII/Gita.Baigelman142.jpeg";
 import HenryGreet from "../../Media/Pre-WWII/Henry.Baigelman002.jpeg";
 
 import "react-vertical-timeline-component/style.min.css";

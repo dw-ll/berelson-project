@@ -17,12 +17,12 @@ import {
   DropdownMenu
 } from "reactstrap";
 
-
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
+import About from "./Line/component/about.jsx";
 import Tree from "./Line/component/tree.jsx";
 import "firebase/database";
 import "./App.css";
@@ -31,7 +31,6 @@ import "bootstrap/dist/css/bootstrap.css";
 global.jQuery = require("jquery");
 require("bootstrap");
 //test
-
 
 class App extends Component {
   constructor(props) {
@@ -93,6 +92,13 @@ class App extends Component {
               return <Tree />;
             }}
           />
+          <Route
+            exact
+            path={`/about`}
+            render={() => {
+              return <About />;
+            }}
+          />
 
           <div className="App">
             <Navbar
@@ -101,9 +107,7 @@ class App extends Component {
               light
               expand="md"
             >
-              <NavbarBrand href="/#/">
-                {" The Berelson Project"}
-              </NavbarBrand>
+              <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
 
               <Nav className="ml-auto" navbar>
@@ -111,9 +115,7 @@ class App extends Component {
                   <NavLink href="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/archive">
-                    Archive
-                  </NavLink>
+                  <NavLink href="/archive">Archive</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/dw-ll/Berelson-Project">
@@ -146,7 +148,7 @@ class App extends Component {
                 </UncontrolledDropdown>
               </Nav>
             </Navbar>
-
+            <ScrollUpButton />
             <Line />
             <MDBFooter color="grey" className="font-small pt-4 mt-4">
               <MDBContainer fluid className="text-center text-md-left">
@@ -154,7 +156,8 @@ class App extends Component {
                   <MDBCol md="4">
                     <h5 className="title">The Berelson Project</h5>
                     <p>
-                     An ancestral site built to display and document the Berelson lineage in an archival effort.
+                      An ancestral site built to display and document the
+                      Berelson lineage in an archival effort.
                     </p>
                   </MDBCol>
                   <MDBCol md="4">
@@ -166,24 +169,26 @@ class App extends Component {
                       <li className="list-unstyled">
                         <a href="/tree/">Family Tree</a>
                       </li>
-                  
                     </ul>
                   </MDBCol>
                   <MDBCol md="4">
                     <h5 className="title">Contact</h5>
                     <ul>
                       <li className="list-unstyled">
-                        
                         <p>
-                        <i class="fas fa-home  mr-3"></i> Santa Cruz, CA 95062, US</p>
+                          <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
+                          95062, US
+                        </p>
                       </li>
                       <li className="list-unstyled">
                         <p>
-                          <i class="fas fa-envelope mr-3"></i> Email</p>
+                          <i class="fas fa-envelope mr-3"></i> Email
+                        </p>
                       </li>
                       <li className="list-unstyled">
                         <p>
-                          <i class="fas fa-phone mr-3"></i> Phone</p>
+                          <i class="fas fa-phone mr-3"></i> Phone
+                        </p>
                       </li>
                     </ul>
                   </MDBCol>
@@ -191,8 +196,7 @@ class App extends Component {
               </MDBContainer>
               <div className="footer-copyright text-center py-3">
                 <MDBContainer fluid>
-                  &copy; {new Date().getFullYear()} 
-                  
+                  &copy; {new Date().getFullYear()}
                 </MDBContainer>
               </div>
             </MDBFooter>
