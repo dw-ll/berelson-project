@@ -132,7 +132,7 @@ export default class Line extends Component {
             className="vertical-timeline-element--work"
             key={i}
             iconStyle={{
-              background:card.nodeColor,
+              background: card.nodeColor,
               color: "#000"
             }}
             paddingTop="0em"
@@ -308,49 +308,6 @@ export default class Line extends Component {
                     Learn the Berelson lineage through this interactive timeline
                     that spans both sides of the second World War.
                   </h6>
-                </div>
-                <div>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="Small outlined button group"
-                  >
-                    <Button
-                      onClick={() => {
-                        this.preScroll.current.scrollIntoView({
-                          behavior: "smooth"
-                        });
-                      }}
-                    >
-                      Pre WW2
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        this.warScroll.current.scrollIntoView({
-                          behavior: "smooth"
-                        });
-                      }}
-                    >
-                      WW2
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        this.postScroll.current.scrollIntoView({
-                          behavior: "smooth"
-                        });
-                      }}
-                    >
-                      Post WW2
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        this.presentScroll.current.scrollIntoView({
-                          behavior: "smooth"
-                        });
-                      }}
-                    >
-                      Present
-                    </Button>
-                  </ButtonGroup>
                 </div>
               </div>
 

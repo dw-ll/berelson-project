@@ -80,21 +80,21 @@ class App extends Component {
           />
           <Route
             exact
-            path={`/archive`}
+            path={`/#/archive`}
             render={() => {
               return <Archive />;
             }}
           />
           <Route
             exact
-            path={`/tree`}
+            path={`/#/tree`}
             render={() => {
               return <Tree />;
             }}
           />
           <Route
             exact
-            path={`/about`}
+            path={`/#/about`}
             render={() => {
               return <About />;
             }}
@@ -149,7 +149,10 @@ class App extends Component {
               </Nav>
             </Navbar>
             <ScrollUpButton />
-            <Line />
+            <div>
+              <Line />
+            </div>
+
             <MDBFooter color="grey" className="font-small pt-4 mt-4">
               <MDBContainer fluid className="text-center text-md-left">
                 <MDBRow>
