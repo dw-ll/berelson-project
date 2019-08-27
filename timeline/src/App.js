@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
@@ -45,7 +45,7 @@ class App extends Component {
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route
-            path="/berelson-project/"
+            path="/#/"
             exact
             render={() => {
               return <Line />;
@@ -121,7 +121,7 @@ class App extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href={`${process.env.PUBLIC_URL}/tree/`}>
+                  <NavLink href={`${process.env.PUBLIC_URL}/tree`}>
                     Tree
                   </NavLink>
                 </NavItem>

@@ -3,10 +3,10 @@ const webpack = require("webpack");
 
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: "./src/index.js",
   output: {
     path: "/",
-    filename: "bundle.js"
+    filename: "chunk.js"
   },
   
 
@@ -25,9 +25,14 @@ module.exports = {
       }
     ]
   },
-
-  devtool: "cheap-module-eval-source-map",
+  resolve: {
+    root: path.resolve(__dirname, 'src'),
+    extensions: ['', '.js', '.jsx']
+  },
   devServer: {
-    historyApiFallback: true
-  }
+    historyApiFallback: true,
+    contentBase: './'
+  },
+
+  
 };
