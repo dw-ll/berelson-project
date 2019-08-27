@@ -101,7 +101,7 @@ class App extends Component {
               light
               expand="md"
             >
-              <NavbarBrand href="/berelson-project/">
+              <NavbarBrand href="/#/">
                 {" The Berelson Project"}
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
@@ -111,7 +111,7 @@ class App extends Component {
                   <NavLink href="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href={`${process.env.PUBLIC_URL}/archive/`}>
+                  <NavLink href="/archive">
                     Archive
                   </NavLink>
                 </NavItem>
