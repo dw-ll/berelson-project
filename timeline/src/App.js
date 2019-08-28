@@ -28,8 +28,9 @@ import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
 import "bootstrap/dist/css/bootstrap.css";
-global.jQuery = require("jquery");
 require("bootstrap");
+global.jQuery = require("jquery");
+
 //test
 
 class App extends Component {
@@ -123,7 +124,7 @@ class App extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href={`${process.env.PUBLIC_URL}/tree`}>
+                  <NavLink href="/#/tree">
                     Tree
                   </NavLink>
                 </NavItem>
@@ -167,10 +168,10 @@ class App extends Component {
                     <h5 className="title">Explore</h5>
                     <ul>
                       <li className="list-unstyled">
-                        <a href="/archive/">Archive</a>
+                        <a href="/#/archive">Archive</a>
                       </li>
                       <li className="list-unstyled">
-                        <a href="/tree/">Family Tree</a>
+                        <a href="/#/tree">Family Tree</a>
                       </li>
                     </ul>
                   </MDBCol>
