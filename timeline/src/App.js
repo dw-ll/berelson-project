@@ -178,10 +178,10 @@ class App extends Component {
                     <h5 className="title">Explore</h5>
                     <ul>
                       <li className="list-unstyled">
-                        <a href="/#/archive">Archive</a>
+                        <a href="/archive">Archive</a>
                       </li>
                       <li className="list-unstyled">
-                        <a href="/#/tree">Family Tree</a>
+                        <a href="/tree">Family Tree</a>
                       </li>
                     </ul>
                   </MDBCol>
