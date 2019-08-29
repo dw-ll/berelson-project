@@ -147,7 +147,7 @@ class App extends Component {
                 </UncontrolledDropdown>
               </Nav>
             </Navbar>
-            <ScrollUpButton />
+            <ScrollUpButton className ="" />
             <div>
               <Line />
             </div>
