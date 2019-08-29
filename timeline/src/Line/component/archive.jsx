@@ -1199,17 +1199,18 @@ class Line extends Component {
 
             <div className="App">
               <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
-
               <div>
-                <h6 style={{ textAlign: "center" }}>
-                  An archive of the Berelson Lineage.
-                </h6>
-              </div>
+                <div>
+                  <h6 style={{ textAlign: "center" }}>
+                    An archive of the Berelson Lineage.
+                  </h6>
+                </div>
 
-              <Gallery images={preImages} enableImageSelection={false} />
-              <Gallery images={warImages} enableImageSelection={false} />
-              <Gallery images={postWarImages} enableImageSelection={false} />
-              <Gallery images={modernImages} enableImageSelection={false} />
+                <Gallery images={preImages} enableImageSelection={false} />
+                <Gallery images={warImages} enableImageSelection={false} />
+                <Gallery images={postWarImages} enableImageSelection={false} />
+                <Gallery images={modernImages} enableImageSelection={false} />
+              </div>
             </div>
           </Switch>
         </ScrollToTop>

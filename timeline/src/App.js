@@ -124,9 +124,7 @@ class App extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/#/tree">
-                    Tree
-                  </NavLink>
+                  <NavLink href="/#/tree">Tree</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
@@ -154,7 +152,11 @@ class App extends Component {
               <Line />
             </div>
 
-            <MDBFooter color="grey" className="font-small pt-4 mt-4">
+            <MDBFooter
+              class="fixed-bottom"
+              color="grey"
+              className="footer font-small pt-4 mt-4"
+            >
               <MDBContainer fluid className="text-center text-md-left">
                 <MDBRow>
                   <MDBCol md="4">
