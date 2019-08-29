@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+import ScrollButton from "react-scroll-button";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import {
   DropdownItem,
@@ -101,7 +102,7 @@ class App extends Component {
             }}
           />
 
-          <div className="App">
+          <div className="App" id="app">
             <Navbar
               className="navbar-header no-shadows"
               theme="dark"
@@ -147,7 +148,14 @@ class App extends Component {
                 </UncontrolledDropdown>
               </Nav>
             </Navbar>
-            <ScrollUpButton className ="" />
+            <ScrollButton
+              targetId={"app"}
+              behavior={"smooth"}
+              buttonBackgroundColor={"white"}
+              buttonColor={"black"}
+              iconType={"arrow-up"}
+            />
+
             <div>
               <Line />
             </div>
