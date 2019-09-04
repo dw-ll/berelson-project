@@ -8,6 +8,8 @@ import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
 import * as legoData from "./legoloading.json";
 import * as doneData from "./doneloading.json";
+import * as famData from "./family.json";
+import * as treeData from "./tree.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import {
   DropdownItem,
@@ -39,12 +41,20 @@ global.jQuery = require("jquery");
 const defaultOptions = {
   loop: true,
   autoplay: true,
-  animationData: legoData.default,
+  animationData: famData.default,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
 const defaultOptions2 = {
+  loop: true,
+  autoplay: true,
+  animationData: famData.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
+const defaultOptions3 = {
   loop: false,
   autoplay: true,
   animationData: doneData.default,
@@ -72,7 +82,7 @@ class App extends Component {
             this.setState({ done: true });
           }, 1000);
         });
-    }, 1200);
+    }, 2200);
   }
   render() {
     return (
@@ -134,119 +144,130 @@ class App extends Component {
               return <About />;
             }}
           />
-        
+
           <div className="App" id="app">
-              {!this.state.done ? (
-          <FadeIn>
-            <div class="d-flex justify-content-center align-items-center">
-              <h1>fetching history</h1>
-              {!this.state.loading ? (
-                <Lottie options={defaultOptions} height={120} width={120} />
-              ) : (
-                <Lottie options={defaultOptions2} height={120} width={120} />
-              )}
-            </div>
-          </FadeIn>
-        ) : (
-          <div>
-            <Navbar
-              className="navbar-header no-shadows"
-              theme="dark"
-              light
-              expand="md"
-            >
-              <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
-              <NavbarToggler onClick={this.toggle} />
-
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink href="/about">About</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/archive">Archive</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                    GitHub
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/#/tree">Tree</NavLink>
-                </NavItem>
-              </Nav>
-            </Navbar>
-            <div>
-            <ScrollButton
-              targetId={"app"}
-              behavior={"smooth"}
-              buttonBackgroundColor={"white"}
-              buttonColor={"black"}
-              iconType={"arrow-up"}
-            />
-
+            {!this.state.done ? (
+              <FadeIn style={{ paddingTop: "100%" }}>
             
-              <Line />
-              </div>
-            
+                <div className="loader">
+                  <h1>The Berelson Project</h1>
+                  <h1>Building Lineage</h1>
+                  {!this.state.loading ? (
+                    <Lottie
+                      options={defaultOptions2}
+                      height={80}
+                      width={80}
+                      className="lottie"
+                    />
+                  ) : (
+                    <Lottie
+                      options={defaultOptions2}
+                      height={80}
+                      width={80}
+                      className="lottie"
+                    />
+                  )}
+                </div>
+              </FadeIn>
+            ) : (
+              <div>
+                <Navbar
+                  className="navbar-header no-shadows"
+                  theme="dark"
+                  light
+                  expand="md"
+                >
+                  <NavbarBrand href="/#/">
+                    {" The Berelson Project"}
+                  </NavbarBrand>
+                  <NavbarToggler onClick={this.toggle} />
 
-            <MDBFooter
-              class="fixed-bottom"
-              color="grey"
-              className="footer font-small pt-4 mt-4"
-            >
-              <MDBContainer fluid className="text-center text-md-left">
-                <MDBRow>
-                  <MDBCol md="4">
-                    <h5 className="title">The Berelson Project</h5>
-                    <p>
-                      An ancestral site built to display and document the
-                      Berelson lineage in an archival effort.
-                    </p>
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <h5 className="title">Explore</h5>
-                    <ul>
-                      <li className="list-unstyled">
-                        <a href="/archive">Archive</a>
-                      </li>
-                      <li className="list-unstyled">
-                        <a href="/tree">Family Tree</a>
-                      </li>
-                    </ul>
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <h5 className="title">Contact</h5>
-                    <ul>
-                      <li className="list-unstyled">
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <NavLink href="/about">About</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="/archive">Archive</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="https://github.com/dw-ll/Berelson-Project">
+                        GitHub
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="/#/tree">Tree</NavLink>
+                    </NavItem>
+                  </Nav>
+                </Navbar>
+                <div>
+                  <ScrollButton
+                    targetId={"app"}
+                    behavior={"smooth"}
+                    buttonBackgroundColor={"white"}
+                    buttonColor={"black"}
+                    iconType={"arrow-up"}
+                  />
+
+                  <Line />
+                </div>
+
+                <MDBFooter
+                  class="fixed-bottom"
+                  color="grey"
+                  className="footer font-small pt-4 mt-4"
+                >
+                  <MDBContainer fluid className="text-center text-md-left">
+                    <MDBRow>
+                      <MDBCol md="4">
+                        <h5 className="title">The Berelson Project</h5>
                         <p>
-                          <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
-                          95062, US
+                          An ancestral site built to display and document the
+                          Berelson lineage in an archival effort.
                         </p>
-                      </li>
-                      <li className="list-unstyled">
-                        <p>
-                          <i class="fas fa-envelope mr-3"></i> Email
-                        </p>
-                      </li>
-                      <li className="list-unstyled">
-                        <p>
-                          <i class="fas fa-phone mr-3"></i> Phone
-                        </p>
-                      </li>
-                    </ul>
-                  </MDBCol>
-                </MDBRow>
-              </MDBContainer>
-              <div className="footer-copyright text-center py-3">
-                <MDBContainer fluid>
-                  &copy; {new Date().getFullYear()}
-                </MDBContainer>
+                      </MDBCol>
+                      <MDBCol md="4">
+                        <h5 className="title">Explore</h5>
+                        <ul>
+                          <li className="list-unstyled">
+                            <a href="/archive">Archive</a>
+                          </li>
+                          <li className="list-unstyled">
+                            <a href="/tree">Family Tree</a>
+                          </li>
+                        </ul>
+                      </MDBCol>
+                      <MDBCol md="4">
+                        <h5 className="title">Contact</h5>
+                        <ul>
+                          <li className="list-unstyled">
+                            <p>
+                              <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
+                              95062, US
+                            </p>
+                          </li>
+                          <li className="list-unstyled">
+                            <p>
+                              <i class="fas fa-envelope mr-3"></i> Email
+                            </p>
+                          </li>
+                          <li className="list-unstyled">
+                            <p>
+                              <i class="fas fa-phone mr-3"></i> Phone
+                            </p>
+                          </li>
+                        </ul>
+                      </MDBCol>
+                    </MDBRow>
+                  </MDBContainer>
+                  <div className="footer-copyright text-center py-3">
+                    <MDBContainer fluid>
+                      &copy; {new Date().getFullYear()}
+                    </MDBContainer>
+                  </div>
+                </MDBFooter>
               </div>
-            </MDBFooter>
-            </div>
-              )}
+            )}
           </div>
-      
         </Switch>
       </Router>
     );
