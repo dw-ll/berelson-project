@@ -4,6 +4,10 @@ import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 import ScrollButton from "react-scroll-button";
+import FadeIn from "react-fade-in";
+import Lottie from "react-lottie";
+import * as legoData from "./legoloading.json";
+import * as doneData from "./doneloading.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import {
   DropdownItem,
@@ -28,9 +32,26 @@ import Tree from "./Line/component/tree.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
+import Load from "./loading.js";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
 global.jQuery = require("jquery");
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: legoData.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
+const defaultOptions2 = {
+  loop: false,
+  autoplay: true,
+  animationData: doneData.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 //test
 
@@ -40,6 +61,18 @@ class App extends Component {
     this.state = {
       loading: true
     };
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(response => response.json())
+        .then(json => {
+          this.setState({ loading: true });
+          setTimeout(() => {
+            this.setState({ done: true });
+          }, 1000);
+        });
+    }, 1200);
   }
   render() {
     return (
@@ -101,8 +134,21 @@ class App extends Component {
               return <About />;
             }}
           />
-
+        
           <div className="App" id="app">
+              {!this.state.done ? (
+          <FadeIn>
+            <div class="d-flex justify-content-center align-items-center">
+              <h1>fetching history</h1>
+              {!this.state.loading ? (
+                <Lottie options={defaultOptions} height={120} width={120} />
+              ) : (
+                <Lottie options={defaultOptions2} height={120} width={120} />
+              )}
+            </div>
+          </FadeIn>
+        ) : (
+          <div>
             <Navbar
               className="navbar-header no-shadows"
               theme="dark"
@@ -129,6 +175,7 @@ class App extends Component {
                 </NavItem>
               </Nav>
             </Navbar>
+            <div>
             <ScrollButton
               targetId={"app"}
               behavior={"smooth"}
@@ -137,9 +184,10 @@ class App extends Component {
               iconType={"arrow-up"}
             />
 
-            <div>
+            
               <Line />
-            </div>
+              </div>
+            
 
             <MDBFooter
               class="fixed-bottom"
@@ -195,7 +243,10 @@ class App extends Component {
                 </MDBContainer>
               </div>
             </MDBFooter>
+            </div>
+              )}
           </div>
+      
         </Switch>
       </Router>
     );
