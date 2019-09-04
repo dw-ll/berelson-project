@@ -36,11 +36,13 @@ import "./App.css";
 import Line from "./Line/component/Line.jsx";
 import Load from "./loading.js";
 import "bootstrap/dist/css/bootstrap.css";
+import loadGreet from "./Media/Post-WWII 2/Fonia220.jpeg";
 require("bootstrap");
 global.jQuery = require("jquery");
 const defaultOptions = {
   loop: true,
   autoplay: true,
+  color: "white",
   animationData: famData.default,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice"
@@ -148,8 +150,13 @@ class App extends Component {
           <div className="App" id="app">
             {!this.state.done ? (
               <FadeIn style={{ paddingTop: "100%" }}>
-            
                 <div className="loader">
+                  <img
+                    src={loadGreet}
+                    width="600px"
+                    height="450px"
+                    alt=""
+                  ></img>
                   <h1>The Berelson Project</h1>
                   <h1>Building Lineage</h1>
                   {!this.state.loading ? (
@@ -157,6 +164,7 @@ class App extends Component {
                       options={defaultOptions2}
                       height={80}
                       width={80}
+                      color="white"
                       className="lottie"
                     />
                   ) : (
@@ -164,6 +172,7 @@ class App extends Component {
                       options={defaultOptions2}
                       height={80}
                       width={80}
+                      color="white"
                       className="lottie"
                     />
                   )}
