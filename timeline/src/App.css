@@ -8,11 +8,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+.card{
+ 
+}
 .scroll-button{
   background-color: black;
   background:grey;
 }
-.
+
 .profile {
   height: 70%;
 }
@@ -133,6 +136,10 @@ h3 {
 
 .vertical-timeline::before {
   background: grey;
+}
+.vertical-timeline-element-content{
+  background:white;
+  color:white;
 }
 * {
   margin: 0;

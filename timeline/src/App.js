@@ -127,25 +127,6 @@ class App extends Component {
                 <NavItem>
                   <NavLink href="/#/tree">Tree</NavLink>
                 </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Eras
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <LinkContainer to="/pre/">
-                      <DropdownItem>Pre WWII</DropdownItem>
-                    </LinkContainer>
-                    <LinkContainer to="/ww2/">
-                      <DropdownItem>WWII</DropdownItem>
-                    </LinkContainer>
-                    <LinkContainer to="/post/">
-                      <DropdownItem>Post WWII</DropdownItem>
-                    </LinkContainer>
-                    <LinkContainer to="/present/">
-                      <DropdownItem>Modern</DropdownItem>
-                    </LinkContainer>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
               </Nav>
             </Navbar>
             <ScrollButton

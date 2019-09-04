@@ -12,7 +12,9 @@ import Greeting from "react-lazy-hero";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 import Toast from "react-bootstrap/Toast";
+import Popup from "reactjs-popup";
 import Container from "react-bootstrap/Container";
+import Back from "../../24px.svg";
 
 import {
   VerticalTimeline,
@@ -234,6 +236,7 @@ class Line extends Component {
                             color: "#000"
                           }}
                           paddingTop="0em"
+                          date="1920-1950"
 
                           //icon={<Print/>}
                         >
@@ -353,6 +356,7 @@ class Line extends Component {
                             color: "#000"
                           }}
                           paddingTop="0em"
+                          date="1920-1950"
 
                           //icon={<Print/>}
                         >
@@ -370,9 +374,6 @@ class Line extends Component {
                                     component="h2"
                                   >
                                     {card.title}
-                                  </Typography>
-                                  <Typography component="p">
-                                    {card.subtitle}
                                   </Typography>
                                 </CardContent>
                               </CardActionArea>
