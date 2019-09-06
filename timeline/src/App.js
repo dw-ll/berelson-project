@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
@@ -6,6 +6,7 @@ import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 import ScrollButton from "react-scroll-button";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
+import styled from "@emotion/styled";
 import * as legoData from "./legoloading.json";
 import * as doneData from "./doneloading.json";
 import * as famData from "./family.json";
@@ -23,7 +24,7 @@ import {
   DropdownToggle,
   DropdownMenu
 } from "reactstrap";
-
+import { themeManager } from "./theme_switch.jsx";
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
@@ -39,16 +40,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import loadGreet from "./Media/Post-WWII 2/Fonia220.jpeg";
 require("bootstrap");
 global.jQuery = require("jquery");
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  color: "white",
-  animationData: famData.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
-  }
-};
-const defaultOptions2 = {
+const Loader = {
   loop: true,
   autoplay: true,
   animationData: famData.default,
@@ -56,14 +48,15 @@ const defaultOptions2 = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
-const defaultOptions3 = {
-  loop: false,
-  autoplay: true,
-  animationData: doneData.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
+
+const ThemeWrapper = styled("div")`
+  background: ${props => props.theme.background};
+  width: 100vw;
+  height: 100vh;
+  h1 {
+    color: ${props => props.theme.body};
   }
-};
+`;
 
 //test
 
@@ -74,6 +67,7 @@ class App extends Component {
       loading: true
     };
   }
+
   componentDidMount() {
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts")
@@ -87,6 +81,7 @@ class App extends Component {
     }, 2200);
   }
   render() {
+    const ThemeState = useState();
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
@@ -146,137 +141,137 @@ class App extends Component {
               return <About />;
             }}
           />
-
-          <div className="App" id="app">
-            {!this.state.done ? (
-              <FadeIn style={{ paddingTop: "100%" }}>
-                <div className="loader">
-                  <img
-                    src={loadGreet}
-                    width="600px"
-                    height="450px"
-                    alt=""
-                  ></img>
-                  <h1>The Berelson Project</h1>
-                  <h1>Building Lineage</h1>
-                  {!this.state.loading ? (
-                    <Lottie
-                      options={defaultOptions2}
-                      height={80}
-                      width={80}
-                      color="white"
-                      className="lottie"
-                    />
-                  ) : (
-                    <Lottie
-                      options={defaultOptions2}
-                      height={80}
-                      width={80}
-                      color="white"
-                      className="lottie"
-                    />
-                  )}
-                </div>
-              </FadeIn>
-            ) : (
-              <div>
-                <Navbar
-                  className="navbar-header no-shadows"
-                  theme="dark"
-                  light
-                  expand="md"
-                >
-                  <NavbarBrand href="/#/">
-                    {" The Berelson Project"}
-                  </NavbarBrand>
-                  <NavbarToggler onClick={this.toggle} />
-
-                  <Nav className="ml-auto" navbar>
-                    <NavItem>
-                      <NavLink href="/about">About</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="/archive">Archive</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                        GitHub
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="/#/tree">Tree</NavLink>
-                    </NavItem>
-                  </Nav>
-                </Navbar>
-                <div>
-                  <ScrollButton
-                    targetId={"app"}
-                    behavior={"smooth"}
-                    buttonBackgroundColor={"white"}
-                    buttonColor={"black"}
-                    iconType={"arrow-up"}
-                  />
-
-                  <Line />
-                </div>
-
-                <MDBFooter
-                  class="fixed-bottom"
-                  color="grey"
-                  className="footer font-small pt-4 mt-4"
-                >
-                  <MDBContainer fluid className="text-center text-md-left">
-                    <MDBRow>
-                      <MDBCol md="4">
-                        <h5 className="title">The Berelson Project</h5>
-                        <p>
-                          An ancestral site built to display and document the
-                          Berelson lineage in an archival effort.
-                        </p>
-                      </MDBCol>
-                      <MDBCol md="4">
-                        <h5 className="title">Explore</h5>
-                        <ul>
-                          <li className="list-unstyled">
-                            <a href="/archive">Archive</a>
-                          </li>
-                          <li className="list-unstyled">
-                            <a href="/tree">Family Tree</a>
-                          </li>
-                        </ul>
-                      </MDBCol>
-                      <MDBCol md="4">
-                        <h5 className="title">Contact</h5>
-                        <ul>
-                          <li className="list-unstyled">
-                            <p>
-                              <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
-                              95062, US
-                            </p>
-                          </li>
-                          <li className="list-unstyled">
-                            <p>
-                              <i class="fas fa-envelope mr-3"></i> Email
-                            </p>
-                          </li>
-                          <li className="list-unstyled">
-                            <p>
-                              <i class="fas fa-phone mr-3"></i> Phone
-                            </p>
-                          </li>
-                        </ul>
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBContainer>
-                  <div className="footer-copyright text-center py-3">
-                    <MDBContainer fluid>
-                      &copy; {new Date().getFullYear()}
-                    </MDBContainer>
+          <ThemeWrapper>
+            <div className="App" id="app">
+              {!this.state.done ? (
+                <FadeIn style={{ paddingTop: "100%" }}>
+                  <div className="loader">
+                    <h1>The Berelson Project</h1>
+                    <h1>Building Lineage</h1>
+                    {!this.state.loading ? (
+                      <Lottie
+                        options={Loader}
+                        height={80}
+                        width={80}
+                        color="white"
+                        className="lottie"
+                      />
+                    ) : (
+                      <Lottie
+                        options={Loader}
+                        height={80}
+                        width={80}
+                        color="white"
+                        className="lottie"
+                      />
+                    )}
                   </div>
-                </MDBFooter>
-              </div>
-            )}
-          </div>
+                </FadeIn>
+              ) : (
+                <div>
+                  <Navbar
+                    className="navbar-header no-shadows"
+                    theme="dark"
+                    light
+                    expand="md"
+                  >
+                    <NavbarBrand href="/#/">
+                      {" The Berelson Project"}
+                    </NavbarBrand>
+                    <NavbarToggler onClick={this.toggle} />
+
+                    <Nav className="ml-auto" navbar>
+                      <NavItem>
+                        <NavLink href="/about">About</NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink href="/archive">Archive</NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink href="https://github.com/dw-ll/Berelson-Project">
+                          GitHub
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink href="/#/tree">Tree</NavLink>
+                      </NavItem>
+                    </Nav>
+                  </Navbar>
+                  <button onClick={() => ThemeState.toggle()}>
+                    {ThemeState.dark
+                      ? "Switch to Light Mode"
+                      : "Switch to Dark Mode"}
+                  </button>
+                  <div>
+                    <ScrollButton
+                      targetId={"app"}
+                      behavior={"smooth"}
+                      buttonBackgroundColor={"white"}
+                      buttonColor={"black"}
+                      iconType={"arrow-up"}
+                    />
+
+                    <Line />
+                  </div>
+
+                  <MDBFooter
+                    class="fixed-bottom"
+                    color="grey"
+                    className="footer font-small pt-4 mt-4"
+                  >
+                    <MDBContainer fluid className="text-center text-md-left">
+                      <MDBRow>
+                        <MDBCol md="4">
+                          <h5 className="title">The Berelson Project</h5>
+                          <p>
+                            An ancestral site built to display and document the
+                            Berelson lineage in an archival effort.
+                          </p>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Explore</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <a href="/archive">Archive</a>
+                            </li>
+                            <li className="list-unstyled">
+                              <a href="/tree">Family Tree</a>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Contact</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
+                                95062, US
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-envelope mr-3"></i> Email
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-phone mr-3"></i> Phone
+                              </p>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBContainer>
+                    <div className="footer-copyright text-center py-3">
+                      <MDBContainer fluid>
+                        &copy; {new Date().getFullYear()}
+                      </MDBContainer>
+                    </div>
+                  </MDBFooter>
+                </div>
+              )}
+            </div>
+          </ThemeWrapper>
         </Switch>
       </Router>
     );

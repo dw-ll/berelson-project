@@ -127,6 +127,7 @@ class FamilyTree extends Component {
   }
   componentDidMount() {
     this.topRef.current.scrollIntoView({
+      
       behavior: "auto"
     });
   }
