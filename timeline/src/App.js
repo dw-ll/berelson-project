@@ -81,8 +81,15 @@ const App = () => {
   }, [darkMode]);
 
   function fetchInitMode(){
+    const isReturningUser = "dark" in localStorage;
     const storedMode = JSON.parse(localStorage.getItem('dark'));
+    const userPreference = fetchFeaturePref();
+
     return storedMode || false;
+  }
+  function fetchFeaturePref(){
+    if(!window.matchMedia) return;
+    return window.matchMedia("(prefers-color-scheme:dark)");
   }
 
   return (
