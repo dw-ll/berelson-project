@@ -10,6 +10,25 @@
   overflow: auto;
 }
 
+.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode {
+  background-color: #1a1919;
+  color: #999;
+}
+
+.dark-mode main-nav {
+  background-color: #1b2938;
+  color: #999;
+}
+
+.dark-mode loader{
+    background-color: #1b2938;
+}
+
 h1 {
   justify-content: center;
   margin: 0 auto;
@@ -21,13 +40,12 @@ h1 {
   pointer-events: none;
 }
 .loader {
-  
   padding-top: 15%;
   align-items: center;
 }
-.lottie{
-  color:white;
-  background-color:black;
+.lottie {
+  color: black;
+  background-color: black;
 }
 .scroll-button {
   background-color: black;
@@ -278,7 +296,6 @@ h3 {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   transition: transform 0.2s; /* Animation */
-  
 }
 
 .tree li a + a {

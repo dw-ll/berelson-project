@@ -6,7 +6,7 @@ import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 import ScrollButton from "react-scroll-button";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 import * as legoData from "./legoloading.json";
 import * as doneData from "./doneloading.json";
 import * as famData from "./family.json";
@@ -24,7 +24,7 @@ import {
   DropdownToggle,
   DropdownMenu
 } from "reactstrap";
-import { themeManager } from "./theme_switch.jsx";
+// import { themeManager } from "./theme_switch.jsx";
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
@@ -49,232 +49,220 @@ const Loader = {
   }
 };
 
-const ThemeWrapper = styled("div")`
+/*const ThemeWrapper = styled("div")`
   background: ${props => props.theme.background};
   width: 100vw;
   height: 100vh;
   h1 {
     color: ${props => props.theme.body};
   }
-`;
+`; */
 
 //test
+const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [done, setDone] = useState(true);
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true
-    };
-  }
+  const [darkMode, setDarkMode] = useState(false);
 
-  componentDidMount() {
+  useEffect(() => {
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
         .then(json => {
-          this.setState({ loading: true });
+          setLoading(true);
           setTimeout(() => {
-            this.setState({ done: true });
+            setDone(true);
           }, 1000);
         });
     }, 2200);
-  }
-  render() {
-    const ThemeState = useState();
-    return (
-      <Router basename={process.env.PUBLIC_URL}>
-        <Switch>
-          <Route
-            path="/#/"
-            exact
-            render={() => {
-              return <Line />;
-            }}
-          />
-          <Route
-            path={`/pre`}
-            exact
-            render={() => {
-              return <Pre />;
-            }}
-          />
-          <Route
-            path={`/ww2`}
-            exact
-            render={() => {
-              return <WW2 />;
-            }}
-          />
-          <Route
-            path={`/post`}
-            exact
-            render={() => {
-              return <Post />;
-            }}
-          />
-          <Route
-            path={`/present`}
-            exact
-            render={() => {
-              return <Present />;
-            }}
-          />
-          <Route
-            exact
-            path={`/#/archive`}
-            render={() => {
-              return <Archive />;
-            }}
-          />
-          <Route
-            exact
-            path={`/#/tree`}
-            render={() => {
-              return <Tree />;
-            }}
-          />
-          <Route
-            exact
-            path={`/#/about`}
-            render={() => {
-              return <About />;
-            }}
-          />
-          <ThemeWrapper>
-            <div className="App" id="app">
-              {!this.state.done ? (
-                <FadeIn style={{ paddingTop: "100%" }}>
-                  <div className="loader">
-                    <h1>The Berelson Project</h1>
-                    <h1>Building Lineage</h1>
-                    {!this.state.loading ? (
-                      <Lottie
-                        options={Loader}
-                        height={80}
-                        width={80}
-                        color="white"
-                        className="lottie"
-                      />
-                    ) : (
-                      <Lottie
-                        options={Loader}
-                        height={80}
-                        width={80}
-                        color="white"
-                        className="lottie"
-                      />
-                    )}
-                  </div>
-                </FadeIn>
-              ) : (
-                <div>
-                  <Navbar
-                    className="navbar-header no-shadows"
-                    theme="dark"
-                    light
-                    expand="md"
-                  >
-                    <NavbarBrand href="/#/">
-                      {" The Berelson Project"}
-                    </NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
+  }, []);
 
-                    <Nav className="ml-auto" navbar>
-                      <NavItem>
-                        <NavLink href="/about">About</NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink href="/archive">Archive</NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                          GitHub
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink href="/#/tree">Tree</NavLink>
-                      </NavItem>
-                    </Nav>
-                  </Navbar>
-                  <button onClick={() => ThemeState.toggle()}>
-                    {ThemeState.dark
-                      ? "Switch to Light Mode"
-                      : "Switch to Dark Mode"}
-                  </button>
-                  <div>
-                    <ScrollButton
-                      targetId={"app"}
-                      behavior={"smooth"}
-                      buttonBackgroundColor={"white"}
-                      buttonColor={"black"}
-                      iconType={"arrow-up"}
-                    />
+  return (
+    <Router basename={process.env.PUBLIC_URL}>
+      <Switch>
+        <Route
+          path="/#/"
+          exact
+          render={() => {
+            return <Line />;
+          }}
+        />
+        <Route
+          path={`/pre`}
+          exact
+          render={() => {
+            return <Pre />;
+          }}
+        />
+        <Route
+          path={`/ww2`}
+          exact
+          render={() => {
+            return <WW2 />;
+          }}
+        />
+        <Route
+          path={`/post`}
+          exact
+          render={() => {
+            return <Post />;
+          }}
+        />
+        <Route
+          path={`/present`}
+          exact
+          render={() => {
+            return <Present />;
+          }}
+        />
+        <Route
+          exact
+          path={`/#/archive`}
+          render={() => {
+            return <Archive />;
+          }}
+        />
+        <Route
+          exact
+          path={`/#/tree`}
+          render={() => {
+            return <Tree />;
+          }}
+        />
+        <Route
+          exact
+          path={`/#/about`}
+          render={() => {
+            return <About />;
+          }}
+        />
 
-                    <Line />
-                  </div>
+        <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
+          {!done ? (
+            <FadeIn style={{ paddingTop: "100%" }}>
+              <div className="loader">
+                <h1>The Berelson Project</h1>
+                <h1>Building Lineage</h1>
+                {!loading ? (
+                  <Lottie
+                    options={Loader}
+                    height={80}
+                    width={80}
+                    color="white"
+                    className="lottie"
+                  />
+                ) : (
+                  <Lottie
+                    options={Loader}
+                    height={80}
+                    width={80}
+                    color="white"
+                    className="lottie"
+                  />
+                )}
+              </div>
+            </FadeIn>
+          ) : (
+            <div>
+              <Navbar
+                className="navbar-header no-shadows"
+                theme="dark"
+                light
+                expand="md"
+              >
+                <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
-                  <MDBFooter
-                    class="fixed-bottom"
-                    color="grey"
-                    className="footer font-small pt-4 mt-4"
-                  >
-                    <MDBContainer fluid className="text-center text-md-left">
-                      <MDBRow>
-                        <MDBCol md="4">
-                          <h5 className="title">The Berelson Project</h5>
+                <Nav className="ml-auto" navbar>
+                  <NavItem>
+                    <NavLink href="/about">About</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="/archive">Archive</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="https://github.com/dw-ll/Berelson-Project">
+                      GitHub
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="/#/tree">Tree</NavLink>
+                  </NavItem>
+                </Nav>
+              </Navbar>
+
+              <div>
+                <ScrollButton
+                  targetId={"app"}
+                  behavior={"smooth"}
+                  buttonBackgroundColor={"white"}
+                  buttonColor={"black"}
+                  iconType={"arrow-up"}
+                />
+
+                <Line />
+              </div>
+
+              <MDBFooter
+                class="fixed-bottom"
+                color="grey"
+                className="footer font-small pt-4 mt-4"
+              >
+                <MDBContainer fluid className="text-center text-md-left">
+                  <MDBRow>
+                    <MDBCol md="4">
+                      <h5 className="title">The Berelson Project</h5>
+                      <p>
+                        An ancestral site built to display and document the
+                        Berelson lineage in an archival effort.
+                      </p>
+                    </MDBCol>
+                    <MDBCol md="4">
+                      <h5 className="title">Explore</h5>
+                      <ul>
+                        <li className="list-unstyled">
+                          <a href="/archive">Archive</a>
+                        </li>
+                        <li className="list-unstyled">
+                          <a href="/tree">Family Tree</a>
+                        </li>
+                      </ul>
+                    </MDBCol>
+                    <MDBCol md="4">
+                      <h5 className="title">Contact</h5>
+                      <ul>
+                        <li className="list-unstyled">
                           <p>
-                            An ancestral site built to display and document the
-                            Berelson lineage in an archival effort.
+                            <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
+                            95062, US
                           </p>
-                        </MDBCol>
-                        <MDBCol md="4">
-                          <h5 className="title">Explore</h5>
-                          <ul>
-                            <li className="list-unstyled">
-                              <a href="/archive">Archive</a>
-                            </li>
-                            <li className="list-unstyled">
-                              <a href="/tree">Family Tree</a>
-                            </li>
-                          </ul>
-                        </MDBCol>
-                        <MDBCol md="4">
-                          <h5 className="title">Contact</h5>
-                          <ul>
-                            <li className="list-unstyled">
-                              <p>
-                                <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
-                                95062, US
-                              </p>
-                            </li>
-                            <li className="list-unstyled">
-                              <p>
-                                <i class="fas fa-envelope mr-3"></i> Email
-                              </p>
-                            </li>
-                            <li className="list-unstyled">
-                              <p>
-                                <i class="fas fa-phone mr-3"></i> Phone
-                              </p>
-                            </li>
-                          </ul>
-                        </MDBCol>
-                      </MDBRow>
-                    </MDBContainer>
-                    <div className="footer-copyright text-center py-3">
-                      <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()}
-                      </MDBContainer>
-                    </div>
-                  </MDBFooter>
+                        </li>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-envelope mr-3"></i> Email
+                          </p>
+                        </li>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-phone mr-3"></i> Phone
+                          </p>
+                        </li>
+                      </ul>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+                <div className="footer-copyright text-center py-3">
+                  <MDBContainer fluid>
+                    &copy; {new Date().getFullYear()}
+                  </MDBContainer>
                 </div>
-              )}
+              </MDBFooter>
             </div>
-          </ThemeWrapper>
-        </Switch>
-      </Router>
-    );
-  }
-}
+          )}
+        </div>
+      </Switch>
+    </Router>
+  );
+};
+
 export default App;
