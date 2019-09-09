@@ -60,8 +60,8 @@ const Loader = {
 
 //test
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [done, setDone] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -174,6 +174,9 @@ const App = () => {
                 <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
                 <Nav className="ml-auto" navbar>
+                  <NavItem className="toggle-container">
+                    <button onClick={setDarkMode}>Dark Mode</button>
+                  </NavItem>
                   <NavItem>
                     <NavLink href="/about">About</NavLink>
                   </NavItem>
