@@ -63,7 +63,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(fetchInitMode());
 
   useEffect(() => {
     setTimeout(() => {
@@ -76,7 +76,14 @@ const App = () => {
           }, 1000);
         });
     }, 2200);
-  }, []);
+    localStorage.setItem('dark',JSON.stringify(darkMode));
+
+  }, [darkMode]);
+
+  function fetchInitMode(){
+    const storedMode = JSON.parse(localStorage.getItem('dark'));
+    return storedMode || false;
+  }
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
@@ -175,7 +182,7 @@ const App = () => {
 
                 <Nav className="ml-auto" navbar>
                   <NavItem className="toggle-container">
-                    <button onClick={setDarkMode}>Dark Mode</button>
+                    <button onClick={() => setDarkMode(isDark=>!isDark)}>Dark Mode</button>
                   </NavItem>
                   <NavItem>
                     <NavLink href="/about">About</NavLink>
