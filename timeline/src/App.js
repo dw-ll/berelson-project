@@ -198,9 +198,23 @@ const App = () => {
                     </NavLink>
                   </NavItem>
                   <NavItem className="toggle-container">
-                    <button onClick={() => setDarkMode(isDark => !isDark)}>
-                      Dark Mode
-                    </button>
+                    {darkMode ? (
+                      <span
+                        className="mode-toggle"
+                        style={{ color: "pink" }}
+                        onClick={() => setDarkMode(isDark => !isDark)}
+                      >
+                        ☾
+                      </span>
+                    ) : (
+                      <span
+                        className="mode-toggle"
+                        style={{ color: "darkgoldenrod" }}
+                        onClick={() => setDarkMode(isDark => !isDark)}
+                      >
+                        ☀︎
+                      </span>
+                    )}
                   </NavItem>
                 </Nav>
               </Navbar>

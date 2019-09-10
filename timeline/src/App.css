@@ -9,6 +9,80 @@
   margin-top: -1px;
   overflow: auto;
 }
+.toggle {
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: cyan;
+}
+
+.toggle-container {
+  display: flex;
+  margin: 0 auto;
+}
+.mode-toggle{
+  height:20px;
+  width:60px;
+}
+main {
+  padding: 0.5em;
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  height: 90vh;
+}
+
+.toggle-container > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+
+.toggle-container > span:last-child {
+  margin-top: 5px;
+}
+
 .nav.navbar-nav li a {
   color: #fff !important;
 }
@@ -16,11 +90,13 @@
 .light-mode {
   background-color: #fff;
   color: #333;
+  transition: background-color 0.25s ease-out;
 }
 
 .dark-mode {
   background-color: #303030;
   color: #fff;
+  transition: background-color 0.25s ease-out;
 }
 .dark-mode App {
   background-color: #303030;
@@ -52,6 +128,7 @@
 
 .dark-mode loader {
   background-color: #303030;
+  height:100%;
 }
 .dark-mode lottie {
   background-color: #303030;
