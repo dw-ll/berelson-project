@@ -76,19 +76,18 @@ const App = () => {
           }, 1000);
         });
     }, 2200);
-    localStorage.setItem('dark',JSON.stringify(darkMode));
-
+    localStorage.setItem("dark", JSON.stringify(darkMode));
   }, [darkMode]);
 
-  function fetchInitMode(){
+  function fetchInitMode() {
     const isReturningUser = "dark" in localStorage;
-    const storedMode = JSON.parse(localStorage.getItem('dark'));
+    const storedMode = JSON.parse(localStorage.getItem("dark"));
     const userPreference = fetchFeaturePref();
 
     return storedMode || false;
   }
-  function fetchFeaturePref(){
-    if(!window.matchMedia) return;
+  function fetchFeaturePref() {
+    if (!window.matchMedia) return;
     return window.matchMedia("(prefers-color-scheme:dark)");
   }
 
@@ -161,7 +160,7 @@ const App = () => {
                 {!loading ? (
                   <Lottie
                     options={Loader}
-                    height={80}
+                    height={100}
                     width={80}
                     color="white"
                     className="lottie"
@@ -169,7 +168,7 @@ const App = () => {
                 ) : (
                   <Lottie
                     options={Loader}
-                    height={80}
+                    height={100}
                     width={80}
                     color="white"
                     className="lottie"
@@ -179,41 +178,40 @@ const App = () => {
             </FadeIn>
           ) : (
             <div>
-              <Navbar
-                className="navbar-header no-shadows"
-                theme="dark"
-                light
-                expand="md"
-              >
+              <Navbar className="navbar-header no-shadows" light expand="md">
                 <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
                 <Nav className="ml-auto" navbar>
-                  <NavItem className="toggle-container">
-                    <button onClick={() => setDarkMode(isDark=>!isDark)}>Dark Mode</button>
-                  </NavItem>
                   <NavItem>
                     <NavLink href="/about">About</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="/archive">Archive</NavLink>
                   </NavItem>
+
+                  <NavItem>
+                    <NavLink href="/#/tree">Tree</NavLink>
+                  </NavItem>
                   <NavItem>
                     <NavLink href="https://github.com/dw-ll/Berelson-Project">
                       GitHub
                     </NavLink>
                   </NavItem>
-                  <NavItem>
-                    <NavLink href="/#/tree">Tree</NavLink>
+                  <NavItem className="toggle-container">
+                    <button onClick={() => setDarkMode(isDark => !isDark)}>
+                      Dark Mode
+                    </button>
                   </NavItem>
                 </Nav>
               </Navbar>
 
               <div>
                 <ScrollButton
+                  className="scroll-up-button"
                   targetId={"app"}
                   behavior={"smooth"}
-                  buttonBackgroundColor={"white"}
-                  buttonColor={"black"}
+                  buttonBackgroundColor={darkMode ? "grey" : "white"}
+                  buttonColor={darkMode ? "white" : "black"}
                   iconType={"arrow-up"}
                 />
 

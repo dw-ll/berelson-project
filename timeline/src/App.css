@@ -9,6 +9,9 @@
   margin-top: -1px;
   overflow: auto;
 }
+.nav.navbar-nav li a {
+  color: #fff !important;
+}
 
 .light-mode {
   background-color: #fff;
@@ -16,17 +19,42 @@
 }
 
 .dark-mode {
-  background-color: #1a1919;
-  color: #999;
+  background-color: #303030;
+  color: #fff;
+}
+.dark-mode App {
+  background-color: #303030;
+}
+.dark-mode card-style {
+  background-color: #303030;
 }
 
-.dark-mode main-nav {
-  background-color: #1b2938;
-  color: #999;
+.dark-mode hero-greet {
+  opacity: 0;
 }
 
-.dark-mode loader{
-    background-color: #1b2938;
+
+.dark-mode Card {
+  background-color: #303030;
+  background:#303030;
+}
+
+.dark-mode vertical-timeline-element-content{
+  background-color: #303030;
+}
+
+.dark-mode a {
+  color: #fff !important;
+}
+.dark-mode nav-link {
+  color: black;
+}
+
+.dark-mode loader {
+  background-color: #303030;
+}
+.dark-mode lottie {
+  background-color: #303030;
 }
 
 h1 {
@@ -78,7 +106,7 @@ h1 {
   animation: App-logo-spin infinite 20s linear;
 }
 .hero-greet {
-  opacity: 1;
+  opacity: 0.5;
   background: transparent;
 }
 body,
