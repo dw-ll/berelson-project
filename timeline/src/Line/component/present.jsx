@@ -177,10 +177,17 @@ class Line extends Component {
                     image={card.image}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography
+                      className="card-info"
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
                       {card.title}
                     </Typography>
-                    <Typography component="p">{card.subtitle}</Typography>
+                    <Typography className="card-info" component="p">
+                      {card.subtitle}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
 
@@ -233,10 +240,17 @@ class Line extends Component {
                     image={card.image}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography
+                      className="card-info"
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
                       {card.title}
                     </Typography>
-                    <Typography component="p">{card.subtitle}</Typography>
+                    <Typography className="card-info" component="p">
+                      {card.subtitle}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
 

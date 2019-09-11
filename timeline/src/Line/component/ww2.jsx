@@ -125,10 +125,17 @@ class Line extends Component {
                     image={card.image}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography
+                      className="card-info"
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
                       {card.title}
                     </Typography>
-                    <Typography component="p">{card.subtitle}</Typography>
+                    <Typography className="card-info" component="p">
+                      {card.subtitle}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
 
@@ -181,10 +188,17 @@ class Line extends Component {
                     image={card.image}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography
+                      className="card-info"
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
                       {card.title}
                     </Typography>
-                    <Typography component="p">{card.subtitle}</Typography>
+                    <Typography className="card-info" component="p">
+                      {card.subtitle}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
 
@@ -248,7 +262,6 @@ class Line extends Component {
                       color="yellow"
                       aria-label="Outlined primary button group"
                     >
-
                       <Button
                         onClick={() => {
                           this.scrollDiv.current.scrollIntoView({
@@ -258,8 +271,7 @@ class Line extends Component {
                         style={{ color: "white" }}
                       >
                         Visit Timeline
-                        </Button>
-
+                      </Button>
                     </ButtonGroup>
                   </Grid>
                 </div>

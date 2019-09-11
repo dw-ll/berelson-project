@@ -94,7 +94,7 @@ main {
 }
 
 .dark-mode {
-  background-color: #303030;
+  background-color: #121212;
   color: #fff;
   transition: background-color 0.25s ease-out;
 }
@@ -105,18 +105,49 @@ main {
   background-color: #303030;
 }
 
+.dark-mode .main-footer {
+  background-color: #303030;
+}
+
 .dark-mode hero-greet {
   opacity: 0;
 }
 
 
-.dark-mode Card {
+.dark-mode .Card {
   background-color: #303030;
   background:#303030;
 }
 
-.dark-mode vertical-timeline-element-content{
+
+.dark-mode .vertical-timeline-element-content{
+  background: #121212;
+}
+.dark-mode .vertical-timeline-element-content ::after{
+   background: #121212;
+}
+.dark-mode .bounce-in{
+  background: #121212;
+}
+.dark-mode .preDiv{
+  background: #303030;
+}
+.dark-mode .MuiCardActionArea-root-361{
+  color: #fff;
   background-color: #303030;
+  opacity:20%;
+}
+.dark-mode .MuiPaper-root-334{
+    background-color: #303030;
+
+}
+
+.dark-mode .card-info{
+  color: #fff;
+}
+
+.dark-mode .vertical-timeline-element-date{
+  color: #fff;
 }
 
 .dark-mode a {
@@ -127,17 +158,20 @@ main {
 }
 
 .dark-mode loader {
-  background-color: #303030;
+  background-color: #000;
   height:100%;
 }
 .dark-mode lottie {
-  background-color: #303030;
+  background-color: #000;
 }
 
 h1 {
   justify-content: center;
   margin: 0 auto;
   font-family: "Times New Roman", Times, serif;
+}
+.lottie-text {
+  color: white;
 }
 
 .App-logo {
@@ -146,11 +180,14 @@ h1 {
 }
 .loader {
   padding-top: 15%;
+  height:100%;
   align-items: center;
+  background-color:white !important;
 }
 .lottie {
   color: black;
   background-color: black;
+  height:100%;
 }
 .scroll-button {
   background-color: black;

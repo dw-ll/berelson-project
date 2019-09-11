@@ -251,6 +251,7 @@ class Line extends Component {
                               />
                               <CardContent>
                                 <Typography
+                                  className="card-info"
                                   gutterBottom
                                   variant="h5"
                                   component="h2"
@@ -341,7 +342,9 @@ class Line extends Component {
                                     image={card.image}
                                   />
                                   <CardContent>
-                                    <Typography>{card.subtitle}</Typography>
+                                    <Typography className="card-info">
+                                      {card.subtitle}
+                                    </Typography>
                                   </CardContent>
                                 </CardActionArea>
                               </Card>
@@ -369,6 +372,7 @@ class Line extends Component {
                                 />
                                 <CardContent>
                                   <Typography
+                                    className="card-info"
                                     gutterBottom
                                     variant="h5"
                                     component="h2"

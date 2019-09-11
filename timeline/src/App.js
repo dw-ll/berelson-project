@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import useGlobalHook from "use-global-hook";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
@@ -24,7 +25,6 @@ import {
   DropdownToggle,
   DropdownMenu
 } from "reactstrap";
-// import { themeManager } from "./theme_switch.jsx";
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
@@ -64,6 +64,7 @@ const App = () => {
   const [done, setDone] = useState(false);
 
   const [darkMode, setDarkMode] = useState(fetchInitMode());
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -154,15 +155,15 @@ const App = () => {
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           {!done ? (
             <FadeIn style={{ paddingTop: "100%" }}>
-              <div className="loader">
-                <h1>The Berelson Project</h1>
-                <h1>Building Lineage</h1>
+              <div className="loader" style={{ height: "100%" }}>
+                <h1 className="lottie-text">The Berelson Project</h1>
+                <h1 className="lottie-text">Building Lineage</h1>
                 {!loading ? (
                   <Lottie
                     options={Loader}
                     height={100}
                     width={80}
-                    color="white"
+                    color="black"
                     className="lottie"
                   />
                 ) : (
@@ -170,7 +171,7 @@ const App = () => {
                     options={Loader}
                     height={100}
                     width={80}
-                    color="white"
+                    color="black"
                     className="lottie"
                   />
                 )}
@@ -234,8 +235,8 @@ const App = () => {
 
               <MDBFooter
                 class="fixed-bottom"
-                color="grey"
-                className="footer font-small pt-4 mt-4"
+                color={darkMode ? "dimgrey" : "grey"}
+                className="main-footer font-small pt-4 mt-4"
               >
                 <MDBContainer fluid className="text-center text-md-left">
                   <MDBRow>
