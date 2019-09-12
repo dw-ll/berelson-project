@@ -131,6 +131,7 @@ export default class Line extends Component {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             key={i}
+            contentStyle={{border:"blue"}}
             iconStyle={{
               background: card.nodeColor,
               color: "#000"
@@ -191,6 +192,7 @@ export default class Line extends Component {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             key={i}
+            contentArrowStyle={{ border:"#ffffff"}}
             iconStyle={{
               background: card.nodeColor,
               color: "#000"

@@ -56,10 +56,12 @@ input[type="checkbox"].checkbox + label {
   display: flex;
   margin: 0 auto;
 }
-.mode-toggle{
-  height:20px;
-  width:60px;
+
+.mode-toggle {
+  height: 20px;
+  width: 60px;
 }
+
 main {
   padding: 0.5em;
   margin: 0 auto;
@@ -92,6 +94,15 @@ main {
   color: #333;
   transition: background-color 0.25s ease-out;
 }
+.light-mode .vertical-timeline-element-content {
+   box-shadow: 0 0px 0 #303030;
+}
+
+.light-mode .vertical-timeline-element-content::before{
+  
+  border-left-color: #121212;
+ 
+}
 
 .dark-mode {
   background-color: #121212;
@@ -99,7 +110,7 @@ main {
   transition: background-color 0.25s ease-out;
 }
 .dark-mode App {
-  background-color: #303030;
+  background-color: #272727;
 }
 .dark-mode card-style {
   background-color: #303030;
@@ -113,40 +124,58 @@ main {
   opacity: 0;
 }
 
+.dark-mode .vertical-timeline-element-content::before {
+  border-bottom-color: #121212;
+  border-right-color: #121212;
+}
 
 .dark-mode .Card {
   background-color: #303030;
-  background:#303030;
-}
-
-
-.dark-mode .vertical-timeline-element-content{
-  background: #121212;
-}
-.dark-mode .vertical-timeline-element-content ::after{
-   background: #121212;
-}
-.dark-mode .bounce-in{
-  background: #121212;
-}
-.dark-mode .preDiv{
   background: #303030;
 }
-.dark-mode .MuiCardActionArea-root-361{
+
+.dark-mode .vertical-timeline-element--work {
+  border-color: #121212;
+}
+
+.dark-mode .vertical-timeline-element {
+  border-color: #121212;
+}
+.dark-mode .vertical-timeline-element-content {
+  background: #303030;
+  border-color: #121212;
+  border: 10px 10 0 0;
+  border-radius: 0.25em;
+  box-shadow: 0 0px 0 #303030;
+}
+.dark-mode .vertical-timeline-element-content::after {
+  background: #121212;
+  border-color: #121212;
+  border-bottom-color: #121212;
+  border-right-color: #121212;
+  border: 0px 10 0 0;
+}
+.dark-mode .bounce-in {
+  background: #121212;
+}
+.dark-mode .preDiv {
+  background: #303030;
+}
+.dark-mode .MuiCardActionArea-root-361 {
   color: #fff;
   background-color: #303030;
-  opacity:20%;
+  opacity: 20%;
 }
-.dark-mode .MuiPaper-root-334{
-    background-color: #303030;
-
+.dark-mode .MuiPaper-root-334 {
+  background-color: #303030;
+  border-color: #121212;
 }
 
-.dark-mode .card-info{
+.dark-mode .card-info {
   color: #fff;
 }
 
-.dark-mode .vertical-timeline-element-date{
+.dark-mode .vertical-timeline-element-date {
   color: #fff;
 }
 
@@ -159,7 +188,7 @@ main {
 
 .dark-mode loader {
   background-color: #000;
-  height:100%;
+  height: 100%;
 }
 .dark-mode lottie {
   background-color: #000;
@@ -180,14 +209,14 @@ h1 {
 }
 .loader {
   padding-top: 15%;
-  height:100%;
+  height: 100%;
   align-items: center;
-  background-color:white !important;
+  background-color: white !important;
 }
 .lottie {
   color: black;
   background-color: black;
-  height:100%;
+  height: 100%;
 }
 .scroll-button {
   background-color: black;
