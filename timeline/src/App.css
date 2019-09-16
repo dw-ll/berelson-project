@@ -95,13 +95,11 @@ main {
   transition: background-color 0.25s ease-out;
 }
 .light-mode .vertical-timeline-element-content {
-   box-shadow: 0 0px 0 #303030;
+  box-shadow: 0 0px 0 #303030;
 }
 
-.light-mode .vertical-timeline-element-content::before{
-  
+.light-mode .vertical-timeline-element-content::before {
   border-left-color: #121212;
- 
 }
 
 .dark-mode {
@@ -128,10 +126,12 @@ main {
   border-bottom-color: #121212;
   border-right-color: #121212;
 }
-
-.dark-mode .Card {
-  background-color: #303030;
-  background: #303030;
+.dark-mode .vertical-timeline-element-content::after {
+  background: #121212;
+  border-color: #121212;
+  border-bottom-color: #121212;
+  border-right-color: #121212;
+  border: 0px 10 0 0;
 }
 
 .dark-mode .vertical-timeline-element--work {
@@ -148,29 +148,18 @@ main {
   border-radius: 0.25em;
   box-shadow: 0 0px 0 #303030;
 }
-.dark-mode .vertical-timeline-element-content::after {
-  background: #121212;
-  border-color: #121212;
-  border-bottom-color: #121212;
-  border-right-color: #121212;
-  border: 0px 10 0 0;
-}
+
 .dark-mode .bounce-in {
   background: #121212;
 }
 .dark-mode .preDiv {
   background: #303030;
 }
-.dark-mode .MuiCardActionArea-root-361 {
-  color: #fff;
-  background-color: #303030;
-  opacity: 20%;
-}
-.dark-mode .MuiPaper-root-334 {
+
+.dark-mode .card-style {
   background-color: #303030;
   border-color: #121212;
 }
-
 .dark-mode .card-info {
   color: #fff;
 }
@@ -469,6 +458,26 @@ h3 {
   transition: transform 0.2s; /* Animation */
 }
 
+.dark-mode .tree li a {
+  border: 5px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  background: #121212;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  transition: transform 0.2s; /* Animation */
+}
+
 .tree li a + a {
   margin-left: 20px;
   position: relative;
@@ -533,12 +542,14 @@ input[type="checkbox"]:checked ~ label > img {
   margin-left: 250px;
   transition: transform 1s;
 }
+.tree-wrapper:hover {
+  transform: scale(0.325);
+ 
+}
 .tree {
   transition: transform 1s;
 }
-.tree-wrapper:hover {
-  transform: scale(0.325);
-}
+
 .tree-profile {
   position: relative;
   width: 250px;

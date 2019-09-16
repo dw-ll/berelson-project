@@ -7,6 +7,7 @@ import DavidB from "../../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 import Riva from "../../Media/Modern/Riva346.jpeg";
 import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
+import $ from "jquery";
 
 // Profile Pages
 /*
@@ -119,6 +120,23 @@ import Starski from "../../gallery/component/people/present_starski.jsx";
   { component: Sevek, path: "/present/sevek" },
   { component: Starski, path: "/present/starski" }
 ];*/
+$(".tree")
+  // tile mouse actions
+  .on("mouseover", function() {
+    $(this).css({ transform: "scale(" + $(this).attr("data-scale") + ")" });
+  })
+  .on("mouseout", function() {
+    $(this).css({ transform: "scale(1)" });
+  })
+  .on("mousemove", function(e) {
+    $(this).css({
+      "transform-origin":
+        ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
+        "% " +
+        ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
+        "%"
+    });
+  });
 
 class FamilyTree extends Component {
   constructor(props) {
@@ -127,7 +145,6 @@ class FamilyTree extends Component {
   }
   componentDidMount() {
     this.topRef.current.scrollIntoView({
-      
       behavior: "auto"
     });
   }
@@ -149,7 +166,6 @@ class FamilyTree extends Component {
   render() {
     return (
       <div class="top" ref={this.topRef}>
-   
         <div>
           <h4 style={{ textAlign: "center" }}>Berelson Family Tree</h4>
           <h6 style={{ textAlign: "center" }}>
@@ -176,9 +192,7 @@ class FamilyTree extends Component {
                       <div class="tree-info">Pinchas</div>
                     </a>
 
-                    <a href=" ">
-                      Katz
-                    </a>
+                    <a href=" ">Katz</a>
                     <ul>
                       <li>
                         <a href=" ">
@@ -203,12 +217,20 @@ class FamilyTree extends Component {
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Married</div>
                                 </a>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Putty</div>
                                 </a>
                               </li>
@@ -328,7 +350,11 @@ class FamilyTree extends Component {
                             <ul>
                               <li>
                                 <a href=" ">
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Serj</div>
                                 </a>
                               </li>
@@ -346,18 +372,30 @@ class FamilyTree extends Component {
                             <ul>
                               <li>
                                 <a href=" ">
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Serj</div>{" "}
                                 </a>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Dan Wagowski</div>
                                 </a>
                                 <ul>
                                   <li>
                                     <a href=" ">
-                                      <img alt="" class="tree-profile" src={Missing} />
+                                      <img
+                                        alt=""
+                                        class="tree-profile"
+                                        src={Missing}
+                                      />
                                       <div class="tree-info">Eli</div>
                                     </a>
                                   </li>
@@ -366,14 +404,22 @@ class FamilyTree extends Component {
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Aron</div>
                                 </a>
                               </li>
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Abby</div>
                                 </a>
                               </li>
@@ -461,17 +507,29 @@ class FamilyTree extends Component {
                                 <li>
                                   <a href=" ">
                                     {" "}
-                                    <img alt="" class="tree-profile" src={Missing} />
+                                    <img
+                                      alt=""
+                                      class="tree-profile"
+                                      src={Missing}
+                                    />
                                     <div class="tree-info">Sandy</div>
                                   </a>
                                 </li>
                                 <li>
                                   <a href=" ">
-                                    <img alt="" class="tree-profile" src={Missing} />
+                                    <img
+                                      alt=""
+                                      class="tree-profile"
+                                      src={Missing}
+                                    />
                                     <div class="tree-info">Mark</div>
                                   </a>
                                   <a href=" ">
-                                    <img alt="" class="tree-profile" src={Missing} />
+                                    <img
+                                      alt=""
+                                      class="tree-profile"
+                                      src={Missing}
+                                    />
                                     <div class="tree-info">Blaine</div>
                                   </a>
                                   <ul>
@@ -483,7 +541,6 @@ class FamilyTree extends Component {
                                           src={Missing}
                                           alt=" "
                                         />
-                                      
                                         <div class="tree-info">Mollie</div>
                                       </a>
                                     </li>
@@ -503,7 +560,11 @@ class FamilyTree extends Component {
                                 <li>
                                   <a href=" ">
                                     {" "}
-                                    <img alt="" class="tree-profile" src={Missing} />
+                                    <img
+                                      alt=""
+                                      class="tree-profile"
+                                      src={Missing}
+                                    />
                                     <div class="tree-info">Illana</div>
                                   </a>
                                 </li>
@@ -672,40 +733,64 @@ class FamilyTree extends Component {
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Sam</div>
                                 </a>
                               </li>
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Ben</div>
                                 </a>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Rose</div>
                                 </a>
                                 <ul>
                                   <li>
                                     <a href=" ">
                                       {" "}
-                                      <img alt="" class="tree-profile" src={Missing} />
+                                      <img
+                                        alt=""
+                                        class="tree-profile"
+                                        src={Missing}
+                                      />
                                       <div class="tree-info">Joan Boarch</div>
                                     </a>
                                   </li>
                                   <li>
                                     <a href=" ">
                                       {" "}
-                                      <img alt="" class="tree-profile" src={Missing} />
+                                      <img
+                                        alt=""
+                                        class="tree-profile"
+                                        src={Missing}
+                                      />
                                       <div class="tree-info">Mitch</div>
                                     </a>
                                   </li>
                                   <li>
                                     <a href=" ">
                                       {" "}
-                                      <img alt="" class="tree-profile" src={Missing} />
+                                      <img
+                                        alt=""
+                                        class="tree-profile"
+                                        src={Missing}
+                                      />
                                       <div class="tree-info">Dan</div>
                                     </a>
                                   </li>
@@ -728,14 +813,22 @@ class FamilyTree extends Component {
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Child</div>
                                 </a>
                               </li>
                               <li>
                                 <a href=" ">
                                   {" "}
-                                  <img alt="" class="tree-profile" src={Missing} />
+                                  <img
+                                    alt=""
+                                    class="tree-profile"
+                                    src={Missing}
+                                  />
                                   <div class="tree-info">Child</div>
                                 </a>
                               </li>
@@ -781,7 +874,6 @@ class FamilyTree extends Component {
             </ul>
           </div>
         </div>
-  
       </div>
     );
   }
