@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import useGlobalHook from "use-global-hook";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
@@ -49,6 +49,7 @@ const Loader = {
   }
 };
 
+
 /*const ThemeWrapper = styled("div")`
   background: ${props => props.theme.background};
   width: 100vw;
@@ -59,6 +60,7 @@ const Loader = {
 `; */
 
 //test
+
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -93,7 +95,7 @@ const App = () => {
   }
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router >
       <Switch>
         <Route
           path="/#/"
@@ -132,7 +134,7 @@ const App = () => {
         />
         <Route
           exact
-          path={`/#/archive`}
+          path={"/#/archive/"}
           render={() => {
             return <Archive />;
           }}
@@ -152,6 +154,7 @@ const App = () => {
           }}
         />
 
+       
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           {!done ? (
             <FadeIn style={{ paddingTop: "100%" }}>
@@ -191,7 +194,7 @@ const App = () => {
                   </NavItem>
 
                   <NavItem>
-                    <NavLink href="/#/tree">Tree</NavLink>
+                    <NavLink href="/tree">Tree</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="https://github.com/dw-ll/Berelson-Project">
