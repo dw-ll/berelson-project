@@ -116,6 +116,7 @@ main {
 
 .dark-mode .main-footer {
   background-color: #303030;
+  margin-top:-50px
 }
 
 .dark-mode hero-greet {
