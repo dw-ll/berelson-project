@@ -1,30 +1,12 @@
-import React, { Component, useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
-import useGlobalHook from "use-global-hook";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import { LinkContainer } from "react-router-bootstrap";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 import ScrollButton from "react-scroll-button";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
-// import styled from "@emotion/styled";
-import * as legoData from "./legoloading.json";
-import * as doneData from "./doneloading.json";
 import * as famData from "./family.json";
-import * as treeData from "./tree.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import {
-  DropdownItem,
-  NavLink,
-  Navbar,
-  NavbarBrand,
-  NavItem,
-  Nav,
-  NavbarToggler,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu
-} from "reactstrap";
+import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
@@ -35,9 +17,7 @@ import Tree from "./Line/component/tree.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
-import Load from "./loading.js";
 import "bootstrap/dist/css/bootstrap.css";
-import loadGreet from "./Media/Post-WWII 2/Fonia220.jpeg";
 require("bootstrap");
 global.jQuery = require("jquery");
 const Loader = {
@@ -48,7 +28,6 @@ const Loader = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
-
 
 /*const ThemeWrapper = styled("div")`
   background: ${props => props.theme.background};
@@ -66,7 +45,6 @@ const App = () => {
   const [done, setDone] = useState(false);
 
   const [darkMode, setDarkMode] = useState(fetchInitMode());
-  
 
   useEffect(() => {
     setTimeout(() => {
@@ -95,67 +73,110 @@ const App = () => {
   }
 
   return (
-    <Router >
-      <Switch>
-        <Route
-          path="/#/"
-          exact
-          render={() => {
-            return <Line />;
-          }}
-        />
-        <Route
-          path={`/pre`}
-          exact
-          render={() => {
-            return <Pre />;
-          }}
-        />
-        <Route
-          path={`/ww2`}
-          exact
-          render={() => {
-            return <WW2 />;
-          }}
-        />
-        <Route
-          path={`/post`}
-          exact
-          render={() => {
-            return <Post />;
-          }}
-        />
-        <Route
-          path={`/present`}
-          exact
-          render={() => {
-            return <Present />;
-          }}
-        />
-        <Route
-          exact
-          path={"/#/archive/"}
-          render={() => {
-            return <Archive />;
-          }}
-        />
-        <Route
-          exact
-          path={`/#/tree`}
-          render={() => {
-            return <Tree />;
-          }}
-        />
-        <Route
-          exact
-          path={`/#/about`}
-          render={() => {
-            return <About />;
-          }}
-        />
+    <Router>
+      <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
+        <Navbar className="navbar-header no-shadows" light expand="md">
+          <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
-       
-        <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/archive">
+                Archive
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/tree">Tree</Link>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/dw-ll/Berelson-Project">
+                GitHub
+              </NavLink>
+            </NavItem>
+            <NavItem className="toggle-container">
+              {darkMode ? (
+                <span
+                  className="mode-toggle"
+                  style={{ color: "pink" }}
+                  onClick={() => setDarkMode(isDark => !isDark)}
+                >
+                  ☾
+                </span>
+              ) : (
+                <span
+                  className="mode-toggle"
+                  style={{ color: "darkgoldenrod" }}
+                  onClick={() => setDarkMode(isDark => !isDark)}
+                >
+                  ☀︎
+                </span>
+              )}
+            </NavItem>
+          </Nav>
+        </Navbar>
+
+        <Switch>
+          <Route
+            path="/#"
+            exact
+            render={() => {
+              return <Line />;
+            }}
+          />
+          <Route
+            path="/pre"
+            exact
+            render={() => {
+              return <Pre />;
+            }}
+          />
+          <Route
+            path={`/ww2`}
+            exact
+            render={() => {
+              return <WW2 />;
+            }}
+          />
+          <Route
+            path={`/post`}
+            exact
+            render={() => {
+              return <Post />;
+            }}
+          />
+          <Route
+            path={`/present`}
+            exact
+            render={() => {
+              return <Present />;
+            }}
+          />
+          <Route
+            exact
+            path="/archive/"
+            render={() => {
+              return <Archive />;
+            }}
+          />
+          <Route
+            exact
+            path="/tree"
+            render={() => {
+              return <Tree />;
+            }}
+          />
+          <Route
+            exact
+            path="/about"
+            render={() => {
+              return <About />;
+            }}
+          />
+
           {!done ? (
             <FadeIn style={{ paddingTop: "100%" }}>
               <div className="loader" style={{ height: "100%" }}>
@@ -182,47 +203,6 @@ const App = () => {
             </FadeIn>
           ) : (
             <div>
-              <Navbar className="navbar-header no-shadows" light expand="md">
-                <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
-
-                <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <NavLink href="/about">About</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/archive">Archive</NavLink>
-                  </NavItem>
-
-                  <NavItem>
-                    <NavLink href="/tree">Tree</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                      GitHub
-                    </NavLink>
-                  </NavItem>
-                  <NavItem className="toggle-container">
-                    {darkMode ? (
-                      <span
-                        className="mode-toggle"
-                        style={{ color: "pink" }}
-                        onClick={() => setDarkMode(isDark => !isDark)}
-                      >
-                        ☾
-                      </span>
-                    ) : (
-                      <span
-                        className="mode-toggle"
-                        style={{ color: "darkgoldenrod" }}
-                        onClick={() => setDarkMode(isDark => !isDark)}
-                      >
-                        ☀︎
-                      </span>
-                    )}
-                  </NavItem>
-                </Nav>
-              </Navbar>
-
               <div>
                 <ScrollButton
                   className="scroll-up-button"
@@ -292,8 +272,8 @@ const App = () => {
               </MDBFooter>
             </div>
           )}
-        </div>
-      </Switch>
+        </Switch>
+      </div>
     </Router>
   );
 };
