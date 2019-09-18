@@ -74,134 +74,136 @@ const App = () => {
 
   return (
     <Router>
-      <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
-        <Navbar className="navbar-header no-shadows" light expand="md">
-          <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
+      {!done ? (
+        <FadeIn style={{ paddingTop: "100%" }}>
+          <div className="loader" style={{ height: "100%" }}>
+            <h1 className="lottie-text">The Berelson Project</h1>
+            <h1 className="lottie-text">Building Lineage</h1>
+            {!loading ? (
+              <Lottie
+                options={Loader}
+                height={100}
+                width={80}
+                color="black"
+                className="lottie"
+              />
+            ) : (
+              <Lottie
+                options={Loader}
+                height={100}
+                width={80}
+                color="black"
+                className="lottie"
+              />
+            )}
+          </div>
+        </FadeIn>
+      ) : (
+        <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
+          <Navbar className="navbar-header no-shadows" light expand="md">
+            <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link className="nav-link" to="/archive">
-                Archive
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link className="nav-link" to="/tree">Tree</Link>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <NavItem className="toggle-container">
-              {darkMode ? (
-                <span
-                  className="mode-toggle"
-                  style={{ color: "pink" }}
-                  onClick={() => setDarkMode(isDark => !isDark)}
-                >
-                  ☾
-                </span>
-              ) : (
-                <span
-                  className="mode-toggle"
-                  style={{ color: "darkgoldenrod" }}
-                  onClick={() => setDarkMode(isDark => !isDark)}
-                >
-                  ☀︎
-                </span>
-              )}
-            </NavItem>
-          </Nav>
-        </Navbar>
-
-        <Switch>
-          <Route
-            path="/#"
-            exact
-            render={() => {
-              return <Line />;
-            }}
-          />
-          <Route
-            path="/pre"
-            exact
-            render={() => {
-              return <Pre />;
-            }}
-          />
-          <Route
-            path={`/ww2`}
-            exact
-            render={() => {
-              return <WW2 />;
-            }}
-          />
-          <Route
-            path={`/post`}
-            exact
-            render={() => {
-              return <Post />;
-            }}
-          />
-          <Route
-            path={`/present`}
-            exact
-            render={() => {
-              return <Present />;
-            }}
-          />
-          <Route
-            exact
-            path="/archive/"
-            render={() => {
-              return <Archive />;
-            }}
-          />
-          <Route
-            exact
-            path="/tree"
-            render={() => {
-              return <Tree />;
-            }}
-          />
-          <Route
-            exact
-            path="/about"
-            render={() => {
-              return <About />;
-            }}
-          />
-
-          {!done ? (
-            <FadeIn style={{ paddingTop: "100%" }}>
-              <div className="loader" style={{ height: "100%" }}>
-                <h1 className="lottie-text">The Berelson Project</h1>
-                <h1 className="lottie-text">Building Lineage</h1>
-                {!loading ? (
-                  <Lottie
-                    options={Loader}
-                    height={100}
-                    width={80}
-                    color="black"
-                    className="lottie"
-                  />
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/archive">
+                  Archive
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/tree">
+                  Tree
+                </Link>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/dw-ll/Berelson-Project">
+                  GitHub
+                </NavLink>
+              </NavItem>
+              <NavItem className="toggle-container">
+                {darkMode ? (
+                  <span
+                    className="mode-toggle"
+                    style={{ color: "pink" }}
+                    onClick={() => setDarkMode(isDark => !isDark)}
+                  >
+                    ☾
+                  </span>
                 ) : (
-                  <Lottie
-                    options={Loader}
-                    height={100}
-                    width={80}
-                    color="black"
-                    className="lottie"
-                  />
+                  <span
+                    className="mode-toggle"
+                    style={{ color: "darkgoldenrod" }}
+                    onClick={() => setDarkMode(isDark => !isDark)}
+                  >
+                    ☀︎
+                  </span>
                 )}
-              </div>
-            </FadeIn>
-          ) : (
+              </NavItem>
+            </Nav>
+          </Navbar>
+
+          <Switch>
+            <Route
+              path="/#"
+              exact
+              render={() => {
+                return <Line />;
+              }}
+            />
+            <Route
+              path="/pre"
+              exact
+              render={() => {
+                return <Pre />;
+              }}
+            />
+            <Route
+              path={`/ww2`}
+              exact
+              render={() => {
+                return <WW2 />;
+              }}
+            />
+            <Route
+              path={`/post`}
+              exact
+              render={() => {
+                return <Post />;
+              }}
+            />
+            <Route
+              path={`/present`}
+              exact
+              render={() => {
+                return <Present />;
+              }}
+            />
+            <Route
+              exact
+              path="/archive/"
+              render={() => {
+                return <Archive />;
+              }}
+            />
+            <Route
+              exact
+              path="/tree"
+              render={() => {
+                return <Tree />;
+              }}
+            />
+            <Route
+              exact
+              path="/about"
+              render={() => {
+                return <About />;
+              }}
+            />
+
             <div>
               <div>
                 <ScrollButton
@@ -271,9 +273,9 @@ const App = () => {
                 </div>
               </MDBFooter>
             </div>
-          )}
-        </Switch>
-      </div>
+          </Switch>
+        </div>
+      )}
     </Router>
   );
 };
