@@ -170,7 +170,7 @@ class Line extends Component {
             //icon={<Print/>}
           >
             <div>
-              <Card className="card">
+              <Card className="card-style">
                 <CardActionArea>
                   <CardMedia
                     style={{ height: 0, paddingTop: "100%" }}
@@ -233,7 +233,7 @@ class Line extends Component {
             //icon={<Print/>}
           >
             <div>
-              <Card className="card">
+              <Card className="card-style">
                 <CardActionArea>
                   <CardMedia
                     style={{ height: 0, paddingTop: "100%" }}

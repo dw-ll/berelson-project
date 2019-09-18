@@ -240,7 +240,7 @@ class Line extends Component {
 
                           //icon={<Print/>}
                         >
-                          <Card className="card">
+                          <Card className="card-style">
                             <CardActionArea>
                               <CardMedia
                                 style={{
@@ -332,7 +332,7 @@ class Line extends Component {
                           >
                             <Toast.Header>{card.title}</Toast.Header>
                             <Toast.Body>
-                              <Card className="card">
+                              <Card className="card-style">
                                 <CardActionArea>
                                   <CardMedia
                                     style={{
@@ -364,7 +364,7 @@ class Line extends Component {
                           //icon={<Print/>}
                         >
                           <div>
-                            <Card className="card">
+                            <Card className="card-style">
                               <CardActionArea>
                                 <CardMedia
                                   style={{ height: 0, paddingTop: "100%" }}
