@@ -240,6 +240,7 @@ class Line extends Component {
 
                           //icon={<Print/>}
                         >
+                         <Link to={preTimelineObjects[i].path}>
                           <Card className="card-style">
                             <CardActionArea>
                               <CardMedia
@@ -274,6 +275,7 @@ class Line extends Component {
                               Learn More
                             </Button>
                           </Card>
+                          </Link>
                         </VerticalTimelineElement>
 
                         <div
@@ -332,6 +334,7 @@ class Line extends Component {
                           >
                             <Toast.Header>{card.title}</Toast.Header>
                             <Toast.Body>
+                            
                               <Card className="card-style">
                                 <CardActionArea>
                                   <CardMedia
@@ -364,6 +367,7 @@ class Line extends Component {
                           //icon={<Print/>}
                         >
                           <div>
+                           <Link to={preTimelineObjects[i].path}>
                             <Card className="card-style">
                               <CardActionArea>
                                 <CardMedia
@@ -409,6 +413,7 @@ class Line extends Component {
                                 Left popover text
                               </Popover>
                             </Card>
+                            </Link>
                           </div>
                         </VerticalTimelineElement>
                       </Container>

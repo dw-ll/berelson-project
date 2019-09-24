@@ -185,6 +185,7 @@ class Line extends Component {
             //icon={<Print/>}
           >
             <div>
+            <Link to={postTimelineObjects[i].path}>
               <Card className="card-style">
                 <CardActionArea>
                   <CardMedia
@@ -233,6 +234,7 @@ class Line extends Component {
                   Right popover text
                 </Popover>
               </Card>
+              </Link>
             </div>
           </VerticalTimelineElement>
         ) : (
@@ -248,6 +250,7 @@ class Line extends Component {
             //icon={<Print/>}
           >
             <div>
+            <Link to={postTimelineObjects[i].path}>
               <Card className="card-style">
                 <CardActionArea>
                   <CardMedia
@@ -296,6 +299,7 @@ class Line extends Component {
                   Left popover text
                 </Popover>
               </Card>
+              </Link>
             </div>
           </VerticalTimelineElement>
         )}

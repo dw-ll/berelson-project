@@ -131,7 +131,7 @@ export default class Line extends Component {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             key={i}
-            contentStyle={{border:"blue"}}
+            contentStyle={{ border: "blue" }}
             iconStyle={{
               background: card.nodeColor,
               color: "#000"
@@ -141,6 +141,8 @@ export default class Line extends Component {
             //icon={<Print/>}
           >
             <div className={card.divID}>
+            <Link to={routes[i].path}>
+      
               <Card className="card-style">
                 <CardActionArea>
                   <CardMedia
@@ -186,13 +188,15 @@ export default class Line extends Component {
                   Right popover text
                 </Popover>
               </Card>
+
+            </Link>
             </div>
           </VerticalTimelineElement>
         ) : (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             key={i}
-            contentArrowStyle={{ border:"#ffffff"}}
+            contentArrowStyle={{ border: "#ffffff" }}
             iconStyle={{
               background: card.nodeColor,
               color: "#000"
@@ -202,6 +206,7 @@ export default class Line extends Component {
             //icon={<Print/>}
           >
             <div>
+             <Link to={routes[i].path}>
               <Card className="card-style">
                 <CardActionArea>
                   <CardMedia
@@ -247,6 +252,7 @@ export default class Line extends Component {
                   Left popover text
                 </Popover>
               </Card>
+              </Link>
             </div>
           </VerticalTimelineElement>
         )}
