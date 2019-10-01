@@ -51,7 +51,20 @@ input[type="checkbox"].checkbox + label {
   opacity: 0.9;
   background-color: cyan;
 }
-
+.carousel {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
+.img-slider {
+  height: 30;
+}
+.landing-text {
+  margin-top:25px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
 .toggle-container {
   display: flex;
   margin: 0 auto;
@@ -116,7 +129,7 @@ main {
 
 .dark-mode .main-footer {
   background-color: #303030;
-  margin-top:-50px
+  margin-top: -50px;
 }
 
 .dark-mode hero-greet {
@@ -545,7 +558,6 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .tree-wrapper:hover {
   transform: scale(0.325);
- 
 }
 .tree {
   transition: transform 1s;

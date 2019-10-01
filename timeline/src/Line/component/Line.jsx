@@ -24,8 +24,17 @@ import ButtonGroup from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView
+} from "mdbreact";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
+import CarolGreet from "../../Media/Modern/Carol343.jpeg";
+import EdGreet from "../../Media/Post-WWII 2/Ed.Silver091.jpeg";
 
 const routes = [
   {
@@ -141,55 +150,53 @@ export default class Line extends Component {
             //icon={<Print/>}
           >
             <div className={card.divID}>
-            <Link to={routes[i].path}>
-      
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+              <Link to={routes[i].path}>
+                <Card className="card-style">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "100%" }}
+                      image={card.image}
+                    />
+                    <CardContent>
+                      <Typography
+                        className="card-info"
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {card.title}
+                      </Typography>
+                      <Typography className="card-info" component="p">
+                        {card.subtitle}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
 
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "right",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "right",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Right popover text
-                </Popover>
-              </Card>
-
-            </Link>
+                  <Button
+                    size="small"
+                    color="primary"
+                    component={Link}
+                    to={card.path}
+                  >
+                    Learn More
+                  </Button>
+                  <Popover
+                    open={this.state.popped === i}
+                    anchorEl={this.state.anchorEl}
+                    anchorOrigin={{
+                      horizontal: "right",
+                      vertical: "center "
+                    }}
+                    transformOrigin={{
+                      horizontal: "right",
+                      vertical: "bottom"
+                    }}
+                    onClose={this.handleRequestClose}
+                  >
+                    Right popover text
+                  </Popover>
+                </Card>
+              </Link>
             </div>
           </VerticalTimelineElement>
         ) : (
@@ -206,52 +213,52 @@ export default class Line extends Component {
             //icon={<Print/>}
           >
             <div>
-             <Link to={routes[i].path}>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+              <Link to={routes[i].path}>
+                <Card className="card-style">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "100%" }}
+                      image={card.image}
+                    />
+                    <CardContent>
+                      <Typography
+                        className="card-info"
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {card.title}
+                      </Typography>
+                      <Typography className="card-info" component="p">
+                        {card.subtitle}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
 
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "left",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "left",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Left popover text
-                </Popover>
-              </Card>
+                  <Button
+                    size="small"
+                    color="primary"
+                    component={Link}
+                    to={card.path}
+                  >
+                    Learn More
+                  </Button>
+                  <Popover
+                    open={this.state.popped === i}
+                    anchorEl={this.state.anchorEl}
+                    anchorOrigin={{
+                      horizontal: "left",
+                      vertical: "center "
+                    }}
+                    transformOrigin={{
+                      horizontal: "left",
+                      vertical: "bottom"
+                    }}
+                    onClose={this.handleRequestClose}
+                  >
+                    Left popover text
+                  </Popover>
+                </Card>
               </Link>
             </div>
           </VerticalTimelineElement>
@@ -275,52 +282,54 @@ export default class Line extends Component {
 
           <div className="back">
             <div id="landing">
-              <div id="hero-greet">
-                <Greeting
-                  minHeight="100vh"
-                  opacity="0.1"
-                  isCentered={true}
-                  imageSrc={FoniaGreet}
-                >
-                  <h3 style={{ color: "white", fontFamily: "Times" }}>
-                    The Berelson Project
-                  </h3>
-                  <div>
-                    <Grid item>
-                      <ButtonGroup
-                        color="yellow"
-                        aria-label="Outlined primary button group"
-                      >
-                        <Button
-                          component={Link}
-                          to="/archive"
-                          style={{ color: "white" }}
-                        >
-                          Visit Archive
-                        </Button>
-                        <Button
-                          onClick={() => {
-                            this.scrollDiv.current.scrollIntoView({
-                              behavior: "smooth"
-                            });
-                          }}
-                          style={{ color: "white" }}
-                        >
-                          Visit Timeline
-                        </Button>
-                        <Button
-                          component={Link}
-                          to="/tree"
-                          style={{ color: "white" }}
-                        >
-                          Visit Tree
-                        </Button>
-                      </ButtonGroup>
-                    </Grid>
-                  </div>
-                  <div />
-                </Greeting>
-              </div>
+              <MDBCarousel
+                activeItem={1}
+                length={3}
+                interval={3000}
+                showControls={false}
+                showIndicators={false}
+                className="carousel z-depth-1"
+                style={{ height: "750px", textAlign:"center" }}
+              >
+                <MDBCarouselInner>
+                  <MDBCarouselItem itemId="1">
+                    <MDBView className="img-slider">
+                      <img
+                        className="d-block w-100"
+                        src={FoniaGreet}
+                        alt="First slide"
+                      />
+                    </MDBView>
+                    <MDBCarouselCaption className="landing-text">
+                      <h3 className="h3-responsive">The Berelson Project</h3>
+                    </MDBCarouselCaption>
+                  </MDBCarouselItem>
+                  <MDBCarouselItem itemId="2">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src={CarolGreet}
+                        alt="Second slide"
+                      />
+                    </MDBView>
+                    <MDBCarouselCaption>
+                      <h3 className="h3-responsive">The Berelson Project</h3>
+                    </MDBCarouselCaption>
+                  </MDBCarouselItem>
+                  <MDBCarouselItem itemId="3">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src={EdGreet}
+                        alt="Third slide"
+                      />
+                    </MDBView>
+                    <MDBCarouselCaption>
+                      <h3 className="h3-responsive">The Berelson Project</h3>
+                    </MDBCarouselCaption>
+                  </MDBCarouselItem>
+                </MDBCarouselInner>
+              </MDBCarousel>
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
