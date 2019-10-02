@@ -303,21 +303,22 @@ export default class Line extends Component {
 
                     <MDBCarouselCaption>
                       <h3 className="h3-responsive">The Berelson Project</h3>
-
                       <div
-                        class="indicator"
+                        className="scroll-down"
                         onClick={() => {
                           this.scrollDiv.current.scrollIntoView({
                             behavior: "smooth"
                           });
                         }}
-                      >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
+                      ></div>
+                      <div
+                        className="scroll-down"
+                        onClick={() => {
+                          this.scrollDiv.current.scrollIntoView({
+                            behavior: "smooth"
+                          });
+                        }}
+                      ></div>
                     </MDBCarouselCaption>
                   </MDBCarouselItem>
                   <MDBCarouselItem itemId="2">
@@ -330,6 +331,19 @@ export default class Line extends Component {
                     </MDBView>
                     <MDBCarouselCaption>
                       <h3 className="h3-responsive">The Berelson Project</h3>
+                      <div
+                        class="arrow-container animated fadeInDown"
+                        onClick={() => {
+                          this.scrollDiv.current.scrollIntoView({
+                            behavior: "smooth"
+                          });
+                        }}
+                      >
+                        <div class="arrow-2">
+                          <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="arrow-1 animated hinge infinite zoomIn"></div>
+                      </div>
                       <div
                         class="indicator"
                         onClick={() => {
@@ -356,20 +370,11 @@ export default class Line extends Component {
                     </MDBView>
                     <MDBCarouselCaption>
                       <h3 className="h3-responsive">The Berelson Project</h3>
-                      <div
-                        class="indicator"
-                        onClick={() => {
-                          this.scrollDiv.current.scrollIntoView({
-                            behavior: "smooth"
-                          });
-                        }}
-                      >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
+                      <p class="scroll-down2">
+                        <a href="#complements" class="animate">
+                          More
+                        </a>
+                      </p>
                     </MDBCarouselCaption>
                   </MDBCarouselItem>
                 </MDBCarouselInner>
