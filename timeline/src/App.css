@@ -34,6 +34,7 @@
   border-right: 2px solid #fff;
   z-index: 9;
   left: 50%;
+  cursor: pointer;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
@@ -231,7 +232,6 @@ a {
   left: 50%;
   bottom: 90px;
   display: block;
- 
 }
 .bounce {
   -webkit-animation: bounce 2s infinite;
@@ -326,6 +326,19 @@ input[type="checkbox"].checkbox + label {
 }
 .h3-responsive {
   z-index: 3;
+  font-family: "Times New Roman";
+  margin-top: 195px;
+  justify-content: center;
+}
+.h6-responsive {
+  z-index: 3;
+  font-family: "Times New Roman";
+  margin-top: 195px;
+  justify-content: center;
+}
+.title-column {
+  bottom: 105px;
+  margin-top: 105px;
 }
 .landing-text {
   margin: 0 auto;
@@ -818,9 +831,8 @@ input[type="checkbox"]:checked ~ label > img {
   display: inline-block;
   min-height: 500px;
   width: 13000px;
-  transform: scale(0.075);
-  transform-origin: 0% 2% 0px;
-  overflow-x: scroll;
+  transform: scale(0.125);
+  transform-origin: -2% 3% 0px;
   overflow-y: hidden;
   margin-left: 150px;
   transition: transform 1s;
@@ -839,7 +851,7 @@ input[type="checkbox"]:checked ~ label > img {
   border-radius: 50%;
 }
 .tree-info {
-  font-size: x-large;
+  font-size: 55px;
   font-family: "Times New Roman", Times, serif;
 }
 .navbar-header {
@@ -847,7 +859,9 @@ input[type="checkbox"]:checked ~ label > img {
   top: 0;
   width: 1450px;
 }
-
+.main-footer {
+  width: 1450px;
+}
 #scroll {
   background: grey;
 }

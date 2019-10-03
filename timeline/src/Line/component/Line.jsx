@@ -35,6 +35,7 @@ import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
 import CarolGreet from "../../Media/Modern/Carol343.jpeg";
 import EdGreet from "../../Media/Post-WWII 2/Ed.Silver091.jpeg";
+import Fonia2Greet from "../../Media/Post-WWII 2/Fonia208 2.jpeg";
 
 const routes = [
   {
@@ -284,7 +285,7 @@ export default class Line extends Component {
             <div id="landing">
               <MDBCarousel
                 activeItem={1}
-                length={3}
+                length={4}
                 interval={2500}
                 showControls={false}
                 showIndicators={false}
@@ -302,8 +303,19 @@ export default class Line extends Component {
                     </MDBView>
 
                     <MDBCarouselCaption>
-                      <h3 className="h3-responsive">The Berelson Project</h3>
-
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <h3 className="h3-responsive">Vessel Archives</h3>
+                          </div>
+                          <div class="col-sm-6">
+                            <h5 className="h6-responsive">
+                              The Berelson Project is an archival site that
+                              displays and documents the Berelson lineage.
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
                       <div
                         className="scroll-down"
                         onClick={() => {
@@ -315,15 +327,28 @@ export default class Line extends Component {
                     </MDBCarouselCaption>
                   </MDBCarouselItem>
                   <MDBCarouselItem itemId="2">
-                    <MDBView>
+                    <MDBView className="img-slider">
                       <img
                         className="d-block w-100"
-                        src={CarolGreet}
-                        alt="Second slide"
+                        src={Fonia2Greet}
+                        alt="First slide"
                       />
                     </MDBView>
+
                     <MDBCarouselCaption>
-                      <h3 className="h3-responsive">The Berelson Project</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <h3 className="h3-responsive">Vessel Archives</h3>
+                          </div>
+                          <div class="col-sm-6">
+                            <h5 className="h6-responsive">
+                              The Berelson Project is an archival site that
+                              displays and documents the Berelson lineage.
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
                       <div
                         className="scroll-down"
                         onClick={() => {
@@ -338,12 +363,56 @@ export default class Line extends Component {
                     <MDBView>
                       <img
                         className="d-block w-100"
+                        src={CarolGreet}
+                        alt="Second slide"
+                      />
+                    </MDBView>
+                    <MDBCarouselCaption>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <h3 className="h3-responsive">Vessel Archives</h3>
+                          </div>
+                          <div class="col-sm-6">
+                            <h5 className="h6-responsive">
+                              The Berelson Project is an archival site that
+                              displays and documents the Berelson lineage.
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="scroll-down"
+                        onClick={() => {
+                          this.scrollDiv.current.scrollIntoView({
+                            behavior: "smooth"
+                          });
+                        }}
+                      ></div>
+                    </MDBCarouselCaption>
+                  </MDBCarouselItem>
+                  <MDBCarouselItem itemId="4">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
                         src={EdGreet}
                         alt="Third slide"
                       />
                     </MDBView>
                     <MDBCarouselCaption>
-                      <h3 className="h3-responsive">The Berelson Project</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <h3 className="h3-responsive">Vessel Archives</h3>
+                          </div>
+                          <div class="col-sm-6">
+                            <h5 className="h3-responsive">
+                              The Berelson Project is an archival site that
+                              displays and documents the Berelson lineage.
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
                       <div
                         class="arrow bounce"
                         onClick={() => {
