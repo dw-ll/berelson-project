@@ -285,7 +285,7 @@ export default class Line extends Component {
               <MDBCarousel
                 activeItem={1}
                 length={3}
-                interval={3000}
+                interval={2500}
                 showControls={false}
                 showIndicators={false}
                 className="carousel z-depth-1"
@@ -303,14 +303,7 @@ export default class Line extends Component {
 
                     <MDBCarouselCaption>
                       <h3 className="h3-responsive">The Berelson Project</h3>
-                      <div
-                        className="scroll-down"
-                        onClick={() => {
-                          this.scrollDiv.current.scrollIntoView({
-                            behavior: "smooth"
-                          });
-                        }}
-                      ></div>
+
                       <div
                         className="scroll-down"
                         onClick={() => {
@@ -332,32 +325,13 @@ export default class Line extends Component {
                     <MDBCarouselCaption>
                       <h3 className="h3-responsive">The Berelson Project</h3>
                       <div
-                        class="arrow-container animated fadeInDown"
+                        className="scroll-down"
                         onClick={() => {
                           this.scrollDiv.current.scrollIntoView({
                             behavior: "smooth"
                           });
                         }}
-                      >
-                        <div class="arrow-2">
-                          <i class="fa fa-angle-down"></i>
-                        </div>
-                        <div class="arrow-1 animated hinge infinite zoomIn"></div>
-                      </div>
-                      <div
-                        class="indicator"
-                        onClick={() => {
-                          this.scrollDiv.current.scrollIntoView({
-                            behavior: "smooth"
-                          });
-                        }}
-                      >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
+                      ></div>
                     </MDBCarouselCaption>
                   </MDBCarouselItem>
                   <MDBCarouselItem itemId="3">
@@ -370,11 +344,16 @@ export default class Line extends Component {
                     </MDBView>
                     <MDBCarouselCaption>
                       <h3 className="h3-responsive">The Berelson Project</h3>
-                      <p class="scroll-down2">
-                        <a href="#complements" class="animate">
-                          More
-                        </a>
-                      </p>
+                      <div
+                        class="arrow bounce"
+                        onClick={() => {
+                          this.scrollDiv.current.scrollIntoView({
+                            behavior: "smooth"
+                          });
+                        }}
+                      >
+                        <a class="fa fa-arrow-down fa-2x" href="#"></a>
+                      </div>
                     </MDBCarouselCaption>
                   </MDBCarouselItem>
                 </MDBCarouselInner>
