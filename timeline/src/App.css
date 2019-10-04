@@ -831,15 +831,13 @@ input[type="checkbox"]:checked ~ label > img {
   display: inline-block;
   min-height: 500px;
   width: 13000px;
-  transform: scale(0.125);
-  transform-origin: -2% 3% 0px;
+  transform: scale(0.105);
+  transform-origin: -1.02% 1% 0px;
   overflow-y: hidden;
   margin-left: 150px;
   transition: transform 1s;
 }
-.tree-wrapper:hover {
-  transform: scale(0.325);
-}
+
 .tree {
   transition: transform 1s;
 }
