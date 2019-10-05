@@ -365,6 +365,32 @@ main {
   line-height: 1.1;
   height: 90vh;
 }
+.dark-mode .modal-container{
+  background: #303030;
+  width:20%;
+
+}
+.dark-mode .modal-body{
+  text-align: center;
+  background: #303030;
+  color:white;
+  font-family:"Times"
+}
+.dark-mode .modal-foot{
+  justify-content: left;
+}
+
+.modal-container{
+  width:20%;
+
+}
+.modal-body{
+  text-align: center;
+  font-family:"Times"
+}
+.modal-foot{
+  justify-content: left;
+}
 
 .toggle-container > span {
   font-size: 1.2em;
@@ -797,7 +823,7 @@ body#archive .footer {
 .tree li a:hover ~ ul li a {
   background: #c8e4f8;
   color: #000;
-  border: 1px solid #94a0b4;
+  border: 0.5px solid #94a0b4;
 }
 /*Connector styles on hover*/
 .tree li a:hover ~ ul li::after,
@@ -838,9 +864,7 @@ input[type="checkbox"]:checked ~ label > img {
   transition: transform 1s;
 }
 
-.tree {
-  transition: transform 1s;
-}
+
 
 .tree-profile {
   position: relative;
