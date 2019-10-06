@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/berelson-development/precache-manifest.52dc7405c90701de4bbeb315a5f1b708.js"
+  "/berelson-development/precache-manifest.04a8b1602887b2ab63b00a6a8ca3544c.js"
 );
 
 workbox.clientsClaim();
