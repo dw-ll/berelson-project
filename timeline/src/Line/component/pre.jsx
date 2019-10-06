@@ -14,7 +14,7 @@ import Popover from "@material-ui/core/Popover";
 import Toast from "react-bootstrap/Toast";
 import Popup from "reactjs-popup";
 import Container from "react-bootstrap/Container";
-import Back from "../../24px.svg";
+
 
 import {
   VerticalTimeline,

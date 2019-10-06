@@ -6,7 +6,6 @@ import { LinkContainer } from "react-router-bootstrap";
 import "react-vertical-timeline-component/style.min.css";
 import Missing from "../../Media/missing_profile.jpg";
 import Chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
-import Abram from "../../Media/Abram.Baigelman040.pdf";
 import DavidB from "../../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 import Riva from "../../Media/Modern/Riva346.jpeg";
@@ -246,7 +245,7 @@ const FamilyTree = () => {
                       <ul>
                         <li>
                           <a href=" ">
-                            <img alt="" class="tree-profile" src={Abram} />
+                            <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Abram</div>
                           </a>
                         </li>
