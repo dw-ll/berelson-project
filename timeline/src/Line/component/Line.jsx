@@ -26,6 +26,7 @@ import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
+import * as famData from "../../family.json";
 
 const routes = [
   {
@@ -131,7 +132,7 @@ export default class Line extends Component {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             key={i}
-            contentStyle={{border:"blue"}}
+            contentStyle={{ border: "blue" }}
             iconStyle={{
               background: card.nodeColor,
               color: "#000"
@@ -192,7 +193,7 @@ export default class Line extends Component {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             key={i}
-            contentArrowStyle={{ border:"#ffffff"}}
+            contentArrowStyle={{ border: "#ffffff" }}
             iconStyle={{
               background: card.nodeColor,
               color: "#000"
@@ -267,70 +268,34 @@ export default class Line extends Component {
             />
           ))}
 
-          <div className="back">
-            <div id="landing">
-              <div id="hero-greet">
-                <Greeting
-                  minHeight="100vh"
-                  opacity="0.1"
-                  isCentered={true}
-                  imageSrc={FoniaGreet}
-                >
-                  <h3 style={{ color: "white", fontFamily: "Times" }}>
-                    The Berelson Project
-                  </h3>
-                  <div>
-                    <Grid item>
-                      <ButtonGroup
-                        color="yellow"
-                        aria-label="Outlined primary button group"
-                      >
-                        <Button
-                          component={Link}
-                          to="/archive"
-                          style={{ color: "white" }}
-                        >
-                          Visit Archive
-                        </Button>
-                        <Button
-                          onClick={() => {
-                            this.scrollDiv.current.scrollIntoView({
-                              behavior: "smooth"
-                            });
-                          }}
-                          style={{ color: "white" }}
-                        >
-                          Visit Timeline
-                        </Button>
-                        <Button
-                          component={Link}
-                          to="/tree"
-                          style={{ color: "white" }}
-                        >
-                          Visit Tree
-                        </Button>
-                      </ButtonGroup>
-                    </Grid>
-                  </div>
-                  <div />
-                </Greeting>
+          <div id="hero-greet">
+            <Greeting
+              minHeight="100vh"
+              opacity="0.1"
+              isCentered={true}
+              imageSrc={FoniaGreet}
+              className="greeting"
+            >
+              <h3 style={{ color: "white", fontFamily: "Times" }}>
+                The Berelson Project
+              </h3>
+              <div>
+                <Grid item>
+                  <ButtonGroup
+                    color="yellow"
+                    aria-label="Outlined primary button group"
+                  >
+                    <Button
+                      component={Link}
+                      to="/archive"
+                      style={{ color: "white" }}
+                    >
+                      Visit Archive
+                    </Button>
+                  </ButtonGroup>
+                </Grid>
               </div>
-            </div>
-            <div ref={this.scrollDiv}>
-              <div id="timeline-start" href="/timeline">
-                <div>
-                  <h4>Timeline</h4>
-                  <h6>
-                    Learn the Berelson lineage through this interactive timeline
-                    that spans both sides of the second World War.
-                  </h6>
-                </div>
-              </div>
-
-              <VerticalTimeline style={{ color: "black" }}>
-                <div>{cards}</div>
-              </VerticalTimeline>
-            </div>
+            </Greeting>
           </div>
         </Switch>
       </Router>

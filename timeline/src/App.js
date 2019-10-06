@@ -13,7 +13,7 @@ import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
 import About from "./Line/component/about.jsx";
-import Tree from "./Line/component/tree.jsx";
+import Tree from "./Line/component/tree_dev.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
@@ -373,18 +373,16 @@ const App = () => {
               )}
             />
             <div>
-              <div>
-                <ScrollButton
-                  className="scroll-up-button"
-                  targetId={"app"}
-                  behavior={"smooth"}
-                  buttonBackgroundColor={darkMode ? "grey" : "white"}
-                  buttonColor={darkMode ? "white" : "black"}
-                  iconType={"arrow-up"}
-                />
+              <ScrollButton
+                className="scroll-up-button"
+                targetId={"app"}
+                behavior={"smooth"}
+                buttonBackgroundColor={darkMode ? "grey" : "white"}
+                buttonColor={darkMode ? "white" : "black"}
+                iconType={"arrow-up"}
+              />
 
-                <Line />
-              </div>
+              <Line />
 
               <MDBFooter
                 class="fixed-bottom"

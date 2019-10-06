@@ -101,6 +101,12 @@ main {
 .light-mode .vertical-timeline-element-content::before {
   border-left-color: #121212;
 }
+.light-mode .main-footer {
+  background-color: #303030;
+  margin-top:-50px;
+  padding:-5px;
+  margin:0px;
+}
 
 .dark-mode {
   background-color: #121212;
@@ -241,6 +247,7 @@ h1 {
 .hero-greet {
   opacity: 0.5;
   background: transparent;
+  height:10000px;
 }
 body,
 html {
@@ -261,14 +268,18 @@ html {
   background-size: cover;
   position: relative;
 }
-
+.greeting{
+  height:100%;
+}
 .landing {
   opacity: 1;
   background: transparent;
+  height:100%;
 }
 .back {
   opacity: 1;
   background: transparent;
+  height:100%;
 }
 
 .App-link {
@@ -494,7 +505,19 @@ h3 {
 }
 body#archive .footer {
   display: none;
+
 }
+.tree-dev{
+  margin-top:125px;
+  text-align:center;
+}
+.tree-dev-text{
+  display: inline-block;
+}
+.tree-dev-text h4{
+  font-family:"Times";
+}
+
 
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
