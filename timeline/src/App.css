@@ -454,7 +454,33 @@ main {
 .dark-mode hero-greet {
   opacity: 0;
 }
+.hero-greet{
 
+}
+.greeting{
+   transform: scale(1);
+  transform-origin: -0.5% 1% 0px;
+}
+.greeting-text{
+  position: absolute;
+  left:41.5%;
+  top:37%;
+  margin-top:10px;
+}
+.greeting-button{
+ position: absolute;
+  left:45%;
+  top:41%;
+  margin-top:10px;
+  color:white;
+}
+.greeting-button-text{
+ 
+  color:white;
+}
+.greeting-greet{
+  margin-top:5px;
+}
 .dark-mode .vertical-timeline-element-content::before {
   border-bottom-color: #121212;
   border-right-color: #121212;

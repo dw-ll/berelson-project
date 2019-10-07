@@ -27,6 +27,7 @@ import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
+import Lodz from "../../Media/lodz.jpg";
 import * as famData from "../../family.json";
 
 const routes = [
@@ -270,31 +271,33 @@ export default class Line extends Component {
           ))}
 
           <div id="hero-greet">
+        
             <Greeting
               minHeight="100vh"
-              opacity="0.1"
+              opacity="0"
               isCentered={true}
-              imageSrc={FoniaGreet}
+              imageSrc={Lodz}
               className="greeting"
             >
-              <h3 style={{ color: "white", fontFamily: "Times" }}>
+            <div className="greeting-greet">
+              <h3 className="greeting-text" style={{ color: "black", fontFamily: "Times", marginTop:"10px"}}>
                 The Berelson Project
               </h3>
-              <div>
+              <div className="greeting-button">
                 <Grid item>
                   <ButtonGroup
-                    color="yellow"
                     aria-label="Outlined primary button group"
                   >
                     <Button
                       component={Link}
                       to="/archive"
-                      style={{ color: "white" }}
+                      className="greeting-button-text"
                     >
                       Visit Archive
                     </Button>
                   </ButtonGroup>
                 </Grid>
+              </div>
               </div>
             </Greeting>
           </div>
