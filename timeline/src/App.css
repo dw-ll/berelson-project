@@ -16,6 +16,264 @@
   align-items: center;
 }
 
+/* ARROW 1 */
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 33px;
+  height: 33px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  left: 50%;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* ARROW 2 */
+
+.arrow-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+}
+
+.arrow-1 {
+  width: 100px;
+  height: 100px;
+  background: #00bcd4;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.arrow-2 {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: table;
+}
+
+.arrow-2:before {
+  width: 52px;
+  height: 52px;
+  content: "";
+  border: 2px solid #006064;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.arrow-2 i.fa {
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #006064;
+}
+
+/* Custom Animate.css */
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.4, 0.4, 0.4);
+    transform: scale3d(0.4, 0.4, 0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.4, 0.4, 0.4);
+    transform: scale3d(0.4, 0.4, 0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+/* ARROW 3 */
+a {
+  color: white;
+  text-decoration: none;
+}
+.arrow {
+  text-align: center;
+  bottom: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  display: block;
+}
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
 input[type="checkbox"].checkbox {
   width: 40px;
   height: 10px;
@@ -51,7 +309,44 @@ input[type="checkbox"].checkbox + label {
   opacity: 0.9;
   background-color: cyan;
 }
-
+.carousel {
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
+.carousel-caption {
+  position: absolute;
+  top: -5px;
+  bottom: auto;
+  margin: 0 auto;
+}
+.img-slider {
+  height: 30;
+}
+.h3-responsive {
+  z-index: 3;
+  font-family: "Times New Roman";
+  margin-top: 195px;
+  justify-content: center;
+}
+.h6-responsive {
+  z-index: 3;
+  font-family: "Times New Roman";
+  margin-top: 195px;
+  justify-content: center;
+}
+.title-column {
+  bottom: 105px;
+  margin-top: 105px;
+}
+.landing-text {
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
 .toggle-container {
   display: flex;
   margin: 0 auto;
@@ -69,6 +364,36 @@ main {
   font-size: 1.2rem;
   line-height: 1.1;
   height: 90vh;
+}
+.dark-mode .modal-container{
+  background: #303030;
+  width:20%;
+
+}
+.dark-mode .modal-body{
+  text-align: center;
+  background: #303030;
+  color:white;
+  font-family:"Times"
+}
+.dark-mode .modal-foot{
+  justify-content: left;
+}
+
+.modal-container{
+  width:20%;
+
+}
+.modal-open{
+  justify-content:center;
+  text-align:center;
+}
+.modal-body{
+  text-align: center;
+  font-family:"Times"
+}
+.modal-foot{
+  justify-content: left;
 }
 
 .toggle-container > span {
@@ -101,12 +426,6 @@ main {
 .light-mode .vertical-timeline-element-content::before {
   border-left-color: #121212;
 }
-.light-mode .main-footer {
-  background-color: #303030;
-  margin-top:-50px;
-  padding:-5px;
-  margin:0px;
-}
 
 .dark-mode {
   background-color: #121212;
@@ -122,7 +441,7 @@ main {
 
 .dark-mode .main-footer {
   background-color: #303030;
-  margin-top:-50px
+  margin-top: -50px;
 }
 
 .dark-mode hero-greet {
@@ -247,7 +566,6 @@ h1 {
 .hero-greet {
   opacity: 0.5;
   background: transparent;
-  height:10000px;
 }
 body,
 html {
@@ -268,18 +586,14 @@ html {
   background-size: cover;
   position: relative;
 }
-.greeting{
-  height:100%;
-}
+
 .landing {
   opacity: 1;
   background: transparent;
-  height:100%;
 }
 .back {
   opacity: 1;
   background: transparent;
-  height:100%;
 }
 
 .App-link {
@@ -505,19 +819,7 @@ h3 {
 }
 body#archive .footer {
   display: none;
-
 }
-.tree-dev{
-  margin-top:125px;
-  text-align:center;
-}
-.tree-dev-text{
-  display: inline-block;
-}
-.tree-dev-text h4{
-  font-family:"Times";
-}
-
 
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
@@ -525,7 +827,7 @@ body#archive .footer {
 .tree li a:hover ~ ul li a {
   background: #c8e4f8;
   color: #000;
-  border: 1px solid #94a0b4;
+  border: 0.5px solid #94a0b4;
 }
 /*Connector styles on hover*/
 .tree li a:hover ~ ul li::after,
@@ -559,20 +861,14 @@ input[type="checkbox"]:checked ~ label > img {
   display: inline-block;
   min-height: 500px;
   width: 13000px;
-  transform: scale(0.075);
-  transform-origin: 0% 2% 0px;
-  overflow-x: scroll;
+  transform: scale(0.105);
+  transform-origin: -1.02% 1% 0px;
   overflow-y: hidden;
   margin-left: 150px;
   transition: transform 1s;
 }
-.tree-wrapper:hover {
-  transform: scale(0.325);
- 
-}
-.tree {
-  transition: transform 1s;
-}
+
+
 
 .tree-profile {
   position: relative;
@@ -581,7 +877,7 @@ input[type="checkbox"]:checked ~ label > img {
   border-radius: 50%;
 }
 .tree-info {
-  font-size: x-large;
+  font-size: 55px;
   font-family: "Times New Roman", Times, serif;
 }
 .navbar-header {
@@ -589,7 +885,9 @@ input[type="checkbox"]:checked ~ label > img {
   top: 0;
   width: 1450px;
 }
-
+.main-footer {
+  width: 1450px;
+}
 #scroll {
   background: grey;
 }

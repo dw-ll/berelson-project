@@ -13,7 +13,7 @@ import Post from "./Line/component/post.jsx";
 import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
 import About from "./Line/component/about.jsx";
-import Tree from "./Line/component/tree_dev.jsx";
+import Tree from "./Line/component/tree.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
