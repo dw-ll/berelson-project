@@ -381,12 +381,13 @@ main {
 }
 
 .modal-container{
-  width:20%;
+  width:1450px;
 
 }
 .modal-open{
   justify-content:center;
   text-align:center;
+  background:black;
 }
 .modal-body{
   text-align: center;
@@ -394,6 +395,12 @@ main {
 }
 .modal-foot{
   justify-content: left;
+}
+.fade modal-container modal show{
+  width:1450px;
+  display:block;
+  padding-left:0;
+  justify-content: center;
 }
 
 .toggle-container > span {

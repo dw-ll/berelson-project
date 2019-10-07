@@ -3,9 +3,13 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 
 import { LinkContainer } from "react-router-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import "react-vertical-timeline-component/style.min.css";
+
+import HenryP from "../../gallery/component/people/pre_henry.jsx";
+import David from "../../gallery/component/people/pre_david.jsx";
+import JackPost from "../../gallery/component/people/post_jack.jsx";
+import RivaPost from "../../gallery/component/people/post_riva.jsx";
 import Missing from "../../Media/missing_profile.jpg";
 import Chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 import Abram from "../../Media/Abram.Baigelman040.pdf";
@@ -14,14 +18,13 @@ import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 import Riva from "../../Media/Modern/Riva346.jpeg";
 import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 import makeStyles from "@material-ui/core/styles";
+
+import "bootstrap/dist/css/bootstrap.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+
 import $ from "jquery";
 
-import HenryP from "../../gallery/component/people/pre_henry.jsx";
-import David from "../../gallery/component/people/pre_david.jsx";
-import JackPost from "../../gallery/component/people/post_jack.jsx";
-import RivaPost from "../../gallery/component/people/post_riva.jsx";
 
 
 require("bootstrap");
