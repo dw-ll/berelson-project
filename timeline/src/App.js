@@ -104,11 +104,7 @@ const App = () => {
             <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </NavItem>
+          
               <NavItem>
                 <Link className="nav-link" to="/archive">
                   Archive
@@ -119,11 +115,7 @@ const App = () => {
                   Tree
                 </Link>
               </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                  GitHub
-                </NavLink>
-              </NavItem>
+             
               <NavItem className="toggle-container">
                 {darkMode ? (
                   <span
