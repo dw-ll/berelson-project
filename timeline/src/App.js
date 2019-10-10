@@ -104,7 +104,6 @@ const App = () => {
             <NavbarBrand href="/#/">{" The Berelson Project"}</NavbarBrand>
 
             <Nav className="ml-auto" navbar>
-          
               <NavItem>
                 <Link className="nav-link" to="/archive">
                   Archive
@@ -112,10 +111,10 @@ const App = () => {
               </NavItem>
               <NavItem>
                 <Link className="nav-link" to="/tree">
-                  Tree
+                  Family Tree
                 </Link>
               </NavItem>
-             
+
               <NavItem className="toggle-container">
                 {darkMode ? (
                   <span
@@ -394,10 +393,12 @@ const App = () => {
                       <h5 className="title">Explore</h5>
                       <ul>
                         <li className="list-unstyled">
-                          <a href="/archive">Archive</a>
+                          <Link to="/archive">Archive</Link>
+                         
                         </li>
                         <li className="list-unstyled">
-                          <a href="/tree">Family Tree</a>
+                          <Link to="/tree">Family Tree</Link>
+                         
                         </li>
                       </ul>
                     </MDBCol>
