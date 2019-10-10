@@ -606,6 +606,9 @@ html {
   width: 100%;
   margin:0px;
 }
+.dark-mode .MuiButton-label-232{
+  color:black;
+}
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
