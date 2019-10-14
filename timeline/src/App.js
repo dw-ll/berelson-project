@@ -14,7 +14,6 @@ import faker from "faker";
 
 import SearchBar from "react-search-bar-semantic-ui";
 
-
 import EDF from "../src/Media/Modern/Ed.Silver088.jpeg";
 
 import Pre from "./Line/component/pre.jsx";
@@ -46,27 +45,25 @@ const searchData = [
   },
   {
     title: "Sevek in San Francisco",
-    desc: "Some description",
+    description: "Some description",
     image: "../src/Media/Modern/Sevek267.jpeg"
   },
   {
     title: "Sevek and Family",
-    desc: "Some description",
+    description: "Some description",
     image: "../src/Media/Modern/Sevek259.jpeg"
   },
   {
     title: "Young Riva",
-    desc: "Some description",
+    description: "Some description",
     image: "../src/Media/Modern/Riva290.jpeg"
   },
   {
     title: "Riva",
-    desc: "Some description",
+    description: "Some description",
     image: "../src/Media/Modern/Riva346.jpeg"
   }
 ];
-
-const initialState = { isLoading: false, results: [], value: "" };
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -76,50 +73,27 @@ const App = () => {
   const [results, setResults] = useState([]);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
 
-  const handleSelect = (e, { result }) => setValue(result.title);
-
-  const handleSearch = (e, { value }) => {
-    setIsLoading(true);
+  let handleResultSelect = (e, { result }) => setValue(result.title);
+  const handleSearchChange = (e, { value }) => {
+    setIsLoading(true, value);
     setValue(value);
-    const reg = new RegExp(_.escapeRegExp(value), "i");
-    const isMatch = result => reg.test(result.title);
-    setIsLoading(false);
-    setResults(_.filter(searchData, isMatch));
-    if (value.length < 1) {
-      setIsLoading(false);
-      setValue("");
-      setResults([]);
-    }
-    // this.setState({ isLoading: true, value });
-    /*
-    useEffect(() => {
-      setTimeout(() => {
-        //if (this.state.value.length < 1) return this.setState(false);
-        if (value.length < 1) {
-          setIsLoading(false);
-          setValue("");
-          setResults([]);
-        }
 
-        // const reg = new RegExp(_.escapeRegExp(this.state.value), "i");
-        const reg = new RegExp(_.escapeRegExp(value), "i");
-        const isMatch = result => reg.test(result.title);
-
-        // isLoading: false,
+    setTimeout(() => {
+      if (value.length < 1) {
         setIsLoading(false);
-        // results: _.filter(searchData, isMatch)
-        setResults(_.filter(searchData, isMatch));
-      }, 300);
-    });*/
+        setValue("");
+        setResults([]);
+      }
+
+      const re = new RegExp(_.escapeRegExp(value), "i");
+      const isMatch = result => re.test(result.title);
+      setIsLoading(false);
+      setResults(_.filter(searchData, isMatch));
+    }, 300);
   };
 
   useEffect(() => {
     setTimeout(() => {
-      // const reg = new RegExp(_.escapeRegExp(this.state.value), "i");
-      // isLoading: false,
-
-      // results: _.filter(searchData, isMatch)
-
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
         .then(json => {
@@ -179,7 +153,15 @@ const App = () => {
 
             <Nav className="ml-auto" navbar>
               <NavItem>
-              <SearchBar data={searchData}/>
+                <Search
+                  loading={isLoading}
+                  onResultSelect={handleResultSelect}
+                  onSearchChange={_.debounce(handleSearchChange, 500, {
+                    leading: true
+                  })}
+                  results={results}
+                  value={value}
+                />
               </NavItem>
               <NavItem>
                 <Link className="nav-link" to="/about">
