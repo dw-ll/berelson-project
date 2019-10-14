@@ -5,8 +5,15 @@ import ScrollButton from "react-scroll-button";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
 import * as famData from "./family.json";
+
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
+import { Search, Grid, Header, Segment } from "semantic-ui-react";
+import _ from "lodash";
+import faker from "faker";
+
+import EDF from "../src/Media/Modern/Ed.Silver088.jpeg";
+
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
@@ -28,26 +35,90 @@ const Loader = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
-
-/*const ThemeWrapper = styled("div")`
-  background: ${props => props.theme.background};
-  width: 100vw;
-  height: 100vh;
-  h1 {
-    color: ${props => props.theme.body};
+const searchData = [
+  {
+    title: "Ed and Family",
+    desc: "Some description",
+    image: {EDF}
+  },
+  {
+    title: "Sevek in San Francisco",
+    desc: "Some description",
+    image: "../src/Media/Modern/Sevek267.jpeg"
+  },
+  {
+    title: "Sevek and Family",
+    desc: "Some description",
+    image: "../src/Media/Modern/Sevek259.jpeg"
+  },
+  {
+    title: "Young Riva",
+    desc: "Some description",
+    image: "../src/Media/Modern/Riva290.jpeg"
+  },
+  {
+    title: "Riva",
+    desc: "Some description",
+    image: "../src/Media/Modern/Riva346.jpeg"
   }
-`; */
+];
 
-//test
+const initialState = { isLoading: false, results: [], value: "" };
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [value, setValue] = useState("");
+  const [results, setResults] = useState([]);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
+
+  const handleSelect = (e, { result }) => setValue(result.title);
+
+  const handleSearch = (e, { value }) => {
+    setIsLoading(true);
+    setValue(value);
+    const reg = new RegExp(_.escapeRegExp(value), "i");
+    const isMatch = result => reg.test(result.title);
+    setIsLoading(false);
+    setResults(_.filter(searchData, isMatch));
+    // this.setState({ isLoading: true, value });
+    /*
+    useEffect(() => {
+      setTimeout(() => {
+        //if (this.state.value.length < 1) return this.setState(false);
+        if (value.length < 1) {
+          setIsLoading(false);
+          setValue("");
+          setResults([]);
+        }
+
+        // const reg = new RegExp(_.escapeRegExp(this.state.value), "i");
+        const reg = new RegExp(_.escapeRegExp(value), "i");
+        const isMatch = result => reg.test(result.title);
+
+        // isLoading: false,
+        setIsLoading(false);
+        // results: _.filter(searchData, isMatch)
+        setResults(_.filter(searchData, isMatch));
+      }, 300);
+    });*/
+  };
 
   useEffect(() => {
     setTimeout(() => {
+      if (value.length < 1) {
+        setIsLoading(false);
+        setValue("");
+        setResults([]);
+      }
+      // const reg = new RegExp(_.escapeRegExp(this.state.value), "i");
+      const reg = new RegExp(_.escapeRegExp(value), "i");
+      const isMatch = result => reg.test(result.title);
+      // isLoading: false,
+      setIsLoading(false);
+      // results: _.filter(searchData, isMatch)
+      setResults(_.filter(searchData, isMatch));
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
         .then(json => {
@@ -101,9 +172,22 @@ const App = () => {
       ) : (
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           <Navbar className="navbar-header no-shadows" light expand="md">
-            <NavbarBrand href="/berelson-development/#/">{"Vessel Archives"}</NavbarBrand>
+            <NavbarBrand href="/berelson-development/#/">
+              {"Vessel Archives"}
+            </NavbarBrand>
 
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <Search
+                  loading={isLoading}
+                  onResultSelect={handleSelect}
+                  onSearchChange={_.debounce(handleSearch, 500, {
+                    leading: true
+                  })}
+                  results={results}
+                  value={value}
+                />
+              </NavItem>
               <NavItem>
                 <Link className="nav-link" to="/about">
                   About
