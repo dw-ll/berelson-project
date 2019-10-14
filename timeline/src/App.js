@@ -12,6 +12,9 @@ import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import _ from "lodash";
 import faker from "faker";
 
+import SearchBar from "react-search-bar-semantic-ui";
+
+
 import EDF from "../src/Media/Modern/Ed.Silver088.jpeg";
 
 import Pre from "./Line/component/pre.jsx";
@@ -39,7 +42,7 @@ const searchData = [
   {
     title: "Ed and Family",
     desc: "Some description",
-    image: {EDF}
+    image: { EDF }
   },
   {
     title: "Sevek in San Francisco",
@@ -82,6 +85,11 @@ const App = () => {
     const isMatch = result => reg.test(result.title);
     setIsLoading(false);
     setResults(_.filter(searchData, isMatch));
+    if (value.length < 1) {
+      setIsLoading(false);
+      setValue("");
+      setResults([]);
+    }
     // this.setState({ isLoading: true, value });
     /*
     useEffect(() => {
@@ -107,18 +115,11 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (value.length < 1) {
-        setIsLoading(false);
-        setValue("");
-        setResults([]);
-      }
       // const reg = new RegExp(_.escapeRegExp(this.state.value), "i");
-      const reg = new RegExp(_.escapeRegExp(value), "i");
-      const isMatch = result => reg.test(result.title);
       // isLoading: false,
-      setIsLoading(false);
+
       // results: _.filter(searchData, isMatch)
-      setResults(_.filter(searchData, isMatch));
+
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
         .then(json => {
@@ -178,15 +179,7 @@ const App = () => {
 
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Search
-                  loading={isLoading}
-                  onResultSelect={handleSelect}
-                  onSearchChange={_.debounce(handleSearch, 500, {
-                    leading: true
-                  })}
-                  results={results}
-                  value={value}
-                />
+              <SearchBar data={searchData}/>
               </NavItem>
               <NavItem>
                 <Link className="nav-link" to="/about">

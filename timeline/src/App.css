@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
 }
+.search-bar{  z-index:9999;}
 
 /* ARROW 1 */
 
