@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
+
 import { Switch } from "react-router";
 import ScrollButton from "react-scroll-button";
 import FadeIn from "react-fade-in";
@@ -10,7 +12,8 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import _ from "lodash";
-import faker from "faker";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 import SearchBar from "react-search-bar-semantic-ui";
 
@@ -40,28 +43,28 @@ const Loader = {
 const searchData = [
   {
     title: "Ed and Family",
-    desc: "Some description",
-    image: { EDF }
+    description: "Some description",
+    image: require("../src/Media/Modern/Ed.Silver088.jpeg")
   },
   {
     title: "Sevek in San Francisco",
     description: "Some description",
-    image: "../src/Media/Modern/Sevek267.jpeg"
+    image: require("../src/Media/Modern/Sevek267.jpeg")
   },
   {
     title: "Sevek and Family",
     description: "Some description",
-    image: "../src/Media/Modern/Sevek259.jpeg"
+    image: require("../src/Media/Modern/Sevek259.jpeg")
   },
   {
     title: "Young Riva",
     description: "Some description",
-    image: "../src/Media/Modern/Riva290.jpeg"
+    image: require("../src/Media/Modern/Riva290.jpeg")
   },
   {
     title: "Riva",
     description: "Some description",
-    image: "../src/Media/Modern/Riva346.jpeg"
+    image: require("../src/Media/Modern/Riva346.jpeg")
   }
 ];
 
@@ -72,8 +75,33 @@ const App = () => {
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
+  const [open, setOpen] = useState(false);
+  const [person, setPerson] = useState("");
 
-  let handleResultSelect = (e, { result }) => setValue(result.title);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleResultSelect = (e, { result }) => {
+    setValue(result.title);
+    setPerson(result);
+    setOpen(true);
+    const title = result.title;
+    const info = result.description;
+    const img = result.image;
+
+    return (
+      <div>
+        <h1>HI</h1>
+      </div>
+      /*
+      
+      */
+    );
+  };
   const handleSearchChange = (e, { value }) => {
     setIsLoading(true, value);
     setValue(value);
@@ -441,6 +469,41 @@ const App = () => {
                   buttonColor={darkMode ? "white" : "black"}
                   iconType={"arrow-up"}
                 />
+
+                {(function() {
+                  if (open) {
+                    return (
+                      <Modal
+                        size="lg"
+                        aria-labelledby="contained-modal-title-vcenter"
+                        centered
+                        show={open}
+                        onHide={() => setOpen(false)}
+                        className="modal-container"
+                      >
+                        <Modal.Header closeButton>
+                          <Modal.Title
+                            className="modal-body"
+                            id="contained-modal-title-vcenter"
+                          >
+                            {person.title}
+                          </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className="modal-body">
+                          <img alt="" class="tree-profile" src={person.image} />
+                          <h6>B.1900 D.1960</h6>
+                          <p>{person.description}</p>
+                        </Modal.Body>
+                        <Modal.Footer className="modal-foot">
+                          <Button onClick={handleClose}>Close</Button>
+                          <LinkContainer to="/pre/david">
+                            <Button>Learn</Button>
+                          </LinkContainer>
+                        </Modal.Footer>
+                      </Modal>
+                    );
+                  }
+                })()}
 
                 <Line />
               </div>
