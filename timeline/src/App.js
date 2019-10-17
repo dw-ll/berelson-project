@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-
 import { Switch } from "react-router";
 import ScrollButton from "react-scroll-button";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
 import * as famData from "./family.json";
-
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import _ from "lodash";
+import { Search } from "semantic-ui-react";
+import SearchBar from "react-search-bar-semantic-ui";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-
-import SearchBar from "react-search-bar-semantic-ui";
-
-import EDF from "../src/Media/Modern/Ed.Silver088.jpeg";
-
 import Pre from "./Line/component/pre.jsx";
 import WW2 from "./Line/component/ww2.jsx";
 import Post from "./Line/component/post.jsx";
@@ -78,9 +72,6 @@ const App = () => {
   const [open, setOpen] = useState(false);
   const [person, setPerson] = useState("");
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
@@ -89,18 +80,6 @@ const App = () => {
     setValue(result.title);
     setPerson(result);
     setOpen(true);
-    const title = result.title;
-    const info = result.description;
-    const img = result.image;
-
-    return (
-      <div>
-        <h1>HI</h1>
-      </div>
-      /*
-      
-      */
-    );
   };
   const handleSearchChange = (e, { value }) => {
     setIsLoading(true, value);

@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
 }
-.search-bar{  z-index:9999;}
 
 /* ARROW 1 */
 
@@ -42,6 +41,9 @@
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
   -moz-animation: fade_move_down 4s ease-in-out infinite;
   animation: fade_move_down 4s ease-in-out infinite;
+}
+.search-bar{
+  z-index:9999;
 }
 
 /*animated scroll arrow animation*/
