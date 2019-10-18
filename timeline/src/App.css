@@ -63,6 +63,21 @@
 .group {
   color: white;
 }
+.audio-lists-panel-content .audio-item .player-name{
+  color:black !important;
+}
+.react-jinke-music-player-main.light-theme .player-time{
+  color:black !important;
+}
+.audio-lists-panel-content .audio-item .player-delete{
+  color:black !important;
+}
+.react-jinke-music-player-play-icon{
+  color:black !important;
+}
+.react-jinke-music-player-main.light-theme .audio-item.playing svg{
+  color:black !important;
+}
 .react-jinke-music-player-main.light-theme svg {
   color: black;
 }
