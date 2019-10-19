@@ -305,15 +305,8 @@ export default class Line extends Component {
                     <MDBCarouselCaption>
                       <div class="container">
                         <div class="row">
-                          <div class="col-sm-6">
-                            <h3 className="h3-responsive">Vessel Archives</h3>
-                          </div>
-                          <div class="col-sm-6">
-                            <h5 className="h6-responsive">
-                              The Berelson Project is an archival site that
-                              displays and documents the Berelson lineage.
-                            </h5>
-                          </div>
+                          <div class="col-sm-6"></div>
+                          <div class="col-sm-6"></div>
                         </div>
                       </div>
                       <div
@@ -338,15 +331,8 @@ export default class Line extends Component {
                     <MDBCarouselCaption>
                       <div class="container">
                         <div class="row">
-                          <div class="col-sm-6">
-                            <h3 className="h3-responsive">Vessel Archives</h3>
-                          </div>
-                          <div class="col-sm-6">
-                            <h5 className="h6-responsive">
-                              The Berelson Project is an archival site that
-                              displays and documents the Berelson lineage.
-                            </h5>
-                          </div>
+                          <div class="col-sm-6"></div>
+                          <div class="col-sm-6"></div>
                         </div>
                       </div>
                       <div
@@ -370,15 +356,8 @@ export default class Line extends Component {
                     <MDBCarouselCaption>
                       <div class="container">
                         <div class="row">
-                          <div class="col-sm-6">
-                            <h3 className="h3-responsive">Vessel Archives</h3>
-                          </div>
-                          <div class="col-sm-6">
-                            <h5 className="h6-responsive">
-                              The Berelson Project is an archival site that
-                              displays and documents the Berelson lineage.
-                            </h5>
-                          </div>
+                          <div class="col-sm-6"></div>
+                          <div class="col-sm-6"></div>
                         </div>
                       </div>
                       <div
@@ -402,27 +381,18 @@ export default class Line extends Component {
                     <MDBCarouselCaption>
                       <div class="container">
                         <div class="row">
-                          <div class="col-sm-6">
-                            <h3 className="h3-responsive">Vessel Archives</h3>
-                          </div>
-                          <div class="col-sm-6">
-                            <h5 className="h3-responsive">
-                              The Berelson Project is an archival site that
-                              displays and documents the Berelson lineage.
-                            </h5>
-                          </div>
+                          <div class="col-sm-6"></div>
+                          <div class="col-sm-6"></div>
                         </div>
                       </div>
                       <div
-                        class="arrow bounce"
+                        className="scroll-down"
                         onClick={() => {
                           this.scrollDiv.current.scrollIntoView({
                             behavior: "smooth"
                           });
                         }}
-                      >
-                        <a class="fa fa-arrow-down fa-2x" href="#"></a>
-                      </div>
+                      ></div>
                     </MDBCarouselCaption>
                   </MDBCarouselItem>
                 </MDBCarouselInner>

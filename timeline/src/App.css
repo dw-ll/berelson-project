@@ -48,13 +48,21 @@
 
 .react-jinke-music-player .music-player-controller{
   
-  background-color:transparent !important;
+  background-color:white !important;
   border:grey !important;
 }
 .react-jinke-music-player .music-player-controller:hover{
-  
+  color:black !important;
   background-color:black !important;
   border:grey !important;
+}
+.react-jinke-music-player .music-player-controller .music-player-controller-setting:hover{
+  color:white !important;
+  background-color:black !important;
+}
+.react-jinke-music-player .music-player-controller .music-player-controller-setting{
+  background:black !important;
+  color:white !important;
 }
 .progess-bar {
   background-color: transparent !important;
@@ -959,6 +967,9 @@ input[type="checkbox"]:checked ~ label > img {
   transform: scale(2);
   cursor: zoom-out;
 }
+.nav-item{
+  padding-left:5px !important;
+}
 
 .tree-wrapper {
   display: inline-block;
@@ -970,12 +981,20 @@ input[type="checkbox"]:checked ~ label > img {
   margin-left: 150px;
   transition: transform 1s;
 }
-
+.btn.btn-primary{
+  background-color:grey !important;
+}
 .tree-profile {
   position: relative;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+}
+
+.search-profile{
+  position: relative;
+  width:450px;
+  height: 450px;
 }
 .tree-info {
   font-size: 55px;

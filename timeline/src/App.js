@@ -28,6 +28,8 @@ import Line from "./Line/component/Line.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
 global.jQuery = require("jquery");
+
+// Loading Animation
 const Loader = {
   loop: true,
   autoplay: true,
@@ -36,6 +38,8 @@ const Loader = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
+
+// Local Search Bank for Search Feature
 const searchData = [
   {
     title: "Ed and Family",
@@ -63,6 +67,8 @@ const searchData = [
     image: require("../src/Media/Modern/Riva346.jpeg")
   }
 ];
+
+// Music Player Options
 const options = {
   //audio lists model
   audioLists: [
@@ -120,7 +126,7 @@ const options = {
 
   //audio controller initial position    [ type `Object` default '{top:0,left:0}' ]
   defaultPosition: {
-    top: 700,
+    top: 575,
     left: 55
   },
 
@@ -146,7 +152,7 @@ const options = {
   defaultPlayMode: "order",
 
   //audio mode        mini | full          [type `String`  default `mini`]
-  mode: "full",
+  mode: "mini",
 
   /**
    * [ type `Boolean` default 'false' ]
@@ -324,6 +330,16 @@ const App = () => {
 
             <Nav className="ml-auto" navbar>
               <NavItem>
+                <Link className="nav-link" to="/archive">
+                  Archive
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/tree">
+                  Family Tree
+                </Link>
+              </NavItem>
+              <NavItem>
                 <Search
                   loading={isLoading}
                   onResultSelect={handleResultSelect}
@@ -332,27 +348,8 @@ const App = () => {
                   })}
                   results={results}
                   value={value}
+                  size="small"
                 />
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/archive">
-                  Archive
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/tree">
-                  Tree
-                </Link>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/dw-ll/Berelson-Project">
-                  GitHub
-                </NavLink>
               </NavItem>
               <NavItem className="toggle-container">
                 {darkMode ? (
@@ -636,15 +633,11 @@ const App = () => {
                           </Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="modal-body">
-                          <img alt="" class="tree-profile" src={person.image} />
-                          <h6>B.1900 D.1960</h6>
+                          <img alt="" class="search-profile" src={person.image} />
                           <p>{person.description}</p>
                         </Modal.Body>
                         <Modal.Footer className="modal-foot">
-                          <Button onClick={handleClose}>Close</Button>
-                          <LinkContainer to="/pre/david">
-                            <Button>Learn</Button>
-                          </LinkContainer>
+                          <Button style={{backgroundColor: "grey !important"}} onClick={handleClose}>Close</Button>
                         </Modal.Footer>
                       </Modal>
                     );
