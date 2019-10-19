@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Switch } from "react-router";
@@ -8,6 +9,7 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
+import { StickyContainer, Sticky } from 'react-sticky';
 import _ from "lodash";
 import { Search } from "semantic-ui-react";
 import SearchBar from "react-search-bar-semantic-ui";
@@ -241,6 +243,7 @@ const App = () => {
   const [open, setOpen] = useState(false);
   const [person, setPerson] = useState("");
   const [params, setParams] = useState(options);
+     
 
   const handleClose = () => {
     setOpen(false);
@@ -322,8 +325,18 @@ const App = () => {
           </div>
         </FadeIn>
       ) : (
+      
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
-          <Navbar className="navbar-header no-shadows" light expand="md">
+          <StickyContainer>
+          <Sticky>
+          
+            {({
+            isSticky = true,
+            wasSticky = false,
+            distanceFromTop,
+            distanceFromBottom,
+           }) =>( 
+            <Navbar className="navbar-header no-shadows" light expand="md">
             <NavbarBrand href="/berelson-development/#/">
               {"Vessel Archives"}
             </NavbarBrand>
@@ -371,7 +384,10 @@ const App = () => {
                 )}
               </NavItem>
             </Nav>
-          </Navbar>
+          </Navbar>)}
+          </Sticky>  
+          </StickyContainer>
+         
 
           <Switch>
             <Route
