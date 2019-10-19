@@ -971,6 +971,7 @@ input[type="checkbox"]:checked ~ label > img {
   padding-left:5px !important;
 }
 
+
 .tree-wrapper {
   display: inline-block;
   min-height: 500px;
@@ -1001,11 +1002,14 @@ input[type="checkbox"]:checked ~ label > img {
   font-family: "Times New Roman", Times, serif;
 }
 .navbar-header {
-  position: relative !important;
+  position: -webkit-sticky;
+  position:sticky;
   top: 0;
   width: 1450px;
 }
 .main-footer {
+  position:-webkit-sticky;
+  position:sticky;
   width: 1450px;
 }
 #scroll {
