@@ -12,30 +12,15 @@ mongoose.connect("mongodb://127.0.0.1:27017/tutorial", {
 const connection = mongoose.connection;
 connection.once("open", function(callback) {
   console.log("MongoDB database connection established successfully");
-   connection.db.collection("firstCollection", function(err, collection){
-        collection.find({}).toArray(function(err, data){
-            console.log(data); // it will print your collection data
-        })
-   });
 });
-
-
 app.use(cors());
 app.use(bodyParser.json());
-
-
-app.listen(PORT, function() {
-  console.log("Server is running on Port: " + PORT);
-});
-
-
-
 routes.route("/").get(function(req, res) {
   Bank.find(function(err, results) {
     if (err) {
       console.log(err);
     } else {
-      console.log(results);
+
       res.json(results);
     }
   });
@@ -52,4 +37,7 @@ routes.route("/add").post(function(req, res) {
       res.status(400).send("result add failed.");
     });
 });
-app.use("/todos", routes);
+app.use("/tutorial", routes);
+app.listen(PORT, function() {
+  console.log("Server is running on Port: " + PORT);
+});

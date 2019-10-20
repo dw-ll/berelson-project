@@ -9,7 +9,7 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import { StickyContainer, Sticky } from 'react-sticky';
+import { StickyContainer, Sticky } from "react-sticky";
 import _ from "lodash";
 import { Search } from "semantic-ui-react";
 import SearchBar from "react-search-bar-semantic-ui";
@@ -239,11 +239,11 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
+  const [searchBank, setSearchBank] = useState();
   const [darkMode, setDarkMode] = useState(fetchInitMode());
   const [open, setOpen] = useState(false);
   const [person, setPerson] = useState("");
   const [params, setParams] = useState(options);
-     
 
   const handleClose = () => {
     setOpen(false);
@@ -268,11 +268,20 @@ const App = () => {
       const re = new RegExp(_.escapeRegExp(value), "i");
       const isMatch = result => re.test(result.title);
       setIsLoading(false);
-      setResults(_.filter(searchData, isMatch));
+      setResults(_.filter(searchBank, isMatch));
     }, 300);
   };
 
   useEffect(() => {
+    axios
+      .get("http://localhost:4000/tutorial/")
+      .then(response => {
+        setSearchBank(response);
+        console.log(searchBank);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
@@ -325,69 +334,67 @@ const App = () => {
           </div>
         </FadeIn>
       ) : (
-      
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           <StickyContainer>
-          <Sticky>
-          
-            {({
-            isSticky = true,
-            wasSticky = false,
-            distanceFromTop,
-            distanceFromBottom,
-           }) =>( 
-            <Navbar className="navbar-header no-shadows" light expand="md">
-            <NavbarBrand href="/berelson-development/#/">
-              {"Vessel Archives"}
-            </NavbarBrand>
+            <Sticky>
+              {({
+                isSticky = true,
+                wasSticky = false,
+                distanceFromTop,
+                distanceFromBottom
+              }) => (
+                <Navbar className="navbar-header no-shadows" light expand="md">
+                  <NavbarBrand href="/berelson-development/#/">
+                    {"Vessel Archives"}
+                  </NavbarBrand>
 
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <Link className="nav-link" to="/archive">
-                  Archive
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/tree">
-                  Family Tree
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Search
-                  loading={isLoading}
-                  onResultSelect={handleResultSelect}
-                  onSearchChange={_.debounce(handleSearchChange, 500, {
-                    leading: true
-                  })}
-                  results={results}
-                  value={value}
-                  size="small"
-                />
-              </NavItem>
-              <NavItem className="toggle-container">
-                {darkMode ? (
-                  <span
-                    className="mode-toggle"
-                    style={{ color: "pink" }}
-                    onClick={() => setDarkMode(isDark => !isDark)}
-                  >
-                    ☾
-                  </span>
-                ) : (
-                  <span
-                    className="mode-toggle"
-                    style={{ color: "darkgoldenrod" }}
-                    onClick={() => setDarkMode(isDark => !isDark)}
-                  >
-                    ☀︎
-                  </span>
-                )}
-              </NavItem>
-            </Nav>
-          </Navbar>)}
-          </Sticky>  
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <Link className="nav-link" to="/archive">
+                        Archive
+                      </Link>
+                    </NavItem>
+                    <NavItem>
+                      <Link className="nav-link" to="/tree">
+                        Family Tree
+                      </Link>
+                    </NavItem>
+                    <NavItem>
+                      <Search
+                        loading={isLoading}
+                        onResultSelect={handleResultSelect}
+                        onSearchChange={_.debounce(handleSearchChange, 500, {
+                          leading: true
+                        })}
+                        results={results}
+                        value={value}
+                        size="small"
+                      />
+                    </NavItem>
+                    <NavItem className="toggle-container">
+                      {darkMode ? (
+                        <span
+                          className="mode-toggle"
+                          style={{ color: "pink" }}
+                          onClick={() => setDarkMode(isDark => !isDark)}
+                        >
+                          ☾
+                        </span>
+                      ) : (
+                        <span
+                          className="mode-toggle"
+                          style={{ color: "darkgoldenrod" }}
+                          onClick={() => setDarkMode(isDark => !isDark)}
+                        >
+                          ☀︎
+                        </span>
+                      )}
+                    </NavItem>
+                  </Nav>
+                </Navbar>
+              )}
+            </Sticky>
           </StickyContainer>
-         
 
           <Switch>
             <Route
@@ -649,11 +656,20 @@ const App = () => {
                           </Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="modal-body">
-                          <img alt="" class="search-profile" src={person.image} />
+                          <img
+                            alt=""
+                            class="search-profile"
+                            src={person.image}
+                          />
                           <p>{person.description}</p>
                         </Modal.Body>
                         <Modal.Footer className="modal-foot">
-                          <Button style={{backgroundColor: "grey !important"}} onClick={handleClose}>Close</Button>
+                          <Button
+                            style={{ backgroundColor: "grey !important" }}
+                            onClick={handleClose}
+                          >
+                            Close
+                          </Button>
                         </Modal.Footer>
                       </Modal>
                     );
