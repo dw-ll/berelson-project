@@ -15,13 +15,15 @@
   display: flex;
   align-items: center;
 }
-
+.top{
+  height:500px;
+}
 /* ARROW 1 */
 
 .scroll-down {
   position: absolute;
   left: 50%;
-  bottom: 90px;
+  top: 650px;
   display: block;
   text-align: center;
   font-size: 50px;
@@ -45,6 +47,32 @@
 .search-bar {
   z-index: 9999;
 }
+.modal-container{
+  width:1450px !important;
+}
+.modal{
+  width:1450px !important;
+}
+
+.modal-open{
+  justify-content:center;
+  text-align:center;
+  background:black;
+}
+.modal-body{
+  text-align: center;
+  font-family:"Times"
+}
+.modal-foot{
+  justify-content: left;
+}
+.fade modal-container modal show{
+  width:1450px !important;
+  display:block;
+  padding-left:0;
+  justify-content: center;
+}
+fade modal-container modal show
 
 .react-jinke-music-player .music-player-controller {
   background-color: white !important;
@@ -667,7 +695,7 @@ h1 {
   font-size: calc(10px + 2vmin);
 }
 .main-nav {
-  font-family: Arial, sans-serif;
+  font-family: Times, sans-serif;
   margin: 0 25%;
   float: left;
 }
@@ -973,15 +1001,22 @@ input[type="checkbox"]:checked ~ label > img {
   padding-left: 5px !important;
 }
 
+.tree{
+  height:500px;
+  position: absolute;
+}
+
 .tree-wrapper {
   display: inline-block;
-  min-height: 500px;
+  height: 2700px;
   width: 13000px;
   transform: scale(0.105);
   transform-origin: -1.02% 1% 0px;
   overflow-y: hidden;
+  position: absolute;
   margin-left: 150px;
   transition: transform 1s;
+  left:0;
 }
 .btn.btn-primary {
   background-color: grey !important;
@@ -1003,13 +1038,12 @@ input[type="checkbox"]:checked ~ label > img {
   font-family: "Times New Roman", Times, serif;
 }
 .navbar-header {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   width: 1450px;
 }
 .main-footer {
   width: 1450px;
+  position: sticky;
 }
 #scroll {
   background: grey;
