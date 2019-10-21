@@ -15,8 +15,8 @@
   display: flex;
   align-items: center;
 }
-.top{
-  height:500px;
+.top {
+  min-height: calc(100vh - 40px);
 }
 /* ARROW 1 */
 
@@ -47,34 +47,37 @@
 .search-bar {
   z-index: 9999;
 }
-.modal-container{
-  width:1450px !important;
+.modal-container {
+  width: 1450px !important;
 }
-.modal{
-  width:1450px !important;
+.modal {
+  width: 1450px !important;
 }
 
-.modal-open{
-  justify-content:center;
-  text-align:center;
-  background:black;
-}
-.modal-body{
+.modal-open {
+  justify-content: center;
   text-align: center;
-  font-family:"Times"
+  background: black;
 }
-.modal-foot{
+.modal-body {
+  text-align: center;
+  font-family: "Times";
+}
+.modal-foot {
   justify-content: left;
 }
-.fade modal-container modal show{
-  width:1450px !important;
-  display:block;
-  padding-left:0;
+.fade modal-container modal show {
+  width: 1450px !important;
+  display: block;
+  padding-left: 0;
   justify-content: center;
 }
-fade modal-container modal show
-
-.react-jinke-music-player .music-player-controller {
+fade
+  modal-container
+  modal
+  show
+  .react-jinke-music-player
+  .music-player-controller {
   background-color: white !important;
   border: grey !important;
 }
@@ -1001,8 +1004,8 @@ input[type="checkbox"]:checked ~ label > img {
   padding-left: 5px !important;
 }
 
-.tree{
-  height:500px;
+.tree {
+  height: 500px;
   position: absolute;
 }
 
@@ -1016,7 +1019,7 @@ input[type="checkbox"]:checked ~ label > img {
   position: absolute;
   margin-left: 150px;
   transition: transform 1s;
-  left:0;
+  left: 0;
 }
 .btn.btn-primary {
   background-color: grey !important;
@@ -1043,7 +1046,6 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .main-footer {
   width: 1450px;
-  position: sticky;
 }
 #scroll {
   background: grey;
@@ -1051,7 +1053,7 @@ input[type="checkbox"]:checked ~ label > img {
 .player-wrapper {
   position: relative;
   padding-top: 0; /* Player ratio: 100 / (1280 / 720) */
-  justify-content:center;
+  justify-content: center;
 }
 
 .react-player {
