@@ -5,7 +5,7 @@ let Bank = new Schema(
   {
     title: { type: String },
     description: { Type: String },
-    img: { Type: String }
+    image: { Type: String }
   },
   { collection: "firstCollection" }
 );

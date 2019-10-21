@@ -46,7 +46,7 @@ const searchData = [
   {
     title: "Ed and Family",
     description: "Some description",
-    image: require("../src/Media/Modern/Ed.Silver088.jpeg")
+    image: "../src/Media/Modern/Ed.Silver088.jpeg"
   },
   {
     title: "Sevek in San Francisco",
@@ -239,7 +239,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
-  const [searchBank, setSearchBank] = useState();
+  const [searchBank, setSearchBank] = useState([]);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
   const [open, setOpen] = useState(false);
   const [person, setPerson] = useState("");
@@ -264,11 +264,11 @@ const App = () => {
         setValue("");
         setResults([]);
       }
-
+      console.log(searchBank);
       const re = new RegExp(_.escapeRegExp(value), "i");
       const isMatch = result => re.test(result.title);
       setIsLoading(false);
-      setResults(_.filter(searchBank, isMatch));
+      setResults(_.filter(searchData, isMatch));
     }, 300);
   };
 
@@ -276,8 +276,8 @@ const App = () => {
     axios
       .get("http://localhost:4000/tutorial/")
       .then(response => {
-        setSearchBank(response);
-        console.log(searchBank);
+        console.log("GET passsed.");
+        setSearchBank(response.data);
       })
       .catch(function(error) {
         console.log(error);
@@ -638,6 +638,7 @@ const App = () => {
 
                 {(function() {
                   if (open) {
+                    console.log(person);
                     return (
                       <Modal
                         size="lg"
@@ -657,7 +658,7 @@ const App = () => {
                         </Modal.Header>
                         <Modal.Body className="modal-body">
                           <img
-                            alt=""
+                            alt={person.image}
                             class="search-profile"
                             src={person.image}
                           />

@@ -25,7 +25,6 @@ routes.route("/").get(function(req, res) {
     }
   });
 });
-
 routes.route("/add").post(function(req, res) {
   let result = new Bank(req.body);
   result
