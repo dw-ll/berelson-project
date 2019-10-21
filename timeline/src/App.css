@@ -1029,6 +1029,7 @@ input[type="checkbox"]:checked ~ label > img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  padding-bottom: 2em;
 }
 
 .search-profile {
