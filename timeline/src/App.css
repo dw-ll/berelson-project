@@ -1100,6 +1100,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 
 .era-span {
+  margin-bottom: 150px;
   width: 1440px;
   height: 510px;
 }
@@ -1129,11 +1130,32 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .era-image {
+  .era-image1 {
     display: inline-block;
     min-height: 420px;
     width: inherit;
-    background-image: url("./Media/Modern/Carol343.jpeg");
+    background-image: url("./Media/Pre-WWII/Gita.Baigelman139.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
     background-position: center;
   }
   .era-text-link {
