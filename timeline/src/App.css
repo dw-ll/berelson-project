@@ -1047,6 +1047,15 @@ input[type="checkbox"]:checked ~ label > img {
     width: 1450px;
   }
 }
+@media screen and (min-width: 1680px) {
+   .navbar-header {
+    top: 0;
+    width: 1920px;
+  }
+  .main-footer {
+    width: 1920px;
+  }
+}
 
 .btn.btn-primary {
   background-color: grey !important;
@@ -1111,6 +1120,32 @@ input[type="checkbox"]:checked ~ label > img {
 @media screen and (min-width: 1080px) {
   .era-text-container {
     max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 300px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .era-span {
+  margin-bottom: 150px;
+  width: 1920px;
+  height: 510px;
+}
+  .era-text-container {
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
