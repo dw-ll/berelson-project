@@ -1050,12 +1050,46 @@ input[type="checkbox"]:checked ~ label > img {
 @media screen and (min-width: 1680px) {
    .navbar-header {
     top: 0;
+    width: 1620px;
+  }
+  .main-footer {
+    width: 1680px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 275px;
+    transition: transform 1s;
+    left: 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+   .navbar-header {
+    top: 0;
     width: 1920px;
   }
   .main-footer {
     width: 1920px;
   }
+    .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 400px;
+    transition: transform 1s;
+    left: 0;
+  }
 }
+
 
 .btn.btn-primary {
   background-color: grey !important;
