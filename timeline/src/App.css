@@ -1081,6 +1081,10 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 
+.eras{
+  padding-top:15px;
+}
+
 .eras-title {
   margin-bottom: 20px;
   padding: 5px 0 5px 10px;
@@ -1102,29 +1106,55 @@ input[type="checkbox"]:checked ~ label > img {
 .era {
   margin: 0;
 }
-.era-image {
-  display: inline-block;
-  min-height: 420px;
-  width: inherit;
-  background-image: url("./Media/Modern/Carol343.jpeg");
-  background-position: center;
+
+@media screen and (min-width: 1080px) {
+  .era-text-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 300px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
 }
-.era-text-container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
+@media screen and (min-width: 1200px) {
+  .era-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Modern/Carol343.jpeg");
+    background-position: center;
+  }
+  .era-text-link {
+    font-family: "Euclid Flex", "Helvetica", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700;
+  }
+  .era-date {
+    font-size: 18px !important;
+  }
 }
-.era-text-break {
-  flex: 0 0 300px;
-  display:flex;
-  align-items: flex-start;
+.era-text-link {
+  text-align: left;
 }
-.era-text-box {
-  flex-grow: 1;
+.era-date {
+  text-align: left;
+  margin-bottom: 20px !important;
+  font-weight: 300;
 }
-.era-text-link h3 {
-  font-family: "Euclid Flex", "Helvetica", sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 600;
+.rich-text-desc {
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
