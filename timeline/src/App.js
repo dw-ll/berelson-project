@@ -9,7 +9,6 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import { StickyContainer, Sticky } from "react-sticky";
 import _ from "lodash";
 import { Search } from "semantic-ui-react";
 import SearchBar from "react-search-bar-semantic-ui";
@@ -24,6 +23,7 @@ import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
 import About from "./Line/component/about.jsx";
 import Tree from "./Line/component/tree.jsx";
+import Span from "./Line/component/span.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
@@ -46,7 +46,7 @@ const searchData = [
   {
     title: "Ed and Family",
     description: "Some description",
-    image: "../src/Media/Modern/Ed.Silver088.jpeg"
+    image: require("../src/Media/Modern/Ed.Silver088.jpeg")
   },
   {
     title: "Sevek in San Francisco",
@@ -257,18 +257,16 @@ const App = () => {
   const handleSearchChange = (e, { value }) => {
     setIsLoading(true, value);
     setValue(value);
-
     setTimeout(() => {
       if (value.length < 1) {
         setIsLoading(false);
         setValue("");
         setResults([]);
       }
-      console.log(searchBank);
       const re = new RegExp(_.escapeRegExp(value), "i");
       const isMatch = result => re.test(result.title);
       setIsLoading(false);
-      setResults(_.filter(searchData, isMatch));
+      setResults(_.filter(searchBank, isMatch));
     }, 300);
   };
 
@@ -286,7 +284,7 @@ const App = () => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
         .then(json => {
-          setLoading(true);
+          setLoading(false);
           setTimeout(() => {
             setDone(true);
           }, 1000);
@@ -335,67 +333,57 @@ const App = () => {
         </FadeIn>
       ) : (
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
-          <StickyContainer>
-            <Sticky>
-              {({
-                isSticky = true,
-                wasSticky = false,
-                distanceFromTop,
-                distanceFromBottom
-              }) => (
-                <Navbar className="navbar-header no-shadows" light expand="md">
-                  <NavbarBrand href="/berelson-development/#/">
-                    {"Vessel Archives"}
-                  </NavbarBrand>
+          <Navbar className="navbar-header no-shadows" light expand="md">
+            <NavbarBrand href="/berelson-development/#/">
+              {"Vessel Archives"}
+            </NavbarBrand>
 
-                  <Nav className="ml-auto" navbar>
-                    <NavItem>
-                      <Link className="nav-link" to="/archive">
-                        Archive
-                      </Link>
-                    </NavItem>
-                    <NavItem>
-                      <Link className="nav-link" to="/tree">
-                        Family Tree
-                      </Link>
-                    </NavItem>
-                    <NavItem>
-                      <Search
-                        loading={isLoading}
-                        onResultSelect={handleResultSelect}
-                        onSearchChange={_.debounce(handleSearchChange, 500, {
-                          leading: true
-                        })}
-                        results={results}
-                        value={value}
-                        size="small"
-                      />
-                    </NavItem>
-                    <NavItem className="toggle-container">
-                      {darkMode ? (
-                        <span
-                          className="mode-toggle"
-                          style={{ color: "pink" }}
-                          onClick={() => setDarkMode(isDark => !isDark)}
-                        >
-                          ☾
-                        </span>
-                      ) : (
-                        <span
-                          className="mode-toggle"
-                          style={{ color: "darkgoldenrod" }}
-                          onClick={() => setDarkMode(isDark => !isDark)}
-                        >
-                          ☀︎
-                        </span>
-                      )}
-                    </NavItem>
-                  </Nav>
-                </Navbar>
-              )}
-            </Sticky>
-          </StickyContainer>
-
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <Link className="nav-link" to="/archive">
+                  Archive
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/tree">
+                  Family Tree
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Search
+                className="search-bar"
+                  loading={isLoading}
+                  onResultSelect={handleResultSelect}
+                  onSearchChange={_.debounce(handleSearchChange, 500, {
+                    leading: true
+                  })}
+                  results={results}
+                  value={value}
+                  size="small"
+                />
+              </NavItem>
+              <NavItem className="toggle-container">
+                {darkMode ? (
+                  <span
+                    className="mode-toggle"
+                    style={{ color: "pink" }}
+                    onClick={() => setDarkMode(isDark => !isDark)}
+                  >
+                    ☾
+                  </span>
+                ) : (
+                  <span
+                    className="mode-toggle"
+                    style={{ color: "darkgoldenrod" }}
+                    onClick={() => setDarkMode(isDark => !isDark)}
+                  >
+                    ☀︎
+                  </span>
+                )}
+              </NavItem>
+            </Nav>
+          </Navbar>
+          
           <Switch>
             <Route
               path="/#"
@@ -638,7 +626,6 @@ const App = () => {
 
                 {(function() {
                   if (open) {
-                    console.log(person);
                     return (
                       <Modal
                         size="lg"
@@ -677,7 +664,7 @@ const App = () => {
                   }
                 })()}
 
-                <Line />
+                <Span/>
               </div>
 
               <MDBFooter
