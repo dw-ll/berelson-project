@@ -23,7 +23,7 @@ import Present from "./Line/component/present.jsx";
 import Archive from "./Line/component/archive.jsx";
 import About from "./Line/component/about.jsx";
 import Tree from "./Line/component/tree.jsx";
-import Span from "./Line/component/span.jsx";
+import LandingSpan from "./Line/component/landing_span.jsx";
 import "firebase/database";
 import "./App.css";
 import Line from "./Line/component/Line.jsx";
@@ -351,7 +351,7 @@ const App = () => {
               </NavItem>
               <NavItem>
                 <Search
-                className="search-bar"
+                  className="search-bar"
                   loading={isLoading}
                   onResultSelect={handleResultSelect}
                   onSearchChange={_.debounce(handleSearchChange, 500, {
@@ -383,7 +383,7 @@ const App = () => {
               </NavItem>
             </Nav>
           </Navbar>
-          
+
           <Switch>
             <Route
               path="/#"
@@ -664,7 +664,7 @@ const App = () => {
                   }
                 })()}
 
-                <Span/>
+                <LandingSpan />
               </div>
 
               <MDBFooter

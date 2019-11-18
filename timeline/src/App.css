@@ -1030,25 +1030,14 @@ input[type="checkbox"]:checked ~ label > img {
   .main-footer {
     width: 1450px;
   }
-  .tree-wrapper {
-    display: inline-block;
-    height: 2700px;
-    width: 13000px;
-    transform: scale(0.105);
-    transform-origin: -1.02% 1% 0px;
-    overflow-y: hidden;
-    position: absolute;
-    margin-left: 150px;
-    transition: transform 1s;
-    left: 0;
-  }
+
   .navbar-header {
     top: 0;
     width: 1450px;
   }
 }
 @media screen and (min-width: 1680px) {
-   .navbar-header {
+  .navbar-header {
     top: 0;
     width: 1620px;
   }
@@ -1067,16 +1056,19 @@ input[type="checkbox"]:checked ~ label > img {
     transition: transform 1s;
     left: 0;
   }
+  .modal-container modal show {
+    margin-left: 200px !important;
+  }
 }
 @media screen and (min-width: 1920px) {
-   .navbar-header {
+  .navbar-header {
     top: 0;
     width: 1920px;
   }
   .main-footer {
     width: 1920px;
   }
-    .tree-wrapper {
+  .tree-wrapper {
     display: inline-block;
     height: 2700px;
     width: 13000px;
@@ -1084,12 +1076,11 @@ input[type="checkbox"]:checked ~ label > img {
     transform-origin: -1.02% 1% 0px;
     overflow-y: hidden;
     position: absolute;
-    margin-left: 400px;
+    margin-left: 400px !important;
     transition: transform 1s;
     left: 0;
   }
 }
-
 
 .btn.btn-primary {
   background-color: grey !important;
@@ -1124,8 +1115,8 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 
-.eras{
-  padding-top:15px;
+.eras {
+  padding-top: 15px;
 }
 
 .eras-title {
@@ -1152,6 +1143,9 @@ input[type="checkbox"]:checked ~ label > img {
 }
 
 @media screen and (min-width: 1080px) {
+  .span-link {
+    width: 1440px;
+  }
   .era-text-container {
     max-width: 1200px;
     margin-left: auto;
@@ -1174,10 +1168,10 @@ input[type="checkbox"]:checked ~ label > img {
 }
 @media screen and (min-width: 1680px) {
   .era-span {
-  margin-bottom: 150px;
-  width: 1920px;
-  height: 510px;
-}
+    margin-bottom: 150px;
+    width: 1920px;
+    height: 510px;
+  }
   .era-text-container {
     max-width: 1600px;
     margin-left: auto;
@@ -1248,4 +1242,10 @@ input[type="checkbox"]:checked ~ label > img {
   text-align: left;
   margin-bottom: 20px;
   line-height: 1.6;
+}
+.span-title-link {
+  color: black;
+}
+.span-title-link:hover {
+  color: grey;
 }
