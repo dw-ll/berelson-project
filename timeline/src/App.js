@@ -9,8 +9,9 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
+import { StickyContainer, Sticky } from "react-sticky";
 import _ from "lodash";
-import { Search } from "semantic-ui-react";
+import { Search,Label } from "semantic-ui-react";
 import SearchBar from "react-search-bar-semantic-ui";
 import MusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";
@@ -40,23 +41,149 @@ const Loader = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
+const testData = [
+  {
+    application: {
+      name: "application",
+      results: [
+        {
+          title: "Hoppe Inc",
+          description: "Multi-lateral client-server analyzer",
+          image: "https://s3.amazonaws.com/uifaces/faces/twitter/txcx/128.jpg",
+          price: "$61.14"
+        },
+        {
+          title: "Willms Inc",
+          description: "Enhanced systemic alliance",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/davidcazalis/128.jpg",
+          price: "$78.54"
+        },
+        {
+          title: "Schowalter - Auer",
+          description: "Streamlined even-keeled product",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/bennyjien/128.jpg",
+          price: "$40.68"
+        },
+        {
+          title: "DuBuque - Gutkowski",
+          description: "Mandatory asynchronous contingency",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/joeymurdah/128.jpg",
+          price: "$47.37"
+        },
+        {
+          title: "Stanton Inc",
+          description: "Profound holistic collaboration",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/dzantievm/128.jpg",
+          price: "$31.17"
+        }
+      ]
+    },
+    driver: {
+      name: "driver",
+      results: [
+        {
+          title: "Macejkovic, Simonis and Parker",
+          description: "Virtual uniform approach",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/ashernatali/128.jpg",
+          price: "$39.60"
+        },
+        {
+          title: "Little, Stracke and Ondricka",
+          description: "Compatible directional collaboration",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/curiousonaut/128.jpg",
+          price: "$62.94"
+        },
+        {
+          title: "Quigley - Bins",
+          description: "Assimilated client-server intranet",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/namankreative/128.jpg",
+          price: "$30.02"
+        },
+        {
+          title: "Mann - Kuhic",
+          description: "Synergized 6th generation application",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/osvaldas/128.jpg",
+          price: "$58.44"
+        },
+        {
+          title: "Smitham - Mante",
+          description: "Phased homogeneous secured line",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/ma_tiax/128.jpg",
+          price: "$56.02"
+        }
+      ]
+    },
+    interface: {
+      name: "interface",
+      results: [
+        {
+          title: "Lemke LLC",
+          description: "Streamlined radical array",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/taybenlor/128.jpg",
+          price: "$12.54"
+        },
+        {
+          title: "Ankunding LLC",
+          description: "Versatile responsive attitude",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/bfrohs/128.jpg",
+          price: "$47.84"
+        },
+        {
+          title: "Pollich and Sons",
+          description: "Programmable foreground open system",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/nicollerich/128.jpg",
+          price: "$31.56"
+        },
+        {
+          title: "Goodwin LLC",
+          description: "Distributed modular strategy",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/dicesales/128.jpg",
+          price: "$64.11"
+        },
+        {
+          title: "Bednar - Erdman",
+          description: "Implemented attitude-oriented groupware",
+          image:
+            "https://s3.amazonaws.com/uifaces/faces/twitter/chrisslowik/128.jpg",
+          price: "$76.63"
+        }
+      ]
+    }
+  }
+];
 
 // Local Search Bank for Search Feature
 const searchData = [
   {
     title: "Ed and Family",
     description: "Some description",
-    image: require("../src/Media/Modern/Ed.Silver088.jpeg")
+    image: require("../src/Media/Modern/Ed.Silver088.jpeg"),
+    tags: "ballplay"
   },
   {
     title: "Sevek in San Francisco",
     description: "Some description",
-    image: require("../src/Media/Modern/Sevek267.jpeg")
+    image: require("../src/Media/Modern/Sevek267.jpeg"),
+    tags: "danceball1970"
   },
   {
     title: "Sevek and Family",
     description: "Some description",
-    image: require("../src/Media/Modern/Sevek259.jpeg")
+    image: require("../src/Media/Modern/Sevek259.jpeg"),
+    tags: "1970"
   },
   {
     title: "Young Riva",
@@ -248,7 +375,18 @@ const App = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const resultRenderer = ({ title }) => <Label content={title} />;
 
+  const source = _.range(0, 3).reduce(memo => {
+    // eslint-disable-next-line no-param-reassign
+    const name =" s"
+    memo[name] = {
+      name,
+      results: searchData
+    };
+
+    return memo;
+  }, {});
   const handleResultSelect = (e, { result }) => {
     setValue(result.title);
     setPerson(result);
@@ -264,9 +402,19 @@ const App = () => {
         setResults([]);
       }
       const re = new RegExp(_.escapeRegExp(value), "i");
-      const isMatch = result => re.test(result.title);
+      const isMatch = result => re.test(result.tags);
+      const filteredResults = _.reduce(
+        source,
+        (memo, data, name) => {
+          const results = _.filter(data.results, isMatch);
+          if (results.length) memo[name] = { name, results }; // eslint-disable-line no-param-reassign
+
+          return memo;
+        },
+        {}
+      );
       setIsLoading(false);
-      setResults(_.filter(searchBank, isMatch));
+      setResults(_.filter(searchData, isMatch));
     }, 300);
   };
 
@@ -360,6 +508,7 @@ const App = () => {
                   results={results}
                   value={value}
                   size="small"
+                  resultRenderer={resultRenderer}
                 />
               </NavItem>
               <NavItem className="toggle-container">

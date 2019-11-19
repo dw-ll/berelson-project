@@ -41,7 +41,7 @@ const routes = [
   }
 ];
 
-export default class Span extends Component {
+export default class Span extends Component { 
   render() {
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>

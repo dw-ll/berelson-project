@@ -222,7 +222,7 @@ const FamilyTree = () => {
             <h6>Explore and learn more about the Berelson ancestry.</h6>
           </div>
 
-          <div class="tree-wrapper">
+          <div class="tree-wrapper overflow-hidden">
             <div class="tree">
               <ul>
                 <li>

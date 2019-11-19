@@ -224,204 +224,256 @@ class Line extends Component {
                   </h6>
                 </div>
               </div>
-              <VerticalTimeline>
-                {preTimelineObjects.map((card, i) => (
-                  <React.Fragment key={i}>
-                    {i % 2 === 0 ? (
-                      <Container id={i}>
-                        <VerticalTimelineElement
-                          className="vertical-timeline-element--work"
-                          iconStyle={{
-                            background: "rgb(40,49,72)",
-                            color: "#000"
-                          }}
-                          paddingTop="0em"
-                          date="1920-1950"
-
-                          //icon={<Print/>}
-                        >
-                         <Link to={preTimelineObjects[i].path}>
-                          <Card className="card-style">
-                            <CardActionArea>
-                              <CardMedia
-                                style={{
-                                  height: 0,
-                                  paddingTop: "100%"
-                                }}
-                                image={card.image}
-                              />
-                              <CardContent>
-                                <Typography
-                                  className="card-info"
-                                  gutterBottom
-                                  variant="h5"
-                                  component="h2"
-                                >
-                                  {card.title}
-                                </Typography>
-                              </CardContent>
-                            </CardActionArea>
-
-                            <Button
-                              size="small"
-                              color="primary"
-                              component={Link}
-                              to={card.path}
-                              /** onClick={e => {
-                                  this.handlePop(e, i);
-                                  console.log(i);
-                                }} */
-                            >
-                              Learn More
-                            </Button>
-                          </Card>
-                          </Link>
-                        </VerticalTimelineElement>
-
-                        <div
-                          id={i}
-                          style={{
-                            float: "right",
-                            width: "40%",
-                            height: "20%"
-                          }}
-                        >
-                          <Toast
-                            show={this.state.popped === i}
-                            onClose={this.handleRequestClose}
-                            style={{
-                              position: "absolute",
-                              top: 100
-                            }}
-                          >
-                            <Toast.Header>{card.title}</Toast.Header>
-                            <Toast.Body>
-                              <Card className="card">
-                                <CardActionArea>
-                                  <CardMedia
-                                    style={{
-                                      height: 0,
-                                      paddingTop: "100%"
-                                    }}
-                                    image={card.image}
-                                  />
-                                  <CardContent>
-                                    <Typography>{card.subtitle}</Typography>
-                                  </CardContent>
-                                </CardActionArea>
-                              </Card>
-                            </Toast.Body>
-                          </Toast>
+              <ul className="eras">
+                <li className="era-span">
+                  <Link to="/pre/abram" className="span-link">
+                    <a className="abram-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/abram" className="span-title-link">
+                          <h3 className="era-text-link">Abram</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
                         </div>
-                      </Container>
-                    ) : (
-                      <Container id={i}>
-                        <div
-                          lg="auto"
-                          style={{
-                            float: "left",
-                            width: "30%",
-                            height: "80"
-                          }}
-                        >
-                          <Toast
-                            show={this.state.popped === i}
-                            onClose={this.handleRequestClose}
-                            style={{
-                              position: "absolute",
-                              top: 100
-                            }}
-                          >
-                            <Toast.Header>{card.title}</Toast.Header>
-                            <Toast.Body>
-                            
-                              <Card className="card-style">
-                                <CardActionArea>
-                                  <CardMedia
-                                    style={{
-                                      height: 0,
-                                      paddingTop: "100%"
-                                    }}
-                                    image={card.image}
-                                  />
-                                  <CardContent>
-                                    <Typography className="card-info">
-                                      {card.subtitle}
-                                    </Typography>
-                                  </CardContent>
-                                </CardActionArea>
-                              </Card>
-                            </Toast.Body>
-                          </Toast>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/chana" className="span-link">
+                    <a className="chana-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/chana" className="span-title-link">
+                          <h3 className="era-text-link">Chana</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
                         </div>
-                        <VerticalTimelineElement
-                          className="vertical-timeline-element--work"
-                          key={i}
-                          iconStyle={{
-                            background: "rgb(40,49,72)",
-                            color: "#000"
-                          }}
-                          paddingTop="0em"
-                          date="1920-1950"
-
-                          //icon={<Print/>}
-                        >
-                          <div>
-                           <Link to={preTimelineObjects[i].path}>
-                            <Card className="card-style">
-                              <CardActionArea>
-                                <CardMedia
-                                  style={{ height: 0, paddingTop: "100%" }}
-                                  image={card.image}
-                                />
-                                <CardContent>
-                                  <Typography
-                                    className="card-info"
-                                    gutterBottom
-                                    variant="h5"
-                                    component="h2"
-                                  >
-                                    {card.title}
-                                  </Typography>
-                                </CardContent>
-                              </CardActionArea>
-
-                              <Button
-                                size="small"
-                                color="primary"
-                                component={Link}
-                                to={card.path}
-                                /**  onClick={e => {
-                                  this.handlePop(e, i);
-                                }}*/
-                              >
-                                Learn More
-                              </Button>
-                              <Popover
-                                open={this.state.popped === i}
-                                anchorEl={this.state.anchorEl}
-                                anchorOrigin={{
-                                  horizontal: "left",
-                                  vertical: "center "
-                                }}
-                                transformOrigin={{
-                                  horizontal: "left",
-                                  vertical: "center"
-                                }}
-                                onClose={this.handleRequestClose}
-                              >
-                                Left popover text
-                              </Popover>
-                            </Card>
-                            </Link>
-                          </div>
-                        </VerticalTimelineElement>
-                      </Container>
-                    )}
-                  </React.Fragment>
-                ))}
-                ;
-              </VerticalTimeline>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/david" className="span-link">
+                    <a className="david-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/david" className="span-title-link">
+                          <h3 className="era-text-link">David</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/gita" className="span-link">
+                    <a className="gita-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/gita" className="span-title-link">
+                          <h3 className="era-text-link">Gita</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/henry" className="span-link">
+                    <a className="henry-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/henry" className="span-title-link">
+                          <h3 className="era-text-link">Henry</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/jolly_boys" className="span-link">
+                    <a className="jolly-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/jolly_boys" className="span-title-link">
+                          <h3 className="era-text-link">Jolly Boys</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/leon" className="span-link">
+                    <a className="leon-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/leon" className="span-title-link">
+                          <h3 className="era-text-link">Leon</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="era-span">
+                  <Link to="/pre/lodz" className="span-link">
+                    <a className="lodz-image">&nbsp;</a>
+                  </Link>
+                  <div className="l-container era-text-container">
+                    <div className="page-section__row era-text-inner-container">
+                      <div className="page-section__title-container era-text-break"></div>
+                      <div className="page-section__content era-text">
+                        <Link to="/pre/lodz" className="span-title-link">
+                          <h3 className="era-text-link">Lodz Theatre</h3>
+                        </Link>
+                        <p className="era-date">
+                          <span>1900-1950</span>
+                        </p>
+                        <div className="rich-text-desc">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </Switch>

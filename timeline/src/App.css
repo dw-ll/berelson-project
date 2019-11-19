@@ -1022,6 +1022,13 @@ input[type="checkbox"]:checked ~ label > img {
   font-family: "Times New Roman", Times, serif;
 }
 
+.navbar-header{
+  top:0;
+  position:-webkit-sticky;
+  position:sticky;
+
+}
+
 @media screen and (min-width: 1080px) {
   .top {
     min-height: calc(75vh - 00px);
@@ -1034,6 +1041,20 @@ input[type="checkbox"]:checked ~ label > img {
   .navbar-header {
     top: 0;
     width: 1450px;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 275px;
+    transition: transform 1s;
+    left: 0;
   }
 }
 @media screen and (min-width: 1680px) {
@@ -1158,7 +1179,7 @@ input[type="checkbox"]:checked ~ label > img {
     align-items: stretch;
   }
   .era-text-break {
-    flex: 0 0 300px !important;
+    flex: 0 0 10px !important;
     display: flex;
     align-items: flex-start;
   }
@@ -1221,6 +1242,62 @@ input[type="checkbox"]:checked ~ label > img {
     background-image: url("./Media/Modern/Ed.Silver089.jpeg");
     background-position: center;
   }
+  .abram-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Abram.Baigelman026.jpeg");
+    background-position: center;
+  }
+  .chana-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Chana.Fodeman025.jpeg");
+    background-position: center;
+  }
+  .david-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/David.Baigelman016.jpeg");
+    background-position: center;
+  }
+  .gita-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Gita.Baigelman137.jpeg");
+    background-position: center;
+  }
+  .henry-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Henry.Baigelman002.jpeg");
+    background-position: center;
+  }
+  .jolly-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Jolly.Bays008.jpeg");
+    background-position: center;
+  }
+  .leon-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Leon.Glazer143.jpeg");
+    background-position: center;
+  }
+  .lodz-image {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Lodz.Theatre426.jpeg");
+    background-position: center;
+  }
   .era-text-link {
     font-family: "Euclid Flex", "Helvetica", sans-serif !important;
     font-size: 28px !important;
@@ -1240,6 +1317,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .rich-text-desc {
   text-align: left;
+  padding-left:10px;
   margin-bottom: 20px;
   line-height: 1.6;
 }
