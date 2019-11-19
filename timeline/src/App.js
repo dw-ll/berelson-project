@@ -11,8 +11,9 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { NavLink, Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import { StickyContainer, Sticky } from "react-sticky";
 import _ from "lodash";
-import { Search,Label } from "semantic-ui-react";
+import { Search, Label } from "semantic-ui-react";
 import SearchBar from "react-search-bar-semantic-ui";
+import Select from "react-select";
 import MusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";
 import Modal from "react-bootstrap/Modal";
@@ -41,143 +42,149 @@ const Loader = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
-const testData = [
-  {
-    application: {
-      name: "application",
-      results: [
-        {
-          title: "Hoppe Inc",
-          description: "Multi-lateral client-server analyzer",
-          image: "https://s3.amazonaws.com/uifaces/faces/twitter/txcx/128.jpg",
-          price: "$61.14"
-        },
-        {
-          title: "Willms Inc",
-          description: "Enhanced systemic alliance",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/davidcazalis/128.jpg",
-          price: "$78.54"
-        },
-        {
-          title: "Schowalter - Auer",
-          description: "Streamlined even-keeled product",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/bennyjien/128.jpg",
-          price: "$40.68"
-        },
-        {
-          title: "DuBuque - Gutkowski",
-          description: "Mandatory asynchronous contingency",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/joeymurdah/128.jpg",
-          price: "$47.37"
-        },
-        {
-          title: "Stanton Inc",
-          description: "Profound holistic collaboration",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/dzantievm/128.jpg",
-          price: "$31.17"
-        }
-      ]
-    },
-    driver: {
-      name: "driver",
-      results: [
-        {
-          title: "Macejkovic, Simonis and Parker",
-          description: "Virtual uniform approach",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/ashernatali/128.jpg",
-          price: "$39.60"
-        },
-        {
-          title: "Little, Stracke and Ondricka",
-          description: "Compatible directional collaboration",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/curiousonaut/128.jpg",
-          price: "$62.94"
-        },
-        {
-          title: "Quigley - Bins",
-          description: "Assimilated client-server intranet",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/namankreative/128.jpg",
-          price: "$30.02"
-        },
-        {
-          title: "Mann - Kuhic",
-          description: "Synergized 6th generation application",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/osvaldas/128.jpg",
-          price: "$58.44"
-        },
-        {
-          title: "Smitham - Mante",
-          description: "Phased homogeneous secured line",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/ma_tiax/128.jpg",
-          price: "$56.02"
-        }
-      ]
-    },
-    interface: {
-      name: "interface",
-      results: [
-        {
-          title: "Lemke LLC",
-          description: "Streamlined radical array",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/taybenlor/128.jpg",
-          price: "$12.54"
-        },
-        {
-          title: "Ankunding LLC",
-          description: "Versatile responsive attitude",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/bfrohs/128.jpg",
-          price: "$47.84"
-        },
-        {
-          title: "Pollich and Sons",
-          description: "Programmable foreground open system",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/nicollerich/128.jpg",
-          price: "$31.56"
-        },
-        {
-          title: "Goodwin LLC",
-          description: "Distributed modular strategy",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/dicesales/128.jpg",
-          price: "$64.11"
-        },
-        {
-          title: "Bednar - Erdman",
-          description: "Implemented attitude-oriented groupware",
-          image:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/chrisslowik/128.jpg",
-          price: "$76.63"
-        }
-      ]
-    }
-  }
-];
 
 // Local Search Bank for Search Feature
 const searchData = [
   {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman026.jpeg"),
+    tags: "Abram Baigelman 1935 Krakow Pre-WWII Arthur Bay",
+    id:1
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman027.jpeg"),
+    tags: "Abram Baigelman 1935 Krakow Sukienniee Pre-WWII Arthur Bay",
+    id:2
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman029.jpeg"),
+    tags: "Abram Baigelman 1935 Krakow Ploso Pre-WWII Arthur Bay",
+    id:3
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman030.jpeg"),
+    tags: "Abram Baigelman 1935 Krakow Hieia Marjacka Pre-WWII Arthur Bay"
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman031.jpeg"),
+    tags: "Abram Baigelman 1936 Kryniea october Pre-WWII Arthur Bay"
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman034.jpeg"),
+    tags: "Abram Baigelman 1936 Kryniea Pre-WWII Arthur Bay"
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman035.jpeg"),
+    tags: "Abram Baigelman 1936 Kryniea Pre-WWII Arthur Bay"
+  },
+  {
+    title: "Abram Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman038.jpeg"),
+    tags: "Henry's Brother Abram 1936  Pre-WWII Arthur Bay"
+  },
+  {
+    title: "Chana Fodeman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Chana.Fodeman025.jpeg"),
+    tags: "Chana Fodeman David's Wife actress 1930 Warsaw Poland Pre-WWII"
+  },
+  {
+    title: "David Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/David.Baigelman016.jpeg"),
+    tags: "David Baigelman 1934 Pre-WWII"
+  },
+  {
+    title: "David Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/David.Baigelman022.jpeg"),
+    tags: "David Baigelman 1934 Pre-WWII"
+  },
+  {
+    title: "Gita Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Gita.Baigelman137.jpeg"),
+    tags: "Gita Baigelman Lodz Pre-WWII"
+  },
+  {
+    title: "Henry Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman002.jpeg"),
+    tags: "Henry Baigelman Pre-WWII"
+  },
+  {
+    title: "Henry Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman003.jpeg"),
+    tags: "Henry Baigelman Pre-WWII"
+  },
+  {
+    title: "Henry Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman004.jpeg"),
+    tags: "Henry Baigelman Pre-WWII 1938"
+  },
+  {
+    title: "Henry Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Bogelman001.jpeg"),
+    tags: "Henry Baigelman Pre-WWII"
+  },
+  {
+    title: "Henry Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.David.Baigelman006.jpeg"),
+    tags: "Henry Baigelman David Band Pre-WWII"
+  },
+  {
+    title: "Jolly Boys",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Jolly.Boys008.jpeg"),
+    tags: "Pre-WWII Jolly Boys"
+  },
+  {
+    title: "Lodz Theatre",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Lodz.Theatre426.jpeg"),
+    tags: "Isaac Simon David Baigelman Music 1800 1939 Pre-WWII"
+  },
+  {
+    title: "Lodz Theatre",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Lodz.Theatre429.jpeg"),
+    tags: "Isaac David Foderman Meier Speismachar 1800 1939 Pre-WWII"
+  },
+  {
+    title: "Leon Glazer",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Leon.Glazer143.jpeg"),
+    tags: "Leon Glazer Polish Army May 5/26/1927 Lodz Pre-WWII"
+  },
+  {
     title: "Ed and Family",
     description: "Some description",
     image: require("../src/Media/Modern/Ed.Silver088.jpeg"),
-    tags: "ballplay"
+    tags: "ball play"
   },
   {
     title: "Sevek in San Francisco",
     description: "Some description",
     image: require("../src/Media/Modern/Sevek267.jpeg"),
-    tags: "danceball1970"
+    tags: "dance ball 1970"
   },
   {
     title: "Sevek and Family",
@@ -366,6 +373,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
+  const [filteredResults,setFilteredResults] = useState([]);
   const [searchBank, setSearchBank] = useState([]);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
   const [open, setOpen] = useState(false);
@@ -375,20 +383,8 @@ const App = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  const resultRenderer = ({ title }) => <Label content={title} />;
 
-  const source = _.range(0, 3).reduce(memo => {
-    // eslint-disable-next-line no-param-reassign
-    const name =" s"
-    memo[name] = {
-      name,
-      results: searchData
-    };
-
-    return memo;
-  }, {});
   const handleResultSelect = (e, { result }) => {
-    setValue(result.title);
     setPerson(result);
     setOpen(true);
   };
@@ -401,20 +397,10 @@ const App = () => {
         setValue("");
         setResults([]);
       }
-      const re = new RegExp(_.escapeRegExp(value), "i");
-      const isMatch = result => re.test(result.tags);
-      const filteredResults = _.reduce(
-        source,
-        (memo, data, name) => {
-          const results = _.filter(data.results, isMatch);
-          if (results.length) memo[name] = { name, results }; // eslint-disable-line no-param-reassign
-
-          return memo;
-        },
-        {}
-      );
+      const re = new RegExp(_.escapeRegExp(value), "");
+      const isMatch = result => re.test(result.title);
       setIsLoading(false);
-      setResults(_.filter(searchData, isMatch));
+      setFilteredResults(_.filter(searchData, isMatch));
     }, 300);
   };
 
@@ -505,10 +491,10 @@ const App = () => {
                   onSearchChange={_.debounce(handleSearchChange, 500, {
                     leading: true
                   })}
-                  results={results}
+                  results={filteredResults}
                   value={value}
-                  size="small"
-                  resultRenderer={resultRenderer}
+                
+                  size="large"
                 />
               </NavItem>
               <NavItem className="toggle-container">
