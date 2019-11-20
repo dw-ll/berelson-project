@@ -49,158 +49,37 @@ const searchData = [
     title: "Abram Baigelman",
     description: "",
     image: require("./SearchMedia/Pre-WWII/Abram.Baigelman026.jpeg"),
-    tags: "Abram Baigelman 1935 Krakow Pre-WWII Arthur Bay",
-    id:1
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman027.jpeg"),
-    tags: "Abram Baigelman 1935 Krakow Sukienniee Pre-WWII Arthur Bay",
-    id:2
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman029.jpeg"),
-    tags: "Abram Baigelman 1935 Krakow Ploso Pre-WWII Arthur Bay",
-    id:3
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman030.jpeg"),
-    tags: "Abram Baigelman 1935 Krakow Hieia Marjacka Pre-WWII Arthur Bay"
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman031.jpeg"),
-    tags: "Abram Baigelman 1936 Kryniea october Pre-WWII Arthur Bay"
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman034.jpeg"),
-    tags: "Abram Baigelman 1936 Kryniea Pre-WWII Arthur Bay"
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman035.jpeg"),
-    tags: "Abram Baigelman 1936 Kryniea Pre-WWII Arthur Bay"
-  },
-  {
-    title: "Abram Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman038.jpeg"),
-    tags: "Henry's Brother Abram 1936  Pre-WWII Arthur Bay"
+    tags: [
+      "abram ",
+      "baigelman",
+      "1935",
+      "krakow",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
   },
   {
     title: "Chana Fodeman",
     description: "",
     image: require("./SearchMedia/Pre-WWII/Chana.Fodeman025.jpeg"),
-    tags: "Chana Fodeman David's Wife actress 1930 Warsaw Poland Pre-WWII"
-  },
-  {
-    title: "David Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/David.Baigelman016.jpeg"),
-    tags: "David Baigelman 1934 Pre-WWII"
-  },
-  {
-    title: "David Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/David.Baigelman022.jpeg"),
-    tags: "David Baigelman 1934 Pre-WWII"
-  },
-  {
-    title: "Gita Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Gita.Baigelman137.jpeg"),
-    tags: "Gita Baigelman Lodz Pre-WWII"
-  },
-  {
-    title: "Henry Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman002.jpeg"),
-    tags: "Henry Baigelman Pre-WWII"
-  },
-  {
-    title: "Henry Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman003.jpeg"),
-    tags: "Henry Baigelman Pre-WWII"
-  },
-  {
-    title: "Henry Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman004.jpeg"),
-    tags: "Henry Baigelman Pre-WWII 1938"
-  },
-  {
-    title: "Henry Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Henry.Bogelman001.jpeg"),
-    tags: "Henry Baigelman Pre-WWII"
-  },
-  {
-    title: "Henry Baigelman",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Henry.David.Baigelman006.jpeg"),
-    tags: "Henry Baigelman David Band Pre-WWII"
-  },
-  {
-    title: "Jolly Boys",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Jolly.Boys008.jpeg"),
-    tags: "Pre-WWII Jolly Boys"
-  },
-  {
-    title: "Lodz Theatre",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Lodz.Theatre426.jpeg"),
-    tags: "Isaac Simon David Baigelman Music 1800 1939 Pre-WWII"
-  },
-  {
-    title: "Lodz Theatre",
-    description: "",
-    image: require("./SearchMedia/Pre-WWII/Lodz.Theatre429.jpeg"),
-    tags: "Isaac David Foderman Meier Speismachar 1800 1939 Pre-WWII"
+    tags: [
+      "chana",
+      "fodeman ",
+      "david's wife",
+      "actress",
+      "1930",
+      "warsaw",
+      "poland",
+      "pre-wwII"
+    ]
   },
   {
     title: "Leon Glazer",
     description: "",
     image: require("./SearchMedia/Pre-WWII/Leon.Glazer143.jpeg"),
-    tags: "Leon Glazer Polish Army May 5/26/1927 Lodz Pre-WWII"
-  },
-  {
-    title: "Ed and Family",
-    description: "Some description",
-    image: require("../src/Media/Modern/Ed.Silver088.jpeg"),
-    tags: "ball play"
-  },
-  {
-    title: "Sevek in San Francisco",
-    description: "Some description",
-    image: require("../src/Media/Modern/Sevek267.jpeg"),
-    tags: "dance ball 1970"
-  },
-  {
-    title: "Sevek and Family",
-    description: "Some description",
-    image: require("../src/Media/Modern/Sevek259.jpeg"),
-    tags: "1970"
-  },
-  {
-    title: "Young Riva",
-    description: "Some description",
-    image: require("../src/Media/Modern/Riva290.jpeg")
-  },
-  {
-    title: "Riva",
-    description: "Some description",
-    image: require("../src/Media/Modern/Riva346.jpeg")
+    tags: ["leon", "glazer","polish","army", "may", "5/26/1927" ,"lodz", "pre-wwII"]
   }
 ];
 
@@ -373,7 +252,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
-  const [filteredResults,setFilteredResults] = useState([]);
+  const [filteredResults, setFilteredResults] = useState([]);
   const [searchBank, setSearchBank] = useState([]);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
   const [open, setOpen] = useState(false);
@@ -398,9 +277,41 @@ const App = () => {
         setResults([]);
       }
       const re = new RegExp(_.escapeRegExp(value), "");
-      const isMatch = result => re.test(result.title);
-      setIsLoading(false);
+      const isMatch = result => re in setIsLoading(false);
       setFilteredResults(_.filter(searchData, isMatch));
+    }, 300);
+  };
+  const handleTagChange = (e, { value }) => {
+    const searchQuery = value.toLowerCase();
+    setIsLoading(true, value);
+    setValue(value);
+    let tagMatchArray = searchData;
+    let filteredResults = searchData;
+
+    setTimeout(() => {
+      if (searchQuery.length === 0) {
+        filteredResults = searchData;
+        setIsLoading(false);
+        setValue("");
+        setFilteredResults([]);
+      }
+      const match = figure => {
+        return figure.tagMatch === true;
+      };
+
+      tagMatchArray.forEach(figure => {
+        figure.tags.forEach(tag => {
+          figure.tagMatch = false;
+          if (tag.includes(searchQuery)) {
+            console.log("tag match found");
+            setLoading(false);
+            figure.tagMatch = true;
+            filteredResults = tagMatchArray.filter(match);
+            setFilteredResults(filteredResults);
+            console.log(filteredResults);
+          }
+        });
+      });
     }, 300);
   };
 
@@ -488,12 +399,11 @@ const App = () => {
                   className="search-bar"
                   loading={isLoading}
                   onResultSelect={handleResultSelect}
-                  onSearchChange={_.debounce(handleSearchChange, 500, {
+                  onSearchChange={_.debounce(handleTagChange, 500, {
                     leading: true
                   })}
                   results={filteredResults}
                   value={value}
-                
                   size="large"
                 />
               </NavItem>
