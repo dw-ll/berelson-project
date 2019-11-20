@@ -79,7 +79,16 @@ const searchData = [
     title: "Leon Glazer",
     description: "",
     image: require("./SearchMedia/Pre-WWII/Leon.Glazer143.jpeg"),
-    tags: ["leon", "glazer","polish","army", "may", "5/26/1927" ,"lodz", "pre-wwII"]
+    tags: [
+      "leon",
+      "glazer",
+      "polish",
+      "army",
+      "may",
+      "5/26/1927",
+      "lodz",
+      "pre-wwII"
+    ]
   }
 ];
 
@@ -265,6 +274,7 @@ const App = () => {
 
   const handleResultSelect = (e, { result }) => {
     setPerson(result);
+    setValue(result.title);
     setOpen(true);
   };
   const handleSearchChange = (e, { value }) => {
@@ -286,11 +296,9 @@ const App = () => {
     setIsLoading(true, value);
     setValue(value);
     let tagMatchArray = searchData;
-    let filteredResults = searchData;
 
     setTimeout(() => {
       if (searchQuery.length === 0) {
-        filteredResults = searchData;
         setIsLoading(false);
         setValue("");
         setFilteredResults([]);
@@ -306,8 +314,7 @@ const App = () => {
             console.log("tag match found");
             setLoading(false);
             figure.tagMatch = true;
-            filteredResults = tagMatchArray.filter(match);
-            setFilteredResults(filteredResults);
+            setFilteredResults(tagMatchArray.filter(match));
             console.log(filteredResults);
           }
         });
