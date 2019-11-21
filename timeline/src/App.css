@@ -1327,3 +1327,7 @@ input[type="checkbox"]:checked ~ label > img {
 .span-title-link:hover {
   color: grey;
 }
+.results {
+  height:300px !important;
+  overflow-y:scroll;
+}
