@@ -270,6 +270,656 @@ const searchData = [
       "pre-WWII"
     ],
     id: 1
+  },
+  {
+    title: "Young Gita Baigelman",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/gita.Baigelman144 2.jpeg"),
+    tags: ["lodz ", "gita", "front row", "3rd from left", "1942", "wwII"],
+    id: 1
+  },
+  {
+    title: "Happy Boys",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/HappyBoys428.jpeg"),
+    tags: [
+      "henry ",
+      "cham",
+      "henry eizenman",
+      "sam spais",
+      "abram",
+      "the happy boys",
+      "1945",
+      "music",
+      "wwII"
+    ],
+    id: 1
+  },
+  {
+    title: "Henry Baigelman 5",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/Henry.Baigelman101 2.pdf"),
+    tags: ["1945", "stamsreid", "wwII"],
+    id: 1
+  },
+  {
+    title: "Henry Baigelman 6",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/Henry.Baigelman102.pdf"),
+    tags: ["1945", "stamsreid", "wwII"],
+    id: 1
+  },
+  {
+    title: "Inmate Certificate 1",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/InmateCert2377.pdf"),
+    tags: ["henry", "inmate", "certificate", "1945", "wwII"],
+    id: 1
+  },
+  {
+    title: "Inmate Certificate 2",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/InmateCertificate.pdf"),
+    tags: ["henry", "inmate", "certificate", "1945", "wwII"],
+    id: 1
+  },
+  {
+    title: "Rachella",
+    description: "",
+    image: require("./SearchMedia/WWII (during)/Rachella148.pdf"),
+    tags: [
+      "henry",
+      "rachella",
+      "gita's sister",
+      "glazer-merring",
+      "1945",
+      "wwII"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 9",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Abram.Baigelman097.jpeg"),
+    tags: [
+      "abram",
+      "shlomo",
+      "costa rica",
+      "grave",
+      "b. 1905 ostrowiec.poland",
+      "d. 1982 san jose.costarica",
+      "musician",
+      "b. 07/15/1905",
+      "certificate",
+      "1945",
+      "wwII"
+    ],
+    id: 1
+  },
+  {
+    title: "Adolfo Spielman",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/adolfo.spielman010.jpeg"),
+    tags: [
+      "brazil",
+      "henry baigelmans's cousin",
+      "adolfo",
+      "spilman",
+      "wife:baigelman descendant"
+    ],
+    id: 1
+  },
+  {
+    title: "Beatrice Glazer",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Beatrice.Glazer001.jpg"),
+    tags: [
+      "beatrice",
+      "glazer",
+      "l-r",
+      "lydia glazer",
+      "1950",
+      "beatrice glazer"
+    ]
+  },
+  {
+    title: "Beatrice Glazer 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Beatrice.Glazer002.jpg"),
+    tags: ["beatrice", "glazer", "beatrice's daughter", "1973"],
+    id: 1
+  },
+  {
+    title: "Ed Silver",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Ed.Silver087.jpeg"),
+    tags: [
+      "ed",
+      "silver",
+      "san jose symphony",
+      "san francisco",
+      "california",
+      "april",
+      "1951",
+      "musician",
+      "silberschatz"
+    ]
+  },
+  {
+    title: "Fonia 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia206.jpeg"),
+    tags: ["fania's daughter", "justina", "glazer", "baby"]
+  },
+  {
+    title: "Fonia 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia210.jpeg"),
+    tags: ["beatrice glazer", "buenas aires", "1950"]
+  },
+  {
+    title: "Fonia 3",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia211.jpeg"),
+    tags: [
+      "beatrice glazer",
+      "lydia glazer",
+      "mar del plata",
+      "beach",
+      "l-r",
+      "argentina",
+      "1957"
+    ]
+  },
+  {
+    title: "Fonia 4",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia212.jpeg"),
+    tags: ["beatrice glazer", "lydia glazer", "l-r", "buenas aires", "1950"]
+  },
+  {
+    title: "Fonia 5",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia213 2.jpeg"),
+    tags: [
+      "fania",
+      "glazer",
+      "beatrice",
+      "glazer",
+      "lydia",
+      "glazer",
+      "l-r",
+      "buenas aires",
+      "1952",
+      "post-wwii"
+    ]
+  },
+  {
+    title: "Fonia 6",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia214.jpeg"),
+    tags: [
+      "beatrice glazer",
+      "lydia glazer",
+      "fania glazer",
+      "sevek glazer",
+      "l-r",
+      "buenas aires",
+      "1950"
+    ]
+  },
+  {
+    title: "Fonia 7",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia216.jpeg"),
+    tags: [
+      "beatrice",
+      "glazer",
+      "lydia",
+      "glazer",
+      "fonia",
+      "glazer",
+      "buenas aires",
+      "1950"
+    ]
+  },
+  {
+    title: "Fonia 8",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia216.jpeg"),
+    tags: [
+      "beatrice",
+      "glazer",
+      "lydia",
+      "glazer",
+      "fonia",
+      "glazer",
+      "buenas aires",
+      "1950"
+    ]
+  },
+  {
+    title: "Fonia 9",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia217.jpeg"),
+    tags: ["glazer", "lydia", "buenas aires", "beach", "1950"]
+  },
+  {
+    title: "Fonia 10",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia218.jpeg"),
+    tags: ["beatrice", "glazer", "lydia", "l-r", "buenas aires", "1950"]
+  },
+  {
+    title: "Fonia 11",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia221.jpeg"),
+    tags: [
+      "sevek",
+      "fonia",
+      "beatrice",
+      "lydia",
+      "carriage",
+      "l-r",
+      "sevek glazer",
+      "lydia glazer",
+      "beatrice glazer",
+      "buenas aires",
+      "1950"
+    ]
+  },
+  {
+    title: "Fonia 12",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia223.jpeg"),
+    tags: [
+      "sevek glazer",
+      "fania glazer",
+      "beatrice glazer",
+      "lydia glazer",
+      "l-r",
+      "mar del plata",
+      "1957"
+    ]
+  },
+  {
+    title: "Fonia 13",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia225.jpeg"),
+    tags: [
+      "mar del plata",
+      "l-r",
+      "fania glazer",
+      "sevek glazer",
+      "argentina",
+      "beach",
+      "1957"
+    ]
+  },
+  {
+    title: "Fonia 14",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia226.jpeg"),
+    tags: [
+      "sevek glazer",
+      "beatrice glazer",
+      "lydia glazer",
+      "fania glazer",
+      "l-r",
+      "madrid",
+      "spain",
+      "1955"
+    ]
+  },
+  {
+    title: "Fonia 15",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia235 2.jpeg"),
+    tags: ["beatrice glazer", "february", "buenas aires", "1964", "post ww2"]
+  },
+  {
+    title: "Fonia 16",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia242.jpeg"),
+    tags: ["sevek glazer", "justina glazer", "l-r", "paris", "1947"]
+  },
+  {
+    title: "Fonia 17",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia244.jpeg"),
+    tags: ["justina", "fonia", "1946"]
+  },
+  {
+    title: "Fonia 18",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia245.jpeg"),
+    tags: ["fania glazer", "justina glazer", "paris", "1947"]
+  },
+  {
+    title: "Fonia 19",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia246.jpeg"),
+    tags: ["fania glazer", "justina glazer", "paris", "1947"]
+  },
+  {
+    title: "Fonia 20",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia247.jpeg"),
+    tags: ["justina", "lodz", "1946", "post wwii"]
+  },
+  {
+    title: "Fonia 21",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia248.jpeg"),
+    tags: ["justina glazer", "fania glazer", "paris", "1947"]
+  },
+  {
+    title: "Fonia 22",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia249.jpeg"),
+    tags: ["justina glazer", "beatrice glazer", "buenas aires", "1949"]
+  },
+  {
+    title: "Fonia 23",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Fonia250.jpeg"),
+    tags: ["justina glazer", "portrait", "1947"]
+  },
+  {
+    title: "Sevek 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/glazer195.jpeg"),
+    tags: ["sevek", "glazer", "israel", "1946"]
+  },
+  {
+    title: "Jack Baigelman 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Jack.Baigelman059.jpeg"),
+    tags: [
+      "jack",
+      "baigelman",
+      "wedding",
+      "rita",
+      "first on left: sam spais",
+      "3rd from left: henry baigelman",
+      "center front row:jack and rita"
+    ]
+  },
+  {
+    title: "Jack Baigelman 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Jack.Baigelman060.jpeg"),
+    tags: [
+      "jack",
+      "baigelman",
+      "wedding",
+      "rita",
+      "2nd row 3rd from left: henry baigelman",
+      "1st row 1st from left: rita baigelman"
+    ]
+  },
+  {
+    title: "Jacques Merring",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Jacques.Merring001.jpg"),
+    tags: [
+      "jacques merring",
+      "katie's father",
+      "rachella merring's husband",
+      "paris",
+      "1951"
+    ]
+  },
+  {
+    title: "Justina Glazer",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/justina198.jpeg"),
+    tags: [
+      "justina glazer",
+      "sevek glazer",
+      "toby glazer grave",
+      "riva's grandmother",
+      "l-r",
+      "cemetery",
+      "lodz"
+    ]
+  },
+  {
+    title: "Katie 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/katie154.jpeg"),
+    tags: [
+      "katie",
+      "rachella",
+      "rachella's daughter",
+      "4th birthday",
+      "paris",
+      "birthday",
+      "post 1950"
+    ]
+  },
+  {
+    title: "Katie 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/katie158.jpeg"),
+    tags: ["katie", "baby", "grandmother merring", "paris", "1952", "post 1950"]
+  },
+  {
+    title: "Katie 3",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/katie160.jpeg"),
+    tags: [
+      "katie",
+      "rachella",
+      "rachella's daughter",
+      "dog",
+      "german shepard",
+      "france",
+      "1956",
+      "post 1950"
+    ]
+  },
+  {
+    title: "Mina Glazer",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Mina.Glazer002.jpg"),
+    tags: ["mina glazer", "1946", "december"]
+  },
+  {
+    title: "Mordecai 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Mordecai185.jpeg"),
+    tags: [
+      "mordecai glazer",
+      "famiy",
+      "grave",
+      "l-r",
+      "third from left",
+      "samuel glazer",
+      "mina glazer",
+      "aryeh lander"
+    ]
+  },
+  {
+    title: "Pinek Baigelman 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Pinek.Baigelman042.jpeg"),
+    tags: ["pinek", "baigelman", "grave site", "lodz", "chilek", "post wwii"]
+  },
+  {
+    title: "Pinek Baigelman 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Pinek.Baigelman043.jpeg"),
+    tags: ["pinek", "baigelman", "simon", "szymon", "grave", "d. 1937"]
+  },
+  {
+    title: "Pinek Baigelman 3",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Pinek.Baigelman044.jpeg"),
+    tags: ["pinek", "baigelman", "chonah baigelman", "lodz", "grave"]
+  },
+  {
+    title: "Pinek Baigelman 4",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Pinek.Baigelman047.jpeg"),
+    tags: ["pinek", "baigelman", "grave", "abram", "d. 1938", "lodz"]
+  },
+  {
+    title: "Pola Glazer 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola167.jpeg"),
+    tags: [
+      "pola glazer",
+      "mina glazer",
+      "samuel glazer",
+      "cousin rose glazer b. new york",
+      "jerusalem",
+      "l-r",
+      "cousins",
+      "glazer factory"
+    ]
+  },
+  {
+    title: "Pola Glazer 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola169.jpeg"),
+    tags: ["mina glazer", "samuel glazer", "munich.germany", "l-r", "1947"]
+  },
+  {
+    title: "Pola Glazer 3",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola170.jpeg"),
+    tags: [
+      "mina glazer",
+      "samuel glazer",
+      "rachella glazer",
+      "munich",
+      "l-r",
+      "1947"
+    ]
+  },
+  {
+    title: "Pola Glazer 4",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola171.jpeg"),
+    tags: [
+      "mina glazer",
+      "pola glazer",
+      "mordecai glazer",
+      "gita father",
+      "l-r",
+      "family",
+      "tel aviv",
+      "israel",
+      "1949"
+    ]
+  },
+  {
+    title: "Pola Glazer 5",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola172.jpeg"),
+    tags: [
+      "pola glazer",
+      "mordecai glazer",
+      "mina glazer",
+      "tel aviv",
+      "family",
+      "l-r",
+      "israel",
+      "jerusalem",
+      "1953"
+    ]
+  },
+  {
+    title: "Pola Glazer 6",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola173.jpeg"),
+    tags: [
+      "mina glazer",
+      "mordecai glazer",
+      "samuel glazer",
+      "tel aviv",
+      "l-r",
+      "beach",
+      "1953"
+    ]
+  },
+  {
+    title: "Pola Glazer 7",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola175.jpeg"),
+    tags: ["samuel glazer", "germany", "l-r"]
+  },
+  {
+    title: "Pola Glazer 8",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/pola176.jpeg"),
+    tags: [
+      "rachel lander",
+      "pola's daughter",
+      "baby",
+      "tel aviv",
+      "israel",
+      "1954",
+      "post wwii"
+    ]
+  },
+  {
+    title: "Rachella 1",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Rachella151.jpeg"),
+    tags: [
+      "rachella",
+      "katie",
+      "september",
+      "paris",
+      "1951",
+      "09/06/1951",
+      "post 1950"
+    ]
+  },
+  {
+    title: "Rachella 2",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Rachella153.jpeg"),
+    tags: [
+      "rachella",
+      "katie",
+      "post 1950",
+      "beach",
+      "1955",
+      "rachella's daughter",
+      "france"
+    ]
+  },
+  {
+    title: "Sam Spielman",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Sam.Spielman067.jpeg"),
+    tags: [
+      "sam",
+      "chiala",
+      "spielman",
+      "ocean",
+      "beach",
+      "henry baigelman's cousin",
+      "1951",
+      "7/4/1951",
+      "post wwii"
+    ]
+  },
+  {
+    title: "Sam Dinner",
+    description: "",
+    image: require("./SearchMedia/Post-WWII/Samual.Dinner001.jpg"),
+    tags: [
+      "samuel glazer",
+      "mini glazer",
+      "l-r",
+      "israel",
+      "dinner",
+      "post wwii"
+    ]
   }
 ];
 
@@ -485,7 +1135,7 @@ const App = () => {
         setIsLoading(false);
         setValue("");
         setFilteredResults([]);
-        runnerArray = []
+        runnerArray = [];
       }
       const match = figure => {
         return figure.tagMatch === true;
@@ -495,19 +1145,18 @@ const App = () => {
         figure.tags.forEach(tag => {
           figure.tagMatch = false;
           if (tag.includes(searchQuery)) {
-            console.log("tag match found:",searchQuery);
+            console.log("tag match found:", searchQuery);
             setLoading(false);
             figure.tagMatch = true;
-            if(!runnerArray.includes(figure)){runnerArray.push(figure);}
-            
-         
-            console.log("Runner array:",runnerArray);
+            if (!runnerArray.includes(figure)) {
+              runnerArray.push(figure);
+            }
+            console.log("Runner array:", runnerArray);
           }
-         
         });
       });
-        setFilteredResults(runnerArray);
-      console.log("Filtered Results:",filteredResults);
+      setFilteredResults(runnerArray);
+      console.log("Filtered Results:", filteredResults);
     }, 300);
   };
 
