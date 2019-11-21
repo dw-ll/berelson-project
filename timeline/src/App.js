@@ -46,7 +46,7 @@ const Loader = {
 // Local Search Bank for Search Feature
 const searchData = [
   {
-    title: "Abram Baigelman",
+    title: "Abram Baigelman 1",
     description: "",
     image: require("./SearchMedia/Pre-WWII/Abram.Baigelman026.jpeg"),
     tags: [
@@ -54,6 +54,108 @@ const searchData = [
       "baigelman",
       "1935",
       "krakow",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 2",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman027.jpeg"),
+    tags: [
+      "abram ",
+      "baigelman",
+      "1935",
+      "krakow",
+      "sukienniee",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 3",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman029.jpeg"),
+    tags: [
+      "abram ",
+      "baigelman",
+      "1935",
+      "krakow",
+      "ploso",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 4",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman030.jpeg"),
+    tags: [
+      "abram ",
+      "baigelman",
+      "1935",
+      "krakow",
+      "hieia",
+      "marjacka",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 5",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman031.jpeg"),
+    tags: [
+      "abram ",
+      "baigelman",
+      "1936",
+      "kryneia",
+      "october",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 6",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman034.jpeg"),
+    tags: ["abram ", "baigelman", "1936", "pre-WWII", "arthur", "bay"],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 7",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman035.jpeg"),
+    tags: [
+      "abram ",
+      "baigelman",
+      "1936",
+      "kryniea",
+      "pre-WWII",
+      "arthur",
+      "bay"
+    ],
+    id: 1
+  },
+  {
+    title: "Abram Baigelman 8",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Abram.Baigelman038.jpeg"),
+    tags: [
+      "abram ",
+      "baigelman",
+      "henry's brother",
+      "1936",
       "pre-WWII",
       "arthur",
       "bay"
@@ -76,6 +178,69 @@ const searchData = [
     ]
   },
   {
+    title: "David Baigelman 1",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/David.Baigelman016.jpeg"),
+    tags: ["david ", "baigelman", "1934", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "David Baigelman 2",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/David.Baigelman022.jpeg"),
+    tags: ["david ", "baigelman", "1934", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "Gita Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Gita.Baigelman137.jpeg"),
+    tags: ["gita ", "baigelman", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "Henry Baigelman 1",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman002.jpeg"),
+    tags: ["henry ", "baigelman", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "Henry Baigelman 2",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman003.jpeg"),
+    tags: ["henry ", "baigelman", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "Henry Baigelman 3",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Baigelman004.jpeg"),
+    tags: ["henry ", "baigelman", "1938", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "Henry Baigelman 4",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.Bogelman001.jpeg"),
+    tags: ["henry ", "baigelman", "pre-WWII"],
+    id: 1
+  },
+  {
+    title: "Henry David Baigelman",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Henry.David.Baigelman006.jpeg"),
+    tags: ["henry ", "baigelman", "pre-WWII", "band"],
+    id: 1
+  },
+  {
+    title: "Jolly Boys",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Jolly.Boys008.jpeg"),
+    tags: ["jolly", "boys", "pre-WWII"],
+    id: 1
+  },
+  {
     title: "Leon Glazer",
     description: "",
     image: require("./SearchMedia/Pre-WWII/Leon.Glazer143.jpeg"),
@@ -89,6 +254,22 @@ const searchData = [
       "lodz",
       "pre-wwII"
     ]
+  },
+  {
+    title: "Lodz Theatre",
+    description: "",
+    image: require("./SearchMedia/Pre-WWII/Lodz.Theatre426.jpeg"),
+    tags: [
+      "isaac ",
+      "simon",
+      "david",
+      "baigelman",
+      "music",
+      "1800",
+      "1939",
+      "pre-WWII"
+    ],
+    id: 1
   }
 ];
 
@@ -292,16 +473,19 @@ const App = () => {
     }, 300);
   };
   const handleTagChange = (e, { value }) => {
+    console.log("running HANDLETAGCHANGE");
     const searchQuery = value.toLowerCase();
     setIsLoading(true, value);
     setValue(value);
     let tagMatchArray = searchData;
+    let runnerArray = [];
 
     setTimeout(() => {
       if (searchQuery.length === 0) {
         setIsLoading(false);
         setValue("");
         setFilteredResults([]);
+        runnerArray = []
       }
       const match = figure => {
         return figure.tagMatch === true;
@@ -311,14 +495,19 @@ const App = () => {
         figure.tags.forEach(tag => {
           figure.tagMatch = false;
           if (tag.includes(searchQuery)) {
-            console.log("tag match found");
+            console.log("tag match found:",searchQuery);
             setLoading(false);
             figure.tagMatch = true;
-            setFilteredResults(tagMatchArray.filter(match));
-            console.log(filteredResults);
+            if(!runnerArray.includes(figure)){runnerArray.push(figure);}
+            
+         
+            console.log("Runner array:",runnerArray);
           }
+         
         });
       });
+        setFilteredResults(runnerArray);
+      console.log("Filtered Results:",filteredResults);
     }, 300);
   };
 
