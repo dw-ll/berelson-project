@@ -357,7 +357,7 @@ const searchData = [
     id: 1
   },
   {
-    title: "Adolfo Spielman",
+    title: "Adolfo Spielman 1",
     description: "",
     image: require("./SearchMedia/Post-WWII/adolfo.spielman010.jpeg"),
     tags: [
@@ -370,7 +370,7 @@ const searchData = [
     id: 1
   },
   {
-    title: "Beatrice Glazer",
+    title: "Beatrice Glazer 1",
     description: "",
     image: require("./SearchMedia/Post-WWII/Beatrice.Glazer001.jpg"),
     tags: [
@@ -390,7 +390,7 @@ const searchData = [
     id: 1
   },
   {
-    title: "Ed Silver",
+    title: "Ed Silver 1",
     description: "",
     image: require("./SearchMedia/Post-WWII/Ed.Silver087.jpeg"),
     tags: [
@@ -415,7 +415,7 @@ const searchData = [
     title: "Fonia 2",
     description: "",
     image: require("./SearchMedia/Post-WWII/Fonia210.jpeg"),
-    tags: ["beatrice glazer", "buenas aires", "1950"]
+    tags: ["beatrice glazer", "buenos aires", "1950"]
   },
   {
     title: "Fonia 3",
@@ -435,7 +435,7 @@ const searchData = [
     title: "Fonia 4",
     description: "",
     image: require("./SearchMedia/Post-WWII/Fonia212.jpeg"),
-    tags: ["beatrice glazer", "lydia glazer", "l-r", "buenas aires", "1950"]
+    tags: ["beatrice glazer", "lydia glazer", "l-r", "buenos aires", "1950"]
   },
   {
     title: "Fonia 5",
@@ -449,7 +449,7 @@ const searchData = [
       "lydia",
       "glazer",
       "l-r",
-      "buenas aires",
+      "buenos aires",
       "1952",
       "post-wwii"
     ]
@@ -464,7 +464,7 @@ const searchData = [
       "fania glazer",
       "sevek glazer",
       "l-r",
-      "buenas aires",
+      "buenos aires",
       "1950"
     ]
   },
@@ -479,7 +479,7 @@ const searchData = [
       "glazer",
       "fonia",
       "glazer",
-      "buenas aires",
+      "buenos aires",
       "1950"
     ]
   },
@@ -494,7 +494,7 @@ const searchData = [
       "glazer",
       "fonia",
       "glazer",
-      "buenas aires",
+      "buenos aires",
       "1950"
     ]
   },
@@ -502,13 +502,13 @@ const searchData = [
     title: "Fonia 9",
     description: "",
     image: require("./SearchMedia/Post-WWII/Fonia217.jpeg"),
-    tags: ["glazer", "lydia", "buenas aires", "beach", "1950"]
+    tags: ["glazer", "lydia", "buenos aires", "beach", "1950"]
   },
   {
     title: "Fonia 10",
     description: "",
     image: require("./SearchMedia/Post-WWII/Fonia218.jpeg"),
-    tags: ["beatrice", "glazer", "lydia", "l-r", "buenas aires", "1950"]
+    tags: ["beatrice", "glazer", "lydia", "l-r", "buenos aires", "1950"]
   },
   {
     title: "Fonia 11",
@@ -524,7 +524,7 @@ const searchData = [
       "sevek glazer",
       "lydia glazer",
       "beatrice glazer",
-      "buenas aires",
+      "buenos aires",
       "1950"
     ]
   },
@@ -575,7 +575,7 @@ const searchData = [
     title: "Fonia 15",
     description: "",
     image: require("./SearchMedia/Post-WWII/Fonia235 2.jpeg"),
-    tags: ["beatrice glazer", "february", "buenas aires", "1964", "post ww2"]
+    tags: ["beatrice glazer", "february", "buenos aires", "1964", "post ww2"]
   },
   {
     title: "Fonia 16",
@@ -617,7 +617,7 @@ const searchData = [
     title: "Fonia 22",
     description: "",
     image: require("./SearchMedia/Post-WWII/Fonia249.jpeg"),
-    tags: ["justina glazer", "beatrice glazer", "buenas aires", "1949"]
+    tags: ["justina glazer", "beatrice glazer", "buenos aires", "1949"]
   },
   {
     title: "Fonia 23",
@@ -920,6 +920,685 @@ const searchData = [
       "dinner",
       "post wwii"
     ]
+  },
+  {
+    title: "Adolfo Szpilman",
+    description: "",
+    image: require("./SearchMedia/Modern/Adolfo.Szpilman099.jpeg"),
+    tags: ["szpilman", "rio de janiero", "1998", "modern"]
+  },
+
+  {
+    title: "Baigelmans in Argentina",
+    description: "",
+    image: require("./SearchMedia/Modern/Baigelman.Argentina001.jpg"),
+    tags: [
+      "sevek glazer",
+      "fania glazer",
+      "gita baigelman",
+      "henry baigelman",
+      "ruben tencer",
+      "lydia's husband",
+      "l-r",
+      "argentina"
+    ]
+  },
+  {
+    title: "Beatrice Glazer",
+    description: "",
+    image: require("./SearchMedia/Modern/Beatrice.Glazer004.jpg"),
+    tags: ["sevek glazer", "beatrice", "l-r", "1973"]
+  },
+  {
+    title: "Henry Baigelman's Birth Certificate",
+    description: "",
+    image: require("./SearchMedia/Modern/Birth.Certificate454.jpeg"),
+    tags: ["henry", "birth certificate", "1983", "modern"]
+  },
+  {
+    title: "Calendar 1",
+    description: "",
+    image: require("./SearchMedia/Modern/Calendar453.jpeg"),
+    tags: ["henry", "henry to riva", "calendar", "modern", "1977"]
+  },
+  {
+    title: "Calendar 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Calendar459.jpeg"),
+    tags: ["happy days", "life reborn", "calendar", "modern", "2001"]
+  },
+  {
+    title: "Carol 1",
+    description: "",
+    image: require("./SearchMedia/Modern/Carol343.jpeg"),
+    tags: ["carol", "wedding", "ron", "1970", "modern"]
+  },
+  {
+    title: "Carol 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Carol344.jpeg"),
+    tags: ["carol", "wedding", "1970", "modern"]
+  },
+  {
+    title: "Carol 3",
+    description: "",
+    image: require("./SearchMedia/Modern/Carol345.jpeg"),
+    tags: ["carol", "wedding", "ron", "1970", "modern"]
+  },
+  {
+    title: "Ed Silver 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver086.jpeg"),
+    tags: [
+      "ed silver",
+      "san francisco",
+      "san jose symphony",
+      "california",
+      "1951",
+      "modern"
+    ]
+  },
+  {
+    title: "Ed Silver 3",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver088.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Ed Silver 4",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver089.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Ed Silver 5",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver090.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Ed Silver 6",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver092.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Ed Silver 7",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver093.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Ed Silver 8",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver094.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Ed Silver 9",
+    description: "",
+    image: require("./SearchMedia/Modern/Ed.Silver095.jpeg"),
+    tags: ["ed silver", "tiburon", "san jose symphony", "1992", "modern"]
+  },
+  {
+    title: "Feldafing Sheet Music",
+    description: "",
+    image: require("./SearchMedia/Modern/Feldafing476.jpeg"),
+    tags: ["feldafing", "sheet music", "1999", "modern"]
+  },
+  {
+    title: "Fonia 24",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia227.jpeg"),
+    tags: ["fonia", "beatrice", "lydia", "sevek", "beach", "1968", "modern"]
+  },
+  {
+    title: "Fonia 25",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia230.jpeg"),
+    tags: ["fonia", "lydia", "sevek", "beach", "march", "1974", "modern"]
+  },
+  {
+    title: "Fonia 26",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia232.jpeg"),
+    tags: [
+      "fania glazer",
+      "fania's grandchild",
+      "buenos aires",
+      "beatrice",
+      "dog",
+      "1974",
+      "modern"
+    ]
+  },
+  {
+    title: "Fonia 27",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia233.jpeg"),
+    tags: ["fonia", "lydia", "beatrice", "may", "1968", "modern"]
+  },
+  {
+    title: "Fonia 28",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia234.jpeg"),
+    tags: ["beatrice glazer"]
+  },
+  {
+    title: "Fonia 29",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia236.jpeg"),
+    tags: ["fonia", "lydia", "beatrice", "november", "1967", "modern"]
+  },
+  {
+    title: "Fonia 30",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia237.jpeg"),
+    tags: ["lydia", "november", "1967", "modern"]
+  },
+  {
+    title: "Fonia 31",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia238.jpeg"),
+    tags: ["fonia", "lydia", "sevek", "november", "1967", "modern"]
+  },
+  {
+    title: "Fonia 32",
+    description: "",
+    image: require("./SearchMedia/Modern/Fonia239.jpeg"),
+    tags: ["lydia", "november", "1967", "modern"]
+  },
+  {
+    title: "Henry Memoriam",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry.Memoriam462.jpeg"),
+    tags: ["henry", "memoriam", "newspaper", "2003", "modern"]
+  },
+  {
+    title: "Henry Baigelman 7",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry251.jpeg"),
+    tags: [
+      "henry baigelman",
+      "gita baigelman",
+      "lydia's son",
+      "l-r",
+      "buenos aires",
+      "late 1960's"
+    ]
+  },
+  {
+    title: "Henry Baigelman 8",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry252.jpeg"),
+    tags: [
+      "henry baigelman",
+      "gita baigelman",
+      "lydia's son",
+      "fania glazer",
+      "sevek glazer",
+      "l-r",
+      "buenos aires",
+      "argentina"
+    ]
+  },
+  {
+    title: "Henry Baigelman 9",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry253.jpeg"),
+    tags: ["henry", "gita", "airport", "buenos aires", "late 1960's"]
+  },
+  {
+    title: "Henry Baigelman 10",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry254.jpeg"),
+    tags: [
+      "henry baigelman",
+      "sevek glazer",
+      "l-r",
+      "buenos aires",
+      "late 1960's"
+    ]
+  },
+  {
+    title: "Henry Baigelman 11",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry255.jpeg"),
+    tags: [
+      "henry baigelman",
+      "gita baigelman",
+      "sevek glazer",
+      "l-r",
+      "buenos aires",
+      "late 1960's"
+    ]
+  },
+  {
+    title: "Henry Baigelman 12",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry256.jpeg"),
+    tags: [
+      "henry baigelman",
+      "sevek glazer",
+      "luggage",
+      "l-r",
+      "buenos aires",
+      "late 1960's"
+    ]
+  },
+  {
+    title: "Henry Baigelman 13",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry257.jpeg"),
+    tags: ["henry baigelman", "luggage", "buenos aires", "late 1960's"]
+  },
+  {
+    title: "Henry Baigelman 14",
+    description: "",
+    image: require("./SearchMedia/Modern/Henry367.jpeg"),
+    tags: [
+      "henry",
+      "gita",
+      "july",
+      "kiamesha",
+      "kiameska lake",
+      "1991",
+      "modern"
+    ]
+  },
+  {
+    title: "David's Humanitarian Award",
+    description: "",
+    image: require("./SearchMedia/Modern/Humanitarian.Award481.jpeg"),
+    tags: ["david", "humanitarian award", "1994", "modern"]
+  },
+  {
+    title: "Mordecai 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Mordecai186.jpeg"),
+    tags: ["mina", "samuel", "1977", "modern"]
+  },
+  {
+    title: "Henry's Nursing Certificate",
+    description: "",
+    image: require("./SearchMedia/Modern/NursingCertificate436.jpeg"),
+    tags: [
+      "henry",
+      "nursing admin",
+      "certificate",
+      "1972",
+      "new york",
+      "modern"
+    ]
+  },
+  {
+    title: "Pola Glazer 9",
+    description: "",
+    image: require("./SearchMedia/Modern/pola179.jpeg"),
+    tags: [
+      "rachela glazer-merring",
+      "samual glazer",
+      "lausanne.switzerland",
+      "1977",
+      "rooftop",
+      "modern"
+    ]
+  },
+  {
+    title: "Pola Glazer 10",
+    description: "",
+    image: require("./SearchMedia/Modern/pola192.jpeg"),
+    tags: ["pola", "samuel", "jerusalem", "1981", "modern"]
+  },
+  {
+    title: "Pola Glazer 11",
+    description: "",
+    image: require("./SearchMedia/Modern/pola193.jpeg"),
+    tags: ["riva", "pola", "may", "tel aviv", "1996", "modern"]
+  },
+  {
+    title: "Rachel Lander",
+    description: "",
+    image: require("./SearchMedia/Modern/Rachel188.jpeg"),
+    tags: [
+      "rachel lander",
+      "ehoud samsanov",
+      "tel aviv",
+      "wedding",
+      "may",
+      "1974",
+      "modern"
+    ]
+  },
+  {
+    title: "Rachel Lander 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Rachel189.jpeg"),
+    tags: [
+      "rachel lander-samsanov",
+      "ehoud samsanov",
+      "california",
+      "highway 1",
+      "stinson",
+      "1978",
+      "modern"
+    ]
+  },
+  {
+    title: "Rachel Lander 3",
+    description: "",
+    image: require("./SearchMedia/Modern/Rachel190.jpeg"),
+    tags: [
+      "rachel lander-samsanov",
+      "ehoud samsanov",
+      "san francisco",
+      "1978",
+      "november",
+      "modern"
+    ]
+  },
+  {
+    title: "Riva 1",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva290.jpeg"),
+    tags: ["riva", "january", "new york", "1981", "modern"]
+  },
+  {
+    title: "Riva 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva338.jpeg"),
+    tags: ["new york", "avon", "new york", "1967", "modern"]
+  },
+  {
+    title: "Riva 3",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva346.jpeg"),
+    tags: ["riva", "lake tahoe", "november", "1979", "modern"]
+  },
+  {
+    title: "Riva 4",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva347.jpeg"),
+    tags: ["riva", "lake tahoe", "november", "1979", "modern"]
+  },
+  {
+    title: "Riva 5",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva348.jpeg"),
+    tags: ["riva", "lake tahoe", "november", "car", "1979", "modern"]
+  },
+  {
+    title: "Riva 6",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva349.jpeg"),
+    tags: ["lake tahoe", "november", "1979", "modern"]
+  },
+  {
+    title: "Riva 7",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva350.jpeg"),
+    tags: ["riva", "marinwood", "car", "honda", "1978", "modern"]
+  },
+  {
+    title: "Riva 8",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva351.jpeg"),
+    tags: ["riva", "david", "henry", "new york", "wedding", "1980", "modern"]
+  },
+  {
+    title: "Riva 9",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva352.jpeg"),
+    tags: ["riva", "new york", "wedding", "1980", "modern"]
+  },
+  {
+    title: "Riva 10",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva353.jpeg"),
+    tags: [
+      "riva",
+      "rachela",
+      "pinek",
+      "gita",
+      "pola",
+      "aryeh",
+      "wedding",
+      "1980",
+      "modern"
+    ]
+  },
+  {
+    title: "Riva 11",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva354.jpeg"),
+    tags: ["riva", "bert", "1980", "modern"]
+  },
+  {
+    title: "Riva 12",
+    description: "",
+    image: require("./SearchMedia/Modern/Riva355.jpeg"),
+    tags: ["riva", "bert", "1980", "modern"]
+  },
+  {
+    title: "Serj Invite",
+    description: "",
+    image: require("./SearchMedia/Modern/Serj482.jpeg"),
+    tags: [
+      "serj",
+      "bar-mitzvah",
+      "henry",
+      "gita",
+      "invitation",
+      "rsvp",
+      "2002",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek.Glazer003.jpg"),
+    tags: ["sevek glazer", "fania glazer", "1974", "snow", "modern"]
+  },
+  {
+    title: "Sevek 3",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek259.jpeg"),
+    tags: [
+      "sevek glazer",
+      "fania glazer",
+      "henry baigelman",
+      "gita baigelman",
+      "hallah milich",
+      "jack glazer",
+      "l-r",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 4",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek260.jpeg"),
+    tags: [
+      "rose glazer",
+      "hallah milich",
+      "fania glazer",
+      "carol glazer",
+      "baigelman residence",
+      "new york",
+      "1981",
+      "l-r",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 5",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek261.jpeg"),
+    tags: [
+      "gita baigelman",
+      "henry baigelman",
+      "baigelman residence",
+      "new york",
+      "1981",
+      "l-r",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 6",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek262.jpeg"),
+    tags: [
+      "fania glazer",
+      "sevek glazer",
+      "rachelle glazer-merring",
+      "paris",
+      "1980's",
+      "l-r",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 7",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek264.jpeg"),
+    tags: [
+      "henry baigelman",
+      "sevek glazer",
+      "fania glazer",
+      "gita baigelman",
+      "baigelman residence",
+      "l-r",
+      "new york",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 8",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek265.jpeg"),
+    tags: [
+      "henry baigelman",
+      "beatrice glazer",
+      "new york",
+      "1981",
+      "l-r",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 9",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek266.jpeg"),
+    tags: ["sevek", "fonia", "san francisco", "1978", "december", "modern"]
+  },
+  {
+    title: "Sevek 10",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek267.jpeg"),
+    tags: [
+      "sevek glazer",
+      "golden gate bridge",
+      "san francisco",
+      "1978",
+      "december",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 11",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek268.jpeg"),
+    tags: ["sevek", "david", "riva", "glazer", "buenos aires", "1997", "modern"]
+  },
+  {
+    title: "Sevek 12",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek269.jpeg"),
+    tags: [
+      "david berelson",
+      "riva",
+      "berelson",
+      "fania glazer",
+      "buenos aires",
+      "1997",
+      "modern"
+    ]
+  },
+  {
+    title: "Sevek 13",
+    description: "",
+    image: require("./SearchMedia/Modern/Sevek342.jpeg"),
+    tags: ["sevek", "carol", "gita", "wedding", "oster", "modern", "1970"]
+  },
+  {
+    title: "Simon Baigelman Note",
+    description: "",
+    image: require("./SearchMedia/Modern/Simon.Baigelman.Note461.jpeg"),
+    tags: [
+      "simon",
+      "mount sanai",
+      "ms. caroselli",
+      "hospital",
+      "2002",
+      "modern"
+    ]
+  },
+  {
+    title: "Starski's Daughter",
+    description: "",
+    image: require("./SearchMedia/Modern/Starski.Daughter085.jpeg"),
+    tags: [
+      "starski",
+      "starsky",
+      "daugter",
+      "wedding",
+      "paris",
+      "1998",
+      "modern"
+    ]
+  },
+  {
+    title: "Starski",
+    description: "",
+    image: require("./SearchMedia/Modern/Starski082.jpeg"),
+    tags: ["starski", "starsky", "gita", "henry", "1991", "modern"]
+  },
+  {
+    title: "Starski 2",
+    description: "",
+    image: require("./SearchMedia/Modern/Starski083.jpeg"),
+    tags: [
+      "starski",
+      "starsky",
+      "wedding",
+      "helen",
+      "accordian player",
+      "piano player",
+      "new york",
+      "1991",
+      "modern"
+    ]
+  },
+  {
+    title: "Henry's Visual History Foundation Interview",
+    description: "",
+    image: require("./SearchMedia/Modern/visual.history480.jpeg"),
+    tags: [
+      "henry",
+      "interview",
+      "thanks",
+      "visual history foundation",
+      "1995",
+      "modern"
+    ]
+  },
+  {
+    title: "Henry Windermere",
+    description: "",
+    image: require("./SearchMedia/Modern/Windernere441.jpeg"),
+    tags: ["henry", "windermere", "rooftop", "1973", "modern"]
   }
 ];
 

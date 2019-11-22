@@ -1022,12 +1022,7 @@ input[type="checkbox"]:checked ~ label > img {
   font-family: "Times New Roman", Times, serif;
 }
 
-.navbar-header{
-  top:0;
-  position:-webkit-sticky;
-  position:sticky;
 
-}
 
 @media screen and (min-width: 1080px) {
   .top {
@@ -1041,8 +1036,7 @@ input[type="checkbox"]:checked ~ label > img {
   .navbar-header {
     top: 0;
     width: 1450px;
-    position: -webkit-sticky;
-    position: sticky;
+  
   }
   .tree-wrapper {
     display: inline-block;
@@ -1330,4 +1324,12 @@ input[type="checkbox"]:checked ~ label > img {
 .results {
   height:300px !important;
   overflow-y:scroll;
+}
+.ui .results{
+  top:auto !important;
+
+}
+.ui.search>.results{
+  top:auto !important;
+
 }
