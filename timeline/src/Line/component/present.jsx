@@ -211,7 +211,7 @@ class Line extends Component {
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
-                <div>
+                <div className="era-starter-info">
                   <h4 style={{ textAlign: "center" }}>Present</h4>
                   <h6 style={{ textAlign: "center" }}>
                     History and more information about the family up until now.
