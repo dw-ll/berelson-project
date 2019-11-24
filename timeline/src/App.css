@@ -1074,6 +1074,30 @@ input[type="checkbox"]:checked ~ label > img {
   .modal-container modal show {
     margin-left: 200px !important;
   }
+   .era-span {
+    margin-bottom: 150px;
+    width: 1920px;
+    height: 510px;
+  }
+  .era-text-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 300px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
 }
 @media screen and (min-width: 1920px) {
   .navbar-header {
@@ -1181,32 +1205,7 @@ input[type="checkbox"]:checked ~ label > img {
     flex-grow: 0.5;
   }
 }
-@media screen and (min-width: 1680px) {
-  .era-span {
-    margin-bottom: 150px;
-    width: 1920px;
-    height: 510px;
-  }
-  .era-text-container {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-    padding-top: 20px;
-  }
-  .era-text-inner-container {
-    display: flex;
-    align-items: stretch;
-  }
-  .era-text-break {
-    flex: 0 0 300px !important;
-    display: flex;
-    align-items: flex-start;
-  }
-  .era-text {
-    flex-grow: 0.5;
-  }
-}
+
 @media screen and (min-width: 1200px) {
   .era-image1 {
     display: inline-block;
@@ -1236,60 +1235,11 @@ input[type="checkbox"]:checked ~ label > img {
     background-image: url("./Media/Modern/Ed.Silver089.jpeg");
     background-position: center;
   }
-  .abram-image {
-    display: inline-block;
+  
+ [class^="image-"]{
+     display: inline-block;
     min-height: 420px;
     width: inherit;
-    background-image: url("./Media/Pre-WWII/Abram.Baigelman026.jpeg");
-    background-position: center;
-  }
-  .chana-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/Chana.Fodeman025.jpeg");
-    background-position: center;
-  }
-  .david-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/David.Baigelman016.jpeg");
-    background-position: center;
-  }
-  .gita-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/Gita.Baigelman137.jpeg");
-    background-position: center;
-  }
-  .henry-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/Henry.Baigelman002.jpeg");
-    background-position: center;
-  }
-  .jolly-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/Jolly.Bays008.jpeg");
-    background-position: center;
-  }
-  .leon-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/Leon.Glazer143.jpeg");
-    background-position: center;
-  }
-  .lodz-image {
-    display: inline-block;
-    min-height: 420px;
-    width: inherit;
-    background-image: url("./Media/Pre-WWII/Lodz.Theatre426.jpeg");
     background-position: center;
   }
   .era-text-link {
@@ -1319,7 +1269,10 @@ input[type="checkbox"]:checked ~ label > img {
   color: black;
 }
 .span-title-link:hover {
-  color: grey;
+  color: grey !important;
+}
+.dark-mode .span-title-link:hover {
+  color: darkgrey !important;
 }
 .results {
   height:300px !important;

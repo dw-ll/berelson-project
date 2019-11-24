@@ -53,84 +53,98 @@ const postTimelineObjects = [
   {
     title: "Ed",
     subtitle: "More info about Ed.",
+    style: "image-ed",
     image: require("../../Media/Post-WWII 2/Ed.Silver091.jpeg"),
     path: "/post/ed"
   },
   {
     title: "Fonia",
     subtitle: "More info about Fonia.",
+    style: "image-fonia",
     image: require("../../Media/Post-WWII 2/Fonia220.jpeg"),
     path: "/post/fonia"
   },
   {
     title: "Gita Baigelman",
     subtitle: "More info about Gita.",
+    style: "image-gita",
     image: require("../../Media/Post-WWII 2/Gita.Baigelman120.jpeg"),
     path: "/post/gita"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
+    style: "image-henry",
     image: require("../../Media/Post-WWII 2/Henry.Baigelman119.jpeg"),
     path: "/post/henry"
   },
   {
     title: "Jack Baigelman",
     subtitle: "More info about Jack.",
+    style: "image-jack",
     image: require("../../Media/Post-WWII 2/Jack.Baigelman057.jpeg"),
     path: "/post/jack"
   },
   {
     title: "Justina",
     subtitle: "More info about Justina.",
+    style: "image-justina",
     image: require("../../Media/Post-WWII 2/justina197.jpeg"),
     path: "/post/justina"
   },
   {
     title: "Katie",
     subtitle: "More info about Katie.",
+    style: "image-katie",
     image: require("../../Media/Post-WWII 2/katie159.jpeg"),
     path: "/post/katie"
   },
   {
     title: "Levin Baigelman",
     subtitle: "More info about Levin.",
+    style: "image-levin",
     image: require("../../Media/Post-WWII 2/Levin.Baigelman079.jpeg"),
     path: "/post/levin"
   },
   {
     title: "Pinek Baigelman",
     subtitle: "More info about Pinek.",
+    style: "image-pinek",
     image: require("../../Media/Post-WWII 2/Pinek.Baigelman041.jpeg"),
     path: "/post/pinek"
   },
   {
     title: "Pola",
     subtitle: "More info about Pola.",
+    style: "image-pola",
     image: require("../../Media/Post-WWII 2/pola178.jpeg"),
     path: "/post/pola"
   },
   {
     title: "Rachella",
     subtitle: "More info about Rachella.",
+    style: "image-rachella",
     image: require("../../Media/Post-WWII 2/Rachella150.jpeg"),
     path: "/post/rachella"
   },
   {
     title: "Riva",
     subtitle: "More info about Riva.",
+    style: "image-riva",
     image: require("../../Media/Post-WWII 2/Riva287.jpeg"),
     path: "/post/riva"
   },
   {
     title: "Samuel Spielman",
     subtitle: "More info about Samuel.",
+    style: "image-samuel",
     image: require("../../Media/Post-WWII 2/Samuel181.jpeg"),
     path: "/post/sam"
   },
   {
     title: "Sandy Baigelman",
     subtitle: "More info about Sandy.",
+    style: "image-sandy",
     image: require("../../Media/Post-WWII 2/Sandy.Baigelman056.jpeg"),
     path: "/post/sandy"
   }
@@ -170,142 +184,6 @@ class Line extends Component {
   };
 
   render() {
-    const cards = postTimelineObjects.map((card, i) => (
-      <React.Fragment key={i}>
-        {i % 2 === 0 ? (
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            key={i}
-            iconStyle={{
-              background: "rgb(102, 102, 51)",
-              color: "#000"
-            }}
-            paddingTop="0em"
-
-            //icon={<Print/>}
-          >
-            <div>
-            <Link to={postTimelineObjects[i].path}>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                  // onClick={e => {
-                  // this.handlePop(e, i);
-                  // }}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "right",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "right",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Right popover text
-                </Popover>
-              </Card>
-              </Link>
-            </div>
-          </VerticalTimelineElement>
-        ) : (
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            key={i}
-            iconStyle={{
-              background: "rgb(102, 102, 51)",
-              color: "#000"
-            }}
-            paddingTop="0em"
-
-            //icon={<Print/>}
-          >
-            <div>
-            <Link to={postTimelineObjects[i].path}>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                  //onClick={e => {
-                  //this.handlePop(e, i);
-                  //}}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "left",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "left",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Left popover text
-                </Popover>
-              </Card>
-              </Link>
-            </div>
-          </VerticalTimelineElement>
-        )}
-      </React.Fragment>
-    ));
-
     return (
       <Router>
         <Switch>
@@ -336,7 +214,6 @@ class Line extends Component {
                         color="yellow"
                         aria-label="Outlined primary button group"
                       >
-
                         <Button
                           onClick={() => {
                             this.scrollDiv.current.scrollIntoView({
@@ -347,7 +224,6 @@ class Line extends Component {
                         >
                           Visit Timeline
                         </Button>
-
                       </ButtonGroup>
                     </Grid>
                   </div>
@@ -359,13 +235,54 @@ class Line extends Component {
                 <div>
                   <h4 style={{ textAlign: "center" }}>Post World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
-                    History and more information about the family after the second World War.
+                    History and more information about the family after the
+                    second World War.
                   </h6>
                 </div>
               </div>
-              <VerticalTimeline>
-                <div>{cards}</div>
-              </VerticalTimeline>
+              <ul className="eras">
+                {postTimelineObjects.map((person, i) => (
+                  <li className="era-span">
+                    <Link to={person.path} className="span-link">
+                      <a
+                        class={person.style}
+                        style={{
+                          backgroundImage: 'url("' + person.image + '")'
+                        }}
+                      >
+                        &nbsp;
+                      </a>
+                    </Link>
+                    <div className="l-container era-text-container">
+                      <div className="page-section__row era-text-inner-container">
+                        <div className="page-section__title-container era-text-break"></div>
+                        <div className="page-section__content era-text">
+                          <Link to={person.path} className="span-title-link">
+                            <h3 className="era-text-link">{person.title}</h3>
+                          </Link>
+                          <p className="era-date">
+                            <span>1900-1950</span>
+                          </p>
+                          <div className="rich-text-desc">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur
+                              sint occaecat cupidatat non proident, sunt in
+                              culpa qui officia deserunt mollit anim id est
+                              laborum.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </Switch>

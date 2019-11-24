@@ -36,8 +36,9 @@ export default class Span extends Component {
                 className="greeting-text"
                 style={{
                   color: "black",
-                  fontFamily: "Times",
-                  marginTop: "10px"
+                  fontFamily: "Roboto !important",
+                  marginTop: "10px",
+                  fontWeight: "300"
                 }}
               >
                 The Berelson Project
