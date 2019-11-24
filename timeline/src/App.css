@@ -1024,103 +1024,6 @@ input[type="checkbox"]:checked ~ label > img {
 
 
 
-@media screen and (min-width: 1080px) {
-  .top {
-    min-height: calc(75vh - 00px);
-  }
-
-  .main-footer {
-    width: 1450px;
-  }
-
-  .navbar-header {
-    top: 0;
-    width: 1450px;
-  
-  }
-  .tree-wrapper {
-    display: inline-block;
-    height: 2700px;
-    width: 13000px;
-    transform: scale(0.105);
-    transform-origin: -1.02% 1% 0px;
-    overflow-y: hidden;
-    position: absolute;
-    margin-left: 275px;
-    transition: transform 1s;
-    left: 0;
-  }
-}
-@media screen and (min-width: 1680px) {
-  .navbar-header {
-    top: 0;
-    width: 1620px;
-  }
-  .main-footer {
-    width: 1680px;
-  }
-  .tree-wrapper {
-    display: inline-block;
-    height: 2700px;
-    width: 13000px;
-    transform: scale(0.105);
-    transform-origin: -1.02% 1% 0px;
-    overflow-y: hidden;
-    position: absolute;
-    margin-left: 275px;
-    transition: transform 1s;
-    left: 0;
-  }
-  .modal-container modal show {
-    margin-left: 200px !important;
-  }
-   .era-span {
-    margin-bottom: 150px;
-    width: 1920px;
-    height: 510px;
-  }
-  .era-text-container {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-    padding-top: 20px;
-  }
-  .era-text-inner-container {
-    display: flex;
-    align-items: stretch;
-  }
-  .era-text-break {
-    flex: 0 0 300px !important;
-    display: flex;
-    align-items: flex-start;
-  }
-  .era-text {
-    flex-grow: 0.5;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .navbar-header {
-    top: 0;
-    width: 1920px;
-  }
-  .main-footer {
-    width: 1920px;
-  }
-  .tree-wrapper {
-    display: inline-block;
-    height: 2700px;
-    width: 13000px;
-    transform: scale(0.105);
-    transform-origin: -1.02% 1% 0px;
-    overflow-y: hidden;
-    position: absolute;
-    margin-left: 400px !important;
-    transition: transform 1s;
-    left: 0;
-  }
-}
-
 .btn.btn-primary {
   background-color: grey !important;
 }
@@ -1181,7 +1084,65 @@ input[type="checkbox"]:checked ~ label > img {
   margin: 0;
 }
 
+.era-text-link {
+  text-align: left;
+}
+.era-date {
+  text-align: left;
+  margin-bottom: 20px !important;
+  font-weight: 300;
+}
+.rich-text-desc {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.span-title-link {
+  color: black;
+}
+.span-title-link:hover {
+  color: grey !important;
+}
+.dark-mode .span-title-link:hover {
+  color: darkgrey !important;
+}
+.results {
+  height: 300px !important;
+  overflow-y: scroll;
+}
+.ui .results {
+  top: auto !important;
+}
+.ui.search > .results {
+  top: auto !important;
+}
+
 @media screen and (min-width: 1080px) {
+  .top {
+    min-height: calc(75vh - 00px);
+  }
+
+  .main-footer {
+    width: 1450px;
+  }
+
+  .navbar-header {
+    top: 0;
+    width: 1450px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 165px;
+    transition: transform 1s;
+    left: 0;
+  }
   .span-link {
     width: 1440px;
   }
@@ -1205,7 +1166,6 @@ input[type="checkbox"]:checked ~ label > img {
     flex-grow: 0.5;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .era-image1 {
     display: inline-block;
@@ -1235,9 +1195,9 @@ input[type="checkbox"]:checked ~ label > img {
     background-image: url("./Media/Modern/Ed.Silver089.jpeg");
     background-position: center;
   }
-  
- [class^="image-"]{
-     display: inline-block;
+
+  [class^="image-"] {
+    display: inline-block;
     min-height: 420px;
     width: inherit;
     background-position: center;
@@ -1251,38 +1211,72 @@ input[type="checkbox"]:checked ~ label > img {
     font-size: 18px !important;
   }
 }
-.era-text-link {
-  text-align: left;
+@media screen and (min-width: 1680px) {
+  .navbar-header {
+    top: 0;
+    width: 1620px;
+  }
+  .main-footer {
+    width: 1680px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 275px;
+    transition: transform 1s;
+    left: 0;
+  }
+  .modal-container modal show {
+    margin-left: 200px !important;
+  }
+  .era-span {
+    margin-bottom: 150px;
+    width: 1920px;
+    height: 510px;
+  }
+  .era-text-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 300px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
 }
-.era-date {
-  text-align: left;
-  margin-bottom: 20px !important;
-  font-weight: 300;
-}
-.rich-text-desc {
-  text-align: left;
-  padding-left:10px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-.span-title-link {
-  color: black;
-}
-.span-title-link:hover {
-  color: grey !important;
-}
-.dark-mode .span-title-link:hover {
-  color: darkgrey !important;
-}
-.results {
-  height:300px !important;
-  overflow-y:scroll;
-}
-.ui .results{
-  top:auto !important;
-
-}
-.ui.search>.results{
-  top:auto !important;
-
+@media screen and (min-width: 1920px) {
+  .navbar-header {
+    top: 0;
+    width: 1920px;
+  }
+  .main-footer {
+    width: 1920px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 400px !important;
+    transition: transform 1s;
+    left: 0;
+  }
 }
