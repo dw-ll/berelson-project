@@ -1599,6 +1599,1007 @@ const searchData = [
     description: "",
     image: require("./SearchMedia/Modern/Windernere441.jpeg"),
     tags: ["henry", "windermere", "rooftop", "1973", "modern"]
+  },
+  {
+    title: "Avon Manufacturing 1",
+    description: "",
+    image: require("./SearchMedia/Riva/Avon Manufacturing(Back)001.jpg"),
+    tags: [
+      "avon manufacturing laboratories",
+      "suffern.new york",
+      "postcard",
+      "letter",
+      "summer",
+      "1967",
+      "summer camp"
+    ]
+  },
+  {
+    title: "Avon Manufacturing 2",
+    description: "",
+    image: require("./SearchMedia/Riva/Avon Manufacturing001.jpg"),
+    tags: [
+      "avon manufacturing laboratories",
+      "suffern.new york",
+      "postcard",
+      "summer",
+      "1967",
+      "summer camp"
+    ]
+  },
+  {
+    title: "Concord Hotel 1",
+    description: "",
+    image: require("./SearchMedia/Riva/Concord Hotel (back)001.jpg"),
+    tags: [
+      "concord hotel",
+      "kiamesha lake",
+      "new york",
+      "postcard",
+      "catskill mountains",
+      "borscht belt"
+    ]
+  },
+  {
+    title: "Concord Hotel 2",
+    description: "",
+    image: require("./SearchMedia/Riva/Concord Hotel (back)002.jpg"),
+    tags: [
+      "concord hotel",
+      "kiamesha lake",
+      "new york",
+      "postcard",
+      "catskill mountains",
+      "borscht belt"
+    ]
+  },
+  {
+    title: "Concord Hotel 3",
+    description: "",
+    image: require("./SearchMedia/Riva/Concord Hotel (back)003.jpg"),
+    tags: [
+      "concord hotel",
+      "kiamesha lake",
+      "new york",
+      "postcard",
+      "summer",
+      "riva",
+      "catskill mountains",
+      "borscht belt"
+    ]
+  },
+  {
+    title: "Concord Hotel 4",
+    description: "",
+    image: require("./SearchMedia/Riva/Concord Hotel001.jpg"),
+    tags: [
+      "concord hotel",
+      "kiamesha lake",
+      "new york",
+      "postcard",
+      "pool",
+      "catskill mountains",
+      "borscht belt"
+    ]
+  },
+  {
+    title: "Concord Hotel 5",
+    description: "",
+    image: require("./SearchMedia/Riva/Concord Hotel 002.jpg"),
+    tags: [
+      "concord hotel",
+      "kiamesha lake",
+      "new york",
+      "postcard",
+      "catskill mountains",
+      "borscht belt"
+    ]
+  },
+  {
+    title: "Concord Hotel 6",
+    description: "",
+    image: require("./SearchMedia/Riva/Concord Hotel003.jpg"),
+    tags: [
+      "concord hotel",
+      "kiamesha lake",
+      "new york",
+      "postcard",
+      "catskill mountains",
+      "borscht belt"
+    ]
+  },
+  {
+    title: "Gita 2",
+    description: "",
+    image: require("./SearchMedia/Riva/Gita361.jpeg"),
+    tags: ["gita", "riva"]
+  },
+  {
+    title: "Letter from Gita and Henry to Riva",
+    description: "",
+    image: require("./SearchMedia/Riva/Henry Gita Letter001.jpg"),
+    tags: [
+      "from gita and henry",
+      "to riva",
+      "july",
+      "07/24",
+      "letter",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Letter from Henry to Riva Envelope",
+    description: "",
+    image: require("./SearchMedia/Riva/Henry Letter (Back)001.jpg"),
+    tags: [
+      "from henry",
+      "to riva",
+      "envelope",
+      "forest hills",
+      "new york",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Letter from Henry to Riva",
+    description: "",
+    image: require("./SearchMedia/Riva/Henry Letter 003.jpg"),
+    tags: [
+      "from henry",
+      "to riva",
+      "july",
+      "07/24",
+      "letter",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Letter from Henry to Riva 2",
+    description: "",
+    image: require("./SearchMedia/Riva/Henry Letter(Back)002.jpg"),
+    tags: [
+      "from henry",
+      "to riva",
+      "letter",
+      "postcard",
+      "07/05/68",
+      "1968",
+      "letter",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Letter from Henry to Riva 3 Envelope",
+    description: "",
+    image: require("./SearchMedia/Riva/Henry Letter001.jpg"),
+    tags: [
+      "from henry",
+      "to riva",
+      "camp hi li",
+      "envelope",
+      "livington manor",
+      "new york",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Letter from Henry to Riva 4 Envelope",
+    description: "",
+    image: require("./SearchMedia/Riva/Henry Letter002.jpg"),
+    tags: [
+      "from henry",
+      "to riva",
+      "camp hi li",
+      "postcard",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Jack Baigelman 3",
+    description: "",
+    image: require("./SearchMedia/Riva/Jack.Baigelman061 2.jpeg"),
+    tags: ["jack", "riva", "modern", "1981"]
+  },
+  {
+    title: "Jack Baigelman 4",
+    description: "",
+    image: require("./SearchMedia/Riva/Jack370.jpeg"),
+    tags: ["jack", "1 year old", "catskill mountains", "1953", "lakeside hotel"]
+  },
+  {
+    title: "Jack Baigelman 5",
+    description: "",
+    image: require("./SearchMedia/Riva/Jack371.jpeg"),
+    tags: ["jack", "1 year old", "mother", "rose glazer", "catskill mountains"]
+  },
+  {
+    title: "Lakeside Hotel",
+    description: "",
+    image: require("./SearchMedia/Riva/Lakeside Hotel001.jpg"),
+    tags: [
+      "postcard",
+      "lakeside hotel",
+      "loch sheldrake",
+      "new york",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Regal Hotel Postcard 1 Back",
+    description: "",
+    image: require("./SearchMedia/Riva/Regal Hotel (Back)001.jpg"),
+    tags: ["regal hotel", "postcard", "falburgh.new york", "catskill mountains"]
+  },
+  {
+    title: "Regal Hotel Postcard 1",
+    description: "",
+    image: require("./SearchMedia/Riva/Regal Hotel001.jpg"),
+    tags: ["regal hotel", "postcard", "falburgh.new york", "catskill mountains"]
+  },
+  {
+    title: "Regal Hotel Postcard 2",
+    description: "",
+    image: require("./SearchMedia/Riva/Regal Hotel002.jpg"),
+    tags: ["regal hotel", "postcard", "falburgh.new york", "catskill mountains"]
+  },
+  {
+    title: "Regal Hotel Postcard 2 Back",
+    description: "",
+    image: require("./SearchMedia/Riva/Regal Hotel002.jpg"),
+    tags: ["regal hotel", "postcard", "falburgh.new york", "catskill mountains"]
+  },
+  {
+    title: "Riva Camp Finale",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva Camp Finale (Back)001.jpg"),
+    tags: ["song", "play", "camp hi li", "color war", "catskill mountains"]
+  },
+  {
+    title: "Riva Camp Finale Back",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva Camp Finale001.jpg"),
+    tags: ["camp hi li", "color war", "catskill mountains"]
+  },
+  {
+    title: "Riva 13",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman001.jpg"),
+    tags: [
+      "l-r",
+      "sarah",
+      "julie",
+      "riva",
+      "august 1962",
+      "10 years old",
+      "forest hills.new york"
+    ]
+  },
+  {
+    title: "Riva 14",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman002.jpg"),
+    tags: [
+      "may",
+      "l-r",
+      "riva",
+      "julie",
+      "last day of school",
+      "5th grade",
+      "1963"
+    ]
+  },
+  {
+    title: "Riva 15",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman003.jpg"),
+    tags: [
+      "riva",
+      "1st birthday",
+      "catskill mountains",
+      "new york",
+      "l-r",
+      "rose glazer",
+      "caroline lukin",
+      "riva baigelman",
+      "carol glazer"
+    ]
+  },
+  {
+    title: "Riva 16",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman004.jpg"),
+    tags: [
+      "riva baigelman",
+      "fallsburgh.new york",
+      "lakeside hotel",
+      "henry baigelman"
+    ]
+  },
+  {
+    title: "Riva 17",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman005.jpg"),
+    tags: [
+      "lakeside hotel",
+      "fallsburgh.new york",
+      "gita baigelman",
+      "henry baigelman"
+    ]
+  },
+  {
+    title: "Riva 18",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman006.jpg"),
+    tags: [
+      "spring lake",
+      "catskill mountains",
+      "lakeside hotel",
+      "l-r",
+      "gita",
+      "rose glazer",
+      "hania lukin",
+      "1953"
+    ]
+  },
+  {
+    title: "Riva 19",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman007.jpg"),
+    tags: [
+      "l-r",
+      "gita baigelman",
+      "spring lake",
+      "catskill mountains",
+      "lakeside hotel",
+      "1953"
+    ]
+  },
+  {
+    title: "Riva 20",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman008.jpg"),
+    tags: [
+      "spring lake",
+      "catskill mountains",
+      "lakeside hotel",
+      "l-r",
+      "hania lukin",
+      "gita baigelman",
+      "1953"
+    ]
+  },
+  {
+    title: "Riva 21",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva.Baigelman009.jpg"),
+    tags: [
+      "lakeside hotel",
+      "catskill mountains",
+      "spring lake",
+      "riva",
+      "1953"
+    ]
+  },
+  {
+    title: "Riva 22",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva280.jpeg"),
+    tags: [
+      "riva",
+      "new york",
+      "baby",
+      "berelson",
+      "baigelman",
+      "toby",
+      "may",
+      "1953",
+      "b.august 1952"
+    ]
+  },
+  {
+    title: "Riva 23",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva281.jpeg"),
+    tags: [
+      "riva",
+      "new york",
+      "baby",
+      "berelson",
+      "baigelman",
+      "toby",
+      "may",
+      "1953",
+      "b.august 1952"
+    ]
+  },
+  {
+    title: "Riva 24",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva282.jpeg"),
+    tags: ["riva", "new york", "baby", "1953"]
+  },
+  {
+    title: "Riva 25",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva283.jpeg"),
+    tags: [
+      "riva",
+      "new york",
+      "baby",
+      "1953",
+      "carraige",
+      "post wwii",
+      "background:abram schlamek",
+      "henry baigelman's brother in law"
+    ]
+  },
+  {
+    title: "Riva 26",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva284.jpeg"),
+    tags: [
+      "riva",
+      "new york",
+      "baby",
+      "park",
+      "2nd birthday",
+      "august",
+      "leo glazer's wife",
+      "catskill mountains",
+      "1954"
+    ]
+  },
+  {
+    title: "Riva 27",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva285.jpeg"),
+    tags: [
+      "riva",
+      "regal",
+      "8th birthday",
+      "august 22",
+      "1960",
+      "fallsburgh.new york",
+      "catskill mountains",
+      "post wwii"
+    ]
+  },
+  {
+    title: "Riva 28",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva287.jpeg"),
+    tags: [
+      "riva",
+      "school play",
+      "1962",
+      "pirates of penzance",
+      "4th grade",
+      "forest hills.new york",
+      "post wwii"
+    ]
+  },
+  {
+    title: "Riva 29",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva288.jpeg"),
+    tags: [
+      "riva",
+      "new york city",
+      "berelson",
+      "baigelman",
+      "june",
+      "swing",
+      "1958",
+      "post wwii"
+    ]
+  },
+  {
+    title: "Riva 30",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva289.jpeg"),
+    tags: ["may dance", "riva", "5th grade", "forest hills", "1963"]
+  },
+  {
+    title: "Riva 31",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva290.jpeg"),
+    tags: [
+      "riva",
+      "new york",
+      "september",
+      "1st day of 3rd grade",
+      "8 years old",
+      "1960",
+      "modern"
+    ]
+  },
+  {
+    title: "Riva 32",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva291.jpeg"),
+    tags: [
+      "riva",
+      "last day",
+      "graduation",
+      "5th grade",
+      "gita baigelman",
+      "riva baigelman",
+      "l-r",
+      "1963"
+    ]
+  },
+  {
+    title: "Riva 33",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva293.jpeg"),
+    tags: [
+      "may dance",
+      "riva",
+      "8 years old",
+      "1961",
+      "simon",
+      "june",
+      "post wwii",
+      "brother",
+      "5.5 years old"
+    ]
+  },
+  {
+    title: "Riva 34",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva295.jpeg"),
+    tags: ["l-r", "sam shlamek spais", "riva baigelman", "4 years old"]
+  },
+  {
+    title: "Riva 35",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva296.jpeg"),
+    tags: ["riva baigelman", "4 years old", "nyc"]
+  },
+  {
+    title: "Riva 36",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva297.jpeg"),
+    tags: [
+      "first birthday",
+      "riva",
+      "spring lake hotel",
+      "new york",
+      "youngsville",
+      "1953"
+    ]
+  },
+  {
+    title: "Riva 37",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva298.jpeg"),
+    tags: [
+      "1 year old",
+      "new york",
+      "riva",
+      "catskill mountains",
+      "l-r",
+      "hania lukin",
+      "gita baigelman",
+      "rose glazer",
+      "henry baigelman"
+    ]
+  },
+  {
+    title: "Riva 38",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva300.jpeg"),
+    tags: ["riva", "15 months", "new york"]
+  },
+  {
+    title: "Riva 39",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva301.jpeg"),
+    tags: [
+      "birthday",
+      "1 year old",
+      "new york",
+      "l-r",
+      "caroline lukin",
+      "riva",
+      "carol glazer",
+      "jack glazer",
+      "1953",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Riva 40",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva302.jpeg"),
+    tags: ["riva", "1 year old", "birthday", "new york"]
+  },
+  {
+    title: "Riva 41",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva303.jpeg"),
+    tags: ["riva", "1 year old", "new york"]
+  },
+  {
+    title: "Riva 42",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva304.jpeg"),
+    tags: [
+      "riva",
+      "1 year old",
+      "new york",
+      "catskill mountains",
+      "l-r",
+      "hania lukin",
+      "caroline lukin",
+      "gita baigelman",
+      "riva baigelman"
+    ]
+  },
+  {
+    title: "Riva 43",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva305.jpeg"),
+    tags: ["riva", "1 year old", "new york"]
+  },
+  {
+    title: "Riva 44",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva306.jpeg"),
+    tags: [
+      "l-r",
+      "riva baigelman",
+      "gita baigelman",
+      "carol glazer",
+      "1953",
+      "new york"
+    ]
+  },
+  {
+    title: "Riva 45",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva307.jpeg"),
+    tags: [
+      "1 year old",
+      "lakeside hotel",
+      "catskill mountains",
+      "l-r",
+      "gita baigelman",
+      "riva baigelman",
+      "henry baigelman",
+      "1953"
+    ]
+  },
+  {
+    title: "Riva 46",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva308.jpeg"),
+    tags: [
+      "riva",
+      "family",
+      "lakeside hotel",
+      "l-r",
+      "gita baigelman",
+      "henry baigelman"
+    ]
+  },
+  {
+    title: "Riva 47",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva309.jpeg"),
+    tags: [
+      "riva",
+      "spring lake hotel",
+      "1 year old",
+      "l-r",
+      "gita baigelman",
+      "henry baigelman",
+      "riva baigelman"
+    ]
+  },
+  {
+    title: "Riva 48",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva310.jpeg"),
+    tags: ["spring lake hotel", "l-r", "rose glazer", "gita baigelman"]
+  },
+  {
+    title: "Riva 49",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva311.jpeg"),
+    tags: ["gita", "spring lake hotel", "gita baigelman"]
+  },
+  {
+    title: "Riva 50",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva312.jpeg"),
+    tags: ["l-r", "henry", "gita", "spring lake hotel"]
+  },
+  {
+    title: "Riva 51",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva313.jpeg"),
+    tags: ["l-r", "henry baigelman", "lakeside hotel"]
+  },
+  {
+    title: "Riva 52",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva314.jpeg"),
+    tags: ["catskill mountains", "new york", "l-r", "gita baigelman", "riva"]
+  },
+  {
+    title: "Riva 53",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva315.jpeg"),
+    tags: [
+      "l-r",
+      "carol glazer",
+      "jack glazer",
+      "5 and 2",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Riva 54",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva316.jpeg"),
+    tags: ["lakeside hotel", "l-r", "caroline lukin", "caroline's grandmother"]
+  },
+  {
+    title: "Riva 55",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva317.jpeg"),
+    tags: ["henry", "riva", "lakeside hotel", "catskill mountains"]
+  },
+  {
+    title: "Riva 56",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva318.jpeg"),
+    tags: ["spring lake hotel", "catskill mountains", "l-r", "henry baigelman"]
+  },
+  {
+    title: "Riva 57",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva319.jpeg"),
+    tags: ["1954", "riva baigelman"]
+  },
+  {
+    title: "Riva 58",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva320.jpeg"),
+    tags: [
+      "november",
+      "9/8/1955",
+      "1955",
+      "riva",
+      "l-r",
+      "gita baigelman",
+      "jack glazer",
+      "riva baigelman",
+      "caroline lukin"
+    ]
+  },
+  {
+    title: "Riva 59",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva321.jpeg"),
+    tags: [
+      "riva",
+      "birthday",
+      "midwood hotel",
+      "catskill mountains",
+      "1959",
+      "7 years old"
+    ]
+  },
+  {
+    title: "Riva 60",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva322.jpeg"),
+    tags: [
+      "riva",
+      "8th birthday",
+      "henry baigelman",
+      "birthday",
+      "regal hotel",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Riva 61",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva323.jpeg"),
+    tags: [
+      "riva",
+      "birthday",
+      "1961",
+      "tennis",
+      "9 years old",
+      "regal hotel",
+      "catskill mountains",
+      "fallsburgh.new york",
+      "south"
+    ]
+  },
+  {
+    title: "Riva 62",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva324.jpeg"),
+    tags: [
+      "riva",
+      "8 years old",
+      "1960",
+      "tennis",
+      "9 years old",
+      "regal hotel",
+      "catskill mountains",
+      "fallsburgh.new york",
+      "south"
+    ]
+  },
+  {
+    title: "Riva 63",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva325.jpeg"),
+    tags: ["riva", "simon", "1963", "11 years", "regal hotel"]
+  },
+  {
+    title: "Riva 64",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva326.jpeg"),
+    tags: [
+      "riva",
+      "birthday",
+      "swimming",
+      "pool",
+      "11 years",
+      "regal hotel",
+      "catskill mountains",
+      "fallsburgh.new york",
+      "south",
+      "1963"
+    ]
+  },
+  {
+    title: "Riva 65",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva327.jpeg"),
+    tags: [
+      "riva",
+      "david greenbaum",
+      "11 years",
+      "swimming",
+      "pool",
+      "regal hotel",
+      "catskill mountains",
+      "fallsburgh.new york",
+      "south"
+    ]
+  },
+  {
+    title: "Riva 66",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva328.jpeg"),
+    tags: [
+      "riva",
+      "friends",
+      "catskill mountains",
+      "regal hotel",
+      "13 years old",
+      "l-r",
+      "irene weiss",
+      "riva baigelman"
+    ]
+  },
+  {
+    title: "Riva 67",
+    description: "",
+    image: require("./SearchMedia/Riva/Riva329.jpeg"),
+    tags: [
+      "riva",
+      "14 years",
+      "camp hi li",
+      "l-r",
+      "lenore",
+      "riva baigelman",
+      "gail",
+      "sheila",
+      "judie",
+      "betsy"
+    ]
+  },
+  {
+    title: "Letter from Rose to Riva",
+    description: "",
+    image: require("./SearchMedia/Riva/Rose Glazer Letter001.jpg"),
+    tags: [
+      "postcard",
+      "from rose glazer",
+      "to riva",
+      "camp hi li",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Letter from Rose to Riva Back",
+    description: "",
+    image: require("./SearchMedia/Riva/Rose Glazer Letter(back)001.jpg"),
+    tags: [
+      "postcard",
+      "from rose glazer",
+      "to riva",
+      "letter",
+      "camp hi li",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Simon Baigelman 001",
+    description: "",
+    image: require("./SearchMedia/Riva/Simon.Baigelman001.jpg"),
+    tags: [
+      "august",
+      "1951",
+      "simon baigelman",
+      "6.5 years old",
+      "catskill mountains",
+      "upstate new york"
+    ]
+  },
+  {
+    title: "Ushmim Concert",
+    description: "",
+    image: require("./SearchMedia/Riva/Ushmim.Concert471.jpeg"),
+    tags: ["ushmim", "concert", "music", "henry", "david", "riva"]
+  },
+  {
+    title: "Zalkin Lodge 1",
+    description: "",
+    image: require("./SearchMedia/Riva/Zalkin Lodge001.jpg"),
+    tags: [
+      "zalkin lodge",
+      "greenfield park",
+      "postcard",
+      "new york",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Zalkin Lodge 1 Back",
+    description: "",
+    image: require("./SearchMedia/Riva/Zalkin Lodge (back)001.jpg"),
+    tags: [
+      "zalkin lodge",
+      "greenfield park",
+      "postcard",
+      "new york",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Zalkin Lodge 2",
+    description: "",
+    image: require("./SearchMedia/Riva/Zalkin Lodge002.jpg"),
+    tags: [
+      "zalkin lodge",
+      "greenfield park",
+      "postcard",
+      "new york",
+      "pool",
+      "catskill mountains"
+    ]
+  },
+  {
+    title: "Zalkin Lodge 2 Back",
+    description: "",
+    image: require("./SearchMedia/Riva/Zalkin Lodge (Back)002.jpg"),
+    tags: [
+      "zalkin lodge",
+      "greenfield park",
+      "postcard",
+      "new york",
+      "catskill mountains"
+    ]
   }
 ];
 
