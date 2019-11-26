@@ -2,7 +2,7 @@
     "name": "timeline",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://dw-ll.github.io/berelson-development",
+    "homepage": "https://dw-ll.github.io/",
     "dependencies": {
         "@emotion/core": "^10.0.15",
         "@latticehr/react-org-chart": "^0.1.1",

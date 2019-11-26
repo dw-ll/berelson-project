@@ -4,7 +4,6 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Pre from "../../../Line/component/pre";
 import ReactPlayer from "react-player";
-import Video from "../../../Media/046027488-charlie-chaplin-kid-auto-races.mp4";
 
 const IMGURL =
   "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Pre-WWII/";
@@ -34,15 +33,7 @@ const Slideshow = () => {
           }}
         />
         <div>
-          <div className="player-wrapper">
-            <ReactPlayer
-              className="react-player"
-              url={Video}
-              width="1450px"
-              height="600px"
-              playing="true"
-            />
-          </div>
+          <div className="player-wrapper"></div>
           <div class="container">
             <div class="row">
               <div class="col-6">

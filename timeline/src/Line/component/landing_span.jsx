@@ -41,7 +41,7 @@ const routes = [
   }
 ];
 
-export default class Span extends Component { 
+export default class Span extends Component {
   render() {
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
@@ -77,38 +77,23 @@ export default class Span extends Component {
                   >
                     The Berelson Project
                   </h3>
-                  <div className="greeting-button">
-                    <Grid item>
-                      <ButtonGroup aria-label="Outlined primary button group">
-                        <Button
-                          component={Link}
-                          to="/archive"
-                          className="greeting-button-text"
-                        >
-                          Visit Archive
-                        </Button>
-                      </ButtonGroup>
-                    </Grid>
-                  </div>
+                  <div className="greeting-button"></div>
                 </div>
               </Greeting>
             </div>
             <ul className="eras">
               <li className="era-span">
-                <Link to="/pre" className="span-link">
-                  <a className="era-image1">&nbsp;</a>
-                </Link>
+                <a className="era-image1 inactive">&nbsp;</a>
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
                     <div className="page-section__title-container era-text-break"></div>
                     <div className="page-section__content era-text">
-                      <Link to="/pre" className="span-title-link">
-                        <h3 className="era-text-link">Before the War</h3>
-                      </Link>
-                      <p className="era-date">
+                      <h3 className="era-text-link inactive">Before the War</h3>
+
+                      <p className="era-date inactive">
                         <span>1900-1950</span>
                       </p>
-                      <div className="rich-text-desc">
+                      <div className="rich-text-desc inactive">
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -126,20 +111,17 @@ export default class Span extends Component {
                 </div>
               </li>
               <li className="era-span">
-                <Link to="/ww2" className="span-link">
-                  <a className="era-image2">&nbsp;</a>
-                </Link>
+                <a className="era-image2 inactive">&nbsp;</a>
+
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
                     <div className="page-section__title-container era-text-break"></div>
                     <div className="page-section__content era-text">
-                      <Link to="/ww2" className="span-title-link">
-                        <h3 className="era-text-link">World War II</h3>
-                      </Link>
-                      <p className="era-date">
+                      <h3 className="era-text-link inactive">World War II</h3>
+                      <p className="era-date inactive">
                         <span>1900-1950</span>
                       </p>
-                      <div className="rich-text-desc">
+                      <div className="rich-text-desc inactive">
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -157,20 +139,17 @@ export default class Span extends Component {
                 </div>
               </li>
               <li className="era-span">
-                <Link to="/post" className="span-link">
-                  <a className="era-image3">&nbsp;</a>
-                </Link>
+                <a className="era-image3 inactive">&nbsp;</a>
+
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
                     <div className="page-section__title-container era-text-break"></div>
                     <div className="page-section__content era-text">
-                      <Link to="/post" className="span-title-link">
-                        <h3 className="era-text-link">After the War</h3>
-                      </Link>
-                      <p className="era-date">
+                      <h3 className="era-text-link inactive">After the War</h3>
+                      <p className="era-date inactive">
                         <span>1900-1950</span>
                       </p>
-                      <div className="rich-text-desc">
+                      <div className="rich-text-desc inactive">
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -188,20 +167,17 @@ export default class Span extends Component {
                 </div>
               </li>
               <li className="era-span">
-                <Link to="/present" className="span-link">
-                  <a className="era-image4">&nbsp;</a>
-                </Link>
+                <a className="era-image4 inactive">&nbsp;</a>
+
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
                     <div className="page-section__title-container era-text-break"></div>
                     <div className="page-section__content era-text">
-                      <Link to="/present" className="span-title-link">
-                        <h3 className="era-text-link">Present</h3>
-                      </Link>
-                      <p className="era-date">
+                      <h3 className="era-text-link inactive">Present</h3>
+                      <p className="era-date inactive">
                         <span>1900-1950</span>
                       </p>
-                      <div className="rich-text-desc">
+                      <div className="rich-text-desc inactive">
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
