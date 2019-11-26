@@ -590,9 +590,7 @@ main {
 .dark-mode hero-greet {
   opacity: 0;
 }
-.hero-greet{
 
-}
 .greeting{
    transform: scale(1);
   transform-origin: -0.5% 1% 0px;
@@ -602,6 +600,7 @@ main {
   left:41.5%;
   top:37%;
   margin-top:10px;
+  margin-left:30px;
 }
 .greeting-button{
  position: absolute;
@@ -610,9 +609,14 @@ main {
   margin-top:10px;
   color:white;
 }
+.inactive{
+   pointer-events: none;
+   cursor: default;
+
+}
 .greeting-button-text{
  
-  color:white;
+  color:black !important;
 }
 .greeting-greet{
   margin-top:5px;
@@ -741,9 +745,9 @@ html {
   height: 100%;
   width: 100%;
   margin:0px;
+  line-height: 2em;
 }
 .dark-mode .MuiButton-label-232{
-  color:black;
 }
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
@@ -1048,7 +1052,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 
 .tree-info {
-  font-size: 55px;
+  font-size: 61px;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -1173,7 +1177,7 @@ input[type="checkbox"]:checked ~ label > img {
   }
   .tree-wrapper {
     display: inline-block;
-    height: 2700px;
+    height: 3200px;
     width: 13000px;
     transform: scale(0.105);
     transform-origin: -1.02% 1% 0px;
@@ -1213,6 +1217,7 @@ input[type="checkbox"]:checked ~ label > img {
     width: inherit;
     background-image: url("./Media/Pre-WWII/Gita.Baigelman139.jpeg");
     background-position: center;
+    border: solid grey 3px;
   }
   .era-image2 {
     display: inline-block;
@@ -1220,6 +1225,8 @@ input[type="checkbox"]:checked ~ label > img {
     width: inherit;
     background-image: url("./Media/WWII/HappyBoys4282.jpeg");
     background-position: center;
+        border: solid grey 3px;
+
   }
   .era-image3 {
     display: inline-block;
@@ -1227,6 +1234,8 @@ input[type="checkbox"]:checked ~ label > img {
     width: inherit;
     background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
     background-position: center;
+        border: solid grey 3px;
+
   }
   .era-image4 {
     display: inline-block;
@@ -1234,6 +1243,8 @@ input[type="checkbox"]:checked ~ label > img {
     width: inherit;
     background-image: url("./Media/Modern/Ed.Silver089.jpeg");
     background-position: center;
+        border: solid grey 3px;
+
   }
 
   [class^="image-"] {
@@ -1289,7 +1300,7 @@ input[type="checkbox"]:checked ~ label > img {
   }
   .tree-wrapper {
     display: inline-block;
-    height: 2700px;
+    height: 3200px;
     width: 13000px;
     transform: scale(0.105);
     transform-origin: -1.02% 1% 0px;
@@ -1371,7 +1382,7 @@ input[type="checkbox"]:checked ~ label > img {
   }
   .tree-wrapper {
     display: inline-block;
-    height: 2700px;
+    height: 3200px;
     width: 13000px;
     transform: scale(0.105);
     transform-origin: -1.02% 1% 0px;

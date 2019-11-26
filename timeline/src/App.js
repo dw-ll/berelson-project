@@ -2895,7 +2895,7 @@ const App = () => {
       ) : (
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           <Navbar className="navbar-header no-shadows" light expand="md">
-            <NavbarBrand href="/berelson-development/#/">
+            <NavbarBrand href="/#">
               {"Vessel Archives"}
             </NavbarBrand>
 
