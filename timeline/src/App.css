@@ -9,6 +9,7 @@
   margin-top: -1px;
   overflow: auto;
 }
+
 .toggle {
   position: relative;
   padding: 0 4px;
@@ -21,7 +22,7 @@
 .scroll-down {
   position: absolute;
   left: 50%;
-  bottom: 90px;
+  top: 650px;
   display: block;
   text-align: center;
   font-size: 50px;
@@ -41,6 +42,154 @@
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
   -moz-animation: fade_move_down 4s ease-in-out infinite;
   animation: fade_move_down 4s ease-in-out infinite;
+}
+.search-bar {
+  z-index: 9999;
+}
+.modal-container {
+  width: 1450px !important;
+}
+.modal {
+  width: 1450px !important;
+}
+
+.modal-open {
+  justify-content: center;
+  text-align: center;
+  background: black;
+}
+.modal-body {
+  text-align: center;
+  font-family: "Times";
+}
+.modal-foot {
+  justify-content: left;
+}
+.fade modal-container modal show {
+  width: 1450px !important;
+  display: block;
+  padding-left: 0;
+  justify-content: center;
+}
+fade
+  modal-container
+  modal
+  show
+  .react-jinke-music-player
+  .music-player-controller {
+  background-color: white !important;
+  border: grey !important;
+}
+.react-jinke-music-player .music-player-controller:hover {
+  color: black !important;
+  background-color: black !important;
+  border: grey !important;
+}
+.react-jinke-music-player
+  .music-player-controller
+  .music-player-controller-setting:hover {
+  color: white !important;
+  background-color: black !important;
+}
+.react-jinke-music-player
+  .music-player-controller
+  .music-player-controller-setting {
+  background: black !important;
+  color: white !important;
+}
+.progess-bar {
+  background-color: transparent !important;
+  color: black;
+}
+.group {
+  color: white;
+}
+.audio-lists-panel-content .audio-item .player-name {
+  color: black !important;
+}
+.react-jinke-music-player-main.light-theme .player-time {
+  color: black !important;
+}
+.audio-lists-panel-content .audio-item .player-delete {
+  color: black !important;
+}
+.react-jinke-music-player-play-icon {
+  color: black !important;
+}
+.react-jinke-music-player-main.light-theme .audio-item.playing svg {
+  color: black !important;
+}
+.react-jinke-music-player-main.light-theme svg {
+  color: black;
+}
+.react-jinke-music-player-main.light-theme svg:hover {
+  color: goldenrod;
+}
+.react-jinke-music-player-main
+  .music-player-panel
+  .panel-content
+  .progress-bar-content
+  .audio-title {
+  color: black;
+}
+.react-jinke-music-player-main
+  .music-player-panel
+  .panel-content
+  .progress-bar-content
+  .audio-main {
+  color: black;
+}
+.react-jinke-music-player-main.light-theme button.rc-switch-checked {
+  background-color: black !important;
+  border: black;
+}
+.react-jinke-music-player-main
+  .music-player-panel
+  .panel-content
+  .progress-bar-content
+  .progress-bar
+  .rc-slider-track {
+  background-color: black;
+}
+.react-jinke-music-player-main
+  .music-player-panel
+  .panel-content
+  .progress-bar-content
+  .progress-bar {
+  background-color: transparent !important;
+}
+.rc-slider-track {
+  background-color: goldenrod;
+}
+.rc-slider-handle {
+  background-color: black !important;
+}
+.rc-slider-handle:hover {
+  background-color: goldenrod !important;
+}
+.rc-slider-step {
+  background-color: black !important;
+}
+
+.react-jinke-music-player-main.dark-theme svg {
+  color: white;
+}
+
+.react-jinke-music-player-main.dark-theme
+  .music-player-panel
+  .panel-content
+  .progress-bar-content
+  .progress-bar
+  .rc-slider-track {
+  background-color: goldenrod;
+}
+.react-jinke-music-player-main
+  .dark-theme
+  .music-player-panel
+  .panel-content
+  .progress-bar-content
+  .audio-title {
+  color: white;
 }
 
 /*animated scroll arrow animation*/
@@ -365,42 +514,29 @@ main {
   line-height: 1.1;
   height: 90vh;
 }
-.dark-mode .modal-container{
+.dark-mode .modal-container {
   background: #303030;
-  width:20%;
-
+  width: 20%;
 }
-.dark-mode .modal-body{
+.dark-mode .modal-body {
   text-align: center;
   background: #303030;
-  color:white;
-  font-family:"Times"
+  color: white;
+  font-family: "Times";
 }
-.dark-mode .modal-foot{
+.dark-mode .modal-foot {
   justify-content: left;
 }
 
-.modal-container{
-  width:1450px;
-
+.modal-container {
+  width: 20%;
 }
-.modal-open{
-  justify-content:center;
-  text-align:center;
-  background:black;
-}
-.modal-body{
+.modal-body {
   text-align: center;
-  font-family:"Times"
+  font-family: "Times";
 }
-.modal-foot{
+.modal-foot {
   justify-content: left;
-}
-.fade modal-container modal show{
-  width:1450px;
-  display:block;
-  padding-left:0;
-  justify-content: center;
 }
 
 .toggle-container > span {
@@ -587,7 +723,7 @@ h1 {
   font-size: calc(10px + 2vmin);
 }
 .main-nav {
-  font-family: Arial, sans-serif;
+  font-family: Times, sans-serif;
   margin: 0 25%;
   float: left;
 }
@@ -725,12 +861,6 @@ h3 {
 
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-}
-.tree-photo {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
 }
 
 /*We will use ::before and ::after to draw the connectors*/
@@ -873,6 +1003,7 @@ body#archive .footer {
 .tree li a:hover ~ ul ul::before {
   border-color: #94a0b4;
 }
+
 input[type="checkbox"] {
   display: none;
 }
@@ -893,34 +1024,44 @@ input[type="checkbox"]:checked ~ label > img {
   transform: scale(2);
   cursor: zoom-out;
 }
-
-.tree-wrapper {
-  display: inline-block;
-  min-height: 500px;
-  width: 13000px;
-  transform: scale(0.105);
-  transform-origin: -1.02% 1% 0px;
-  overflow-y: hidden;
-  margin-left: 150px;
-  transition: transform 1s;
+.nav-item {
+  padding-left: 5px !important;
 }
-
-
 
 .tree-profile {
   position: relative;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  padding-bottom: 2em;
 }
+
+.tree-photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.tree {
+  height: 500px;
+  position: absolute;
+}
+
 .tree-info {
   font-size: 55px;
   font-family: "Times New Roman", Times, serif;
 }
-.navbar-header {
-  position: relative !important;
-  top: 0;
-  width: 1450px;
+
+
+
+.btn.btn-primary {
+  background-color: grey !important;
+}
+
+.search-profile {
+  position: relative;
+  width: 450px;
+  height: 450px;
 }
 .main-footer {
   width: 1450px;
@@ -928,12 +1069,322 @@ input[type="checkbox"]:checked ~ label > img {
 #scroll {
   background: grey;
 }
+.player-wrapper {
+  position: relative;
+  padding-top: 0; /* Player ratio: 100 / (1280 / 720) */
+  justify-content: center;
+}
 
+.react-player {
+  position: relative;
+  top: 0;
+  left: 0 !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.eras {
+  padding-top: 15px;
+}
+
+.eras-title {
+  margin-bottom: 20px;
+  padding: 5px 0 5px 10px;
+  text-align: left;
+  font-family: "Euclid Flex", "Helvetica", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600;
+  letter-spacing: 1 px;
+  text-transform: uppercase;
+  border-left: 8px solid grey;
+  background-color: black;
+  color: white !important;
+}
+
+.era-span {
+  margin-bottom: 150px;
+  width: 1440px;
+  height: 510px;
+}
+.era {
+  margin: 0;
+}
+
+.era-text-link {
+  text-align: left;
+}
+.era-date {
+  text-align: left;
+  margin-bottom: 20px !important;
+  font-weight: 300;
+}
+.rich-text-desc {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.span-title-link {
+  color: black;
+}
+.span-title-link:hover {
+  color: grey !important;
+}
+.dark-mode .span-title-link:hover {
+  color: darkgrey !important;
+}
+.results {
+  height: 300px !important;
+  overflow-y: scroll;
+}
+.ui .results {
+  top: auto !important;
+}
+.ui.search > .results {
+  top: auto !important;
+}
+.era-starter-info{
+  padding-top:15px;
+}
+.greeting-text{
+  font-family:Times !important;
+  font-weight:300 !important;
+  font-size:1.75 em !important;
+}
+
+@media screen and (min-width: 1080px) {
+  .top {
+    min-height: calc(75vh - 00px);
+  }
+
+  .main-footer {
+    width: 1450px;
+  }
+
+  .navbar-header {
+    top: 0;
+    width: 1450px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 165px;
+    transition: transform 1s;
+    left: 0;
+  }
+  .span-link {
+    width: 1440px;
+  }
+  .era-text-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 10px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Gita.Baigelman139.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+  }
+
+  [class^="image-"] {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-position: center;
+  }
+  .era-text-link {
+    font-family: "Euclid Flex", "Helvetica", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700;
+  }
+  .era-date {
+    font-size: 18px !important;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/Pre-WWII/Gita.Baigelman139.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+  }
+  .navbar-header {
+    top: 0;
+    width: 1680px;
+  }
+  .main-footer {
+    width: 1680px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 275px;
+    transition: transform 1s;
+    left: 0;
+  }
+  .modal-container modal show {
+    margin-left: 200px !important;
+  }
+  .era-span {
+    margin-bottom: 150px;
+    width: 1680px;
+    height: 510px;
+  }
+  .era-text-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 100px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
+  [class^="image-"] {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 1920px) {
+   .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/Pre-WWII/Gita.Baigelman139.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+  }
+  .navbar-header {
+    top: 0;
+    width: 1920px;
+  }
+  .main-footer {
+    width: 1920px;
+  }
+  .tree-wrapper {
+    display: inline-block;
+    height: 2700px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 400px !important;
+    transition: transform 1s;
+    left: 0;
+  }
+  [class^="image-"] {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-position: center;
   }
 }

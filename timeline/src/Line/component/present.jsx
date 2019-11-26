@@ -50,72 +50,84 @@ const presentTimelineObjects = [
   {
     title: "Adolfo Spzilman",
     subtitle: "More info about Adolfo.",
+    style: "image-adolfo",
     image: require("../../Media/Modern/Adolfo.Szpilman098.jpeg"),
     path: "/present/adolfo"
   },
   {
     title: "Carol",
     subtitle: "More info about Carol.",
+    style: "image-carol",
     image: require("../../Media/Modern/Carol344.jpeg"),
     path: "/present/carol"
   },
   {
     title: "Ed",
     subtitle: "More info about Ed.",
+    style: "image-ed",
     image: require("../../Media/Modern/Ed.Silver089.jpeg"),
     path: "/present/ed"
   },
   {
     title: "Fonia",
     subtitle: "More info about Fonia.",
+    style: "image-fonia",
     image: require("../../Media/Modern/Fonia239.jpeg"),
     path: "/present/fonia"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
+    style: "image-henry",
     image: require("../../Media/Modern/Henry367.jpeg"),
     path: "/present/henry"
   },
   {
     title: "Jack Baigelman",
     subtitle: "More info about Jack.",
+    style: "image-jack",
     image: require("../../Media/Modern/Jack.Baigelman061.jpeg"),
     path: "/present/jack"
   },
   {
     title: "Mordecai",
     subtitle: "More info about Mordecai.",
+    style: "image-mordecai",
     image: require("../../Media/Modern/Mordecai186.jpeg"),
     path: "/present/mordecai"
   },
   {
     title: "Pola",
     subtitle: "More info about Pola.",
+    style: "image-pola",
     image: require("../../Media/Modern/pola179.jpeg"),
     path: "/present/pola"
   },
   {
     title: "Rachel",
     subtitle: "More info about Rachel.",
+    style: "image-rachel",
     image: require("../../Media/Modern/Rachel188.jpeg"),
     path: "/present/rachel"
   },
   {
     title: "Riva",
     subtitle: "More info about Riva.",
+    style: "image-riva",
     image: require("../../Media/Modern/Riva346.jpeg"),
     path: "/present/riva"
   },
   {
     title: "Sevek",
     subtitle: "More info about Sevek.",
+    style: "image-sevek",
     image: require("../../Media/Modern/Sevek267.jpeg"),
     path: "/present/sevek"
   },
   {
     title: "Starski",
     subtitle: "More info about Starski.",
+    style: "image-starski",
     image: require("../../Media/Modern/Starski083.jpeg"),
     path: "/present/starski"
   }
@@ -155,137 +167,6 @@ class Line extends Component {
   };
 
   render() {
-    const cards = presentTimelineObjects.map((card, i) => (
-      <React.Fragment key={i}>
-        {i % 2 === 0 ? (
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            key={i}
-            iconStyle={{
-              background: "rgb(204, 153, 0)",
-              color: "#000"
-            }}
-            paddingTop="0em"
-
-            //icon={<Print/>}
-          >
-            <div>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                  // onClick={e => {
-                  //this.handlePop(e, i);
-                  // </Card> }}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "right",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "right",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Right popover text
-                </Popover>
-              </Card>
-            </div>
-          </VerticalTimelineElement>
-        ) : (
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            key={i}
-            iconStyle={{
-              background: "rgb(204, 153, 0)",
-              color: "#000"
-            }}
-            paddingTop="0em"
-
-            //icon={<Print/>}
-          >
-            <div>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                  // onClick={e => {
-                  //  this.handlePop(e, i);
-                  // }}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "left",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "left",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Left popover text
-                </Popover>
-              </Card>
-            </div>
-          </VerticalTimelineElement>
-        )}
-      </React.Fragment>
-    ));
     return (
       <Router>
         <Switch>
@@ -306,14 +187,13 @@ class Line extends Component {
                 isCentered={true}
                 imageSrc={GreetImage}
               >
-                <h3 style={{ fontFamily: "Times", color:"white" }}>Present</h3>
+                <h3 style={{ fontFamily: "Times", color: "white" }}>Present</h3>
                 <div>
                   <Grid item>
                     <ButtonGroup
                       color="yellow"
                       aria-label="Outlined primary button group"
                     >
-
                       <Button
                         onClick={() => {
                           this.scrollDiv.current.scrollIntoView({
@@ -323,8 +203,7 @@ class Line extends Component {
                         style={{ color: "white" }}
                       >
                         Visit Timeline
-                        </Button>
-
+                      </Button>
                     </ButtonGroup>
                   </Grid>
                 </div>
@@ -332,16 +211,56 @@ class Line extends Component {
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
-                <div>
+                <div className="era-starter-info">
                   <h4 style={{ textAlign: "center" }}>Present</h4>
                   <h6 style={{ textAlign: "center" }}>
                     History and more information about the family up until now.
                   </h6>
                 </div>
               </div>
-              <VerticalTimeline>
-                <div>{cards}</div>
-              </VerticalTimeline>
+              <ul className="eras">
+                {presentTimelineObjects.map((person, i) => (
+                  <li className="era-span">
+                    <Link to={person.path} className="span-link">
+                      <a
+                        class={person.style}
+                        style={{
+                          backgroundImage: 'url("' + person.image + '")'
+                        }}
+                      >
+                        &nbsp;
+                      </a>
+                    </Link>
+                    <div className="l-container era-text-container">
+                      <div className="page-section__row era-text-inner-container">
+                        <div className="page-section__title-container era-text-break"></div>
+                        <div className="page-section__content era-text">
+                          <Link to={person.path} className="span-title-link">
+                            <h3 className="era-text-link">{person.title}</h3>
+                          </Link>
+                          <p className="era-date">
+                            <span>1900-1950</span>
+                          </p>
+                          <div className="rich-text-desc">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur
+                              sint occaecat cupidatat non proident, sunt in
+                              culpa qui officia deserunt mollit anim id est
+                              laborum.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </Switch>

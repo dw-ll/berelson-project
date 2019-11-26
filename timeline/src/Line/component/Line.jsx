@@ -25,10 +25,18 @@ import ButtonGroup from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Popover from "@material-ui/core/Popover";
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView
+} from "mdbreact";
 import Greeting from "react-lazy-hero";
 import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
-import Lodz from "../../Media/lodz.jpg";
-import * as famData from "../../family.json";
+import CarolGreet from "../../Media/Modern/Carol343.jpeg";
+import EdGreet from "../../Media/Post-WWII 2/Ed.Silver091.jpeg";
+import Fonia2Greet from "../../Media/Post-WWII 2/Fonia208 2.jpeg";
 
 const routes = [
   {
@@ -144,51 +152,53 @@ export default class Line extends Component {
             //icon={<Print/>}
           >
             <div className={card.divID}>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+              <Link to={routes[i].path}>
+                <Card className="card-style">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "100%" }}
+                      image={card.image}
+                    />
+                    <CardContent>
+                      <Typography
+                        className="card-info"
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {card.title}
+                      </Typography>
+                      <Typography className="card-info" component="p">
+                        {card.subtitle}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
 
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "right",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "right",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Right popover text
-                </Popover>
-              </Card>
+                  <Button
+                    size="small"
+                    color="primary"
+                    component={Link}
+                    to={card.path}
+                  >
+                    Learn More
+                  </Button>
+                  <Popover
+                    open={this.state.popped === i}
+                    anchorEl={this.state.anchorEl}
+                    anchorOrigin={{
+                      horizontal: "right",
+                      vertical: "center "
+                    }}
+                    transformOrigin={{
+                      horizontal: "right",
+                      vertical: "bottom"
+                    }}
+                    onClose={this.handleRequestClose}
+                  >
+                    Right popover text
+                  </Popover>
+                </Card>
+              </Link>
             </div>
           </VerticalTimelineElement>
         ) : (
@@ -205,51 +215,53 @@ export default class Line extends Component {
             //icon={<Print/>}
           >
             <div>
-              <Card className="card-style">
-                <CardActionArea>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "100%" }}
-                    image={card.image}
-                  />
-                  <CardContent>
-                    <Typography
-                      className="card-info"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography className="card-info" component="p">
-                      {card.subtitle}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+              <Link to={routes[i].path}>
+                <Card className="card-style">
+                  <CardActionArea>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "100%" }}
+                      image={card.image}
+                    />
+                    <CardContent>
+                      <Typography
+                        className="card-info"
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {card.title}
+                      </Typography>
+                      <Typography className="card-info" component="p">
+                        {card.subtitle}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
 
-                <Button
-                  size="small"
-                  color="primary"
-                  component={Link}
-                  to={card.path}
-                >
-                  Learn More
-                </Button>
-                <Popover
-                  open={this.state.popped === i}
-                  anchorEl={this.state.anchorEl}
-                  anchorOrigin={{
-                    horizontal: "left",
-                    vertical: "center "
-                  }}
-                  transformOrigin={{
-                    horizontal: "left",
-                    vertical: "bottom"
-                  }}
-                  onClose={this.handleRequestClose}
-                >
-                  Left popover text
-                </Popover>
-              </Card>
+                  <Button
+                    size="small"
+                    color="primary"
+                    component={Link}
+                    to={card.path}
+                  >
+                    Learn More
+                  </Button>
+                  <Popover
+                    open={this.state.popped === i}
+                    anchorEl={this.state.anchorEl}
+                    anchorOrigin={{
+                      horizontal: "left",
+                      vertical: "center "
+                    }}
+                    transformOrigin={{
+                      horizontal: "left",
+                      vertical: "bottom"
+                    }}
+                    onClose={this.handleRequestClose}
+                  >
+                    Left popover text
+                  </Popover>
+                </Card>
+              </Link>
             </div>
           </VerticalTimelineElement>
         )}
@@ -270,36 +282,8 @@ export default class Line extends Component {
             />
           ))}
 
-          <div id="hero-greet">
-        
-            <Greeting
-              minHeight="100vh"
-              opacity="0"
-              isCentered={true}
-              imageSrc={Lodz}
-              className="greeting"
-            >
-            <div className="greeting-greet">
-              <h3 className="greeting-text" style={{ color: "black", fontFamily: "Times", marginTop:"10px"}}>
-                The Berelson Project
-              </h3>
-              <div className="greeting-button">
-                <Grid item>
-                  <ButtonGroup
-                    aria-label="Outlined primary button group"
-                  >
-                    <Button
-                      component={Link}
-                      to="/archive"
-                      className="greeting-button-text"
-                    >
-                      Visit Archive
-                    </Button>
-                  </ButtonGroup>
-                </Grid>
-              </div>
-              </div>
-            </Greeting>
+          <div className="back">
+            <div id="landing"></div>
           </div>
         </Switch>
       </Router>

@@ -14,7 +14,6 @@ import Popover from "@material-ui/core/Popover";
 import Toast from "react-bootstrap/Toast";
 import Popup from "reactjs-popup";
 import Container from "react-bootstrap/Container";
-import Back from "../../24px.svg";
 
 import {
   VerticalTimeline,
@@ -33,7 +32,6 @@ import HenryGreet from "../../Media/Pre-WWII/Henry.Baigelman002.jpeg";
 import "react-vertical-timeline-component/style.min.css";
 
 //import {Print} from 'material-ui-icons/AccessAlarm';
-
 const routes = [
   {
     component: Abram,
@@ -72,48 +70,56 @@ const preTimelineObjects = [
   {
     title: "Abram Baigelman",
     subtitle: "More info about Abram.",
+    style: "image-abram",
     image: require("../../Media/Pre-WWII/Abram.Baigelman026.jpeg"),
     path: "/pre/abram"
   },
   {
     title: "Chana Fodeman",
     subtitle: "More info about Chana.",
+    style: "image-chana",
     image: require("../../Media/Pre-WWII/Chana.Fodeman025 2.jpeg"),
     path: "/pre/chana"
   },
   {
     title: "David Baigelman",
     subtitle: "More info about David.",
+    style: "image-david",
     image: require("../../Media/Pre-WWII/David.Baigelman016 2.jpeg"),
     path: "/pre/david"
   },
   {
     title: "Gita Baigelman",
     subtitle: "More info about Gita.",
+    style: "image-gita",
     image: require("../../Media/Pre-WWII/Gita.Baigelman137.jpeg"),
     path: "/pre/gita"
   },
   {
     title: "Henry Baigelman",
     subtitle: "More info about Henry.",
+    style: "image-henry",
     image: require("../../Media/Pre-WWII/Henry.Baigelman002.jpeg"),
     path: "/pre/henry"
   },
   {
     title: "Jolly Boys",
     subtitle: "More info about the Jolly Boys.",
+    style: "image-jolly",
     image: require("../../Media/Pre-WWII/Jolly.Bays008.jpeg"),
     path: "/pre/jolly_boys"
   },
   {
     title: "Leon Glazer",
     subtitle: "More info about Leon.",
+    style: "image-leon",
     image: require("../../Media/Pre-WWII/Leon.Glazer143.jpeg"),
     path: "/pre/leon"
   },
   {
     title: "Lodz Theatre",
     subtitle: "More info about the Lodz Theatre.",
+    style: "image-lodz",
     image: require("../../Media/Pre-WWII/Lodz.Theatre426.jpeg"),
     path: "/pre/lodz"
   }
@@ -216,7 +222,7 @@ class Line extends Component {
             </div>
             <div ref={this.scrollDiv}>
               <div id="timeline-start" href="/timeline">
-                <div>
+                <div className="era-starter-info">
                   <h4 style={{ textAlign: "center" }}>Pre World War 2</h4>
                   <h6 style={{ textAlign: "center" }}>
                     History and more information about the family prior to the
@@ -224,199 +230,49 @@ class Line extends Component {
                   </h6>
                 </div>
               </div>
-              <VerticalTimeline>
-                {preTimelineObjects.map((card, i) => (
-                  <React.Fragment key={i}>
-                    {i % 2 === 0 ? (
-                      <Container id={i}>
-                        <VerticalTimelineElement
-                          className="vertical-timeline-element--work"
-                          iconStyle={{
-                            background: "rgb(40,49,72)",
-                            color: "#000"
-                          }}
-                          paddingTop="0em"
-                          date="1920-1950"
-
-                          //icon={<Print/>}
-                        >
-                          <Card className="card-style">
-                            <CardActionArea>
-                              <CardMedia
-                                style={{
-                                  height: 0,
-                                  paddingTop: "100%"
-                                }}
-                                image={card.image}
-                              />
-                              <CardContent>
-                                <Typography
-                                  className="card-info"
-                                  gutterBottom
-                                  variant="h5"
-                                  component="h2"
-                                >
-                                  {card.title}
-                                </Typography>
-                              </CardContent>
-                            </CardActionArea>
-
-                            <Button
-                              size="small"
-                              color="primary"
-                              component={Link}
-                              to={card.path}
-                              /** onClick={e => {
-                                  this.handlePop(e, i);
-                                  console.log(i);
-                                }} */
-                            >
-                              Learn More
-                            </Button>
-                          </Card>
-                        </VerticalTimelineElement>
-
-                        <div
-                          id={i}
-                          style={{
-                            float: "right",
-                            width: "40%",
-                            height: "20%"
-                          }}
-                        >
-                          <Toast
-                            show={this.state.popped === i}
-                            onClose={this.handleRequestClose}
-                            style={{
-                              position: "absolute",
-                              top: 100
-                            }}
-                          >
-                            <Toast.Header>{card.title}</Toast.Header>
-                            <Toast.Body>
-                              <Card className="card">
-                                <CardActionArea>
-                                  <CardMedia
-                                    style={{
-                                      height: 0,
-                                      paddingTop: "100%"
-                                    }}
-                                    image={card.image}
-                                  />
-                                  <CardContent>
-                                    <Typography>{card.subtitle}</Typography>
-                                  </CardContent>
-                                </CardActionArea>
-                              </Card>
-                            </Toast.Body>
-                          </Toast>
-                        </div>
-                      </Container>
-                    ) : (
-                      <Container id={i}>
-                        <div
-                          lg="auto"
-                          style={{
-                            float: "left",
-                            width: "30%",
-                            height: "80"
-                          }}
-                        >
-                          <Toast
-                            show={this.state.popped === i}
-                            onClose={this.handleRequestClose}
-                            style={{
-                              position: "absolute",
-                              top: 100
-                            }}
-                          >
-                            <Toast.Header>{card.title}</Toast.Header>
-                            <Toast.Body>
-                              <Card className="card-style">
-                                <CardActionArea>
-                                  <CardMedia
-                                    style={{
-                                      height: 0,
-                                      paddingTop: "100%"
-                                    }}
-                                    image={card.image}
-                                  />
-                                  <CardContent>
-                                    <Typography className="card-info">
-                                      {card.subtitle}
-                                    </Typography>
-                                  </CardContent>
-                                </CardActionArea>
-                              </Card>
-                            </Toast.Body>
-                          </Toast>
-                        </div>
-                        <VerticalTimelineElement
-                          className="vertical-timeline-element--work"
-                          key={i}
-                          iconStyle={{
-                            background: "rgb(40,49,72)",
-                            color: "#000"
-                          }}
-                          paddingTop="0em"
-                          date="1920-1950"
-
-                          //icon={<Print/>}
-                        >
-                          <div>
-                            <Card className="card-style">
-                              <CardActionArea>
-                                <CardMedia
-                                  style={{ height: 0, paddingTop: "100%" }}
-                                  image={card.image}
-                                />
-                                <CardContent>
-                                  <Typography
-                                    className="card-info"
-                                    gutterBottom
-                                    variant="h5"
-                                    component="h2"
-                                  >
-                                    {card.title}
-                                  </Typography>
-                                </CardContent>
-                              </CardActionArea>
-
-                              <Button
-                                size="small"
-                                color="primary"
-                                component={Link}
-                                to={card.path}
-                                /**  onClick={e => {
-                                  this.handlePop(e, i);
-                                }}*/
-                              >
-                                Learn More
-                              </Button>
-                              <Popover
-                                open={this.state.popped === i}
-                                anchorEl={this.state.anchorEl}
-                                anchorOrigin={{
-                                  horizontal: "left",
-                                  vertical: "center "
-                                }}
-                                transformOrigin={{
-                                  horizontal: "left",
-                                  vertical: "center"
-                                }}
-                                onClose={this.handleRequestClose}
-                              >
-                                Left popover text
-                              </Popover>
-                            </Card>
+              <ul className="eras">
+                {preTimelineObjects.map((person, i) => (
+                  <li className="era-span">
+                    <Link to={person.path} className="span-link">
+                      <a
+                        class={person.style}
+                        style={{ backgroundImage: 'url("' + person.image + '")' }}
+                      >
+                        &nbsp;
+                      </a>
+                    </Link>
+                    <div className="l-container era-text-container">
+                      <div className="page-section__row era-text-inner-container">
+                        <div className="page-section__title-container era-text-break"></div>
+                        <div className="page-section__content era-text">
+                          <Link to={person.path} className="span-title-link">
+                            <h3 className="era-text-link">{person.title}</h3>
+                          </Link>
+                          <p className="era-date">
+                            <span>1900-1950</span>
+                          </p>
+                          <div className="rich-text-desc">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur
+                              sint occaecat cupidatat non proident, sunt in
+                              culpa qui officia deserunt mollit anim id est
+                              laborum.
+                            </p>
                           </div>
-                        </VerticalTimelineElement>
-                      </Container>
-                    )}
-                  </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 ))}
-                ;
-              </VerticalTimeline>
+
+              
+              </ul>
             </div>
           </div>
         </Switch>
