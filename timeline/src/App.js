@@ -14,6 +14,7 @@ import _ from "lodash";
 import { Search, Label } from "semantic-ui-react";
 import SearchBar from "react-search-bar-semantic-ui";
 import MusicPlayer from "react-jinke-music-player";
+import musicPlayer from "./Line/component/musicPlayer.jsx";
 import "react-jinke-music-player/assets/index.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -2607,23 +2608,74 @@ const options = {
   //audio lists model
   audioLists: [
     {
-      name: "Despacito",
-      singer: "Luis Fonsi",
-      cover:
-        "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
-      musicSrc: () => {
-        return Promise.resolve(
-          "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3"
-        );
-      }
+      name: "Makh Tsu Di Eygelekh",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3"
     },
     {
-      name: "Bedtime Stories",
-      singer: "Jay Chou",
-      cover:
-        "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
+      name: "Makh Tsu Di Eygelekh 2",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
       musicSrc:
-        "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3"
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav"
+    },
+    {
+      name: "Tsigaynerlid",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490511/03_Tsigaynerlid_fqfelx.wav"
+    },
+    {
+      name: "Der Yungiker Shnayderl",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490550/Der_yungiker_shnayderl_The_Young_Taylor_itmlrj.wav"
+    },
+    {
+      name: "Es Benkt Zikh Nokh a Heym",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490560/Es_benkt_zikh_nokh_a_heym_We_long_for_a_home_rst1da.wav"
+    },
+    {
+      name: "Feldafing",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav"
+    },
+    {
+      name: "Grzech A Sin",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490521/Grzech_A_Sin_yvnbgy.wav"
+    },
+    {
+      name: "Ikh Vil Fargesn",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav"
+    },
+    {
+      name: "Nie Gniewaj Sie",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490667/Nie_gniewaj_sie_Don_t_Sulk_My_Dear_bjqbgz.wav"
+    },
+    {
+      name: "Untitled",
+      singer: "David Baigelman",
+      cover: require("./Media/Pre-WWII/David.Baigelman016.jpeg"),
+      musicSrc:
+        "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490640/Unknown_Instrumental_Fragment_2_fmi7kc.wav"
     }
   ],
 
@@ -2840,7 +2892,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
@@ -2895,9 +2946,7 @@ const App = () => {
       ) : (
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           <Navbar className="navbar-header no-shadows" light expand="md">
-            <NavbarBrand href="/#">
-              {"Vessel Archives"}
-            </NavbarBrand>
+            <NavbarBrand href="/#">{"Vessel Archives"}</NavbarBrand>
 
             <Nav className="ml-auto" navbar>
               <NavItem>
