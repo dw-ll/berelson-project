@@ -161,7 +161,7 @@ const FamilyTree = () => {
   const handleRivaOpen = () => {
     setRivaOpen(true);
   };
- 
+
   return (
     <Router>
       <Switch>
@@ -204,40 +204,40 @@ const FamilyTree = () => {
             <div class="tree">
               <ul>
                 <li>
-                  <a className="inactive" href=" ">
+                  <a className="inactive" href="# ">
                     <img alt="" class="tree-profile" src={Missing} />
                     <div class="tree-info">Koppel</div>
                   </a>
-                  <a className="inactive" href=" ">
+                  <a className="inactive" href="# ">
                     <img alt="" class="tree-profile" src={Chana} />
                     <div class="tree-info">Chana Fodeman</div>
                   </a>
                   <ul>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Pinchas</div>
                       </a>
 
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         Katz
                       </a>
                       <ul>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Abram</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Brother</div>
                           </a>
                           <ul>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -248,7 +248,7 @@ const FamilyTree = () => {
                               </a>
                               <ul>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -257,7 +257,7 @@ const FamilyTree = () => {
                                     />
                                     <div class="tree-info">Married</div>
                                   </a>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -274,37 +274,37 @@ const FamilyTree = () => {
                       </ul>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Freide</div>
                       </a>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Pessel</div>
                       </a>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Rosa</div>
                       </a>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Simon</div>
                       </a>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Riva</div>
                       </a>
 
                       <ul>
                         <li>
-                          <a onClick={handleDavidOpen} href=" ">
+                          <a onClick={handleDavidOpen} href="# ">
                             <img alt="" class="tree-profile" src={DavidB} />
                             <div class="tree-info">David</div>
                           </a>
@@ -342,14 +342,14 @@ const FamilyTree = () => {
                             </Modal.Footer>
                           </Modal>
 
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chana Federman</div>
                           </a>
 
                           <ul>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -361,13 +361,13 @@ const FamilyTree = () => {
                           </ul>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chaya</div>
                           </a>
                           <ul>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -377,7 +377,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -387,7 +387,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -397,7 +397,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -407,7 +407,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -419,7 +419,7 @@ const FamilyTree = () => {
                           </ul>
                         </li>
                         <li>
-                          <a onClick={handleOpen} href=" ">
+                          <a onClick={handleOpen} href="# ">
                             <img alt="" class="tree-profile" src={Henry} />
                             <div class="tree-info">Henry</div>
                           </a>
@@ -457,13 +457,16 @@ const FamilyTree = () => {
                               </LinkContainer>
                             </Modal.Footer>
                           </Modal>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Greta Glazer</div>
                           </a>
                           <ul>
                             <li>
-                              <a onClick={handleRivaOpen} href=" ">
+                              <a
+                                onClick={handleRivaOpen}
+                                href="# "
+                              >
                                 <img alt="" class="tree-profile" src={Riva} />
                                 <div class="tree-info">Riva</div>
                               </a>
@@ -503,7 +506,7 @@ const FamilyTree = () => {
                                   </LinkContainer>
                                 </Modal.Footer>
                               </Modal>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -513,7 +516,7 @@ const FamilyTree = () => {
                               </a>
                               <ul>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     <img
                                       alt=""
                                       class="tree-profile"
@@ -525,7 +528,7 @@ const FamilyTree = () => {
                               </ul>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -533,7 +536,7 @@ const FamilyTree = () => {
                                 />
                                 <div class="tree-info">Simon</div>
                               </a>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -543,7 +546,7 @@ const FamilyTree = () => {
                               </a>
                               <ul>
                                 <li>
-                                  <a href=" ">
+                                  <a href="# ">
                                     <img
                                       alt=""
                                       class="tree-profile"
@@ -551,7 +554,7 @@ const FamilyTree = () => {
                                     />
                                     <div class="tree-info">Serj</div>{" "}
                                   </a>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -562,7 +565,7 @@ const FamilyTree = () => {
                                   </a>
                                   <ul>
                                     <li>
-                                      <a className="inactive" href=" ">
+                                      <a className="inactive" href="# ">
                                         <img
                                           alt=""
                                           class="tree-profile"
@@ -574,7 +577,7 @@ const FamilyTree = () => {
                                   </ul>
                                 </li>
                                 <li>
-                                  <a href=" ">
+                                  <a href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -585,7 +588,7 @@ const FamilyTree = () => {
                                   </a>
                                 </li>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -601,7 +604,7 @@ const FamilyTree = () => {
                         </li>
 
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Shlomo</div>
@@ -609,23 +612,23 @@ const FamilyTree = () => {
                         </li>
 
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Rosa</div>
                           </a>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Abram</div>
                           </a>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Raquel</div>
                           </a>
                           <ul>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -637,40 +640,40 @@ const FamilyTree = () => {
                           </ul>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Avram</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chaina</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chamon</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Eita</div>
                           </a>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Shmuel</div>
                           </a>
                           <ul>
                             <li>
-                              <a onClick={handleJackOpen} href=" ">
+                              <a onClick={handleJackOpen} href="# ">
                                 <img alt="" class="tree-profile" src={Jack} />
                                 <div class="tree-info">Jack</div>
                               </a>
@@ -710,7 +713,7 @@ const FamilyTree = () => {
                                   </LinkContainer>
                                 </Modal.Footer>
                               </Modal>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 <img
                                   alt=""
                                   class="tree-profile"
@@ -721,7 +724,7 @@ const FamilyTree = () => {
                               <ul>
                                 <li>
                                   <li>
-                                    <a className="inactive" href=" ">
+                                    <a className="inactive" href="# ">
                                       {" "}
                                       <img
                                         alt=""
@@ -732,7 +735,7 @@ const FamilyTree = () => {
                                     </a>
                                   </li>
                                   <li>
-                                    <a className="inactive" href=" ">
+                                    <a className="inactive" href="# ">
                                       <img
                                         alt=""
                                         class="tree-profile"
@@ -740,7 +743,7 @@ const FamilyTree = () => {
                                       />
                                       <div class="tree-info">Mark</div>
                                     </a>
-                                    <a className="inactive" href=" ">
+                                    <a className="inactive" href="# ">
                                       <img
                                         alt=""
                                         class="tree-profile"
@@ -750,7 +753,7 @@ const FamilyTree = () => {
                                     </a>
                                     <ul>
                                       <li>
-                                        <a className="inactive" href=" ">
+                                        <a className="inactive" href="# ">
                                           {" "}
                                           <img
                                             class="tree-profile"
@@ -761,7 +764,7 @@ const FamilyTree = () => {
                                         </a>
                                       </li>
                                       <li>
-                                        <a className="inactive" href=" ">
+                                        <a className="inactive" href="# ">
                                           {" "}
                                           <img
                                             class="tree-profile"
@@ -774,7 +777,7 @@ const FamilyTree = () => {
                                     </ul>
                                   </li>
                                   <li>
-                                    <a href=" ">
+                                    <a href="# ">
                                       {" "}
                                       <img
                                         alt=""
@@ -788,7 +791,7 @@ const FamilyTree = () => {
                               </ul>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -803,47 +806,47 @@ const FamilyTree = () => {
                       </ul>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Leizer</div>
                       </a>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Ida</div>
                       </a>
                       <ul>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Shmuel</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Avram</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chana</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chava</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Sheindel</div>
@@ -852,54 +855,54 @@ const FamilyTree = () => {
                       </ul>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Maika</div>
                       </a>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Rochverg</div>
                       </a>
                       <ul>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Max</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Simon</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Phillip</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chana</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Girl</div>
                           </a>
                         </li>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Girl</div>
@@ -908,31 +911,31 @@ const FamilyTree = () => {
                       </ul>
                     </li>
                     <li>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Yessel</div>
                       </a>
-                      <a className="inactive" href=" ">
+                      <a className="inactive" href="# ">
                         {" "}
                         <img alt="" class="tree-profile" src={Missing} />
                         <div class="tree-info">Paige Laufer</div>
                       </a>
                       <ul>
                         <li>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Yitzshak Baigelman</div>
                           </a>
-                          <a className="inactive" href=" ">
+                          <a className="inactive" href="# ">
                             {" "}
                             <img alt="" class="tree-profile" src={Missing} />
                             <div class="tree-info">Chana HS</div>
                           </a>
                           <ul>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -943,7 +946,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -952,7 +955,7 @@ const FamilyTree = () => {
                                 />
                                 <div class="tree-info">Bryndi</div>
                               </a>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -963,7 +966,7 @@ const FamilyTree = () => {
                               </a>
                               <ul>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -974,7 +977,7 @@ const FamilyTree = () => {
                                   </a>
                                 </li>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -983,7 +986,7 @@ const FamilyTree = () => {
                                     />
                                     <div class="tree-info">Ben</div>
                                   </a>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -994,7 +997,7 @@ const FamilyTree = () => {
                                   </a>
                                   <ul>
                                     <li>
-                                      <a className="inactive" href=" ">
+                                      <a className="inactive" href="# ">
                                         {" "}
                                         <img
                                           alt=""
@@ -1005,7 +1008,7 @@ const FamilyTree = () => {
                                       </a>
                                     </li>
                                     <li>
-                                      <a className="inactive" href=" ">
+                                      <a className="inactive" href="# ">
                                         {" "}
                                         <img
                                           alt=""
@@ -1016,7 +1019,7 @@ const FamilyTree = () => {
                                       </a>
                                     </li>
                                     <li>
-                                      <a className="inactive" href=" ">
+                                      <a className="inactive" href="# ">
                                         {" "}
                                         <img
                                           alt=""
@@ -1031,7 +1034,7 @@ const FamilyTree = () => {
                               </ul>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -1040,7 +1043,7 @@ const FamilyTree = () => {
                                 />
                                 <div class="tree-info">Esther</div>
                               </a>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -1051,7 +1054,7 @@ const FamilyTree = () => {
                               </a>
                               <ul>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -1062,7 +1065,7 @@ const FamilyTree = () => {
                                   </a>
                                 </li>
                                 <li>
-                                  <a className="inactive" href=" ">
+                                  <a className="inactive" href="# ">
                                     {" "}
                                     <img
                                       alt=""
@@ -1075,7 +1078,7 @@ const FamilyTree = () => {
                               </ul>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -1084,7 +1087,7 @@ const FamilyTree = () => {
                                 />
                                 <div class="tree-info">Rivka</div>
                               </a>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -1095,7 +1098,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -1104,7 +1107,7 @@ const FamilyTree = () => {
                                 />
                                 <div class="tree-info">Ethel</div>
                               </a>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
@@ -1115,7 +1118,7 @@ const FamilyTree = () => {
                               </a>
                             </li>
                             <li>
-                              <a className="inactive" href=" ">
+                              <a className="inactive" href="# ">
                                 {" "}
                                 <img
                                   alt=""
