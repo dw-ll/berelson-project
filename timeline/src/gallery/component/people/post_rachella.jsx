@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Post from "../../../Line/component/post.jsx";

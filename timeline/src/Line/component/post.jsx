@@ -1,21 +1,10 @@
 import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Greeting from "react-lazy-hero";
-import Typography from "@material-ui/core/Typography";
-import Popover from "@material-ui/core/Popover";
-
-import {
-  VerticalTimeline,
-  VerticalTimelineElement
-} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Ed from "../../gallery/component/people/post_ed.jsx";
 import Fonia from "../../gallery/component/people/post_fonia.jsx";
@@ -249,6 +238,7 @@ class Line extends Component {
                         style={{
                           backgroundImage: 'url("' + person.image + '")'
                         }}
+                        href="!#"
                       >
                         &nbsp;
                       </a>

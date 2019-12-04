@@ -1,5 +1,5 @@
-import React, { createRef, Component, useState } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import "react-vertical-timeline-component/style.min.css";
@@ -13,17 +13,11 @@ import DavidB from "../../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 import Riva from "../../Media/Modern/Riva346.jpeg";
 import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
-import makeStyles from "@material-ui/core/styles";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import $ from "jquery";
 import "bootstrap/dist/css/bootstrap.css";
 
-
-
 require("bootstrap");
-
-
 
 require("bootstrap");
 
@@ -62,8 +56,8 @@ import Sevek from "../../gallery/component/people/present_sevek.jsx";
 import Starski from "../../gallery/component/people/present_starski.jsx";
 */
 
-const routes = [
-  /*
+/* const routes = [
+  
   {
     component: AbramP,
     path: "/pre/abram"
@@ -79,7 +73,7 @@ const routes = [
   {
     component: Gita,
     path: "/pre/gita"
-  },*/
+  },
   {
     component: HenryP,
     path: "/pre/henry"
@@ -137,31 +131,14 @@ const routes = [
   { component: Rachel, path: "/present/rachel" },
   { component: Riva, path: "/present/riva" },
   { component: Sevek, path: "/present/sevek" },
-  { component: Starski, path: "/present/starski" }*/
-];
-$(".tree")
-  // tile mouse actions
-  .on("mouseover", function() {
-    $(this).css({ transform: "scale(" + $(this).attr("data-scale") + ")" });
-  })
-  .on("mouseout", function() {
-    $(this).css({ transform: "scale(1)" });
-  })
-  .on("mousemove", function(e) {
-    $(this).css({
-      "transform-origin":
-        ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
-        "% " +
-        ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
-        "%"
-    });
-  });
+  { component: Starski, path: "/present/starski" }
+];*/
 
 const FamilyTree = () => {
   const [open, setOpen] = useState(false);
-   const [davidOpen, setDavidOpen] = useState(false);
-   const [jackOpen , setJackOpen] = useState(false);
-   const [rivaOpen, setRivaOpen] = useState(false);
+  const [davidOpen, setDavidOpen] = useState(false);
+  const [jackOpen, setJackOpen] = useState(false);
+  const [rivaOpen, setRivaOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -175,19 +152,16 @@ const FamilyTree = () => {
   const handleDavidClose = () => {
     setDavidOpen(false);
   };
-   const handleJackOpen = () => {
-     setJackOpen(true);
-   };
-   const handleJackClose = () => {
-     setJackOpen(false);
-   };
- const handleRivaOpen = () => {
-   setRivaOpen(true);
- };
- const handleRivaClose = () => {
-   setRivaOpen(false);
- };
-
+  const handleJackOpen = () => {
+    setJackOpen(true);
+  };
+  const handleJackClose = () => {
+    setJackOpen(false);
+  };
+  const handleRivaOpen = () => {
+    setRivaOpen(true);
+  };
+ 
   return (
     <Router>
       <Switch>
@@ -330,7 +304,7 @@ const FamilyTree = () => {
 
                       <ul>
                         <li>
-                          <a onClick={handleDavidOpen}>
+                          <a onClick={handleDavidOpen} href=" ">
                             <img alt="" class="tree-profile" src={DavidB} />
                             <div class="tree-info">David</div>
                           </a>
@@ -445,7 +419,7 @@ const FamilyTree = () => {
                           </ul>
                         </li>
                         <li>
-                          <a onClick={handleOpen}>
+                          <a onClick={handleOpen} href=" ">
                             <img alt="" class="tree-profile" src={Henry} />
                             <div class="tree-info">Henry</div>
                           </a>
@@ -489,7 +463,7 @@ const FamilyTree = () => {
                           </a>
                           <ul>
                             <li>
-                              <a onClick={handleRivaOpen}>
+                              <a onClick={handleRivaOpen} href=" ">
                                 <img alt="" class="tree-profile" src={Riva} />
                                 <div class="tree-info">Riva</div>
                               </a>
@@ -569,7 +543,7 @@ const FamilyTree = () => {
                               </a>
                               <ul>
                                 <li>
-                                  <a>
+                                  <a href=" ">
                                     <img
                                       alt=""
                                       class="tree-profile"
@@ -600,7 +574,7 @@ const FamilyTree = () => {
                                   </ul>
                                 </li>
                                 <li>
-                                  <a>
+                                  <a href=" ">
                                     {" "}
                                     <img
                                       alt=""
@@ -696,7 +670,7 @@ const FamilyTree = () => {
                           </a>
                           <ul>
                             <li>
-                              <a onClick={handleJackOpen}>
+                              <a onClick={handleJackOpen} href=" ">
                                 <img alt="" class="tree-profile" src={Jack} />
                                 <div class="tree-info">Jack</div>
                               </a>
@@ -800,7 +774,7 @@ const FamilyTree = () => {
                                     </ul>
                                   </li>
                                   <li>
-                                    <a>
+                                    <a href=" ">
                                       {" "}
                                       <img
                                         alt=""

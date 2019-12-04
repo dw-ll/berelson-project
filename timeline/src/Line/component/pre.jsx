@@ -1,24 +1,10 @@
 import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Greeting from "react-lazy-hero";
-import Typography from "@material-ui/core/Typography";
-import Popover from "@material-ui/core/Popover";
-import Toast from "react-bootstrap/Toast";
-import Popup from "reactjs-popup";
-import Container from "react-bootstrap/Container";
-
-import {
-  VerticalTimeline,
-  VerticalTimelineElement
-} from "react-vertical-timeline-component";
 import Abram from "../../gallery/component/people/pre_abram.jsx";
 import Chana from "../../gallery/component/people/pre_chana.jsx";
 import David from "../../gallery/component/people/pre_david.jsx";
@@ -236,7 +222,10 @@ class Line extends Component {
                     <Link to={person.path} className="span-link">
                       <a
                         class={person.style}
-                        style={{ backgroundImage: 'url("' + person.image + '")' }}
+                        style={{
+                          backgroundImage: 'url("' + person.image + '")'
+                        }}
+                        href="!#"
                       >
                         &nbsp;
                       </a>
@@ -270,8 +259,6 @@ class Line extends Component {
                     </div>
                   </li>
                 ))}
-
-              
               </ul>
             </div>
           </div>

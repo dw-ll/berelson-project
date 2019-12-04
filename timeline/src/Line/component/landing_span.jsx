@@ -1,23 +1,8 @@
-import React, { Component, createRef } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { render } from "react-dom";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
-import {
-  MDBCarousel,
-  MDBCarouselCaption,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBView
-} from "mdbreact";
 import Greeting from "react-lazy-hero";
 import Lodz from "../../Media/lodz.jpg";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import FoniaGreet from "../../Media/Post-WWII 2/Fonia213.jpeg";
-import CarolGreet from "../../Media/Modern/Carol343.jpeg";
-import EdGreet from "../../Media/Post-WWII 2/Ed.Silver091.jpeg";
-import Fonia2Greet from "../../Media/Post-WWII 2/Fonia208 2.jpeg";
 import Pre from "./pre.jsx";
 import WW2 from "./ww2.jsx";
 import Post from "./post.jsx";
@@ -83,7 +68,9 @@ export default class Span extends Component {
             </div>
             <ul className="eras">
               <li className="era-span">
-                <a className="era-image1 inactive">&nbsp;</a>
+                <a className="era-image1 inactive" href="!#">
+                  &nbsp;
+                </a>
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
                     <div className="page-section__title-container era-text-break"></div>
@@ -111,7 +98,9 @@ export default class Span extends Component {
                 </div>
               </li>
               <li className="era-span">
-                <a className="era-image2 inactive">&nbsp;</a>
+                <a className="era-image2 inactive" href="!#">
+                  &nbsp;
+                </a>
 
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
@@ -139,7 +128,9 @@ export default class Span extends Component {
                 </div>
               </li>
               <li className="era-span">
-                <a className="era-image3 inactive">&nbsp;</a>
+                <a className="era-image3 inactive" href="!#">
+                  &nbsp;
+                </a>
 
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
@@ -167,7 +158,9 @@ export default class Span extends Component {
                 </div>
               </li>
               <li className="era-span">
-                <a className="era-image4 inactive">&nbsp;</a>
+                <a className="era-image4 inactive" href="!#">
+                  &nbsp;
+                </a>
 
                 <div className="l-container era-text-container">
                   <div className="page-section__row era-text-inner-container">
