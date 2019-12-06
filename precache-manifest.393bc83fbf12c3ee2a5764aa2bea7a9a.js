@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6229f2a41387269eed9e6522e2bec745",
-    "url": "/static/media/Sevek269.6229f2a4.jpeg"
+    "revision": "53d30520a733defd33317ecd2d55f733",
+    "url": "/static/media/Sevek342.53d30520.jpeg"
   },
   {
-    "revision": "489183f640a799d3a6c7",
-    "url": "/static/css/main.a5520a1a.chunk.css"
+    "revision": "cf351e0f7233ab7ab3ec",
+    "url": "/static/css/main.c75e344a.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -744,12 +744,12 @@ self.__precacheManifest = [
     "url": "/static/media/Sevek268.66183a02.jpeg"
   },
   {
-    "revision": "489183f640a799d3a6c7",
-    "url": "/static/js/main.87b1ecfd.chunk.js"
+    "revision": "6229f2a41387269eed9e6522e2bec745",
+    "url": "/static/media/Sevek269.6229f2a4.jpeg"
   },
   {
-    "revision": "53d30520a733defd33317ecd2d55f733",
-    "url": "/static/media/Sevek342.53d30520.jpeg"
+    "revision": "cf351e0f7233ab7ab3ec",
+    "url": "/static/js/main.d439fd1c.chunk.js"
   },
   {
     "revision": "4402588943d34560abc76a069d576d80",
@@ -1340,6 +1340,10 @@ self.__precacheManifest = [
     "url": "/static/media/David.Baigelman016 2.8dfaeabd.jpeg"
   },
   {
+    "revision": "b7d0d6e7314639908908c911385312f7",
+    "url": "/static/media/Lodz.Theatre429.b7d0d6e7.jpeg"
+  },
+  {
     "revision": "f5f2566b93e89391da4db79462b8078b",
     "url": "/static/media/fa-regular-400.f5f2566b.woff2"
   },
@@ -1416,12 +1420,12 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Light.a990f611.eot"
   },
   {
-    "revision": "30799efa5bf74129468ad4e257551dc3",
-    "url": "/static/media/Roboto-Regular.30799efa.eot"
-  },
-  {
     "revision": "4d9f3f9e5195e7b074bb63ba4ce42208",
     "url": "/static/media/Roboto-Medium.4d9f3f9e.eot"
+  },
+  {
+    "revision": "30799efa5bf74129468ad4e257551dc3",
+    "url": "/static/media/Roboto-Regular.30799efa.eot"
   },
   {
     "revision": "ecdd509cadbf1ea78b8d2e31ec52328c",
@@ -1436,20 +1440,16 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Light.69f8a061.woff2"
   },
   {
-    "revision": "2751ee43015f9884c3642f103b7f70c9",
-    "url": "/static/media/Roboto-Regular.2751ee43.woff2"
-  },
-  {
     "revision": "574fd0b50367f886d359e8264938fc37",
     "url": "/static/media/Roboto-Medium.574fd0b5.woff2"
   },
   {
-    "revision": "39b2c3031be6b4ea96e2e3e95d307814",
-    "url": "/static/media/Roboto-Bold.39b2c303.woff2"
+    "revision": "2751ee43015f9884c3642f103b7f70c9",
+    "url": "/static/media/Roboto-Regular.2751ee43.woff2"
   },
   {
-    "revision": "7500519de3d82e33d1587f8042e2afcb",
-    "url": "/static/media/Roboto-Thin.7500519d.woff"
+    "revision": "39b2c3031be6b4ea96e2e3e95d307814",
+    "url": "/static/media/Roboto-Bold.39b2c303.woff2"
   },
   {
     "revision": "3b813c2ae0d04909a33a18d792912ee7",
@@ -1460,24 +1460,28 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
-    "revision": "fc78759e93a6cac50458610e3d9d63a0",
-    "url": "/static/media/Roboto-Medium.fc78759e.woff"
-  },
-  {
     "revision": "dc81817def276b4f21395f7ea5e88dcd",
     "url": "/static/media/Roboto-Bold.dc81817d.woff"
   },
   {
-    "revision": "94998475f6aea65f558494802416c1cf",
-    "url": "/static/media/Roboto-Thin.94998475.ttf"
+    "revision": "fc78759e93a6cac50458610e3d9d63a0",
+    "url": "/static/media/Roboto-Medium.fc78759e.woff"
+  },
+  {
+    "revision": "7500519de3d82e33d1587f8042e2afcb",
+    "url": "/static/media/Roboto-Thin.7500519d.woff"
+  },
+  {
+    "revision": "894a2ede85a483bf9bedefd4db45cdb9",
+    "url": "/static/media/Roboto-Medium.894a2ede.ttf"
   },
   {
     "revision": "46e48ce0628835f68a7369d0254e4283",
     "url": "/static/media/Roboto-Light.46e48ce0.ttf"
   },
   {
-    "revision": "894a2ede85a483bf9bedefd4db45cdb9",
-    "url": "/static/media/Roboto-Medium.894a2ede.ttf"
+    "revision": "94998475f6aea65f558494802416c1cf",
+    "url": "/static/media/Roboto-Thin.94998475.ttf"
   },
   {
     "revision": "df7b648ce5356ea1ebce435b3459fd60",
@@ -1488,7 +1492,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.2af24695.chunk.css"
   },
   {
-    "revision": "06dd07d0126c87208e0d51cf77dd4ef9",
+    "revision": "7b7c857ac9c05159e068a60e4f5913b6",
     "url": "/index.html"
   }
 ];
