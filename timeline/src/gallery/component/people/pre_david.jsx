@@ -35,15 +35,16 @@ const Slideshow = () => {
               <h3 className="profile_title">David Baigelman</h3>
               <h6>B. 1900 D. 1950</h6>
               <h6 className="profile_bio">
-                David Baigelman was lorem ipsumdolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum.
-          </h6>
+                David Baigelman was an extremely versatile person: a violinist
+                and violist, a conductor, composer and songwriter. He conducted
+                the Łódź Symphony Orchestra and the orchestra of the Jewish
+                Icchok Zandberg Theatre, he composed music for many theatres all
+                over Poland and conducted their orchestras, he recorded albums
+                for Syrena-Electro, but became famous as the author of the music
+                for the performance of The Dybbuk by S. Anski, which became an
+                international theatre hit. During the war, he founded and
+                conducted a 44-member symphony orchestrain the Łódź Ghetto.
+              </h6>
             </div>
             <div class="col-6">
               <Slide {...properties}>
@@ -53,7 +54,6 @@ const Slideshow = () => {
                 <div className="each-slide">
                   <div style={{ backgroundImage: `url(${slideImages[1]})` }} />
                 </div>
-
               </Slide>
             </div>
           </div>

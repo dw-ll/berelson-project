@@ -187,10 +187,10 @@ const App = () => {
                           <h5 className="title">Explore</h5>
                           <ul>
                             <li className="list-unstyled">
-                              <a href="/archive">Archive</a>
+                              <Link to="/archive/">Archive</Link>
                             </li>
                             <li className="list-unstyled">
-                              <a href="/tree">Family Tree</a>
+                              <Link to="/tree/">Family Tree</Link>
                             </li>
                           </ul>
                         </MDBCol>
@@ -251,10 +251,10 @@ const App = () => {
                           <h5 className="title">Explore</h5>
                           <ul>
                             <li className="list-unstyled">
-                              <a href="/archive">Archive</a>
+                              <Link to="/archive/">Archive</Link>
                             </li>
                             <li className="list-unstyled">
-                              <a href="/tree">Family Tree</a>
+                              <Link to="/tree/">Family Tree</Link>
                             </li>
                           </ul>
                         </MDBCol>

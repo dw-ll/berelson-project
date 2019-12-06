@@ -78,21 +78,8 @@ export default class Span extends Component {
                       <h3 className="era-text-link inactive">Before the War</h3>
 
                       <p className="era-date inactive">
-                        <span>1900-1950</span>
+                        <span>1900-1939</span>
                       </p>
-                      <div className="rich-text-desc inactive">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -108,21 +95,8 @@ export default class Span extends Component {
                     <div className="page-section__content era-text">
                       <h3 className="era-text-link inactive">World War II</h3>
                       <p className="era-date inactive">
-                        <span>1900-1950</span>
+                        <span>1939-1945</span>
                       </p>
-                      <div className="rich-text-desc inactive">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -138,21 +112,8 @@ export default class Span extends Component {
                     <div className="page-section__content era-text">
                       <h3 className="era-text-link inactive">After the War</h3>
                       <p className="era-date inactive">
-                        <span>1900-1950</span>
+                        <span>1945 - 1970</span>
                       </p>
-                      <div className="rich-text-desc inactive">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -168,21 +129,8 @@ export default class Span extends Component {
                     <div className="page-section__content era-text">
                       <h3 className="era-text-link inactive">Present</h3>
                       <p className="era-date inactive">
-                        <span>1900-1950</span>
+                        <span>1970 - 2000s</span>
                       </p>
-                      <div className="rich-text-desc inactive">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
