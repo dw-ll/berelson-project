@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+src/Media
+src/SearchMedia
+src/PlayableMedia
+src/searchData.js
+src/loading.js
+src/*.json
+src/tree.png
+src/24px.svg
+src/App.test.js
