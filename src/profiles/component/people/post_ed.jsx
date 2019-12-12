@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Post from "../../../component/post.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Post-WWII%202/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Post-WWII%202/";
 const slideImages = `${IMGURL}Ed.Silver091.jpeg`;
 
 const Slideshow = () => {

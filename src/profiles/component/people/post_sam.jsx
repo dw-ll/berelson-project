@@ -4,7 +4,7 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Post from "../../../component/post.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Post-WWII%202/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Post-WWII%202/";
 const slideImages = [
   `${IMGURL}Sam.Spielman067.jpeg`,
   `${IMGURL}Samuel181.jpeg`,

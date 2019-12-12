@@ -4,7 +4,7 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import WW2 from "../../../component/ww2.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/WWII/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/WWII/";
 const slideImages = [
   `${IMGURL}Henry.Baigelman101.jpeg`,
   `${IMGURL}Henry.Baigelman102.jpeg`,

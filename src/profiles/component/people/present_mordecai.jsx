@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Present from "../../../component/present.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Modern/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Modern/";
 const slideImages = `${IMGURL}Mordecai186.jpeg`;
 
 const Slideshow = () => {

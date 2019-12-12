@@ -4,7 +4,7 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Pre from "../../../component/pre";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Pre-WWII/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Pre-WWII/";
 const slideImages = [
   `${IMGURL}Gita.Baigelman137.jpeg`,
   `${IMGURL}Gita.Baigelman138.jpeg`,

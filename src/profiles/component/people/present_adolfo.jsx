@@ -4,7 +4,7 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Present from "../../../component/present.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Modern/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Modern/";
 const slideImages = [
   `${IMGURL}Adolfo.Szpilman098.jpeg`,
   `${IMGURL}Adolfo.Szpilman099.jpeg`

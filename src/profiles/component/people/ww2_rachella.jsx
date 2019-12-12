@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import WW2 from "../../../component/ww2.jsx";
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/WWII/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/WWII/";
 const slideImages = `${IMGURL}Rachella148.jpeg`;
 
 const Slideshow = () => {

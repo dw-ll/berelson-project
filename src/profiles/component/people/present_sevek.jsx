@@ -5,7 +5,7 @@ import { Slide } from "react-slideshow-image";
 import Present from "../../../component/present.jsx";
 
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Modern/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Modern/";
 const slideImages = [
   `${IMGURL}Sevek259.jpeg`,
   `${IMGURL}Sevek260.jpeg`,

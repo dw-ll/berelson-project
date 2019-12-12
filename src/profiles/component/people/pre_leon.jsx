@@ -5,7 +5,7 @@ import { Slide } from "react-slideshow-image";
 import Pre from "../../../component/pre";
 
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Pre-WWII/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Pre-WWII/";
 const slideImages = [`${IMGURL}Leon.Glazer143.jpeg`];
 const properties = {
   duration: 5000,

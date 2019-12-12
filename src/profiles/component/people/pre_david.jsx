@@ -6,7 +6,7 @@ import Pre from "../../../component/pre";
 
 
 const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/timeline/src/Media/Pre-WWII/";
+  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Pre-WWII/";
 const slideImages = [
   `${IMGURL}David.Baigelman016.jpeg`,
   `${IMGURL}DavidBaigelman022.jpeg`
