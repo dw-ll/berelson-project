@@ -14,6 +14,7 @@ import Pre from "./component/pre.jsx";
 import WW2 from "./component/ww2.jsx";
 import Post from "./component/post.jsx";
 import Present from "./component/present.jsx";
+import PreHenry from "./profiles/component/people/pre_henry.jsx";
 import Archive from "./component/archive.jsx";
 import About from "./component/about.jsx";
 import Tree from "./component/tree.jsx";
@@ -140,6 +141,13 @@ const App = () => {
               exact
               render={() => {
                 return <Pre />;
+              }}
+            />
+            <Route
+              path="/pre/henry"
+              exact
+              render={() => {
+                return <PreHenry />;
               }}
             />
             <Route
