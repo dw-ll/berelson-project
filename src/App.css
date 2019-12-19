@@ -558,17 +558,18 @@ main {
   line-height: 1.1;
   height: 90vh;
 }
-.dark-mode .modal-container {
+.dark-mode div.modal-container {
   background: #303030 !important;
   width: 20%;
 }
-.dark-mode .modal-body {
+
+.dark-mode modal-body modal-body {
   text-align: center;
   background: #303030 !important;
   color: white;
   font-family: "Times";
 }
-.dark-mode .modal-foot {
+.dark-mode modal-foot {
   justify-content: left;
 }
 

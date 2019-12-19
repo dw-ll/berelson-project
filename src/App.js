@@ -8,7 +8,7 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import { Provider } from "./Context";
+import Context from "./Context.js";
 import SearchBar from "./component/SearchBar.jsx";
 import Music from "./component/Music.jsx";
 import Pre from "./component/pre.jsx";
@@ -89,7 +89,7 @@ const App = () => {
           </div>
         </FadeIn>
       ) : (
-        <Provider value={darkMode}>
+        <Context.Provider value={{dark: darkMode}}>
           <div
             className={darkMode ? "App dark-mode" : "App light-mode"}
             id="app"
@@ -441,7 +441,7 @@ const App = () => {
               </div>
             </Switch>
           </div>
-        </Provider>
+        </Context.Provider>
       )}
     </Router>
   );

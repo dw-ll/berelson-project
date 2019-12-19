@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import "react-vertical-timeline-component/style.min.css";
-import { Consumer } from "../Context";
+import Context from "../Context";
 import HenryP from "../profiles/component/people/pre_henry.jsx";
 import David from "../profiles/component/people/pre_david.jsx";
 import JackPost from "../profiles/component/people/post_jack.jsx";
@@ -26,6 +26,7 @@ const FamilyTree = () => {
   const [jackOpen, setJackOpen] = useState(false);
   const [jackDarkModeOpen, setJackDarkModeOpen] = useState(false);
   const [rivaOpen, setRivaOpen] = useState(false);
+  // const [modalDark, setModalDark] = useState(context.darkMode ? context.darkMode : false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -83,7 +84,7 @@ const FamilyTree = () => {
             return <RivaPost />;
           }}
         />
-        <Consumer>
+        <Context.Consumer>
           {context => (
             <div class="top">
               <div>
@@ -363,7 +364,7 @@ const FamilyTree = () => {
                                   />
                                   <h6>B.1900 D.1960</h6>
                                   <p>
-                                    Chaim (later: Henry) Bajgelman was a
+                                    Chaim (later: Henry) Baigelman was a
                                     violinist, saxophonist and composer and the
                                     only one out of nine musical siblings to
                                     survive the war. He was a member of a family
@@ -1215,7 +1216,7 @@ const FamilyTree = () => {
               </div>
             </div>
           )}
-        </Consumer>
+        </Context.Consumer>
       </Switch>
     </Router>
   );
