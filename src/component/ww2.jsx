@@ -111,31 +111,20 @@ class Line extends Component {
           <div ref={this.myRef} className="back">
             <div id="landing">
               <Greeting
-                minHeight="100vh"
                 opacity="0.2%"
                 isCentered={true}
                 imageSrc={GreetImage}
+                className="greeting"
               >
                 <h3 style={{ color: "white" }}>World War II</h3>
-                <div>
-                  <Grid item>
-                    <ButtonGroup
-                      color="yellow"
-                      aria-label="Outlined primary button group"
-                    >
-                      <Button
-                        onClick={() => {
-                          this.scrollDiv.current.scrollIntoView({
-                            behavior: "smooth"
-                          });
-                        }}
-                        style={{ color: "white" }}
-                      >
-                        Visit Timeline
-                      </Button>
-                    </ButtonGroup>
-                  </Grid>
-                </div>
+                <div
+                  className="scroll-down"
+                  onClick={() => {
+                    this.scrollDiv.current.scrollIntoView({
+                      behavior: "smooth"
+                    });
+                  }}
+                ></div>
               </Greeting>
             </div>
 

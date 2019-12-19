@@ -174,10 +174,10 @@ class Line extends Component {
           <div ref={this.topRef} className="back">
             <div id="landing">
               <Greeting
-                minHeight="100vh"
                 opacity="0.1%"
                 isCentered={true}
                 imageSrc={HenryGreet}
+                className="greeting"
               >
                 <h3 style={{ color: "white", fontFamily: "Future" }}>
                   Before The War
@@ -185,25 +185,14 @@ class Line extends Component {
                 <h5 style={{ color: "white", fontFamily: "Future" }}>
                   Some more info about the family before the war.
                 </h5>
-                <div>
-                  <Grid item>
-                    <ButtonGroup
-                      color="yellow"
-                      aria-label="Outlined primary button group"
-                    >
-                      <Button
-                        onClick={() => {
-                          this.scrollDiv.current.scrollIntoView({
-                            behavior: "smooth"
-                          });
-                        }}
-                        style={{ color: "white" }}
-                      >
-                        Visit Timeline
-                      </Button>
-                    </ButtonGroup>
-                  </Grid>
-                </div>
+                <div
+                  className="scroll-down"
+                  onClick={() => {
+                    this.scrollDiv.current.scrollIntoView({
+                      behavior: "smooth"
+                    });
+                  }}
+                ></div>
               </Greeting>
             </div>
             <div ref={this.scrollDiv}>
@@ -240,20 +229,6 @@ class Line extends Component {
                           <p className="era-date">
                             <span>1900-1950</span>
                           </p>
-                          <div className="rich-text-desc">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut
-                              aliquip ex ea commodo consequat. Duis aute irure
-                              dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur
-                              sint occaecat cupidatat non proident, sunt in
-                              culpa qui officia deserunt mollit anim id est
-                              laborum.
-                            </p>
-                          </div>
                         </div>
                       </div>
                     </div>

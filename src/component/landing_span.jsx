@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Greeting from "react-lazy-hero";
@@ -27,6 +27,13 @@ const routes = [
 ];
 
 export default class Span extends Component {
+  constructor(props) {
+    super(props);
+    this.scrollDiv = createRef();
+  }
+  handleScrollToElement(event) {
+    window.scrollTo(0, this.myRef.current.offsetTop);
+  }
   render() {
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
@@ -45,7 +52,6 @@ export default class Span extends Component {
           <div>
             <div className="greet">
               <Greeting
-                minHeight="100vh"
                 opacity="0"
                 isCentered={true}
                 imageSrc={Lodz}
@@ -60,13 +66,22 @@ export default class Span extends Component {
                       marginTop: "10px"
                     }}
                   >
-                    The Berelson Project
+                    Vessel Archives
                   </h3>
+
                   <div className="greeting-button"></div>
+                  <div
+                    className="scroll-down"
+                    onClick={() => {
+                      this.scrollDiv.current.scrollIntoView({
+                        behavior: "smooth"
+                      });
+                    }}
+                  ></div>
                 </div>
               </Greeting>
             </div>
-            <ul className="eras">
+            <ul className="eras" ref={this.scrollDiv}>
               <li className="era-span">
                 <a className="era-image1 inactive" href="!#">
                   &nbsp;

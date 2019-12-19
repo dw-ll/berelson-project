@@ -135,7 +135,7 @@ const options = {
   defaultPlayMode: "order",
 
   //audio mode        mini | full          [type `String`  default `mini`]
-  mode: "mini",
+  mode: "full",
 
   /**
    * [ type `Boolean` default 'false' ]
@@ -147,7 +147,7 @@ const options = {
   autoPlay: false,
 
   //Whether you can switch between two modes, full => mini  or mini => full   [type 'Boolean' default 'true']
-  toggleMode: true,
+  toggleMode: false,
 
   //audio cover is show of the "mini" mode [type `Boolean` default 'true']
   showMiniModeCover: false,
