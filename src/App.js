@@ -212,8 +212,7 @@ const App = () => {
                             <ul>
                               <li className="list-unstyled">
                                 <p>
-                                  <i class="fas fa-home  mr-3"></i> Santa Cruz,
-                                  CA 95062, US
+                                  <i class="fas fa-home  mr-3"></i> California
                                 </p>
                               </li>
                               <li className="list-unstyled">
@@ -276,8 +275,7 @@ const App = () => {
                             <ul>
                               <li className="list-unstyled">
                                 <p>
-                                  <i class="fas fa-home  mr-3"></i> Santa Cruz,
-                                  CA 95062, US
+                                  <i class="fas fa-home  mr-3"></i> California
                                 </p>
                               </li>
                               <li className="list-unstyled">
@@ -339,8 +337,7 @@ const App = () => {
                             <ul>
                               <li className="list-unstyled">
                                 <p>
-                                  <i class="fas fa-home  mr-3"></i> Santa Cruz,
-                                  CA 95062, US
+                                  <i class="fas fa-home  mr-3"></i> California
                                 </p>
                               </li>
                               <li className="list-unstyled">
@@ -418,8 +415,7 @@ const App = () => {
                         <ul>
                           <li className="list-unstyled">
                             <p>
-                              <i class="fas fa-home  mr-3"></i> Santa Cruz, CA
-                              95062, US
+                              <i class="fas fa-home  mr-3"></i> California
                             </p>
                           </li>
                           <li className="list-unstyled">
