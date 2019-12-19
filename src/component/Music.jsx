@@ -144,7 +144,7 @@ const options = {
   once: true,
 
   //Whether the audio is played after loading is completed. [type `Boolean` default 'true']
-  autoPlay: false,
+  autoPlay: true,
 
   //Whether you can switch between two modes, full => mini  or mini => full   [type 'Boolean' default 'true']
   toggleMode: false,
