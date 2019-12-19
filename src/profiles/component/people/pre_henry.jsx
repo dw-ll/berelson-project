@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route,Link  } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
@@ -105,7 +105,7 @@ const Slideshow = () => {
               <Tree />
               <MDBFooter
                 class="fixed-bottom"
-                color={ "grey"}
+                color={"grey"}
                 className="main-footer font-small pt-4 mt-4"
               >
                 <MDBContainer fluid className="text-center text-md-left">
@@ -167,7 +167,7 @@ const Slideshow = () => {
                 <h3 className="profile_title">Henry Baigelman</h3>
                 <h6>B. 1900 D. 1950</h6>
                 <h6 className="profile_bio">
-                  Chaim (later: Henry) Bajgelman was a violinist, saxophonist
+                  Chaim (later: Henry) Baigelman was a violinist, saxophonist
                   and composer and the only one out of nine musical siblings to
                   survive the war. He played professionally since the age of
                   fifteen. He was a member of a family band, The Jolly Boys,
@@ -208,60 +208,6 @@ const Slideshow = () => {
               </div>
             </div>
           </div>
-
-          <MDBFooter
-            class="fixed-bottom"
-            color={ "grey"}
-            className="main-footer font-small pt-4 mt-4"
-          >
-            <MDBContainer fluid className="text-center text-md-left">
-              <MDBRow>
-                <MDBCol md="4">
-                  <h5 className="title">The Berelson Project</h5>
-                  <p>
-                    An ancestral site built to display and document the Berelson
-                    lineage in an archival effort.
-                  </p>
-                </MDBCol>
-                <MDBCol md="4">
-                  <h5 className="title">Explore</h5>
-                  <ul>
-                    <li className="list-unstyled">
-                      <Link to="/archive">Archive</Link>
-                    </li>
-                    <li className="list-unstyled">
-                      <Link to="/tree">Family Tree</Link>
-                    </li>
-                  </ul>
-                </MDBCol>
-                <MDBCol md="4">
-                  <h5 className="title">Contact</h5>
-                  <ul>
-                    <li className="list-unstyled">
-                      <p>
-                        <i class="fas fa-home  mr-3"></i> California
-                      </p>
-                    </li>
-                    <li className="list-unstyled">
-                      <p>
-                        <i class="fas fa-envelope mr-3"></i> Email
-                      </p>
-                    </li>
-                    <li className="list-unstyled">
-                      <p>
-                        <i class="fas fa-phone mr-3"></i> Phone
-                      </p>
-                    </li>
-                  </ul>
-                </MDBCol>
-              </MDBRow>
-            </MDBContainer>
-            <div className="footer-copyright text-center py-3">
-              <MDBContainer fluid>
-                &copy; {new Date().getFullYear()}
-              </MDBContainer>
-            </div>
-          </MDBFooter>
         </div>
       </Switch>
     </Router>

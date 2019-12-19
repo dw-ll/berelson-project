@@ -26,6 +26,7 @@ const FamilyTree = () => {
   const [jackOpen, setJackOpen] = useState(false);
   const [jackDarkModeOpen, setJackDarkModeOpen] = useState(false);
   const [rivaOpen, setRivaOpen] = useState(false);
+  const [context,setContext] = useState(false);
   // const [modalDark, setModalDark] = useState(context.darkMode ? context.darkMode : false);
 
   const handleOpen = () => {
@@ -215,7 +216,11 @@ const FamilyTree = () => {
                                 centered
                                 show={davidOpen}
                                 onHide={() => setDavidOpen(false)}
-                                className="modal-container"
+                                className={
+                                  context.dark
+                                    ? "dark-mode modal-container"
+                                    : "modal-container"
+                                }
                               >
                                 <Modal.Header closeButton>
                                   <Modal.Title
@@ -346,7 +351,11 @@ const FamilyTree = () => {
                                 centered
                                 show={open}
                                 onHide={() => setOpen(false)}
-                                className="modal-container"
+                                className={
+                                  context.dark
+                                    ? "dark-mode modal-container"
+                                    : "modal-container"
+                                }
                               >
                                 <Modal.Header closeButton>
                                   <Modal.Title
@@ -405,7 +414,11 @@ const FamilyTree = () => {
                                     centered
                                     show={rivaOpen}
                                     onHide={() => setRivaOpen(false)}
-                                    className="modal-container"
+                                    className={
+                                      context.dark
+                                        ? "dark-mode modal-container"
+                                        : "modal-container"
+                                    }
                                   >
                                     <Modal.Header closeButton>
                                       <Modal.Title
@@ -658,7 +671,11 @@ const FamilyTree = () => {
                                     centered
                                     show={jackOpen}
                                     onHide={() => setJackOpen(false)}
-                                    className="modal-container"
+                                    className={
+                                      context.dark
+                                        ? "dark-mode modal-container"
+                                        : "modal-container"
+                                    }
                                   >
                                     <Modal.Header closeButton>
                                       <Modal.Title
@@ -698,7 +715,11 @@ const FamilyTree = () => {
                                     centered
                                     show={jackDarkModeOpen}
                                     onHide={() => setJackOpen(false)}
-                                    className="modal-container"
+                                    className={
+                                      context.dark
+                                        ? "dark-mode modal-container"
+                                        : "modal-container"
+                                    }
                                   >
                                     <Modal.Header closeButton>
                                       <Modal.Title
