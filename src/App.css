@@ -636,7 +636,7 @@ main {
 }
 
 .greeting {
-  min-height: 80vh;
+  min-height: 80vh !important;
   transform: scale(1);
   transform-origin: -0.5% 1% 0px;
 }
@@ -1291,7 +1291,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 @media screen and (min-width: 1080px) {
   .greeting {
-  min-height: 80vh;
+  min-height: 80vh !important;
   transform: scale(1);
   transform-origin: -0.5% 1% 0px;
 }
@@ -1393,7 +1393,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 @media screen and (min-width: 1680px) {
    .greeting {
-  min-height: 78vh;
+  min-height: 78vh !important;
   transform: scale(1);
   transform-origin: -0.5% 1% 0px;
 }
@@ -1481,7 +1481,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 @media screen and (min-width: 1920px) {
   .greeting {
-  min-height: 78vh;
+  min-height: 78vh !important;
   transform: scale(1);
   transform-origin: -0.5% 1% 0px;
 }
