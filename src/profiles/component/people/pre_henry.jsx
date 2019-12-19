@@ -1,7 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route,  } from "react-router-dom";
+import { BrowserRouter as Router, Route,Link  } from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import Archive from "../../../component/archive.jsx";
+import Tree from "../../../component/tree.jsx";
 import Pre from "../../../component/pre";
 
 const IMGURL =
@@ -11,7 +14,7 @@ const slideImages = [
   `${IMGURL}Henry.Baigelman003.jpeg`,
   `${IMGURL}Henry.Baigelman004.jpeg`,
   `${IMGURL}Henry.Baigelman009.jpeg`,
-  `${IMGURL}Henry.Baigelman001.jpeg`
+  `${IMGURL}Henry.Bogelman001.jpeg`
 ];
 const properties = {
   duration: 5000,
@@ -31,9 +34,134 @@ const Slideshow = () => {
             return <Pre />;
           }}
         />
+        <Route
+          exact
+          path="/archive/"
+          render={() => (
+            <div>
+              <Archive />
+              <MDBFooter
+                class="fixed-bottom"
+                color={"grey"}
+                className="main-footer font-small pt-4 mt-4"
+              >
+                <MDBContainer fluid className="text-center text-md-left">
+                  <MDBRow>
+                    <MDBCol md="4">
+                      <h5 className="title">The Berelson Project</h5>
+                      <p>
+                        An ancestral site built to display and document the
+                        Berelson lineage in an archival effort.
+                      </p>
+                    </MDBCol>
+                    <MDBCol md="4">
+                      <h5 className="title">Explore</h5>
+                      <ul>
+                        <li className="list-unstyled">
+                          <Link to="/archive/">Archive</Link>
+                        </li>
+                        <li className="list-unstyled">
+                          <Link to="/tree/">Family Tree</Link>
+                        </li>
+                      </ul>
+                    </MDBCol>
+                    <MDBCol md="4">
+                      <h5 className="title">Contact</h5>
+                      <ul>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-home  mr-3"></i> California
+                          </p>
+                        </li>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-envelope mr-3"></i> Email
+                          </p>
+                        </li>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-phone mr-3"></i> Phone
+                          </p>
+                        </li>
+                      </ul>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+                <div className="footer-copyright text-center py-3">
+                  <MDBContainer fluid>
+                    &copy; {new Date().getFullYear()}
+                  </MDBContainer>
+                </div>
+              </MDBFooter>
+            </div>
+          )}
+        />
+
+        <Route
+          exact
+          path="/tree"
+          render={() => (
+            <div>
+              <Tree />
+              <MDBFooter
+                class="fixed-bottom"
+                color={ "grey"}
+                className="main-footer font-small pt-4 mt-4"
+              >
+                <MDBContainer fluid className="text-center text-md-left">
+                  <MDBRow>
+                    <MDBCol md="4">
+                      <h5 className="title">The Berelson Project</h5>
+                      <p>
+                        An ancestral site built to display and document the
+                        Berelson lineage in an archival effort.
+                      </p>
+                    </MDBCol>
+                    <MDBCol md="4">
+                      <h5 className="title">Explore</h5>
+                      <ul>
+                        <li className="list-unstyled">
+                          <Link to="/archive/">Archive</Link>
+                        </li>
+                        <li className="list-unstyled">
+                          <Link to="/tree/">Family Tree</Link>
+                        </li>
+                      </ul>
+                    </MDBCol>
+                    <MDBCol md="4">
+                      <h5 className="title">Contact</h5>
+                      <ul>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-home  mr-3"></i> California
+                          </p>
+                        </li>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-envelope mr-3"></i> Email
+                          </p>
+                        </li>
+                        <li className="list-unstyled">
+                          <p>
+                            <i class="fas fa-phone mr-3"></i> Phone
+                          </p>
+                        </li>
+                      </ul>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+                <div className="footer-copyright text-center py-3">
+                  <MDBContainer fluid>
+                    &copy; {new Date().getFullYear()}
+                  </MDBContainer>
+                </div>
+              </MDBFooter>
+            </div>
+          )}
+        />
         <div>
           <div className="player-wrapper"></div>
-          <div class="container">
+          <div class="top container">
             <div class="row">
               <div class="col-6">
                 <h3 className="profile_title">Henry Baigelman</h3>
@@ -80,6 +208,60 @@ const Slideshow = () => {
               </div>
             </div>
           </div>
+
+          <MDBFooter
+            class="fixed-bottom"
+            color={ "grey"}
+            className="main-footer font-small pt-4 mt-4"
+          >
+            <MDBContainer fluid className="text-center text-md-left">
+              <MDBRow>
+                <MDBCol md="4">
+                  <h5 className="title">The Berelson Project</h5>
+                  <p>
+                    An ancestral site built to display and document the Berelson
+                    lineage in an archival effort.
+                  </p>
+                </MDBCol>
+                <MDBCol md="4">
+                  <h5 className="title">Explore</h5>
+                  <ul>
+                    <li className="list-unstyled">
+                      <Link to="/archive">Archive</Link>
+                    </li>
+                    <li className="list-unstyled">
+                      <Link to="/tree">Family Tree</Link>
+                    </li>
+                  </ul>
+                </MDBCol>
+                <MDBCol md="4">
+                  <h5 className="title">Contact</h5>
+                  <ul>
+                    <li className="list-unstyled">
+                      <p>
+                        <i class="fas fa-home  mr-3"></i> California
+                      </p>
+                    </li>
+                    <li className="list-unstyled">
+                      <p>
+                        <i class="fas fa-envelope mr-3"></i> Email
+                      </p>
+                    </li>
+                    <li className="list-unstyled">
+                      <p>
+                        <i class="fas fa-phone mr-3"></i> Phone
+                      </p>
+                    </li>
+                  </ul>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+            <div className="footer-copyright text-center py-3">
+              <MDBContainer fluid>
+                &copy; {new Date().getFullYear()}
+              </MDBContainer>
+            </div>
+          </MDBFooter>
         </div>
       </Switch>
     </Router>
