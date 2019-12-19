@@ -568,7 +568,6 @@ main {
 
 }
 
-
 .dark-mode .modal-body{
   text-align: center;
   background: #303030 !important;
@@ -1493,6 +1492,12 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 @media screen and (min-width: 1920px) {
+   .modal-container modal show {
+    margin-left: 500px !important;
+  }
+   .modal-open .modal {
+    margin-left: 245px !important;
+  }
   .greeting {
   min-height: 78vh !important;
   transform: scale(1);
