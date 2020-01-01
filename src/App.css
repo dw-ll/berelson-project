@@ -535,7 +535,7 @@ input[type="checkbox"].checkbox + label {
 }
 .landing-text {
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 10px;
   text-align: center;
   vertical-align: middle;
   line-height: 90px;
@@ -648,16 +648,24 @@ main {
 }
 
 .greeting {
-  min-height: 80vh !important;
+  min-height: 72vh !important;
   transform: scale(1);
   transform-origin: -0.5% 1% 0px;
 }
 .greeting-text {
   position: absolute;
-  left: 41.5%;
-  top: 37%;
+  left: 41%;
+  top: 33.8%;
   margin-top: 10px;
   margin-left: 30px;
+  font-size: 28px;
+}
+.intro-text{
+  font-size: 30px;
+  letter-spacing: 15px;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant: small-caps;
 }
 .greeting-button {
   position: absolute;
@@ -847,6 +855,18 @@ h3 {
   width: 600px;
   height: 500px;
   margin-right: 20%;
+}
+.single-photo-landing {
+  width: 500px;
+  height: 500px;
+  margin-left: 0 !important;
+  border:3px solid goldenrod;
+  border-color:goldenrod !important;
+  cursor: pointer !important;
+}
+.landing-profile-text{
+  padding-top:15%;
+  padding-left: 15%;
 }
 .each-slide > div {
   transform:scale(0.85);
@@ -1168,7 +1188,7 @@ input[type="checkbox"]:checked ~ label > img {
 .era-span {
   margin-bottom: 150px;
   width: 1440px;
-  height: 400px;
+  height: 550px;
 }
 .era {
   margin: 0;
@@ -1303,7 +1323,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 @media screen and (min-width: 1080px) {
   .greeting {
-  min-height: 80vh !important;
+  min-height: 77vh !important;
   transform: scale(1);
   transform-origin: -0.5% 1% 0px;
 }
@@ -1492,6 +1512,15 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 @media screen and (min-width: 1920px) {
+
+  .greeting-text {
+  position: absolute;
+  left: 43%;
+  top: 36.5%;
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 30px;
+}
    .modal-container modal show {
     margin-left: 500px !important;
   }
