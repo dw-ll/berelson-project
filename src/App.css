@@ -18,7 +18,9 @@
 }
 
 /* ARROW 1 */
-
+.scroll-up-button{
+  
+}
 .scroll-down {
   position: absolute;
   cursor: pointer;
@@ -660,11 +662,20 @@ main {
   margin-left: 30px;
   font-size: 28px;
 }
+.profile-card{
+  border: goldenrod 2px solid !important;
+  height: 665px;
+}
+.dark-mode .profile-card{
+  border: goldenrod 2px solid !important;
+  height: 665px;
+  background-color: #272727 !important;
+}
 .intro-text{
   font-size: 30px;
   letter-spacing: 15px;
   
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Cambria';
   font-variant: small-caps;
 }
 .greeting-button {
@@ -856,11 +867,16 @@ h3 {
   height: 500px;
   margin-right: 20%;
 }
+.space{
+  margin-bottom:200px;
+}
 .single-photo-landing {
+
   width: 500px;
   height: 500px;
+
   margin-left: 0 !important;
-  border:3px solid goldenrod;
+  border:1px solid goldenrod;
   border-color:goldenrod !important;
   cursor: pointer !important;
 }

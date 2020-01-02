@@ -8,6 +8,13 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  UncontrolledDropdown
+} from "reactstrap";
 import Context from "./Context.js";
 import SearchBar from "./component/SearchBar.jsx";
 import Music from "./component/Music.jsx";
@@ -41,6 +48,8 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggle = () => setDropdownOpen(prevState => !prevState);
 
   useEffect(() => {
     setTimeout(() => {
@@ -89,7 +98,7 @@ const App = () => {
           </div>
         </FadeIn>
       ) : (
-        <Context.Provider value={{dark: darkMode}}>
+        <Context.Provider value={{ dark: darkMode }}>
           <div
             className={darkMode ? "App dark-mode" : "App light-mode"}
             id="app"
