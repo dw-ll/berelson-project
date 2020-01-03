@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/Sevek342.53d30520.jpeg"
   },
   {
-    "revision": "d13ad590590aba1292c8",
-    "url": "/static/css/main.9e3e7d1c.chunk.css"
+    "revision": "8dde0ec46e980ef2a313",
+    "url": "/static/css/main.7bd39841.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -748,7 +748,7 @@ self.__precacheManifest = [
     "url": "/static/media/Sevek269.6229f2a4.jpeg"
   },
   {
-    "revision": "d13ad590590aba1292c8",
+    "revision": "8dde0ec46e980ef2a313",
     "url": "/static/js/main.5f3fc702.chunk.js"
   },
   {
@@ -1356,20 +1356,20 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.c4f508e7.woff"
   },
   {
-    "revision": "65b286af947c0d982ca01b40e1fcab38",
-    "url": "/static/media/fa-regular-400.65b286af.ttf"
-  },
-  {
     "revision": "c1a866ec0e04a5e1915b41fcf261457c",
     "url": "/static/media/fa-regular-400.c1a866ec.eot"
   },
   {
-    "revision": "cccc9d29470e879e40eb70249d9a2705",
-    "url": "/static/media/fa-brands-400.cccc9d29.woff2"
+    "revision": "65b286af947c0d982ca01b40e1fcab38",
+    "url": "/static/media/fa-regular-400.65b286af.ttf"
   },
   {
     "revision": "44d537ab79f921fde5a28b2c1636f397",
     "url": "/static/media/fa-solid-900.44d537ab.woff2"
+  },
+  {
+    "revision": "cccc9d29470e879e40eb70249d9a2705",
+    "url": "/static/media/fa-brands-400.cccc9d29.woff2"
   },
   {
     "revision": "c5e0f14f88a828261ba01558ce2bf26f",
@@ -1428,12 +1428,12 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Regular.30799efa.eot"
   },
   {
-    "revision": "4d9f3f9e5195e7b074bb63ba4ce42208",
-    "url": "/static/media/Roboto-Medium.4d9f3f9e.eot"
-  },
-  {
     "revision": "ecdd509cadbf1ea78b8d2e31ec52328c",
     "url": "/static/media/Roboto-Bold.ecdd509c.eot"
+  },
+  {
+    "revision": "4d9f3f9e5195e7b074bb63ba4ce42208",
+    "url": "/static/media/Roboto-Medium.4d9f3f9e.eot"
   },
   {
     "revision": "954bbdeb86483e4ffea00c4591530ece",
@@ -1476,12 +1476,12 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Bold.dc81817d.woff"
   },
   {
-    "revision": "94998475f6aea65f558494802416c1cf",
-    "url": "/static/media/Roboto-Thin.94998475.ttf"
-  },
-  {
     "revision": "46e48ce0628835f68a7369d0254e4283",
     "url": "/static/media/Roboto-Light.46e48ce0.ttf"
+  },
+  {
+    "revision": "94998475f6aea65f558494802416c1cf",
+    "url": "/static/media/Roboto-Thin.94998475.ttf"
   },
   {
     "revision": "df7b648ce5356ea1ebce435b3459fd60",
@@ -1496,7 +1496,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.b0178eb1.chunk.css"
   },
   {
-    "revision": "79b45fba9abd12a41cf0edec1261d8a1",
+    "revision": "04a1eabaf44ef668820e563097df4a76",
     "url": "/index.html"
   }
 ];
