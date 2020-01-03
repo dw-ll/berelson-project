@@ -8,13 +8,7 @@ import Lottie from "react-lottie";
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown
-} from "reactstrap";
+import { Dropdown, Menu } from "semantic-ui-react";
 import Context from "./Context.js";
 import SearchBar from "./component/SearchBar.jsx";
 import Music from "./component/Music.jsx";
@@ -116,6 +110,27 @@ const App = () => {
                   <Link className="nav-link" to="/tree">
                     Family Tree
                   </Link>
+                </NavItem>
+                <NavItem>
+                  <Menu className = {darkMode? "dark-mode menu":"menu"}>
+                    <Dropdown text="Eras" pointing className="link item">
+                      <Dropdown.Menu>
+                        <Dropdown.Item as={Link} to="/pre">
+                          Pre World-War II
+                        </Dropdown.Item>
+
+                        <Dropdown.Item as={Link} to="/ww2">
+                          World-War II
+                        </Dropdown.Item>
+                        <Dropdown.Item as={Link} to="/post">
+                          Post World-War II
+                        </Dropdown.Item>
+                        <Dropdown.Item as={Link} to="/present">
+                          Present
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Menu>
                 </NavItem>
                 <NavItem>
                   <SearchBar />
