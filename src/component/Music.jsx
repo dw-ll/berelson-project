@@ -1,5 +1,7 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import MusicPlayer from "react-jinke-music-player";
+import Context from "../Context";
+
 import "react-jinke-music-player/assets/index.css";
 const options = {
   //audio lists model
@@ -216,6 +218,16 @@ const options = {
 
 const Music = () => {
   const [params] = useState(options);
-  return <MusicPlayer className="music-player" {...params} />;
+  if (Context._currentValue !== undefined) {
+    console.log(Context._currentValue);
+    return (
+      <Context.Consumer>
+        {context => <MusicPlayer className="music-player" {...params} />}
+      </Context.Consumer>
+    );
+  } else {
+    return <MusicPlayer className="music-player" {...params} />;
+  }
 };
+
 export default Music;

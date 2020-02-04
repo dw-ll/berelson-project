@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Search } from "semantic-ui-react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import searchData from "../searchData.js";
+import searchData from "../json/searchData.js";
 import _ from "lodash";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
@@ -61,7 +61,7 @@ const SearchBar = () => {
         })}
         results={filteredResults}
         value={value}
-        size="large"
+        size="small"
       />
       {(function() {
         if (open) {

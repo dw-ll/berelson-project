@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import axios from "axios";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import ScrollButton from "react-scroll-button";
@@ -18,12 +17,10 @@ import Post from "./component/post.jsx";
 import Present from "./component/present.jsx";
 import PreHenry from "./profiles/component/people/pre_henry.jsx";
 import Archive from "./component/archive.jsx";
-import About from "./component/about.jsx";
 import Tree from "./component/tree.jsx";
 import LandingSpan from "./component/landing_span.jsx";
 import "firebase/database";
 import "./App.css";
-import Line from "./component/Line.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
 global.jQuery = require("jquery");
@@ -46,16 +43,16 @@ const App = () => {
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(response => response.json())
-        .then(json => {
-          setLoading(false);
-          setTimeout(() => {
-            setDone(true);
-          }, 1000);
-        });
-    }, 2200);
+    // setTimeout(() => {
+    //   // fetch("https://jsonplaceholder.typicode.com/posts")
+    //   //   .then(response => response.json())
+    //   //   .then(json => {
+    //   //     setLoading(false);
+    //   //     setTimeout(() => {
+    //   //       setDone(true);
+    //   //     }, 1000);
+    //   //   });
+    // }, 2200);
     localStorage.setItem("dark", JSON.stringify(darkMode));
   }, [darkMode]);
 
@@ -67,7 +64,7 @@ const App = () => {
 
   return (
     <Router>
-      {!done ? (
+      {/* {!done ? (
         <FadeIn style={{ paddingTop: "100%" }}>
           <div className="loader" style={{ height: "100%" }}>
             <h1 className="lottie-text">The Berelson Project</h1>
@@ -91,7 +88,7 @@ const App = () => {
             )}
           </div>
         </FadeIn>
-      ) : (
+      ) : ( */}
         <Context.Provider value={{ dark: darkMode }}>
           <div
             className={darkMode ? "App dark-mode" : "App light-mode"}
@@ -112,7 +109,7 @@ const App = () => {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Menu className = {darkMode? "dark-mode menu":"menu"}>
+                  <Menu className={darkMode ? "dark-mode menu" : "menu"}>
                     <Dropdown text="Eras" pointing className="link item">
                       <Dropdown.Menu>
                         <Dropdown.Item as={Link} to="/pre">
@@ -158,13 +155,7 @@ const App = () => {
             </Navbar>
 
             <Switch>
-              <Route
-                path="/#"
-                exact
-                render={() => {
-                  return <Line />;
-                }}
-              />
+            
               <Route
                 path="/pre"
                 exact
@@ -325,68 +316,7 @@ const App = () => {
                   </div>
                 )}
               />
-              <Route
-                exact
-                path="/about"
-                render={() => (
-                  <div>
-                    <About />
-                    <MDBFooter
-                      class="fixed-bottom"
-                      color={darkMode ? "dimgrey" : "grey"}
-                      className="main-footer font-small pt-4 mt-4"
-                    >
-                      <MDBContainer fluid className="text-center text-md-left">
-                        <MDBRow>
-                          <MDBCol md="4">
-                            <h5 className="title">The Berelson Project</h5>
-                            <p>
-                              An ancestral site built to display and document
-                              the Berelson lineage in an archival effort.
-                            </p>
-                          </MDBCol>
-                          <MDBCol md="4">
-                            <h5 className="title">Explore</h5>
-                            <ul>
-                              <li className="list-unstyled">
-                                <a href="/archive">Archive</a>
-                              </li>
-                              <li className="list-unstyled">
-                                <a href="/tree">Family Tree</a>
-                              </li>
-                            </ul>
-                          </MDBCol>
-                          <MDBCol md="4">
-                            <h5 className="title">Contact</h5>
-                            <ul>
-                              <li className="list-unstyled">
-                                <p>
-                                  <i class="fas fa-home  mr-3"></i> California
-                                </p>
-                              </li>
-                              <li className="list-unstyled">
-                                <p>
-                                  <i class="fas fa-envelope mr-3"></i> Email
-                                </p>
-                              </li>
-                              <li className="list-unstyled">
-                                <p>
-                                  <i class="fas fa-phone mr-3"></i> Phone
-                                </p>
-                              </li>
-                            </ul>
-                          </MDBCol>
-                        </MDBRow>
-                      </MDBContainer>
-                      <div className="footer-copyright text-center py-3">
-                        <MDBContainer fluid>
-                          &copy; {new Date().getFullYear()}
-                        </MDBContainer>
-                      </div>
-                    </MDBFooter>
-                  </div>
-                )}
-              />
+
               <div>
                 <div>
                   <Music
