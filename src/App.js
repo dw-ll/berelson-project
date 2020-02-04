@@ -19,7 +19,6 @@ import PreHenry from "./profiles/component/people/pre_henry.jsx";
 import Archive from "./component/archive.jsx";
 import Tree from "./component/tree.jsx";
 import LandingSpan from "./component/landing_span.jsx";
-import "firebase/database";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
