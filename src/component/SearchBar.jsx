@@ -85,13 +85,7 @@ const SearchBar = () => {
   return (
     <Router>
       <Switch>
-        <Route
-          path="/results"
-          exact
-          render={props => {
-            return <Results {...props} />;
-          }}
-        />
+      
 
         <div>
           <Search
