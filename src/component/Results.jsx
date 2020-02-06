@@ -21,26 +21,41 @@ class ScrollToTop extends Component {
   }
 }
 
+function printTags(props) {
+  const listTags = props.tags.map(tag => <h4>{tag},</h4>);
+  return listTags;
+}
+
 class Results extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: this.props.location.state.results
+      results: this.props.location.state.results[0],
+      query: this.props.location.state.results[1].title,
+      query_tags: this.props.location.state.results[0][0].tags
     };
   }
   render() {
     console.log(this.state.results);
+    console.log(this.state.query);
+    console.log(this.state.query_tags);
     return (
       <Router>
         <ScrollToTop>
           <Switch>
             <div className="App">
               <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
-              <div>
+              <div className="search-results">
                 <div>
-                  <h6 style={{ textAlign: "center" }}>
-                    An archive of the Berelson Lineage.
-                  </h6>
+                  <h5 style={{ textAlign: "center" }}>
+                    Search Results for {this.state.query}
+                  </h5>
+                  <h5 style={{ textAlign: "center" }}>
+                    Tags related to {this.state.query}:
+                    {this.state.query_tags
+                      .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                      .join(", ")}
+                  </h5>
                 </div>
                 <Gallery
                   className="results-gallery"
