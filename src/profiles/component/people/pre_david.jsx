@@ -46,7 +46,7 @@ const Slideshow = () => {
                 conducted a 44-member symphony orchestrain the Łódź Ghetto.
               </h6>
             </div>
-            <div class="col-6">
+            <div class="col-6 profile-slideshow">
               <Slide {...properties}>
                 <div className="each-slide" display="flex-container">
                   <div style={{ backgroundImage: `url(${slideImages[0]})` }} />

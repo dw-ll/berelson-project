@@ -104,8 +104,8 @@ export default class Span extends Component {
               <h4 style={{ textAlign: "center" }} className="intro-text">
                 meet the family
               </h4>
-              <li className="era-span">
-                <div class="container">
+              <li className="era-span2 left">
+                <div class="landing_container left">
                   <div class="ui cards">
                     <Card
                       fluid
@@ -149,8 +149,8 @@ export default class Span extends Component {
                 </div>
               </li>
               <div className="space"></div>
-              <li className="era-span">
-                <div class="container">
+              <li className="era-span2 right">
+                <div class="landing_container right">
                   <div class="ui cards">
                     <Card
                       fluid
@@ -192,8 +192,8 @@ export default class Span extends Component {
                 </div>
               </li>
               <div className="space"></div>
-              <li className="era-span">
-                <div class="container">
+              <li className="era-span2 left">
+                <div class="landing_container left">
                   <div class="ui cards">
                     <Card
                       fluid

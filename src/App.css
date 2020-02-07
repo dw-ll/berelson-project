@@ -107,6 +107,9 @@
 .dark-mode .ui.menu .ui.dropdown .menu > .item:hover {
   color: grey !important;
 }
+.ui.menu:first-child {
+  margin-top: -2px;
+}
 .ui.menu {
   display: flex;
 
@@ -118,7 +121,7 @@
   min-height: 0.85714286em;
 }
 .ui.pointing.dropdown.link.item {
-  margin-top: 1px !important;
+  margin-top: px !important;
 }
 .dark-mode .ui.card,
 .ui.cards > .card {
@@ -1254,6 +1257,7 @@ input[type="checkbox"]:checked ~ label > img {
 
 .eras {
   padding-top: 15px;
+  list-style-type: none;
 }
 
 .eras-title {
@@ -1319,6 +1323,16 @@ input[type="checkbox"]:checked ~ label > img {
   font-family: Times !important;
   font-weight: 300 !important;
   font-size: 1.75 em !important;
+}
+.era-span2.left {
+  margin-left: -300px;
+  width: 140px;
+  height: 400px !important;
+}
+.era-span2.right {
+  margin-left: 635px;
+  width: 140px;
+  height: 400px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -1406,6 +1420,19 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 @media screen and (min-width: 1080px) {
+  .era-span2.left {
+    margin-left: -300px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .era-span2.right {
+    margin-left: 635px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .ui.menu:first-child {
+    margin-top: -3px;
+  }
   .greeting {
     min-height: 77vh !important;
     transform: scale(1);
@@ -1459,6 +1486,19 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 @media screen and (min-width: 1200px) {
+  .era-span2.left {
+    margin-left: -200px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .era-span2.right {
+    margin-left: 420px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .ui.menu:first-child {
+    margin-top: -3px;
+  }
   .era-image1 {
     display: inline-block;
     min-height: 420px;
@@ -1506,8 +1546,40 @@ input[type="checkbox"]:checked ~ label > img {
   .era-date {
     font-size: 18px !important;
   }
+  .ui.cards {
+    display: -webkit-box;
+
+    margin: -0.875em -0.5em;
+    margin-left: -0.5em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin-left: 0 !important;
+    transform: scale(0.65);
+  }
+  .single-photo-landing {
+    width: 500px;
+    height: 500px;
+    margin-top: 80px;
+    margin-left: 100px;
+    cursor: pointer !important;
+  }
+  .space {
+    margin-bottom: 200px;
+  }
+   .container {
+    max-width: 1140px;
+    margin-left: 25vh !important;
+    border: 2px solid goldenrod;
+  }
+   .profile-slideshow {
+    padding: 20px;
+  }
 }
 @media screen and (min-width: 1680px) {
+  .ui.menu:first-child {
+    margin-top: -3px;
+  }
   .greeting {
     min-height: 78vh !important;
     transform: scale(1);
@@ -1594,10 +1666,31 @@ input[type="checkbox"]:checked ~ label > img {
     width: 1680px;
     background-position: center;
   }
+  .space {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (min-width: 1920px) {
+  .era-span2.left {
+    margin-left: -300px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .era-span2.right {
+    margin-left: 635px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .ui.menu:first-child {
+    margin-top: -3px;
+  }
   .container {
-    margin-left: 95px !important;
+    max-width: 1140px;
+    margin-left: 35vh !important;
+    border: 2px solid goldenrod;
+  }
+  .landing_container.left {
+    min-width: 20px;
   }
   .ui.cards {
     display: -webkit-box;
@@ -1608,14 +1701,13 @@ input[type="checkbox"]:checked ~ label > img {
     flex-wrap: wrap;
     width: 1300px;
     margin-left: 0 !important;
+    transform: scale(0.7);
   }
   .single-photo-landing {
     width: 500px;
     height: 500px;
-
-    margin-left: 0 !important;
-    border: 1px solid goldenrod;
-    border-color: goldenrod !important;
+    margin-top: 80px;
+    margin-left: 100px;
     cursor: pointer !important;
   }
   .landing-profile-text {
@@ -1623,15 +1715,17 @@ input[type="checkbox"]:checked ~ label > img {
     padding-left: 0 !important;
   }
   .space {
-    margin-bottom: 400px;
+    margin-bottom: 200px;
   }
   .profile-card {
-    border: goldenrod 2px solid !important;
+    border: goldenrod 2.5px solid !important;
     height: 665px;
     margin-left: 200px !important;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
-    box-shadow: 3px 3px 5px 6px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+  .profile-slideshow {
+    padding: 10px;
   }
   .dark-mode .profile-card {
     border: goldenrod 2px solid !important;
@@ -1719,7 +1813,7 @@ input[type="checkbox"]:checked ~ label > img {
   }
 }
 
-.search-results{
-  min-height:90vh;
-  padding:10px;
+.search-results {
+  min-height: 90vh;
+  padding: 20px;
 }

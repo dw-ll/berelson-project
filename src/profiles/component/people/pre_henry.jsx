@@ -161,7 +161,7 @@ const Slideshow = () => {
         />
         <div>
           <div className="player-wrapper"></div>
-          <div class="top container">
+          <div class="container">
             <div class="row">
               <div class="col-6">
                 <h3 className="profile_title">Henry Baigelman</h3>
@@ -177,7 +177,7 @@ const Slideshow = () => {
                   continued his musical activities with The Happy Boys.
                 </h6>
               </div>
-              <div class="col-6">
+              <div class="col-6 profile-slideshow">
                 <Slide {...properties}>
                   <div className="each-slide" display="flex-container">
                     <div
