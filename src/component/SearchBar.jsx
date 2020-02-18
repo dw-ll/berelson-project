@@ -17,6 +17,7 @@ import Results from "./Results.jsx";
 import _ from "lodash";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
+
 const SearchBar = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState("");
@@ -24,9 +25,14 @@ const SearchBar = () => {
   const [resultsArray, setResultsArray] = useState([]);
   const [open, setOpen] = useState(false);
   const [person, setPerson] = useState("");
+  const [fire, setFire] = useState(false);
   const handleClose = () => {
     setOpen(false);
   };
+  useEffect(() => {
+    console.log("Resetting Fire");
+    setFire(false);
+  }, fire);
 
   const handleResultSelect = (e, { result, resultRunner }) => {
     setPerson(result);
@@ -62,7 +68,7 @@ const SearchBar = () => {
       });
       resultArray.forEach(figure => {
         figure.tags.forEach(tag => {
-          if (tag.includes(searchQuery)) {
+          if (tag.value === searchQuery) {
             setIsLoading(false);
             if (!runnerArray.includes(figure)) {
               resultRunner.push(figure);
@@ -76,17 +82,21 @@ const SearchBar = () => {
   };
   if (person !== "") {
     return (
-      <Redirect
-        to={{ pathname: "/results", state: { results: resultsArray } }}
-      ></Redirect>
+      <div>
+        <SearchBar />
+        <Redirect
+          to={{
+            pathname: "/results/",
+            state: { results: [resultsArray, person] }
+          }}
+        ></Redirect>
+      </div>
     );
   }
 
   return (
     <Router>
       <Switch>
-      
-
         <div>
           <Search
             className="search-bar"
@@ -99,6 +109,14 @@ const SearchBar = () => {
             value={value}
             size="small"
           />
+          {/* {fire && (
+            <Redirect
+              to={{
+                pathname: "/results/",
+                state: { results: [resultsArray, person] }
+              }}
+            ></Redirect>
+          )} */}
         </div>
       </Switch>
     </Router>

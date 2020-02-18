@@ -8,6 +8,7 @@ import Pre from "./pre";
 import Post from "./post";
 import WWII from "./ww2";
 import images from "../json/resultData.js";
+import SearchBar from "./SearchBar.jsx";
 
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
@@ -57,10 +58,12 @@ class Results extends Component {
                       .join(", ")}
                   </h5>
                 </div>
+
                 <Gallery
                   className="results-gallery"
                   images={this.state.results}
                   enableImageSelection={false}
+                  height="300{"
                 />
               </div>
             </div>
