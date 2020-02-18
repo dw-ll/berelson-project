@@ -32,14 +32,12 @@ class Results extends Component {
     super(props);
     this.state = {
       results: this.props.location.state.results[0],
-      query: this.props.location.state.results[1].title,
-      query_tags: this.props.location.state.results[0][0].tags
+      //query: this.props.location.state.results[1]
     };
   }
   render() {
-    console.log(this.state.results);
-    console.log(this.state.query);
-    console.log(this.state.query_tags);
+    console.log("Results:" + this.state.results);
+
     return (
       <Router>
         <ScrollToTop>
@@ -51,19 +49,13 @@ class Results extends Component {
                   <h5 style={{ textAlign: "center" }}>
                     Search Results for {this.state.query}
                   </h5>
-                  <h5 style={{ textAlign: "center" }}>
-                    Tags related to {this.state.query}:
-                    {this.state.query_tags
-                      .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                      .join(", ")}
-                  </h5>
                 </div>
 
                 <Gallery
                   className="results-gallery"
                   images={this.state.results}
                   enableImageSelection={false}
-                  height="300{"
+                  height="300"
                 />
               </div>
             </div>
