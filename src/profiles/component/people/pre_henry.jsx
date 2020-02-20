@@ -160,51 +160,53 @@ const Slideshow = () => {
           )}
         />
         <div>
-          <div className="player-wrapper"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <h3 className="profile_title">Henry Baigelman</h3>
-                <h6>B. 1900 D. 1950</h6>
-                <h6 className="profile_bio">
-                  Chaim (later: Henry) Baigelman was a violinist, saxophonist
-                  and composer and the only one out of nine musical siblings to
-                  survive the war. He played professionally since the age of
-                  fifteen. He was a member of a family band, The Jolly Boys,
-                  which he revived in post-war Germany under the name The Happy
-                  Boys, playing jazz concerts for American soldiers and Jewish
-                  survivors. After the war, he emigrated to New York, where he
-                  continued his musical activities with The Happy Boys.
-                </h6>
-              </div>
-              <div class="col-6 profile-slideshow">
-                <Slide {...properties}>
-                  <div className="each-slide" display="flex-container">
-                    <div
-                      style={{ backgroundImage: `url(${slideImages[0]})` }}
-                    />
-                  </div>
-                  <div className="each-slide">
-                    <div
-                      style={{ backgroundImage: `url(${slideImages[1]})` }}
-                    />
-                  </div>
-                  <div className="each-slide">
-                    <div
-                      style={{ backgroundImage: `url(${slideImages[2]})` }}
-                    />
-                  </div>
-                  <div className="each-slide">
-                    <div
-                      style={{ backgroundImage: `url(${slideImages[3]})` }}
-                    />
-                  </div>
-                  <div className="each-slide">
-                    <div
-                      style={{ backgroundImage: `url(${slideImages[4]})` }}
-                    />
-                  </div>
-                </Slide>
+          <div className="container-wrapper">
+            <div class="container profile-container">
+              <div class="row">
+                <div class="col-6">
+                  <h3 className="profile_title">Henry Baigelman</h3>
+                  <h6>B. 1900 D. 1950</h6>
+                  <h6 className="profile_bio">
+                    Chaim (later: Henry) Baigelman was a violinist, saxophonist
+                    and composer and the only one out of nine musical siblings
+                    to survive the war. He played professionally since the age
+                    of fifteen. He was a member of a family band, The Jolly
+                    Boys, which he revived in post-war Germany under the name
+                    The Happy Boys, playing jazz concerts for American soldiers
+                    and Jewish survivors. After the war, he emigrated to New
+                    York, where he continued his musical activities with The
+                    Happy Boys.
+                  </h6>
+                </div>
+                <div class="col-6 profile-slideshow">
+                  <Slide {...properties}>
+                    <div className="each-slide" display="flex-container">
+                      <div
+                        style={{ backgroundImage: `url(${slideImages[0]})` }}
+                      />
+                    </div>
+                    <div className="each-slide">
+                      <div
+                        style={{ backgroundImage: `url(${slideImages[1]})` }}
+                      />
+                    </div>
+                    <div className="each-slide">
+                      <div
+                        style={{ backgroundImage: `url(${slideImages[2]})` }}
+                      />
+                    </div>
+                    <div className="each-slide">
+                      <div
+                        style={{ backgroundImage: `url(${slideImages[3]})` }}
+                      />
+                    </div>
+                    <div className="each-slide">
+                      <div
+                        style={{ backgroundImage: `url(${slideImages[4]})` }}
+                      />
+                    </div>
+                  </Slide>
+                </div>
               </div>
             </div>
           </div>
