@@ -1357,8 +1357,8 @@ input[type="checkbox"]:checked ~ label > img {
   border: 1.5px solid goldenrod;
   margin: 35px;
 }
-.riva-row{
-  margin-top:100px;
+.riva-row {
+  margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
   .top {
@@ -1820,5 +1820,6 @@ input[type="checkbox"]:checked ~ label > img {
 
 .search-results {
   min-height: 90vh;
-  padding: 20px;
+  margin-top: 10px;
+  width: 100%;
 }

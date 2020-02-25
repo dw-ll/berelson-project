@@ -34,7 +34,7 @@ const SearchBar = () => {
     setFire(false);
   }, fire);
 
-  const handleResultSelect = (e, { result, resultRunner }) => {
+  const handleResultSelect = (e, { result, value, resultRunner }) => {
     setPerson(result);
     setValue(result.title);
   };
@@ -87,7 +87,7 @@ const SearchBar = () => {
         <Redirect
           to={{
             pathname: "/results/",
-            state: { results: [resultsArray, person] }
+            state: { results: [resultsArray, value, person] }
           }}
         ></Redirect>
       </div>

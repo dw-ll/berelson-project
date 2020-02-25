@@ -32,7 +32,7 @@ class Results extends Component {
     super(props);
     this.state = {
       results: this.props.location.state.results[0],
-      //query: this.props.location.state.results[1]
+      query: this.props.location.state.results[1]
     };
   }
   render() {
@@ -56,6 +56,14 @@ class Results extends Component {
                   images={this.state.results}
                   enableImageSelection={false}
                   height="300"
+                  thumbnailWidth={500}
+                  thumbnailHeight={500}
+                  tagStyle={{
+                    color: "white",
+                    backgroundColor: "#2e2e2e",
+                    marginBottom: "10px",
+                    opacity: "0.8"
+                  }}
                 />
               </div>
             </div>
