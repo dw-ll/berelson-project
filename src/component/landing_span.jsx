@@ -104,56 +104,58 @@ export default class Span extends Component {
                 </div>
               </Greeting>
             </div>
-            <h4 style={{ textAlign: "center" }} className="intro-text">
-              meet the family
-            </h4>
-            <div class="container" style={{ marginTop: "35px" }}>
-              <div class="row profiles">
-                <div class="col-4">
-                  <Card className="landing-card">
-                    <Link to="/pre/david/">
-                      <Card.Img src={DavidProfile}></Card.Img>
-                    </Link>
-                    <Card.Body>
-                      <Card.Title>David Baigelman</Card.Title>
-                      <Card.Text>
-                        A violinist, conductor, composer and songwriter
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
+            <div ref={this.scrollDiv}>
+              <h4 style={{ textAlign: "center" }} className="intro-text">
+                meet the family
+              </h4>
+              <div class="container" style={{ marginTop: "35px" }}>
+                <div class="row profiles">
+                  <div class="col-4">
+                    <Card className="landing-card">
+                      <Link to="/pre/david/">
+                        <Card.Img src={DavidProfile}></Card.Img>
+                      </Link>
+                      <Card.Body>
+                        <Card.Title>David Baigelman</Card.Title>
+                        <Card.Text>
+                          A violinist, conductor, composer and songwriter
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div class="col-4" />
+                  <div class="col-4">
+                    <Card className="landing-card">
+                      <Link to="/pre/henry/">
+                        <Card.Img src={HenryProfile}></Card.Img>
+                      </Link>
+                      <Card.Body>
+                        <Card.Title>Henry Baigelman</Card.Title>
+                        <Card.Text>
+                          A violinist, saxophonist and composer and the only one
+                          out of nine musical siblings to survive the war
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
                 </div>
+              </div>
+              <div class="row profiles riva-row">
                 <div class="col-4" />
                 <div class="col-4">
+                  {" "}
                   <Card className="landing-card">
-                    <Link to="/pre/henry/">
-                      <Card.Img src={HenryProfile}></Card.Img>
+                    <Link to="/present/riva">
+                      <Card.Img src={RivaProfile}></Card.Img>
                     </Link>
                     <Card.Body>
-                      <Card.Title>Henry Baigelman</Card.Title>
-                      <Card.Text>
-                        A violinist, saxophonist and composer and the only one
-                        out of nine musical siblings to survive the war
-                      </Card.Text>
+                      <Card.Title>Riva Baigelman</Card.Title>
+                      <Card.Text>More info about Riva.</Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
+                <div class="col-4" />>
               </div>
-            </div>
-            <div class="row profiles">
-              <div class="col-4" />
-              <div class="col-4">
-                {" "}
-                <Card className="landing-card">
-                  <Link to="/present/riva">
-                    <Card.Img src={RivaProfile}></Card.Img>
-                  </Link>
-                  <Card.Body>
-                    <Card.Title>Riva Baigelman</Card.Title>
-                    <Card.Text>More info about Riva.</Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div class="col-4" />>
             </div>
           </div>
         </Switch>
