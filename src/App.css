@@ -108,7 +108,7 @@
   color: grey !important;
 }
 .ui.menu:first-child {
-  margin-top: -2px;
+  margin-top: 2px;
 }
 .ui.menu {
   display: flex;
@@ -753,6 +753,10 @@ main {
   height: 665px;
   background-color: #272727 !important;
 }
+
+.dark-mode .landing-card{
+  background-color: #272727 !important;
+}
 .intro-text {
   font-size: 30px;
   letter-spacing: 15px;
@@ -1342,12 +1346,12 @@ input[type="checkbox"]:checked ~ label > img {
 .profiles {
   margin-top: 35px;
 }
-.profile-container{
-  padding:55px;
+.profile-container {
+  padding: 55px;
 }
-.container-wrapper{
-  border:1.5px solid goldenrod;
-  margin:35px;
+.container-wrapper {
+  border: 1.5px solid goldenrod;
+  margin: 35px;
 }
 @media screen and (max-width: 768px) {
   .top {
@@ -1445,7 +1449,7 @@ input[type="checkbox"]:checked ~ label > img {
     height: 400px !important;
   }
   .ui.menu:first-child {
-    margin-top: -3px;
+    margin-top: 2px;
   }
   .greeting {
     min-height: 77vh !important;
@@ -1511,7 +1515,7 @@ input[type="checkbox"]:checked ~ label > img {
     height: 400px !important;
   }
   .ui.menu:first-child {
-    margin-top: -3px;
+    margin-top: 2px;
   }
   .era-image1 {
     display: inline-block;
@@ -1590,7 +1594,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 @media screen and (min-width: 1680px) {
   .ui.menu:first-child {
-    margin-top: -3px;
+    margin-top: 2px;
   }
   .greeting {
     min-height: 78vh !important;
@@ -1694,7 +1698,7 @@ input[type="checkbox"]:checked ~ label > img {
     height: 400px !important;
   }
   .ui.menu:first-child {
-    margin-top: -3px;
+    margin-top: 2px;
   }
 
   .single-photo-landing {

@@ -110,7 +110,7 @@ export default class Span extends Component {
             <div class="container" style={{ marginTop: "35px" }}>
               <div class="row profiles">
                 <div class="col-4">
-                  <Card>
+                  <Card className="landing-card">
                     <Link to="/pre/david/">
                       <Card.Img src={DavidProfile}></Card.Img>
                     </Link>
@@ -124,7 +124,7 @@ export default class Span extends Component {
                 </div>
                 <div class="col-4" />
                 <div class="col-4">
-                  <Card>
+                  <Card className="landing-card">
                     <Link to="/pre/henry/">
                       <Card.Img src={HenryProfile}></Card.Img>
                     </Link>
@@ -143,7 +143,7 @@ export default class Span extends Component {
               <div class="col-4" />
               <div class="col-4">
                 {" "}
-                <Card>
+                <Card className="landing-card">
                   <Link to="/present/riva">
                     <Card.Img src={RivaProfile}></Card.Img>
                   </Link>
