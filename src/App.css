@@ -757,6 +757,9 @@ main {
   height: 665px;
   background-color: #272727 !important;
 }
+.landing-card {
+  transform: scale(0.8);
+}
 
 .dark-mode .landing-card {
   background-color: #272727 !important;
@@ -768,6 +771,19 @@ main {
   font-family: "Cambria";
   font-variant: small-caps;
   border-bottom: solid 1px goldenrod;
+}
+.intro-text-paragraph {
+  font-family: "Cambria";
+  padding: 30px 35px 0 30px;
+}
+.intro-text-paragraph:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid goldenrod;
+  left: 35%;
+  bottom: -15%;
+  width: 30%;
+  height: 0px;
 }
 .greeting-button {
   position: absolute;

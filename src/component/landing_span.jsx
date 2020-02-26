@@ -108,9 +108,24 @@ export default class Span extends Component {
               <h4 style={{ textAlign: "center" }} className="intro-text">
                 meet the family
               </h4>
+              <h4 style={{ textAlign: "center" }} className="intro-text-paragraph">
+               "The Baigelman
+                (Beigelman) family of Łódź were prominent musicians, composers,
+                conductors, and theater performers. The patriarch, Simon
+                (Szymon) Baigelman was first oboe for the Łódź Symphony
+                Orchestra, which was populated mostly by musicians related to
+                the family including the last names of Spielman, Mutzman,
+                Ostrowiec, and Spaismacher. Perhaps the most famous was prodigy
+                David (Dawid) Beigelman (1887-1945), a violinist, orchestra
+                leader, and composer of Yiddish theater music and songs. He
+                became director of the Łódź Yiddish Theater in 1912. Among other
+                major accomplishments, he arranged the music for the hugely
+                popular S. Ansky play, The Dybbuk. In 1929 he became composer
+                and music director of the Łódź Ararat Theater."
+              </h4>
               <div class="container" style={{ marginTop: "35px" }}>
                 <div class="row profiles">
-                  <div class="col-4">
+                  <div class="col-6">
                     <Card className="landing-card">
                       <Link to="/pre/david/">
                         <Card.Img src={DavidProfile}></Card.Img>
@@ -118,43 +133,27 @@ export default class Span extends Component {
                       <Card.Body>
                         <Card.Title>David Baigelman</Card.Title>
                         <Card.Text>
-                          A violinist, conductor, composer and songwriter
+                          A violinist, conductor, composer and songwriter.
                         </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>
-                  <div class="col-4" />
-                  <div class="col-4">
-                    <Card className="landing-card">
+
+                  <div class="col-6">
+                    <Card className="landing-card landing-card-henry">
                       <Link to="/pre/henry/">
                         <Card.Img src={HenryProfile}></Card.Img>
                       </Link>
                       <Card.Body>
                         <Card.Title>Henry Baigelman</Card.Title>
                         <Card.Text>
-                          A violinist, saxophonist and composer and the only one
-                          out of nine musical siblings to survive the war
+                          A violinist, saxophonist, composer. The only one out
+                          of nine musical siblings to survive the war.
                         </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>
                 </div>
-              </div>
-              <div class="row profiles riva-row">
-                <div class="col-4" />
-                <div class="col-4">
-                  {" "}
-                  <Card className="landing-card">
-                    <Link to="/present/riva">
-                      <Card.Img src={RivaProfile}></Card.Img>
-                    </Link>
-                    <Card.Body>
-                      <Card.Title>Riva Baigelman</Card.Title>
-                      <Card.Text>More info about Riva.</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div class="col-4" />>
               </div>
             </div>
           </div>
