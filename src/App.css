@@ -774,17 +774,10 @@ main {
 }
 .intro-text-paragraph {
   font-family: "Cambria";
-  padding: 30px 35px 0 30px;
+  padding: 30px 50px 20px 50px;
+  border-bottom: 1px solid goldenrod;
 }
-.intro-text-paragraph:after {
-  content: "";
-  position: absolute;
-  border-top: 1px solid goldenrod;
-  left: 35%;
-  bottom: -15%;
-  width: 30%;
-  height: 0px;
-}
+
 .greeting-button {
   position: absolute;
   left: 45%;
@@ -899,6 +892,14 @@ h1 {
   position: relative;
   margin-top: 25%;
 }
+.profile_bio_row {
+  font-size: 15px;
+  margin-top: 3%;
+}
+.profile_bio_subrow {
+  font-size: 15px;
+  margin-top: 1%;
+}
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -968,10 +969,19 @@ h3 {
 .profile_title {
   font-family: "Times New Roman", Times, serif;
 }
+.profile_title_date {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 5%;
+}
 
 .single_photo {
   width: 600px;
   height: 500px;
+  margin-right: 20%;
+}
+.single_photo_profile {
+  width: 350px;
+  height: 400px;
   margin-right: 20%;
 }
 .space {
@@ -989,15 +999,18 @@ h3 {
 .landing-profile-text {
   padding-top: 15%;
 }
+.profile-text-quote{
+  font-weight: bold;
+}
 .each-slide > div {
-  transform: scale(0.85);
+  
   display: block;
   margin: 0 auto;
   margin-top: -5px;
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 600px;
+  height: 400px;
   width: 100%;
 }
 

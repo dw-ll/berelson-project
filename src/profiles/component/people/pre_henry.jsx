@@ -163,24 +163,11 @@ const Slideshow = () => {
           <div className="container-wrapper">
             <div class="container profile-container">
               <div class="row">
-                <div class="col-6">
+                <div class="col-6 col-md-4"></div>
+                <div class="col-6 col-md-4">
                   <h3 className="profile_title">Henry Baigelman</h3>
-                  <h6>B. 1900 D. 1950</h6>
-                  <h6 className="profile_bio">
-                    Chaim (later: Henry) Baigelman was a violinist, saxophonist
-                    and composer and the only one out of nine musical siblings
-                    to survive the war. He played professionally since the age
-                    of fifteen. He was a member of a family band, The Jolly
-                    Boys, which he revived in post-war Germany under the name
-                    The Happy Boys, playing jazz concerts for American soldiers
-                    and Jewish survivors. After the war, he emigrated to New
-                    York, where he continued his musical activities with The
-                    Happy Boys.
-                  </h6>
-                </div>
-                <div class="col-6 profile-slideshow">
                   <Slide {...properties}>
-                    <div className="each-slide" display="flex-container">
+                    <div className="each-slide" display="flex">
                       <div
                         style={{ backgroundImage: `url(${slideImages[0]})` }}
                       />
@@ -206,7 +193,57 @@ const Slideshow = () => {
                       />
                     </div>
                   </Slide>
+                  <h5 className="profile_title_date">B. 1900 D. 1950</h5>
                 </div>
+                <div class="col-6 col-md-4"></div>
+              </div>
+              <div class="row">
+                <h6 className="profile_bio_row">
+                  Chaim (later: Henry) Baigelman was a violinist, saxophonist
+                  and composer and the only one out of nine musical siblings to
+                  survive the war. He played professionally since the age of
+                  fifteen. He was a member of a family band, The Jolly Boys,
+                  which he revived in post-war Germany under the name The Happy
+                  Boys, playing jazz concerts for American soldiers and Jewish
+                  survivors. After the war, he emigrated to New York, where he
+                  continued his musical activities with The Happy Boys. Henry
+                  (Chaim) Baigelman (1911-2002), one of David’s younger
+                  brothers, was also an extremely talented musician. When Henry
+                  was 6, his brother-in-law, Samuel, taught him to play the
+                  violin. He joined a conservatory and at 15 began playing both
+                  the violin and the saxophone professionally. He played with
+                  the family band, named The Jolly Boys, at the Łódź Ararat
+                  Theater. After his family was confined to the ghetto, he
+                  played the violin in the ghetto orchestra, conducted by his
+                  brother David. On June 10, 1944, when the Nazis ordered the
+                  destruction of the ghetto, David hid the family instruments,
+                  including Henry’s violin, in the attic of a hat factory where
+                  Henry had been working. After horrendous stints at Nazi work
+                  camps, Henry became part of a 12,000-person forced march.
+                  Starving and freezing, and barely able to walk, he was
+                  liberated April 23, 1945 by U.S. Army troops. Only 3,000
+                  prisoners survived. to his earlier band name and also to
+                  emphasize that they were happy to have survived. The band
+                  toured displaced persons camps, bringing the joy of American
+                  jazz and swing to refugees and U.S. troops. During this time,
+                  Henry wrote the lyrics to the popular Yiddish song “Es Bengt
+                  Zich Nuch a Hajm” (“One Longs for Home”). The words, in part,
+                  convey the dark past combined with a fierce optimism: . . .
+                  <h6 className="profile_bio_subrow profile-text-quote">
+                    "One longs for home Our mourners must have retribution. It
+                    was once terrible,But it has changed for the better. Now one
+                    must live. Because the time has come! "{" "}
+                  </h6>
+                  Henry’s brother-in-law had retrieved the hidden family
+                  instruments from the Łódź ghetto following its liberation by
+                  the Soviet Army. After migrating to New York City with his new
+                  wife, Gita (who survived the Łódź ghetto and Ravesnbruck),
+                  Henry continued performing with his band until 1959 and later
+                  became successful in real estate. In 2010, Henry’s children,
+                  Riva Berelson and Simon Baigelman, donated their father’s
+                  rescued instruments, two violins and a saxophone, to the
+                  United States Holocaust Memorial Museum.
+                </h6>
               </div>
             </div>
           </div>
