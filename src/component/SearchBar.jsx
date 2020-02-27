@@ -13,7 +13,7 @@ import Button from "react-bootstrap/Button";
 import searchData from "../json/searchData.js";
 import resultData from "../json/resultData.js";
 import Results from "./Results.jsx";
-
+import $ from "jquery";
 import _ from "lodash";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
@@ -29,10 +29,15 @@ const SearchBar = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  useEffect(() => {
-    console.log("Resetting Fire");
-    setFire(false);
-  }, fire);
+
+  $(function() {
+    $(".search-bar").keyup(function(event) {
+      if (event.keyCode == 13) {
+        console.log("Enter key has been pushed.");
+       
+      }
+    });
+  });
 
   const handleResultSelect = (e, { result, value, resultRunner }) => {
     setPerson(result);
@@ -40,6 +45,7 @@ const SearchBar = () => {
   };
 
   const handleTagChange = (e, { value }) => {
+   
     const searchQuery = value.toLowerCase();
     setIsLoading(true, value);
     setValue(value);
@@ -99,24 +105,19 @@ const SearchBar = () => {
       <Switch>
         <div>
           <Search
+            id="search"
             className="search-bar"
             loading={isLoading}
             onResultSelect={handleResultSelect}
             onSearchChange={_.debounce(handleTagChange, 500, {
               leading: true
             })}
+            selectItemOnEnter={true}
+            //onMouseDown={handleResultSelect}
             results={filteredResults}
             value={value}
             size="small"
           />
-          {/* {fire && (
-            <Redirect
-              to={{
-                pathname: "/results/",
-                state: { results: [resultsArray, person] }
-              }}
-            ></Redirect>
-          )} */}
         </div>
       </Switch>
     </Router>
