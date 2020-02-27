@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import MusicPlayer from "react-jinke-music-player";
-import Context from "../Context";
-
 import "react-jinke-music-player/assets/index.css";
 const options = {
   //audio lists model
@@ -98,7 +96,7 @@ const options = {
 
   //Whether to load audio immediately after the page loads.  [type `Boolean | String`, default `false`]
   //"auto|metadata|none" "true| false"
-  preload: false,
+  preload: true,
 
   //Whether the player's background displays frosted glass effect  [type `Boolean`, default `false`]
   glassBg: true,
@@ -149,7 +147,7 @@ const options = {
   autoPlay: true,
 
   //Whether you can switch between two modes, full => mini  or mini => full   [type 'Boolean' default 'true']
-  toggleMode: false,
+  toggleMode: true,
 
   //audio cover is show of the "mini" mode [type `Boolean` default 'true']
   showMiniModeCover: false,
@@ -218,16 +216,6 @@ const options = {
 
 const Music = () => {
   const [params] = useState(options);
-  if (Context._currentValue !== undefined) {
-    console.log(Context._currentValue);
-    return (
-      <Context.Consumer>
-        {context => <MusicPlayer className="music-player" {...params} />}
-      </Context.Consumer>
-    );
-  } else {
-    return <MusicPlayer className="music-player" {...params} />;
-  }
+  return <MusicPlayer className="music-player" {...params} />;
 };
-
 export default Music;
