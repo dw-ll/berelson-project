@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/Riva Camp Finale001.7d342290.jpg"
   },
   {
-    "revision": "6e2d495631d2baeb15de",
+    "revision": "902b1404eb52ff9901d8",
     "url": "/static/css/main.7be75a2e.chunk.css"
   },
   {
@@ -752,8 +752,8 @@ self.__precacheManifest = [
     "url": "/static/media/Riva Camp Finale (Back)001.43686031.jpg"
   },
   {
-    "revision": "6e2d495631d2baeb15de",
-    "url": "/static/js/main.ecd74cec.chunk.js"
+    "revision": "902b1404eb52ff9901d8",
+    "url": "/static/js/main.b247eeee.chunk.js"
   },
   {
     "revision": "4aad1bf4d9cf2d1cf157435ec717191b",
@@ -1364,12 +1364,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.c4f508e7.woff"
   },
   {
-    "revision": "65b286af947c0d982ca01b40e1fcab38",
-    "url": "/static/media/fa-regular-400.65b286af.ttf"
-  },
-  {
     "revision": "c1a866ec0e04a5e1915b41fcf261457c",
     "url": "/static/media/fa-regular-400.c1a866ec.eot"
+  },
+  {
+    "revision": "65b286af947c0d982ca01b40e1fcab38",
+    "url": "/static/media/fa-regular-400.65b286af.ttf"
   },
   {
     "revision": "cccc9d29470e879e40eb70249d9a2705",
@@ -1400,12 +1400,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.7b9568e6.svg"
   },
   {
-    "revision": "0bff33a5fd7ec390235476b4859747a0",
-    "url": "/static/media/fa-solid-900.0bff33a5.ttf"
-  },
-  {
     "revision": "8e4a6dcc692b3887f9f542cd6894d6d4",
     "url": "/static/media/fa-solid-900.8e4a6dcc.eot"
+  },
+  {
+    "revision": "0bff33a5fd7ec390235476b4859747a0",
+    "url": "/static/media/fa-solid-900.0bff33a5.ttf"
   },
   {
     "revision": "a9c4bb7348f42626454c988dbde1d0a0",
@@ -1456,55 +1456,55 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Regular.2751ee43.woff2"
   },
   {
-    "revision": "574fd0b50367f886d359e8264938fc37",
-    "url": "/static/media/Roboto-Medium.574fd0b5.woff2"
-  },
-  {
     "revision": "39b2c3031be6b4ea96e2e3e95d307814",
     "url": "/static/media/Roboto-Bold.39b2c303.woff2"
   },
   {
-    "revision": "7500519de3d82e33d1587f8042e2afcb",
-    "url": "/static/media/Roboto-Thin.7500519d.woff"
-  },
-  {
-    "revision": "ba3dcd8903e3d0af5de7792777f8ae0d",
-    "url": "/static/media/Roboto-Regular.ba3dcd89.woff"
+    "revision": "574fd0b50367f886d359e8264938fc37",
+    "url": "/static/media/Roboto-Medium.574fd0b5.woff2"
   },
   {
     "revision": "3b813c2ae0d04909a33a18d792912ee7",
     "url": "/static/media/Roboto-Light.3b813c2a.woff"
   },
   {
-    "revision": "fc78759e93a6cac50458610e3d9d63a0",
-    "url": "/static/media/Roboto-Medium.fc78759e.woff"
+    "revision": "7500519de3d82e33d1587f8042e2afcb",
+    "url": "/static/media/Roboto-Thin.7500519d.woff"
   },
   {
     "revision": "dc81817def276b4f21395f7ea5e88dcd",
     "url": "/static/media/Roboto-Bold.dc81817d.woff"
   },
   {
-    "revision": "894a2ede85a483bf9bedefd4db45cdb9",
-    "url": "/static/media/Roboto-Medium.894a2ede.ttf"
+    "revision": "fc78759e93a6cac50458610e3d9d63a0",
+    "url": "/static/media/Roboto-Medium.fc78759e.woff"
+  },
+  {
+    "revision": "ba3dcd8903e3d0af5de7792777f8ae0d",
+    "url": "/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
     "revision": "46e48ce0628835f68a7369d0254e4283",
     "url": "/static/media/Roboto-Light.46e48ce0.ttf"
   },
   {
+    "revision": "df7b648ce5356ea1ebce435b3459fd60",
+    "url": "/static/media/Roboto-Regular.df7b648c.ttf"
+  },
+  {
     "revision": "94998475f6aea65f558494802416c1cf",
     "url": "/static/media/Roboto-Thin.94998475.ttf"
   },
   {
-    "revision": "df7b648ce5356ea1ebce435b3459fd60",
-    "url": "/static/media/Roboto-Regular.df7b648c.ttf"
+    "revision": "894a2ede85a483bf9bedefd4db45cdb9",
+    "url": "/static/media/Roboto-Medium.894a2ede.ttf"
   },
   {
     "revision": "c23b42ca623ee6d29599",
     "url": "/static/css/2.1ba8871e.chunk.css"
   },
   {
-    "revision": "90e9b051757ff69202b63a864f6f4327",
+    "revision": "de1eb5e4e9309f1a64555660d74f0f46",
     "url": "/index.html"
   }
 ];
