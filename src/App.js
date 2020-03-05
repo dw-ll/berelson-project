@@ -97,12 +97,12 @@ const App = () => {
       <Context.Provider value={{ dark: darkMode }}>
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           <Navbar className="navbar-header no-shadows" light expand="md">
-            <NavbarBrand href="/#">{"Vessel Archives"}</NavbarBrand>
+            <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
 
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Link className="nav-link" to="/archive">
-                  Archive
+                  Media
                 </Link>
               </NavItem>
               <NavItem>
@@ -111,25 +111,9 @@ const App = () => {
                 </Link>
               </NavItem>
               <NavItem>
-                <Menu className={darkMode ? "dark-mode menu" : "menu"}>
-                  <Dropdown text="Eras" pointing className="link item">
-                    <Dropdown.Menu>
-                      <Dropdown.Item as={Link} to="/pre">
-                        Pre World-War II
-                      </Dropdown.Item>
-
-                      <Dropdown.Item as={Link} to="/ww2">
-                        World-War II
-                      </Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/post">
-                        Post World-War II
-                      </Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/present">
-                        Present
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Menu>
+                <Link className="nav-link" to="/archive">
+                  Archives
+                </Link>
               </NavItem>
               <NavItem>
                 <SearchBar />
@@ -144,14 +128,14 @@ const App = () => {
                     ☾
                   </span>
                 ) : (
-                  <span
-                    className="mode-toggle"
-                    style={{ color: "darkgoldenrod" }}
-                    onClick={() => setDarkMode(isDark => !isDark)}
-                  >
-                    ☀︎
+                    <span
+                      className="mode-toggle"
+                      style={{ color: "darkgoldenrod" }}
+                      onClick={() => setDarkMode(isDark => !isDark)}
+                    >
+                      ☀︎
                   </span>
-                )}
+                  )}
               </NavItem>
             </Nav>
           </Navbar>
@@ -381,15 +365,7 @@ const App = () => {
             />
 
             <div>
-              <div>
-                <Music
-                  className={
-                    darkMode
-                      ? "dark-music-player-panel"
-                      : "react-jinke-music-player-main light-theme music-player"
-                  }
-                />
-              </div>
+
               <div>
                 <ScrollButton
                   className="scroll-up-button"

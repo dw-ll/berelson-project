@@ -14,6 +14,7 @@ import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119 2.jpeg";
 import HenryRouter from "../profiles/component/people/pre_henry.jsx";
 import RivaProfile from "../SearchMedia/Riva/pola193.jpeg";
 import RivaRouter from "../profiles/component/people/present_riva.jsx";
+import $ from "jquery";
 const routes = [
   {
     component: Pre,
@@ -45,6 +46,32 @@ const routes = [
   }
 ];
 
+$(function() {
+  $("#david-profile").hover(
+    function() {
+      console.log("Hovering.");
+      $(".hover-text-container").html(
+        "A violinist, conductor, composer and songwriter."
+      );
+      $("hover-text-container").fadeIn(10000);
+    },
+    function() {
+      $(".hover-text-container").html("");
+    }
+  );
+
+  $("#henry-profile").hover(
+    function() {
+      $(".hover-text-container").html(
+        "  A violinist, saxophonist, composer. The only one out of nine musical siblings to survive the war."
+      );
+    },
+    function() {
+      $(".hover-text-container").html("");
+    }
+  );
+});
+
 export default class Span extends Component {
   constructor(props) {
     super(props);
@@ -53,6 +80,7 @@ export default class Span extends Component {
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
+
   render() {
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
@@ -78,20 +106,6 @@ export default class Span extends Component {
                 className="greeting"
               >
                 <div className="greeting-greet">
-                  <h3
-                    className="greeting-text"
-                    style={{
-                      color: "black",
-                      fontFamily: "Cambria",
-                      marginTop: "7px",
-                      marginLeft: "2px",
-                      letterSpacing: "2.5px",
-                      fontVariant: "small-caps"
-                    }}
-                  >
-                    vessel archives
-                  </h3>
-
                   <div className="greeting-button"></div>
                   <div
                     className="scroll-down"
@@ -104,52 +118,62 @@ export default class Span extends Component {
                 </div>
               </Greeting>
             </div>
-            <div ref={this.scrollDiv}>
-              <h4 style={{ textAlign: "center" }} className="intro-text">
-                meet the family
-              </h4>
-              <h4 style={{ textAlign: "center" }} className="intro-text-paragraph">
-               "The Baigelman
-                (Beigelman) family of Łódź were prominent musicians, composers,
-                conductors, and theater performers. The patriarch, Simon
-                (Szymon) Baigelman was first oboe for the Łódź Symphony
-                Orchestra, which was populated mostly by musicians related to
-                the family including the last names of Spielman, Mutzman,
-                Ostrowiec, and Spaismacher. Perhaps the most famous was prodigy
-                David (Dawid) Beigelman (1887-1945), a violinist, orchestra
-                leader, and composer of Yiddish theater music and songs. He
-                became director of the Łódź Yiddish Theater in 1912. Among other
-                major accomplishments, he arranged the music for the hugely
-                popular S. Ansky play, The Dybbuk. In 1929 he became composer
-                and music director of the Łódź Ararat Theater."
-              </h4>
+            <div className="intro-text-container" ref={this.scrollDiv}>
               <div class="container" style={{ marginTop: "35px" }}>
+                <div className="intro-text-paragraph-container">
+                  <h4
+                    style={{ textAlign: "center" }}
+                    className="intro-text-paragraph"
+                  >
+                    "The Baigelman (Beigelman) family of Łódź were prominent
+                    musicians, composers, conductors, and theater performers.
+                    The patriarch, Simon (Szymon) Baigelman was first oboe for
+                    the Łódź Symphony Orchestra, which was populated mostly by
+                    musicians related to the family including the last names of
+                    Spielman, Mutzman, Ostrowiec, and Spaismacher. Perhaps the
+                    most famous was prodigy David (Dawid) Beigelman (1887-1945),
+                    a violinist, orchestra leader, and composer of Yiddish
+                    theater music and songs. He became director of the Łódź
+                    Yiddish Theater in 1912. Among other major accomplishments,
+                    he arranged the music for the hugely popular S. Ansky play,
+                    The Dybbuk. In 1929 he became composer and music director of
+                    the Łódź Ararat Theater."
+                  </h4>
+                </div>
                 <div class="row profiles">
-                  <div class="col-6">
-                    <Card className="landing-card">
+                  <div class="col-4">
+                    <h4
+                      id="toggle-text"
+                      style={{ textAlign: "center" }}
+                      className="intro-text"
+                    >
+                      meet the family
+                    </h4>
+                    <h6>
+                      Hover over a portrait to learn more about that person.
+                    </h6>
+
+                    <div class="hover-text-container"></div>
+                  </div>
+
+                  <div class="col-4">
+                    <Card id="david-profile" className="landing-card">
                       <Link to="/pre/david/">
                         <Card.Img src={DavidProfile}></Card.Img>
                       </Link>
                       <Card.Body>
                         <Card.Title>David Baigelman</Card.Title>
-                        <Card.Text>
-                          A violinist, conductor, composer and songwriter.
-                        </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>
 
-                  <div class="col-6">
-                    <Card className="landing-card landing-card-henry">
+                  <div class="col-4">
+                    <Card id="henry-profile" className="landing-card">
                       <Link to="/pre/henry/">
                         <Card.Img src={HenryProfile}></Card.Img>
                       </Link>
                       <Card.Body>
                         <Card.Title>Henry Baigelman</Card.Title>
-                        <Card.Text>
-                          A violinist, saxophonist, composer. The only one out
-                          of nine musical siblings to survive the war.
-                        </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>
