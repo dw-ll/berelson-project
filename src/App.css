@@ -770,13 +770,20 @@ main {
 .dark-mode .landing-card {
   background-color: #272727 !important;
 }
+.intro-text-container {
+  min-height: 90vh;
+}
 .intro-text {
   font-size: 35px;
   letter-spacing: 5px;
 
-  font-family: "Arial";
+  font-family: "Candara";
   font-variant: small-caps;
   border-bottom: solid 1px goldenrod;
+}
+.intro-text-loop {
+  font-family: Candara;
+  font-weight: bold;
 }
 .intro-text-paragraph-container {
 }
@@ -789,13 +796,29 @@ main {
   text-align: left;
   border-bottom: 1px solid goldenrod;
 }
+.hover-prompt {
+  font-family: "Candara";
+  padding: 25px;
+  font-size: 20px;
+}
 
 .hover-text-container {
-  min-height: 400px;
-  width: 400px;
-  justify-content: center;
+  width: inherit;
+  max-height: 20px;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 250px;
+}
+
+.hover-text {
+  font-family: "Arial";
+  font-style: italic;
+  padding: 15px;
+  border-bottom: 1px solid goldenrod;
+}
+.hover-text-click {
+  font-family: "Arial";
+  font-style: italic;
+  padding: 15px;
 }
 /* 
 .david-profile-card:hover ~ .hover-text-david {

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Button, Card } from "react-bootstrap";
 import { Switch } from "react-router";
 import Greeting from "react-lazy-hero";
+import TextLoop from "react-text-loop";
 import Lodz from "../Media/lodz.jpg";
 import Pre from "./pre.jsx";
 import WW2 from "./ww2.jsx";
@@ -50,24 +51,32 @@ $(function() {
   $("#david-profile").hover(
     function() {
       console.log("Hovering.");
-      $(".hover-text-container").html(
-        "A violinist, conductor, composer and songwriter."
+      $(".hover-text-container").append(
+        "<h4 class='hover-text'>David was part of the last group of Lodz Jews to be deported to Auschwitz. He brought his violin and all his scores with him Even in the camp, he tried to provide entertainment for his fellow Jews.</h4>\
+        <h5 class= 'hover-text-click' > Click David's portrait to view his full profile.</h5>"
       );
-      $("hover-text-container").fadeIn(10000);
+      $(".hover-text").fadeIn(10000);
+      $(".hover-prompt").hide();
     },
     function() {
       $(".hover-text-container").html("");
+      $(".hover-prompt").show();
     }
   );
 
   $("#henry-profile").hover(
     function() {
       $(".hover-text-container").html(
-        "  A violinist, saxophonist, composer. The only one out of nine musical siblings to survive the war."
+        "<h4 class='hover-text'> Chaim (later: Henry) Baigelman was a violinist, saxophonist and composer and the only one out of nine musical siblings to survive the war. He was a member of a family band, The Jolly Boys, which he revived in post-war Germany under the name The Happy Boys, playing jazz concerts for American soldiers and Jewish survivors. </h4>\
+         <h5 class= 'hover-text-click' > Click Henry's portrait to view his full profile.</h5>"
       );
+      $(".hover-text").fadeIn(10000);
+      $(".hover-prompt").hide();
     },
     function() {
       $(".hover-text-container").html("");
+      $(".hover-text-container").html("");
+      $(".hover-prompt").show();
     }
   );
 });
@@ -121,12 +130,24 @@ export default class Span extends Component {
             <div className="intro-text-container" ref={this.scrollDiv}>
               <div class="container" style={{ marginTop: "35px" }}>
                 <div className="intro-text-paragraph-container">
+                  <h2 className="intro-text-loop">
+                    The Baigelman (Beigelman) family of Łódź were &nbsp;
+                    <TextLoop>
+                      <span className="intro-text-loop">
+                        prominent musicians
+                      </span>
+                      <span className="intro-text-loop"> composers</span>
+                      <span className="intro-text-loop"> conductors</span>
+                      <span className="intro-text-loop">
+                        {" "}
+                        theater performers
+                      </span>
+                    </TextLoop>{" "}
+                  </h2>
                   <h4
-                    style={{ textAlign: "center" }}
+                    style={{ textAlign: "left" }}
                     className="intro-text-paragraph"
                   >
-                    "The Baigelman (Beigelman) family of Łódź were prominent
-                    musicians, composers, conductors, and theater performers.
                     The patriarch, Simon (Szymon) Baigelman was first oboe for
                     the Łódź Symphony Orchestra, which was populated mostly by
                     musicians related to the family including the last names of
@@ -137,7 +158,7 @@ export default class Span extends Component {
                     Yiddish Theater in 1912. Among other major accomplishments,
                     he arranged the music for the hugely popular S. Ansky play,
                     The Dybbuk. In 1929 he became composer and music director of
-                    the Łódź Ararat Theater."
+                    the Łódź Ararat Theater.
                   </h4>
                 </div>
                 <div class="row profiles">
@@ -149,7 +170,7 @@ export default class Span extends Component {
                     >
                       meet the family
                     </h4>
-                    <h6>
+                    <h6 class="hover-prompt">
                       Hover over a portrait to learn more about that person.
                     </h6>
 
