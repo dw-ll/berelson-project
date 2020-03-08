@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Pre from "../../../component/pre";
+import Playlist from "../../../component/Playlist";
+import { MediaPlayer } from "@cassette/player";
 
 const IMGURL =
   "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Pre-WWII/";
@@ -14,6 +16,101 @@ const properties = {
   indicators: true,
   arrows: true
 };
+
+const makh = [
+  {
+    title: "Makh Tsu Di Eygelekh",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3"
+  },
+  {
+    title: "Makh Tsu Di Eygelekh 2",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav"
+  }
+];
+
+const felda = [
+  {
+    title: "Feldafing",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav"
+  }
+];
+
+const ikhVil = [
+  {
+    title: "Ikh Vil Fargesn",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav"
+  }
+];
+const list2 = [
+  {
+    title: "Makh Tsu Di Eygelekh",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3"
+  },
+  {
+    title: "Makh Tsu Di Eygelekh 2",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav"
+  },
+  {
+    title: "Tsigaynerlid",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490511/03_Tsigaynerlid_fqfelx.wav"
+  },
+  {
+    title: "Der Yungiker Shnayderl",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490550/Der_yungiker_shnayderl_The_Young_Taylor_itmlrj.wav"
+  },
+  {
+    title: "Es Benkt Zikh Nokh a Heym",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490560/Es_benkt_zikh_nokh_a_heym_We_long_for_a_home_rst1da.wav"
+  },
+  {
+    title: "Feldafing",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav"
+  },
+  {
+    title: "Grzech A Sin",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490521/Grzech_A_Sin_yvnbgy.wav"
+  },
+  {
+    title: "Ikh Vil Fargesn",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav"
+  },
+  {
+    title: "Nie Gniewaj Sie",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490667/Nie_gniewaj_sie_Don_t_Sulk_My_Dear_bjqbgz.wav"
+  },
+  {
+    title: "Untitled",
+    artist: "David Baigelman",
+    url:
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490640/Unknown_Instrumental_Fragment_2_fmi7kc.wav"
+  }
+];
 const Slideshow = () => {
   return (
     <Router>
@@ -85,8 +182,154 @@ const Slideshow = () => {
                 publish some of these with their melodies. David was married to
                 the well-known actress Andzhe Foderman. She was killed earlier
                 on. Their only son, Pinyek (also a musician), survived the war
-                in Russia, and thereafter came to America. 
+                in Russia, and thereafter came to America.
               </h6>
+            </div>
+            <div class=" david_work">
+              <div class="col-lg-12 ">
+                <h1 class="david_work_title_main">David's Work</h1>
+                <h6 className="david_work_story">
+                  Here is more info about David's work, including samples of his
+                  music, and accomplishments.Veniam velit adipisicing anim
+                  excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                  duis ut nulla officia irure reprehenderit laborum fugiat
+                  dolore in elit. Adipisicing do qui duis Lorem est. Est
+                  incididunt sint eu minim dolore mollit velit velit commodo ex
+                  nulla exercitation. Veniam velit adipisicing anim excepteur
+                  nostrud magna nostrud aliqua dolor. Sunt aute est duis ut
+                  nulla officia irure reprehenderit laborum fugiat dolore in
+                  elit. Adipisicing do qui duis Lorem est.Veniam velit
+                  adipisicing anim excepteur nostrud magna nostrud aliqua dolor.
+                  Sunt aute est duis ut nulla officia irure reprehenderit
+                  laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
+                  est. Est incididunt sint eu minim dolore mollit velit velit
+                  commodo ex nulla exercitation. Veniam velit adipisicing anim
+                  excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                  duis ut nulla officia irure reprehenderit laborum fugiat
+                  dolore in elit. Adipisicing do qui duis Lorem est.
+                </h6>
+              </div>
+            </div>
+            <div class="david_work">
+              <div class="col-lg-12 ">
+                <div class="sample_wrapper">
+                  <h1 class="david_work_title">Makh Tsu Di Eygelekh</h1>
+                  <h6 className="david_work_story">
+                    Here is more info about David's work, including samples of
+                    his music, and accomplishments.Veniam velit adipisicing anim
+                    excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                    duis ut nulla officia irure reprehenderit laborum fugiat
+                    dolore in elit. Adipisicing do qui duis Lorem est. Est
+                    incididunt sint eu minim dolore mollit velit velit commodo
+                    ex nulla exercitation. Veniam velit adipisicing anim
+                    excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                    duis ut nulla officia irure reprehenderit laborum fugiat
+                    dolore in elit. Adipisicing do qui duis Lorem est.Veniam
+                    velit adipisicing anim excepteur nostrud magna nostrud
+                    aliqua dolor. Sunt aute est duis ut nulla officia irure
+                    reprehenderit laborum fugiat dolore in elit. Adipisicing do
+                    qui duis Lorem est. Est incididunt sint eu minim dolore
+                    mollit velit velit commodo ex nulla exercitation. Veniam
+                    velit adipisicing anim excepteur nostrud magna nostrud
+                    aliqua dolor. Sunt aute est duis ut nulla officia irure
+                    reprehenderit laborum fugiat dolore in elit. Adipisicing do
+                    qui duis Lorem est.
+                  </h6>
+                  <MediaPlayer
+                    className="media-player"
+                    style={{ marginBottom: "-20px" }}
+                    playlist={makh}
+                    autoplay={false}
+                    controls={[
+                      "spacer",
+                      "playpause",
+                      "backskip",
+                      "forwardskip",
+                      "mute",
+                      "spacer",
+                      "progress"
+                    ]}
+                  />
+                </div>
+                <div class="sample_wrapper">
+                  <h1 class="david_work_title">Feldafing</h1>
+                  <h6 className="david_work_story">
+                    Here is more info about David's work, including samples of
+                    his music, and accomplishments.Veniam velit adipisicing anim
+                    excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                    duis ut nulla officia irure reprehenderit laborum fugiat
+                    dolore in elit. Adipisicing do qui duis Lorem est. Est
+                    incididunt sint eu minim dolore mollit velit velit commodo
+                    ex nulla exercitation. Veniam velit adipisicing anim
+                    excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                    duis ut nulla officia irure reprehenderit laborum fugiat
+                    dolore in elit. Adipisicing do qui duis Lorem est.Veniam
+                    velit adipisicing anim excepteur nostrud magna nostrud
+                    aliqua dolor. Sunt aute est duis ut nulla officia irure
+                    reprehenderit laborum fugiat dolore in elit. Adipisicing do
+                    qui duis Lorem est. Est incididunt sint eu minim dolore
+                    mollit velit velit commodo ex nulla exercitation. Veniam
+                    velit adipisicing anim excepteur nostrud magna nostrud
+                    aliqua dolor. Sunt aute est duis ut nulla officia irure
+                    reprehenderit laborum fugiat dolore in elit. Adipisicing do
+                    qui duis Lorem est.
+                  </h6>
+                  <MediaPlayer
+                    className="media-player"
+                    style={{ marginBottom: "-20px" }}
+                    playlist={felda}
+                    autoplay={false}
+                    controls={[
+                      "spacer",
+                      "playpause",
+                      "backskip",
+                      "forwardskip",
+                      "mute",
+                      "spacer",
+                      "progress"
+                    ]}
+                  />
+                </div>
+                <div class="sample_wrapper">
+                  <h1 class="david_work_title">Makh Tsu Di Eygelekh</h1>
+                  <h6 className="david_work_story">
+                    Here is more info about David's work, including samples of
+                    his music, and accomplishments.Veniam velit adipisicing anim
+                    excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                    duis ut nulla officia irure reprehenderit laborum fugiat
+                    dolore in elit. Adipisicing do qui duis Lorem est. Est
+                    incididunt sint eu minim dolore mollit velit velit commodo
+                    ex nulla exercitation. Veniam velit adipisicing anim
+                    excepteur nostrud magna nostrud aliqua dolor. Sunt aute est
+                    duis ut nulla officia irure reprehenderit laborum fugiat
+                    dolore in elit. Adipisicing do qui duis Lorem est.Veniam
+                    velit adipisicing anim excepteur nostrud magna nostrud
+                    aliqua dolor. Sunt aute est duis ut nulla officia irure
+                    reprehenderit laborum fugiat dolore in elit. Adipisicing do
+                    qui duis Lorem est. Est incididunt sint eu minim dolore
+                    mollit velit velit commodo ex nulla exercitation. Veniam
+                    velit adipisicing anim excepteur nostrud magna nostrud
+                    aliqua dolor. Sunt aute est duis ut nulla officia irure
+                    reprehenderit laborum fugiat dolore in elit. Adipisicing do
+                    qui duis Lorem est.
+                  </h6>
+                  <MediaPlayer
+                    className="media-player"
+                    style={{ marginBottom: "-20px" }}
+                    playlist={makh}
+                    autoplay={false}
+                    controls={[
+                      "spacer",
+                      "playpause",
+                      "backskip",
+                      "forwardskip",
+                      "mute",
+                      "spacer",
+                      "progress"
+                    ]}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -948,12 +948,56 @@ h1 {
   margin-top: 25%;
 }
 .profile_bio_row {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
   font-size: 15px;
   margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid goldenrod;
 }
 .profile_bio_subrow {
   font-size: 15px;
   margin-top: 1%;
+}
+
+.henry_story {
+  margin-top: 10px;
+  margin-left: 20%;
+  font-family: Arial;
+  text-align: left;
+}
+.henry_story_title {
+  margin-top: 10px;
+  margin-left: 50%;
+  font-family: Candara;
+  text-align: left;
+}
+.henry_story_photos{
+  margin-left:20%;
+  margin-bottom: 10px;
+  width:550px;
+  height: 350px;
+  border: 1px solid goldenrod;
+}
+.david_work_title{
+  font-family: Candara;
+  font-size:25px;
+}
+.david_work_title_main{
+  font-family: Candara;
+  
+}
+.david_work_story {
+  margin-top: 10px;
+  font-family: Arial;
+  text-align: left;
+}
+.sample_wrapper{
+  border-bottom: 2px solid goldenrod;
+  margin-top:30px;
+  margin-bottom:20px;
 }
 .App-header {
   min-height: 100vh;
@@ -1022,7 +1066,8 @@ h3 {
   text-align: center;
 }
 .profile_title {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Candara;
+  font-size: 32px;
 }
 .profile_title_date {
   font-family: "Times New Roman", Times, serif;
@@ -1467,6 +1512,7 @@ input[type="checkbox"]:checked ~ label > img {
 .cassette__media_time_progress {
   font-size: 15px !important;
 }
+
 @media screen and (max-width: 768px) {
   .top {
     min-height: calc(75vh - 00px);
