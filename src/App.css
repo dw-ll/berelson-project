@@ -686,6 +686,12 @@ main {
 .navbar {
   border-bottom: 1.5px solid goldenrod;
 }
+.navbar-header-brand {
+  float: none;
+  font-size: 25px !important;
+  font-family: Candara !important;
+  font-weight: bolder;
+}
 
 .nav.navbar-nav li a {
   color: #fff !important;
@@ -754,7 +760,7 @@ main {
 }
 .dark-mode .profile-card {
   border: goldenrod 2px solid !important;
-  height: 665px;
+  max-height: 50%;
   background-color: #272727 !important;
 }
 .landing-card {
@@ -764,19 +770,62 @@ main {
 .dark-mode .landing-card {
   background-color: #272727 !important;
 }
+.intro-text-container {
+  min-height: 90vh;
+}
 .intro-text {
-  font-size: 30px;
-  letter-spacing: 15px;
+  font-size: 35px;
+  letter-spacing: 5px;
 
-  font-family: "Cambria";
+  font-family: "Candara";
   font-variant: small-caps;
   border-bottom: solid 1px goldenrod;
 }
+.intro-text-loop {
+  font-family: Candara;
+  font-weight: bold;
+}
+.intro-text-paragraph-container {
+}
+.dark-mode .intro-text-paragraph-container {
+}
 .intro-text-paragraph {
-  font-family: "Cambria";
-  padding: 30px 50px 20px 50px;
+  font-family: "Arial";
+  font-style: italic;
+  padding: 15px;
+  text-align: left;
   border-bottom: 1px solid goldenrod;
 }
+.hover-prompt {
+  font-family: "Candara";
+  padding: 25px;
+  font-size: 20px;
+}
+
+.hover-text-container {
+  width: inherit;
+  max-height: 20px;
+  text-align: center;
+  margin-right: 250px;
+}
+
+.hover-text {
+  font-family: "Arial";
+  font-style: italic;
+  padding: 15px;
+  border-bottom: 1px solid goldenrod;
+}
+.hover-text-click {
+  font-family: "Arial";
+  font-style: italic;
+  padding: 15px;
+}
+/* 
+.david-profile-card:hover ~ .hover-text-david {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+} */
 
 .greeting-button {
   position: absolute;
@@ -843,6 +892,12 @@ main {
 
 .dark-mode a {
   color: #fff !important;
+}
+
+.nav-link {
+  font-family: arial !important;
+  font-size: 14px !important;
+  border-right: 0.5px solid #ccc !important;
 }
 .dark-mode nav-link {
   color: black;
@@ -999,11 +1054,10 @@ h3 {
 .landing-profile-text {
   padding-top: 15%;
 }
-.profile-text-quote{
+.profile-text-quote {
   font-weight: bold;
 }
 .each-slide > div {
-  
   display: block;
   margin: 0 auto;
   margin-top: -5px;
@@ -1388,6 +1442,30 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .riva-row {
   margin-top: 100px;
+}
+.media-player {
+  position: relative;
+  top: 10;
+}
+.dark-mode .cassette__control_bar {
+  background-color: black !important;
+}
+.cassette__control_bar {
+  /* background-color:white !important; */
+  margin-bottom: -25px !important;
+  font-size: 10px;
+  border: 1px solid black;
+  color: black !important;
+}
+.cassette__media_button_wrapper {
+  color: black !important;
+}
+.cassette__media_info_marquee {
+  font-size: 15px !important;
+}
+
+.cassette__media_time_progress {
+  font-size: 15px !important;
 }
 @media screen and (max-width: 768px) {
   .top {
