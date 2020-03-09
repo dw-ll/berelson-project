@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/Riva Camp Finale001.7d342290.jpg"
   },
   {
-    "revision": "af74d2bd79ead2a39454",
-    "url": "/static/css/main.21a75ec2.chunk.css"
+    "revision": "32d975b8a9f16e020479",
+    "url": "/static/css/main.30bef27d.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -752,8 +752,8 @@ self.__precacheManifest = [
     "url": "/static/media/Riva Camp Finale (Back)001.43686031.jpg"
   },
   {
-    "revision": "af74d2bd79ead2a39454",
-    "url": "/static/js/main.695ef7ef.chunk.js"
+    "revision": "32d975b8a9f16e020479",
+    "url": "/static/js/main.9fda6d25.chunk.js"
   },
   {
     "revision": "4aad1bf4d9cf2d1cf157435ec717191b",
@@ -1472,12 +1472,12 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Light.3b813c2a.woff"
   },
   {
-    "revision": "ba3dcd8903e3d0af5de7792777f8ae0d",
-    "url": "/static/media/Roboto-Regular.ba3dcd89.woff"
-  },
-  {
     "revision": "fc78759e93a6cac50458610e3d9d63a0",
     "url": "/static/media/Roboto-Medium.fc78759e.woff"
+  },
+  {
+    "revision": "ba3dcd8903e3d0af5de7792777f8ae0d",
+    "url": "/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
     "revision": "dc81817def276b4f21395f7ea5e88dcd",
@@ -1504,7 +1504,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.8fa0f1e3.chunk.css"
   },
   {
-    "revision": "5a8dd980bd1af0c656166a592b881264",
+    "revision": "a3c77e801bc92d3055a8602fa0a2c565",
     "url": "/index.html"
   }
 ];
