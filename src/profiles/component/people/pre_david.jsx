@@ -133,7 +133,7 @@ const Slideshow = () => {
                   src={slideImages}
                   alt=""
                 />
-                <h5 className="profile_title_date">B. 1900 D. 1950</h5>
+                <h5 className="profile_title_date">B. 1887 D. 1945</h5>
               </div>
               <div class="col-6 col-md-4"></div>
             </div>

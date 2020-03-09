@@ -964,9 +964,11 @@ h1 {
 
 .henry_story {
   margin-top: 10px;
-  margin-left: 20%;
   font-family: Arial;
   text-align: left;
+}
+.henry_story_text{
+  margin-left:20%;
 }
 .henry_story_title {
   margin-top: 10px;

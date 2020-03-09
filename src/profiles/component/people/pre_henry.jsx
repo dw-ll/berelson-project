@@ -168,7 +168,7 @@ const Slideshow = () => {
                     alt=""
                   />
 
-                  <h5 className="profile_title_date">B. 1900 D. 1950</h5>
+                  <h5 className="profile_title_date">B. 1911 D. 2002</h5>
                 </div>
                 <div class="col-6 col-md-4"></div>
               </div>
@@ -225,7 +225,7 @@ const Slideshow = () => {
               <div class="col-md-6 ">
                 <h1 class="henry_story_title">His Journey</h1>
 
-                <h6 className="henry_story">
+                <h6 className="henry_story_text">
                   Here is more info about Henry's journey from surviving the
                   war, and making his way to America. After horrendous stints at
                   Nazi work camps, Henry became part of a 12,000-person forced
