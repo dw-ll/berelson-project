@@ -9,12 +9,15 @@ import Pre from "./pre.jsx";
 import WW2 from "./ww2.jsx";
 import Post from "./post.jsx";
 import Modern from "./present.jsx";
+import Slideshow from './Slideshow.js';
 import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
 import DavidRouter from "../profiles/component/people/pre_david.jsx";
 import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119 2.jpeg";
 import HenryRouter from "../profiles/component/people/pre_henry.jsx";
 import RivaProfile from "../SearchMedia/Riva/pola193.jpeg";
 import RivaRouter from "../profiles/component/people/present_riva.jsx";
+import BaigelmanSlide from '../Media/Modern/Baigelman.Argentina001.jpg';
+import GlazerSlide from '../Media/Modern/Sevek.Glazer003.jpg';
 import $ from "jquery";
 const routes = [
   {
@@ -44,6 +47,28 @@ const routes = [
   {
     component: RivaRouter,
     path: "/present/riva/"
+  }
+];
+const slides = [
+  {
+    city: "Baigelman",
+    path:'/baigelman',
+    img: require("../Media/Modern/Baigelman.Argentina001.jpg")
+  },
+  {
+    city: "Glazer",
+    path: '/glazer',
+    img: require("../Media/Modern/Sevek.Glazer003.jpg")
+  },
+  {
+    city: "Archives",
+    path:'/archive',
+    img: require('../Media/Modern/Calendar459.jpeg')
+  },
+  {
+    city: "Family Tree",
+    path:'/tree',
+    img: require('../Media/Modern/Henry251.jpeg')
   }
 ];
 
@@ -104,28 +129,10 @@ export default class Span extends Component {
               }}
             />
           ))}
-          />
+    
           <div>
             <div className="greet">
-              <Greeting
-                opacity="0"
-                isCentered={true}
-                parallaxOffset={200}
-                imageSrc={Lodz}
-                className="greeting"
-              >
-                <div className="greeting-greet">
-                  <div className="greeting-button"></div>
-                  <div
-                    className="scroll-down"
-                    onClick={() => {
-                      this.scrollDiv.current.scrollIntoView({
-                        behavior: "smooth"
-                      });
-                    }}
-                  ></div>
-                </div>
-              </Greeting>
+              <Slideshow slides={slides}/>
             </div>
             <div className="intro-text-container" ref={this.scrollDiv}>
               <div class="container" style={{ marginTop: "35px" }}>
