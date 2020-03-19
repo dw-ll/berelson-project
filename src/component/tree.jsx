@@ -1,5 +1,10 @@
 import React, { useState, useContext } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  withRouter
+} from "react-router-dom";
 import { Switch } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import "react-vertical-timeline-component/style.min.css";
@@ -12,10 +17,14 @@ import Missing from "../Media/missing_profile.jpg";
 import Chana from "../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 import DavidB from "../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
+import HenryResults from "./HenryResults.js";
 import Riva from "../Media/Modern/Riva346.jpeg";
 import Jack from "../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Results from "./Results.jsx";
+import searchData from "../json/searchData.js";
+import resultData from "../json/resultData.js";
 import "bootstrap/dist/css/bootstrap.css";
 
 require("bootstrap");
@@ -27,6 +36,11 @@ const FamilyTree = () => {
   const [jackDarkModeOpen, setJackDarkModeOpen] = useState(false);
   const [rivaOpen, setRivaOpen] = useState(false);
   const [context, setContext] = useState(false);
+  const [value, setValue] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+  const [resultsArray, setResultsArray] = useState([]);
+  const [person, setPerson] = useState("");
+  const [fire, setFire] = useState(false);
   // const [modalDark, setModalDark] = useState(context.darkMode ? context.darkMode : false);
 
   const handleOpen = () => {
@@ -84,6 +98,13 @@ const FamilyTree = () => {
             exact
             render={() => {
               return <RivaPost />;
+            }}
+          />
+          <Route
+            path="/results/henry"
+            exact
+            render={() => {
+              return <HenryResults />;
             }}
           />
           <Context.Consumer>
@@ -232,7 +253,7 @@ const FamilyTree = () => {
                                       className="modal-body"
                                       id="contained-modal-title-vcenter"
                                     >
-                                      David Berelson
+                                      David Baigelman
                                     </Modal.Title>
                                   </Modal.Header>
                                   <Modal.Body className="modal-body">
@@ -256,6 +277,9 @@ const FamilyTree = () => {
                                     </Button>
                                     <LinkContainer to="/pre/david">
                                       <Button>Learn</Button>
+                                    </LinkContainer>
+                                    <LinkContainer to="/results/david">
+                                      <Button>Photos</Button>
                                     </LinkContainer>
                                   </Modal.Footer>
                                 </Modal>
@@ -397,6 +421,9 @@ const FamilyTree = () => {
                                     <LinkContainer to="/pre/henry">
                                       <Button>Learn</Button>
                                     </LinkContainer>
+                                    <LinkContainer to="/results/henry">
+                                      <Button>Photos</Button>
+                                    </LinkContainer>
                                   </Modal.Footer>
                                 </Modal>
                                 <a className="inactive" href="# ">
@@ -458,6 +485,9 @@ const FamilyTree = () => {
                                         </Button>
                                         <LinkContainer to="/post/riva">
                                           <Button>Learn</Button>
+                                        </LinkContainer>
+                                        <LinkContainer to="/results/riva">
+                                          <Button>Photos</Button>
                                         </LinkContainer>
                                       </Modal.Footer>
                                     </Modal>
@@ -1257,6 +1287,17 @@ const FamilyTree = () => {
       </Router>
     );
   } else {
+    if (person !== "") {
+      return (
+        <div>
+          to=
+          {{
+            pathname: "/results/{person}",
+            state: { results: [resultsArray, value, person] }
+          }}
+        </div>
+      );
+    }
     return (
       <Router>
         <Switch>
@@ -1286,6 +1327,13 @@ const FamilyTree = () => {
             exact
             render={() => {
               return <RivaPost />;
+            }}
+          />
+          <Route
+            path="/results/henry"
+            exact
+            render={() => {
+              return <HenryResults />;
             }}
           />
           <div class="top">
@@ -1420,7 +1468,7 @@ const FamilyTree = () => {
                                   className="modal-body"
                                   id="contained-modal-title-vcenter"
                                 >
-                                  David Berelson
+                                  David Baigelman
                                 </Modal.Title>
                               </Modal.Header>
                               <Modal.Body className="modal-body">
@@ -1440,6 +1488,9 @@ const FamilyTree = () => {
                                 </Button>
                                 <LinkContainer to="/pre/david">
                                   <Button>Learn</Button>
+                                </LinkContainer>
+                                <LinkContainer to="/results/david">
+                                  <Button>Photos</Button>
                                 </LinkContainer>
                               </Modal.Footer>
                             </Modal>

@@ -32,6 +32,7 @@ src/tree.png
 src/24px.svg
 src/App.test.js
 src/component/Music.jsx
+src/component/*Results.js
 src/component/card.jsx
 src/component/span.jsx
 src/component/spinner.jsx

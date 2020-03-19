@@ -23,6 +23,9 @@ import Present from "./component/present.jsx";
 import PreHenry from "./profiles/component/people/pre_henry.jsx";
 import Archive from "./component/archive.jsx";
 import Tree from "./component/tree.jsx";
+import DavidResults from './component/DavidResults.js';
+import HenryResults from './component/HenryResults.js';
+import RivaResults from './component/RivaResults.js';
 import Results from "./component/Results.jsx";
 import LandingSpan from "./component/landing_span.jsx";
 import Playlist from './component/Playlist.jsx';
@@ -46,19 +49,8 @@ const App = () => {
   const [done, setDone] = useState(false);
   const [darkMode, setDarkMode] = useState(fetchInitMode());
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const toggle = () => setDropdownOpen(prevState => !prevState);
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   // fetch("https://jsonplaceholder.typicode.com/posts")
-    //   //   .then(response => response.json())
-    //   //   .then(json => {
-    //   //     setLoading(false);
-    //   //     setTimeout(() => {
-    //   //       setDone(true);
-    //   //     }, 1000);
-    //   //   });
-    // }, 2200);
     localStorage.setItem("dark", JSON.stringify(darkMode));
   }, [darkMode]);
 
@@ -70,31 +62,6 @@ const App = () => {
 
   return (
     <Router>
-      {/* {!done ? (
-        <FadeIn style={{ paddingTop: "100%" }}>
-          <div className="loader" style={{ height: "100%" }}>
-            <h1 className="lottie-text">The Berelson Project</h1>
-            <h1 className="lottie-text">Building Lineage</h1>
-            {!loading ? (
-              <Lottie
-                options={Loader}
-                height={100}
-                width={80}
-                color="black"
-                className="lottie"
-              />
-            ) : (
-              <Lottie
-                options={Loader}
-                height={100}
-                width={80}
-                color="black"
-                className="lottie"
-              />
-            )}
-          </div>
-        </FadeIn>
-      ) : ( */}
       <Context.Provider value={{ dark: darkMode }}>
         <div className={darkMode ? "App dark-mode" : "App light-mode"} id="app">
           <Navbar className="navbar-header no-shadows" light expand="md">
@@ -135,7 +102,7 @@ const App = () => {
                       onClick={() => setDarkMode(isDark => !isDark)}
                     >
                       ☀︎
-                  </span>
+                    </span>
                   )}
               </NavItem>
             </Nav>
@@ -364,6 +331,195 @@ const App = () => {
                 </div>
               )}
             />
+            <Route
+              exact
+              path="/results/henry"
+              render={props => (
+                <div>
+                  <HenryResults />
+                  <MDBFooter
+                    class="fixed-bottom"
+                    color={darkMode ? "dimgrey" : "grey"}
+                    className="main-footer font-small pt-4 mt-4"
+                  >
+                    <MDBContainer fluid className="text-center text-md-left">
+                      <MDBRow>
+                        <MDBCol md="4">
+                          <h5 className="title">The Berelson Project</h5>
+                          <p>
+                            An ancestral site built to display and document the
+                            Berelson lineage in an archival effort.
+                          </p>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Explore</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <Link to="/archive/">Archive</Link>
+                            </li>
+                            <li className="list-unstyled">
+                              <Link to="/tree/">Family Tree</Link>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Contact</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-home  mr-3"></i> California
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-envelope mr-3"></i> Email
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-phone mr-3"></i> Phone
+                              </p>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBContainer>
+                    <div className="footer-copyright text-center py-3">
+                      <MDBContainer fluid>
+                        &copy; {new Date().getFullYear()}
+                      </MDBContainer>
+                    </div>
+                  </MDBFooter>
+                </div>
+              )}
+            />
+            <Route
+              exact
+              path="/results/david"
+              render={props => (
+                <div>
+                  <DavidResults />
+                  <MDBFooter
+                    class="fixed-bottom"
+                    color={darkMode ? "dimgrey" : "grey"}
+                    className="main-footer font-small pt-4 mt-4"
+                  >
+                    <MDBContainer fluid className="text-center text-md-left">
+                      <MDBRow>
+                        <MDBCol md="4">
+                          <h5 className="title">The Berelson Project</h5>
+                          <p>
+                            An ancestral site built to display and document the
+                            Berelson lineage in an archival effort.
+                          </p>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Explore</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <Link to="/archive/">Archive</Link>
+                            </li>
+                            <li className="list-unstyled">
+                              <Link to="/tree/">Family Tree</Link>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Contact</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-home  mr-3"></i> California
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-envelope mr-3"></i> Email
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-phone mr-3"></i> Phone
+                              </p>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBContainer>
+                    <div className="footer-copyright text-center py-3">
+                      <MDBContainer fluid>
+                        &copy; {new Date().getFullYear()}
+                      </MDBContainer>
+                    </div>
+                  </MDBFooter>
+                </div>
+              )}
+            />
+
+            <Route
+              exact
+              path="/results/riva"
+              render={props => (
+                <div>
+                  <RivaResults />
+                  <MDBFooter
+                    class="fixed-bottom"
+                    color={darkMode ? "dimgrey" : "grey"}
+                    className="main-footer font-small pt-4 mt-4"
+                  >
+                    <MDBContainer fluid className="text-center text-md-left">
+                      <MDBRow>
+                        <MDBCol md="4">
+                          <h5 className="title">The Berelson Project</h5>
+                          <p>
+                            An ancestral site built to display and document the
+                            Berelson lineage in an archival effort.
+                          </p>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Explore</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <Link to="/archive/">Archive</Link>
+                            </li>
+                            <li className="list-unstyled">
+                              <Link to="/tree/">Family Tree</Link>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                        <MDBCol md="4">
+                          <h5 className="title">Contact</h5>
+                          <ul>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-home  mr-3"></i> California
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-envelope mr-3"></i> Email
+                              </p>
+                            </li>
+                            <li className="list-unstyled">
+                              <p>
+                                <i class="fas fa-phone mr-3"></i> Phone
+                              </p>
+                            </li>
+                          </ul>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBContainer>
+                    <div className="footer-copyright text-center py-3">
+                      <MDBContainer fluid>
+                        &copy; {new Date().getFullYear()}
+                      </MDBContainer>
+                    </div>
+                  </MDBFooter>
+                </div>
+              )}
+            />
+
+
 
             <div>
 
