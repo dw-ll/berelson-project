@@ -9,13 +9,15 @@ import $ from 'jquery';
 $(function () {
     $("#david-profile").hover(
         function () {
-            $(".family-hover-text-container").html(
+            console.log("Hovering.");
+            $(".family-hover-text-container").append(
                 "<h4 class='hover-text'>David was part of the last group of Lodz Jews to be deported to Auschwitz. He brought his violin and all his scores with him Even in the camp, he tried to provide entertainment for his fellow Jews.</h4>"
             );
             $(".hover-text").fadeIn(10000);
             $(".hover-prompt").hide();
         },
         function () {
+            $(".family-hover-text-container").html("");
             $(".family-hover-text-container").html("");
             $(".hover-prompt").show();
         }
@@ -31,20 +33,21 @@ $(function () {
         },
         function () {
             $(".family-hover-text-container").html("");
+            $(".family-hover-text-container").html("");
             $(".hover-prompt").show();
         }
     );
 });
 
-class Baigelman extends Component {
+class Glazer extends Component {
     render() {
         return (
 
             <div class="container" style={{ marginTop: "35px" }}>
-                <h1 className='intro-text'>the baigelman family</h1>
+                <h1 className='intro-text'>the glazer family</h1>
                 <div className="intro-text-paragraph-container">
                     <h2 className="intro-text-loop">
-                        The Baigelman (Beigelman) family of Łódź were &nbsp;
+                        The Glazer family of Łódź were &nbsp;
                     <TextLoop>
                             <span className="intro-text-loop">
                                 prominent musicians
@@ -84,11 +87,8 @@ class Baigelman extends Component {
                             meet the family
                     </h4>
                     </div>
-
-                    <div class="family-hover-text-container"></div>
-
-
                 </div>
+                <div class="family-hover-text-container"></div>
                 <div class="row profiles">
 
 
@@ -118,4 +118,4 @@ class Baigelman extends Component {
         );
     }
 }
-export default Baigelman;
+export default Glazer;

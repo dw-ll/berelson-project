@@ -770,15 +770,18 @@ main {
 .dark-mode .landing-card {
   background-color: #272727 !important;
 }
+.profile-intro{
+  display:block;
+}
 .intro-text-container {
   min-height: 90vh;
 }
 .intro-text {
   font-size: 35px;
   letter-spacing: 5px;
-
-  font-family: "Candara";
+  font-family: Candara;
   font-variant: small-caps;
+  margin-bottom:10px;
   border-bottom: solid 1px goldenrod;
 }
 .intro-text-loop {
@@ -802,6 +805,12 @@ main {
   font-size: 20px;
 }
 
+.family-hover-text-container {
+  width: inherit;
+  max-height: 40px;
+  text-align: center;
+  
+}
 .hover-text-container {
   width: inherit;
   max-height: 20px;

@@ -7,12 +7,10 @@ import {
 } from "react-router-dom";
 import { Switch } from "react-router";
 import ScrollButton from "react-scroll-button";
-import FadeIn from "react-fade-in";
-import Lottie from "react-lottie";
+
 import * as famData from "./family.json";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import { Dropdown, Menu } from "semantic-ui-react";
 import Context from "./Context.js";
 import SearchBar from "./component/SearchBar.jsx";
 import Music from "./component/Music.jsx";
@@ -27,6 +25,7 @@ import DavidResults from './component/DavidResults.js';
 import HenryResults from './component/HenryResults.js';
 import RivaResults from './component/RivaResults.js';
 import Results from "./component/Results.jsx";
+import Baigelman from './component/Baigelman.js';
 import LandingSpan from "./component/landing_span.jsx";
 import Playlist from './component/Playlist.jsx';
 import "./App.css";
@@ -109,6 +108,14 @@ const App = () => {
           </Navbar>
 
           <Switch>
+            <Route
+              path="/baigelman-family"
+              exact
+              render={() => {
+                return <Baigelman />;
+              }}
+            />
+
             <Route
               path="/pre"
               exact

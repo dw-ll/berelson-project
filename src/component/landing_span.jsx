@@ -4,22 +4,33 @@ import { Button, Card } from "react-bootstrap";
 import { Switch } from "react-router";
 import Greeting from "react-lazy-hero";
 import TextLoop from "react-text-loop";
+import classNames from 'classnames';
 import Lodz from "../Media/lodz.jpg";
+import Archive from './archive.jsx';
 import Pre from "./pre.jsx";
 import WW2 from "./ww2.jsx";
 import Post from "./post.jsx";
 import Modern from "./present.jsx";
-import Slideshow from './Slideshow.js';
+import Tree from './tree.jsx';
+import Slideshow from "./Slideshow.js";
 import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
 import DavidRouter from "../profiles/component/people/pre_david.jsx";
 import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119 2.jpeg";
 import HenryRouter from "../profiles/component/people/pre_henry.jsx";
-import RivaProfile from "../SearchMedia/Riva/pola193.jpeg";
 import RivaRouter from "../profiles/component/people/present_riva.jsx";
-import BaigelmanSlide from '../Media/Modern/Baigelman.Argentina001.jpg';
-import GlazerSlide from '../Media/Modern/Sevek.Glazer003.jpg';
+import Baigelman from "./Baigelman.js";
+import Glazer from './Glazer.js'
+
 import $ from "jquery";
 const routes = [
+  {
+    component: Archive,
+    path:'/archive'
+  },
+  {
+    component: Tree,
+    path: "/tree"
+  },
   {
     component: Pre,
     path: `${process.env.PUBLIC_URL}/pre/`
@@ -47,28 +58,36 @@ const routes = [
   {
     component: RivaRouter,
     path: "/present/riva/"
+  },
+  {
+    component: Baigelman,
+    path: "/baigelman-family"
+  },
+  {
+    component: Glazer,
+    path: "/glazer-family"
   }
 ];
 const slides = [
   {
     city: "Baigelman",
-    path:'/baigelman',
+    path: "/baigelman-family",
     img: require("../Media/Modern/Baigelman.Argentina001.jpg")
   },
   {
     city: "Glazer",
-    path: '/glazer',
+    path: "/glazer-family",
     img: require("../Media/Modern/Sevek.Glazer003.jpg")
   },
   {
     city: "Archives",
-    path:'/archive',
-    img: require('../Media/Modern/Calendar459.jpeg')
+    path: "/archive",
+    img: require("../Media/Modern/Calendar459.jpeg")
   },
   {
     city: "Family Tree",
-    path:'/tree',
-    img: require('../Media/Modern/Henry251.jpeg')
+    path: "/tree",
+    img: require("../Media/Modern/Henry251.jpeg")
   }
 ];
 
@@ -110,12 +129,53 @@ export default class Span extends Component {
   constructor(props) {
     super(props);
     this.scrollDiv = createRef();
+
+    this.IMAGE_PARTS = 4;
+
+    this.changeTO = null;
+    this.AUTOCHANGE_TIME = 4000;
+
+    this.state = {
+      activeSlide: -1,
+      prevSlide: -1,
+      sliderReady: false
+    };
   }
   handleScrollToElement(event) {
     window.scrollTo(0, this.myRef.current.offsetTop);
   }
 
+  componentWillUnmount() {
+    window.clearTimeout(this.changeTO);
+  }
+
+  componentDidMount() {
+    this.runAutochangeTO();
+    setTimeout(() => {
+      this.setState({ activeSlide: 0, sliderReady: true });
+    }, 0);
+  }
+
+  runAutochangeTO() {
+    this.changeTO = setTimeout(() => {
+      this.changeSlides(1);
+      this.runAutochangeTO();
+    }, this.AUTOCHANGE_TIME);
+  }
+
+  changeSlides(change) {
+    window.clearTimeout(this.changeTO);
+    const { length } = slides;
+    const prevSlide = this.state.activeSlide;
+    let activeSlide = prevSlide + change;
+    if (activeSlide < 0) activeSlide = length - 1;
+    if (activeSlide >= length) activeSlide = 0;
+    this.setState({ activeSlide, prevSlide });
+  }
+
   render() {
+    const { activeSlide, prevSlide, sliderReady } = this.state;
+
     return (
       <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Switch>
@@ -129,10 +189,54 @@ export default class Span extends Component {
               }}
             />
           ))}
-    
+
           <div>
             <div className="greet">
-              <Slideshow slides={slides}/>
+              <div
+                className={classNames("slider", { "s--ready": sliderReady })}
+              >
+                <p className="slider__top-heading"></p>
+                <div className="slider__slides">
+                  {slides.map((slide, index) => (
+                    <div
+                      className={classNames("slider__slide", {
+                        "s--active": activeSlide === index,
+                        "s--prev": prevSlide === index
+                      })}
+                      key={slide.city}
+                    >
+                      <div className="slider__slide-content">
+                        <h2 className="slider__slide-heading">
+                          {slide.city.split("").map(l => (
+                            <span>{l}</span>
+                          ))}
+                        </h2>
+                        <Link className="slider-link" to={slide.path}>
+                          <p className="slider__slide-readmore">Explore</p>
+                        </Link>
+                      </div>
+                      <div className="slider__slide-parts">
+                        {[...Array(this.IMAGE_PARTS).fill()].map((x, i) => (
+                          <div className="slider__slide-part" key={i}>
+                            <div
+                              className="slider__slide-part-inner"
+                              style={{ backgroundImage: `url(${slide.img})` }}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div
+                  className="slider__control"
+                  onClick={() => this.changeSlides(-1)}
+                />
+                <div
+                  className="slider__control slider__control--right"
+                  onClick={() => this.changeSlides(1)}
+                />
+              </div>
             </div>
             <div className="intro-text-container" ref={this.scrollDiv}>
               <div class="container" style={{ marginTop: "35px" }}>
@@ -186,7 +290,7 @@ export default class Span extends Component {
 
                   <div class="col-4">
                     <Card id="david-profile" className="landing-card">
-                      <Link to="/pre/david/">
+                      <Link to="/pre-henry">
                         <Card.Img src={DavidProfile}></Card.Img>
                       </Link>
                       <Card.Body>
