@@ -95,7 +95,7 @@ $(function() {
   $("#david-profile").hover(
     function() {
       console.log("Hovering.");
-      $(".hover-text-container").append(
+      $(".hover-text-container").html(
         "<h4 class='hover-text'>David was part of the last group of Lodz Jews to be deported to Auschwitz. He brought his violin and all his scores with him Even in the camp, he tried to provide entertainment for his fellow Jews.</h4>\
         <h5 class= 'hover-text-click' > Click David's portrait to view his full profile.</h5>"
       );

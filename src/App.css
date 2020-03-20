@@ -1354,6 +1354,13 @@ input[type="checkbox"]:checked ~ label > img {
   border-radius: 50%;
   padding-bottom: 2em;
 }
+.tree-profile-modal {
+  position: relative;
+  width: 350px;
+  height: 450px;
+
+  padding-bottom: 2em;
+}
 
 .tree-photo {
   position: relative;

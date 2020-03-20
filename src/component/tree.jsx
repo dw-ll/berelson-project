@@ -259,7 +259,7 @@ const FamilyTree = () => {
                                   <Modal.Body className="modal-body">
                                     <img
                                       alt=""
-                                      class="tree-profile"
+                                      class="tree-profile-modal"
                                       src={DavidB}
                                     />
                                     <h6>B.1900 D.1960</h6>
@@ -401,7 +401,7 @@ const FamilyTree = () => {
                                   <Modal.Body className="modal-body">
                                     <img
                                       alt=""
-                                      class="tree-profile"
+                                      class="tree-profile-modal"
                                       src={Henry}
                                     />
                                     <h6>B.1900 D.1960</h6>
@@ -467,7 +467,7 @@ const FamilyTree = () => {
                                       <Modal.Body className="modal-body">
                                         <img
                                           alt=""
-                                          class="tree-profile"
+                                          class="tree-profile-modal"
                                           src={Riva}
                                         />
                                         <h6>B.1900 D.1960</h6>
@@ -729,7 +729,7 @@ const FamilyTree = () => {
                                       <Modal.Body className="modal-body">
                                         <img
                                           alt=""
-                                          class="tree-profile"
+                                          class="tree-profile-modal"
                                           src={Jack}
                                         />
                                         <h6>B.1900 D.1960</h6>
@@ -773,7 +773,7 @@ const FamilyTree = () => {
                                       <Modal.Body className="modal-body">
                                         <img
                                           alt=""
-                                          class="tree-profile"
+                                          class="tree-profile-modal"
                                           src={Jack}
                                         />
                                         <h6>B.1900 D.1960</h6>

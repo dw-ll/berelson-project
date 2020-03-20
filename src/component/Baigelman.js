@@ -9,6 +9,7 @@ import $ from 'jquery';
 $(function () {
     $("#david-profile").hover(
         function () {
+            console.log("Hovering.");
             $(".family-hover-text-container").html(
                 "<h4 class='hover-text'>David was part of the last group of Lodz Jews to be deported to Auschwitz. He brought his violin and all his scores with him Even in the camp, he tried to provide entertainment for his fellow Jews.</h4>"
             );
@@ -31,6 +32,7 @@ $(function () {
         },
         function () {
             $(".family-hover-text-container").html("");
+            $(".hover-text-container").html("");
             $(".hover-prompt").show();
         }
     );
