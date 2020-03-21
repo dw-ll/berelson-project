@@ -13,8 +13,9 @@ import { createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
-
-const store = createStore(allReducers, { dark: false }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const darkValue = localStorage.getItem('dark');
+console.log(darkValue);
+const store = createStore(allReducers, { dark: darkValue }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>

@@ -54,7 +54,6 @@ global.jQuery = require("jquery");
 
 const App = (props) => {
   const dark = props.dark;
-  const toggleDark = useDispatch(changeMode);
   console.log(dark);
   return (
     <Router>

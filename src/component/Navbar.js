@@ -6,7 +6,6 @@ import {
     Link,
     withRouter
 } from "react-router-dom";
-import Context from "../Context.js";
 import SearchBar from "./SearchBar.jsx";
 import { connect } from 'react-redux';
 import { changeMode } from '../redux/actions/changeMode.js';
@@ -15,7 +14,7 @@ import { changeMode } from '../redux/actions/changeMode.js';
 
 
 const NavBar = (props) => {
-    const dark = props.dark;
+    var { dark, changeMode } = props;
     return (
 
                 <Navbar className="navbar-header no-shadows" light expand="md">
