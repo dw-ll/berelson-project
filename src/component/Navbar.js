@@ -8,21 +8,16 @@ import {
 } from "react-router-dom";
 import Context from "../Context.js";
 import SearchBar from "./SearchBar.jsx";
+import { connect } from 'react-redux';
+import { changeMode } from '../redux/actions/changeMode.js';
 
 
 
 
-const NavBar = () => {
-    const [darkMode, setDarkMode] = useState(fetchInitMode());
-    function fetchInitMode() {
-        const storedMode = JSON.parse(localStorage.getItem("dark"));
-
-        return storedMode || false;
-    }
-
+const NavBar = (props) => {
+    const dark = props.dark;
     return (
-        <Context.Consumer>
-            {context =>
+
                 <Navbar className="navbar-header no-shadows" light expand="md">
                     <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
                     < Nav className="ml-auto" navbar >
@@ -45,11 +40,11 @@ const NavBar = () => {
                             <SearchBar />
                         </NavItem>
                         <NavItem className="toggle-container">
-                            {context.dark ? (
+                            {dark ? (
                                 <span
                                     className="mode-toggle"
                                     style={{ color: "pink" }}
-                                    onClick={() => setDarkMode(darkMode => !darkMode)}
+                                    onClick={changeMode}
                                 >
                                     ☾
                                 </span>
@@ -57,7 +52,7 @@ const NavBar = () => {
                                     <span
                                         className="mode-toggle"
                                         style={{ color: "darkgoldenrod" }}
-                                        onClick={() => setDarkMode(darkMode => !darkMode)}
+                                        onClick={changeMode}
                                     >
                                         ☀︎
                                     </span>
@@ -65,9 +60,7 @@ const NavBar = () => {
                         </NavItem>
                     </Nav >
                 </Navbar >
-            }
-        </Context.Consumer>
     );
 
 }
-export default NavBar;
+export default withRouter(connect(null, { changeMode })(NavBar));

@@ -51,7 +51,7 @@
     "react-page-loading": "^1.0.2",
     "react-photo-gallery": "^7.0.2",
     "react-player": "^1.13.0",
-    "react-redux": "^7.1.0",
+    "react-redux": "^7.2.0",
     "react-responsive-audio-player": "^1.5.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.0.0",
@@ -76,6 +76,7 @@
     "react-vertical-timeline-component": "^2.3.1",
     "reactjs-popup": "^1.5.0",
     "reactstrap": "^7.1.0",
+    "redux": "^4.0.5",
     "semantic-ui-react": "^0.88.1",
     "styled-components": "^4.3.2",
     "topola": "^2.3.4",
@@ -100,6 +101,7 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.14.7",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }
