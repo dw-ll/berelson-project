@@ -543,59 +543,7 @@ const App = () => {
 
               </div>
               <Playlist />
-              <MDBFooter
-                class="fixed-bottom"
-                color={darkMode ? "dimgrey" : "grey"}
-                className="main-footer font-small pt-4 mt-4"
-              >
-                <MDBContainer fluid className="text-center text-md-left">
-                  <MDBRow>
-                    <MDBCol md="4">
-                      <h5 className="title">The Berelson Project</h5>
-                      <p>
-                        An ancestral site built to display and document the
-                        Berelson lineage in an archival effort.
-                      </p>
-                    </MDBCol>
-                    <MDBCol md="4">
-                      <h5 className="title">Explore</h5>
-                      <ul>
-                        <li className="list-unstyled">
-                          <Link to="/archive">Archive</Link>
-                        </li>
-                        <li className="list-unstyled">
-                          <Link to="/tree">Family Tree</Link>
-                        </li>
-                      </ul>
-                    </MDBCol>
-                    <MDBCol md="4">
-                      <h5 className="title">Contact</h5>
-                      <ul>
-                        <li className="list-unstyled">
-                          <p>
-                            <i class="fas fa-home  mr-3"></i> California
-                          </p>
-                        </li>
-                        <li className="list-unstyled">
-                          <p>
-                            <i class="fas fa-envelope mr-3"></i> Email
-                          </p>
-                        </li>
-                        <li className="list-unstyled">
-                          <p>
-                            <i class="fas fa-phone mr-3"></i> Phone
-                          </p>
-                        </li>
-                      </ul>
-                    </MDBCol>
-                  </MDBRow>
-                </MDBContainer>
-                <div className="footer-copyright text-center py-3">
-                  <MDBContainer fluid>
-                    &copy; {new Date().getFullYear()}
-                  </MDBContainer>
-                </div>
-              </MDBFooter>
+            
             </div>
           </Switch>
         </div>

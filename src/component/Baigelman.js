@@ -43,7 +43,7 @@ class Baigelman extends Component {
         return (
 
             <div class="container" style={{ marginTop: "35px" }}>
-                <h1 className='intro-text'>the baigelman family</h1>
+                <h1 className='intro-text-header'>the baigelman family</h1>
                 <div className="intro-text-paragraph-container">
                     <h2 className="intro-text-loop">
                         The Baigelman (Beigelman) family of Łódź were &nbsp;
@@ -116,6 +116,8 @@ class Baigelman extends Component {
                         </Card>
                     </div>
                 </div>
+          
+            
             </div>
         );
     }

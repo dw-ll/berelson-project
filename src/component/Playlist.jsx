@@ -2,29 +2,6 @@ import React, { Component } from "react";
 import AudioPlayer from "react-responsive-audio-player";
 import { MediaPlayer } from "@cassette/player";
 
-const list = [
-  {
-    title: "枝芽",
-    url: "https://hanzluo.s3-us-west-1.amazonaws.com/music/zhiya.mp3"
-  },
-  {
-    title: "自由女神",
-    url: "https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3"
-  },
-  {
-    title: "无雨无晴",
-    url: "https://hanzluo.s3-us-west-1.amazonaws.com/music/wuyuwuqing.mp3"
-  },
-  {
-    title: "碎片",
-    url: "https://hanzluo.s3-us-west-1.amazonaws.com/music/suipian.mp3"
-  },
-  {
-    title: "永恒的港湾",
-    url:
-      "https://hanzluo.s3-us-west-1.amazonaws.com/music/yonghengdegangwan.mp3"
-  }
-];
 
 const list2 = [
   {
