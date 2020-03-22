@@ -12,6 +12,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import Context from "./Context.js";
 import { changeMode } from './redux/actions/changeMode.js';
+import { changeDock } from './redux/actions/changeDock.js';
 import SearchBar from "./component/SearchBar.jsx";
 import Pre from "./component/pre.jsx";
 import WW2 from "./component/ww2.jsx";
@@ -26,50 +27,25 @@ import RivaResults from './component/RivaResults.js';
 import Results from "./component/Results.jsx";
 import Baigelman from './component/Baigelman.js';
 import LandingSpan from "./component/landing_span.jsx";
-import Playlist from './component/Playlist.jsx';
+import MusicDock from './component/MusicDock.js';
 import NavBar from './component/Navbar.js';
 import Footer from './component/Footer.js';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
 global.jQuery = require("jquery");
-// const routes = [
-//   {
-//     component: Baigelman,
-//     path: "/baigelman-family",
-//   },
-//   {
-//     component: WWII,
-//     path: "/ww2"
-//   },
-//   {
-//     component: Post,
-//     path: "/post"
-//   },
-//   {
-//     component: Present,
-//     path: "/present"
-//   }
-// ];
 
 const App = (props) => {
-  const dark = props.dark;
+  const dark = props.dark.dark;
+  const visible = props.dock.dock;
+  console.log(props);
   console.log(dark);
   return (
     <Router>
 
       <div className={dark ? "App dark-mode" : "App light-mode"} id="app">
-        <NavBar props={props}/>
+        <NavBar props={props} />
         <Switch>
-          {/* {routes.map((route, i) => (
-              <Route
-                path={route.path}
-                exact
-                render={() => {
-                  return <route.component />;
-                }}
-              />
-            ))} */}
           <Route
             path="/baigelman-family"
             exact
@@ -487,11 +463,7 @@ const App = (props) => {
               </div>
             )}
           />
-
-
-
           <div>
-
             <div>
               <ScrollButton
                 className="scroll-up-button"
@@ -501,12 +473,9 @@ const App = (props) => {
                 buttonColor={dark ? "white" : "black"}
                 iconType={"arrow-up"}
               />
-              <LandingSpan />
-
+              <LandingSpan props={props}/>
+              <MusicDock />
             </div>
-            <Playlist />
-            <Footer />
-
           </div>
         </Switch>
       </div>
@@ -515,9 +484,10 @@ const App = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
-    dark: state.dark
-  };
+    dark: state.dark,
+    dock: state.dock
+  }
 }
 
 
-export default withRouter(connect(mapStateToProps, { changeMode })(App));
+export default withRouter(connect(mapStateToProps, { changeMode, changeDock })(App));

@@ -14,7 +14,9 @@ import { changeMode } from '../redux/actions/changeMode.js';
 
 
 const NavBar = (props) => {
-    var { dark, changeMode } = props;
+    console.log(props);
+    var dark = props.props.dark.dark;
+    var changeMode = props.props.changeMode;
     return (
 
                 <Navbar className="navbar-header no-shadows" light expand="md">

@@ -1880,6 +1880,13 @@ input[type="checkbox"]:checked ~ label > img {
   left: auto;
   right: 5px;
 }
+.music-trigger{
+  z-index: 200;
+  position: absolute;
+  left:5%;
+  top:70%;
+  border-radius:50%;
+}
 
 
 
