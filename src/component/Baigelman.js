@@ -4,6 +4,8 @@ import { Button, Card } from "react-bootstrap";
 import TextLoop from "react-text-loop";
 import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
 import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119 2.jpeg";
+import ReactPlayer from 'react-player';
+
 import $ from 'jquery';
 
 $(function () {
@@ -28,12 +30,9 @@ $(function () {
                 "<h4 class='hover-text'> Chaim (later: Henry) Baigelman was a violinist, saxophonist and composer and the only one out of nine musical siblings to survive the war. He was a member of a family band, The Jolly Boys, which he revived in post-war Germany under the name The Happy Boys, playing jazz concerts for American soldiers and Jewish survivors. </h4>"
             );
             $(".hover-text").fadeIn(10000);
-            $(".hover-prompt").hide();
         },
         function () {
             $(".family-hover-text-container").html("");
-            $(".hover-text-container").html("");
-            $(".hover-prompt").show();
         }
     );
 });
@@ -74,7 +73,12 @@ class Baigelman extends Component {
                         he arranged the music for the hugely popular S. Ansky play,
                         The Dybbuk. In 1929 he became composer and music director of
                         the Łódź Ararat Theater.
-                  </h4>
+                        <sub>
+                            <a class='ref-link' href="https://www.taubephilanthropies.org/files/assets/pdf/2017/FieldGuide-Lodz-FINAL.pdf" rel="noopener noreferrer" target='_blank'>[1]</a>
+                        </sub>
+                    </h4>
+
+
                 </div>
                 <div className='row profile-intro'>
                     <div class='col-12'>
@@ -114,6 +118,36 @@ class Baigelman extends Component {
                                 <Card.Title>Henry Baigelman</Card.Title>
                             </Card.Body>
                         </Card>
+                    </div>
+                </div>
+                <div className='row profile-intro'>
+                    <div class='col-12'>
+                        <h4
+                            id="toggle-text"
+                            style={{ textAlign: "center" }}
+                            className="intro-text"
+                        >
+                            media
+                    </h4>
+                    </div>
+                </div>
+                <div class='container'>
+                    <div class="row profiles">
+                        <div class='col-lg-5'>
+                            <div class='video-col'>
+                                <ReactPlayer url='https://www.youtube.com/watch?v=tjy7O9sA1TQ' playing={false} controls={true} />
+                                <h5 class='video-caption'>Der Dybbuk (1937)</h5>
+                            </div>
+                        </div>
+                        <div class='col-2'></div>
+                        <div class='col-lg-5'>
+                            <div class='video-col'>
+                                <ReactPlayer url='https://www.youtube.com/watch?v=MlI6mlIyavo' playing={false} controls={true} />
+                                <h5 class='video-caption'>Gangster Tango</h5>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>

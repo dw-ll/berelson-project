@@ -19,6 +19,8 @@ import Missing from "../Media/missing_profile.jpg";
 import Chana from "../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 import DavidB from "../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
+import DavidResults from "./DavidResults.js";
+import RivaResults from "./RivaResults.js";
 import HenryResults from "./HenryResults.js";
 import Riva from "../Media/Modern/Riva346.jpeg";
 import Jack from "../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
@@ -91,6 +93,20 @@ const FamilyTree = props => {
           exact
           render={() => {
             return <RivaPost />;
+          }}
+        />
+        <Route
+          exact
+          path="/results/david"
+          render={() => {
+            return <DavidResults />;
+          }}
+        />
+        <Route
+          exact
+          path="/results/riva"
+          render={() => {
+            return <RivaResults />;
           }}
         />
         <Route

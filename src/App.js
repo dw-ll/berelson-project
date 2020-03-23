@@ -13,7 +13,6 @@ import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import Context from "./Context.js";
 import Fab from '@material-ui/core/Fab'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
-
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
 import SearchBar from "./component/SearchBar.jsx";
