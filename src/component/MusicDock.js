@@ -1,9 +1,11 @@
 import React, { useState, } from "react";
-import AudioPlayer from "react-responsive-audio-player";
+import { withRouter } from 'react-router-dom';
 import { MediaPlayer } from "@cassette/player";
+import { connect } from 'react-redux';
+import { changeDock } from '../redux/actions/changeDock.js';
 import Dock from 'react-dock';
 
-const list2 = [
+const list = [
     {
         title: "Makh Tsu Di Eygelekh",
         artist: "David Baigelman",
@@ -76,19 +78,26 @@ const list2 = [
     }
 ];
 
-const MusicDock = () => {
-    const [playlist, setPlaylist] = useState(list2);
-    const [isVisible, setIsVisible] = useState(false);
-    const handleClick = () => {
-        setIsVisible(!isVisible);
-    }
+const dockStyle = { borderTop: '1.5px solid goldernrod' }
+
+
+const MusicDock = (props) => {
+    var dock = props.dock;
+    var changeDock = props.changeDock;
     return (
-        <Dock position='right' isVisible={isVisible} onClick={handleClick}>
+        <Dock className='music-dock'
+            fluid={false}
+            position='bottom'
+            isVisible={dock}
+            onClick={changeDock}
+            onVisibleChange={changeDock}
+            dockStyle={dockStyle}
+            size={50}
+            dimMode='opaque'>
             <MediaPlayer
                 className="media-player"
-                style={{ marginBottom: "-20px" }}
-                playlist={playlist}
-                autoplay={true}
+                playlist={list}
+                autoplay={false}
                 controls={[
                     "spacer",
                     "playpause",
@@ -102,5 +111,8 @@ const MusicDock = () => {
         </Dock>
     )
 }
+const mapStateToProps = (state) => {
+    return state.dock;
+}
 
-export default MusicDock;
+export default withRouter(connect(mapStateToProps, { changeDock })(MusicDock));

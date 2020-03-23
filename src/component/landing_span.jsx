@@ -1,17 +1,22 @@
 import React, { Component, createRef } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  withRouter
+} from "react-router-dom";
 import { Button, Card } from "react-bootstrap";
 import { Switch } from "react-router";
 import Greeting from "react-lazy-hero";
 import TextLoop from "react-text-loop";
-import classNames from 'classnames';
+import classNames from "classnames";
 import Lodz from "../Media/lodz.jpg";
-import Archive from './archive.jsx';
+import Archive from "./archive.jsx";
 import Pre from "./pre.jsx";
 import WW2 from "./ww2.jsx";
 import Post from "./post.jsx";
 import Modern from "./present.jsx";
-import Tree from './tree.jsx';
+import Tree from "./tree.jsx";
 import Slideshow from "./Slideshow.js";
 import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
 import DavidRouter from "../profiles/component/people/pre_david.jsx";
@@ -19,13 +24,15 @@ import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119 2.jpeg";
 import HenryRouter from "../profiles/component/people/pre_henry.jsx";
 import RivaRouter from "../profiles/component/people/present_riva.jsx";
 import Baigelman from "./Baigelman.js";
-import Glazer from './Glazer.js'
+import Glazer from "./Glazer.js";
+import { connect } from "react-redux";
+import { changeDock } from "../redux/actions/changeDock.js";
 
 import $ from "jquery";
 const routes = [
   {
     component: Archive,
-    path:'/archive'
+    path: "/archive"
   },
   {
     component: Tree,
@@ -125,11 +132,12 @@ $(function() {
   );
 });
 
-export default class Span extends Component {
+class Span extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.scrollDiv = createRef();
-
+    this.changeDock = props.props.changeDock;
     this.IMAGE_PARTS = 4;
 
     this.changeTO = null;
@@ -238,9 +246,10 @@ export default class Span extends Component {
                 />
               </div>
             </div>
-            </div>
+          </div>
         </Switch>
       </Router>
     );
   }
 }
+export default withRouter(connect(null, { changeDock })(Span));

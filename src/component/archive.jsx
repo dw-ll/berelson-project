@@ -8,6 +8,7 @@ import Pre from "./pre";
 import Post from "./post";
 import WWII from "./ww2";
 import images from "../json/archiveData.js";
+import MusicDock from "./MusicDock.js";
 const routes = [
   {
     component: Pre,
@@ -41,7 +42,6 @@ class ScrollToTop extends Component {
 }
 
 class Archive extends Component {
-
   render() {
     return (
       <Router>
@@ -65,9 +65,8 @@ class Archive extends Component {
                     An archive of the Berelson Lineage.
                   </h6>
                 </div>
-
+                <MusicDock />
                 <Gallery images={archiveData} enableImageSelection={false} />
-                
               </div>
             </div>
           </Switch>

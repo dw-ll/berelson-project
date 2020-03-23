@@ -784,14 +784,6 @@ main {
   margin-bottom: 10px;
   border-bottom: solid 1px goldenrod;
 }
-.intro-text-header {
-  font-size: 55px;
-  letter-spacing: 5px;
-  font-family: Candara;
-  font-variant: small-caps;
-  margin-bottom: 10px;
-  border-bottom: solid 1px goldenrod;
-}
 .intro-text-loop {
   font-family: Candara;
   font-weight: bold;
@@ -1511,13 +1503,11 @@ input[type="checkbox"]:checked ~ label > img {
 .riva-row {
   margin-top: 100px;
 }
-.media-player {
-  position: relative;
-  top: 10;
-}
+
 .dark-mode .cassette__control_bar {
   background-color: #272727 !important;
 }
+
 .cassette__control_bar {
   background-color: #9e9e9e !important;
   margin-bottom: -25px !important;
@@ -1903,7 +1893,30 @@ input[type="checkbox"]:checked ~ label > img {
   left: auto;
   right: 5px;
 }
-
+.music-trigger {
+  height: 70px;
+  width: 70px;
+  z-index: 200;
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  border-radius: 50%;
+  background-color: goldenrod;
+}
+.music-dock {
+  max-height: 50px;
+}
+.video-col {
+  margin-left: -100px;
+  margin-bottom: 20px;
+}
+.video-caption {
+  font-family: Candara;
+  margin-left: 20%;
+}
+.ref-link {
+  font-size: 14px;
+}
 @media screen and (max-width: 768px) {
   .top {
     min-height: calc(75vh - 00px);
