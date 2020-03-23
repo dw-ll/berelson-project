@@ -170,7 +170,7 @@ const App = (props) => {
             path="/tree"
             render={() => (
               <div>
-                <Tree />
+                <Tree/>
                 <MDBFooter
                   class="fixed-bottom"
                   color={dark ? "dimgrey" : "grey"}

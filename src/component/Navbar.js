@@ -23,11 +23,6 @@ const NavBar = (props) => {
                     <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
                     < Nav className="ml-auto" navbar >
                         <NavItem>
-                            <Link className="nav-link" to="/archive">
-                                Media
-                </Link>
-                        </NavItem>
-                        <NavItem>
                             <Link className="nav-link" to="/tree">
                                 Family Tree
                 </Link>

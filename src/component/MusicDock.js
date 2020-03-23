@@ -82,11 +82,8 @@ const dockStyle = { borderTop: '1.5px solid goldernrod' }
 
 
 const MusicDock = (props) => {
-    console.log(props);
     var dock = props.dock;
     var changeDock = props.changeDock;
-    console.log(dock);
-    console.log(changeDock);
     return (
         <Dock className='music-dock'
             fluid={false}
