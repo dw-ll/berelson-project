@@ -11,6 +11,9 @@ import ScrollButton from "react-scroll-button";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import Context from "./Context.js";
+import Fab from '@material-ui/core/Fab'
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
+
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
 import SearchBar from "./component/SearchBar.jsx";
@@ -35,15 +38,25 @@ import "bootstrap/dist/css/bootstrap.css";
 require("bootstrap");
 global.jQuery = require("jquery");
 
+const fabStyle = { position: 'fixed', top: '85%', left: '2%' };
 const App = (props) => {
   const dark = props.dark.dark;
   const visible = props.dock.dock;
+  const changeDock = props.changeDock;
   console.log(props);
   console.log(dark);
   return (
     <Router>
 
       <div className={dark ? "App dark-mode" : "App light-mode"} id="app">
+        <Fab className="music-trigger"
+          size="large"
+          style={fabStyle}
+          color="default"
+          aria-label="play"
+          onClick={changeDock}>
+          <MusicNoteIcon />
+        </Fab>
         <NavBar props={props} />
         <Switch>
           <Route
@@ -473,7 +486,8 @@ const App = (props) => {
                 buttonColor={dark ? "white" : "black"}
                 iconType={"arrow-up"}
               />
-              <LandingSpan props={props}/>
+              <LandingSpan props={props} />
+
               <MusicDock />
             </div>
           </div>

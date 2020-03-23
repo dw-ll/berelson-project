@@ -78,6 +78,9 @@ const list = [
     }
 ];
 
+const dockStyle = { borderTop: '1.5px solid goldernrod' }
+
+
 const MusicDock = (props) => {
     console.log(props);
     var dock = props.dock;
@@ -85,11 +88,19 @@ const MusicDock = (props) => {
     console.log(dock);
     console.log(changeDock);
     return (
-        <Dock position='bottom' isVisible={dock} onClick={changeDock}>
+        <Dock className='music-dock'
+            fluid={false}
+            position='bottom'
+            isVisible={dock}
+            onClick={changeDock}
+            onVisibleChange={changeDock}
+            dockStyle={dockStyle}
+            size={50}
+            dimMode='opaque'>
             <MediaPlayer
                 className="media-player"
                 playlist={list}
-                autoplay={true}
+                autoplay={false}
                 controls={[
                     "spacer",
                     "playpause",

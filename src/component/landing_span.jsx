@@ -245,13 +245,7 @@ class Span extends Component {
                   onClick={() => this.changeSlides(1)}
                 />
               </div>
-              <button
-                type="button"
-                class="btn btn-primary music-trigger"
-                onClick={this.changeDock}
-              >
-                Play Music
-              </button>
+            
             </div>
           </div>
         </Switch>
