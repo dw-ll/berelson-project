@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/Fonia239.9a852842.jpeg"
   },
   {
-    "revision": "ebe12c321dfd7d4a1106",
+    "revision": "8e376f2046aeebb3d686",
     "url": "/static/css/main.b16d999f.chunk.css"
   },
   {
@@ -712,8 +712,8 @@ self.__precacheManifest = [
     "url": "/static/media/Fonia238.50ec1eae.jpeg"
   },
   {
-    "revision": "ebe12c321dfd7d4a1106",
-    "url": "/static/js/main.6558ed7c.chunk.js"
+    "revision": "8e376f2046aeebb3d686",
+    "url": "/static/js/main.3601c128.chunk.js"
   },
   {
     "revision": "eb47f5c1da3fa398ede187f3f4c899fc",
@@ -1364,12 +1364,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.73cf49a2.woff"
   },
   {
-    "revision": "a0e3ac82940c1998c5977fd4bc1f5ef6",
-    "url": "/static/media/fa-regular-400.a0e3ac82.ttf"
-  },
-  {
     "revision": "3351f435b3c9037fd88aeb04dc1e43bc",
     "url": "/static/media/fa-regular-400.3351f435.eot"
+  },
+  {
+    "revision": "a0e3ac82940c1998c5977fd4bc1f5ef6",
+    "url": "/static/media/fa-regular-400.a0e3ac82.ttf"
   },
   {
     "revision": "067595ad77ecc0db9c81c8905a7eef32",
@@ -1388,24 +1388,24 @@ self.__precacheManifest = [
     "url": "/static/media/fa-solid-900.cdfec5cf.woff"
   },
   {
-    "revision": "9ec698d1a597bff5df337094b71ddaaf",
-    "url": "/static/media/fa-brands-400.9ec698d1.ttf"
-  },
-  {
     "revision": "57dcda6f368ea90179f75cbdae96c263",
     "url": "/static/media/fa-brands-400.57dcda6f.eot"
+  },
+  {
+    "revision": "9ec698d1a597bff5df337094b71ddaaf",
+    "url": "/static/media/fa-brands-400.9ec698d1.ttf"
   },
   {
     "revision": "5d0861781aeef6c82fda3a3076954a1b",
     "url": "/static/media/fa-regular-400.5d086178.svg"
   },
   {
-    "revision": "75f38a159982b6bd1704891332d95fa7",
-    "url": "/static/media/fa-solid-900.75f38a15.ttf"
-  },
-  {
     "revision": "89e02bae13c9131c7468b1e729339ac1",
     "url": "/static/media/fa-solid-900.89e02bae.eot"
+  },
+  {
+    "revision": "75f38a159982b6bd1704891332d95fa7",
+    "url": "/static/media/fa-solid-900.75f38a15.ttf"
   },
   {
     "revision": "9d67fa1429375bd2a899a17eb77d0342",
@@ -1424,7 +1424,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.93c592c6.chunk.css"
   },
   {
-    "revision": "4c03510f105b143f89f0d0e03aaf8e5d",
+    "revision": "7096295b48446389f6979b6cafac90c4",
     "url": "/index.html"
   }
 ];
