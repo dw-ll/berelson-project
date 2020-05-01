@@ -8,8 +8,7 @@ import {
 } from "react-router-dom";
 import { Switch } from "react-router";
 import { Search } from "semantic-ui-react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import { Button, FormControl, InputGroup } from "react-bootstrap";
 import searchData from "../json/searchData.js";
 import resultData from "../json/resultData.js";
 import Results from "./Results.jsx";
@@ -32,9 +31,8 @@ const SearchBar = () => {
 
   $(function() {
     $(".search-bar").keyup(function(event) {
-      if (event.keyCode == 13) {
+      if (event.keyCode === 13) {
         console.log("Enter key has been pushed.");
-       
       }
     });
   });
@@ -45,7 +43,6 @@ const SearchBar = () => {
   };
 
   const handleTagChange = (e, { value }) => {
-   
     const searchQuery = value.toLowerCase();
     setIsLoading(true, value);
     setValue(value);
@@ -104,20 +101,9 @@ const SearchBar = () => {
     <Router>
       <Switch>
         <div>
-          <Search
-            id="search"
-            className="search-bar"
-            loading={isLoading}
-            onResultSelect={handleResultSelect}
-            onSearchChange={_.debounce(handleTagChange, 500, {
-              leading: true
-            })}
-            selectItemOnEnter={true}
-            //onMouseDown={handleResultSelect}
-            results={filteredResults}
-            value={value}
-            size="small"
-          />
+          <div class="input-group mb-3">
+         
+          </div>
         </div>
       </Switch>
     </Router>
