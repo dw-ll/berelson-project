@@ -10,7 +10,6 @@ import { useSelector, useDispatch, connect } from "react-redux";
 import ScrollButton from "react-scroll-button";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import Context from "./Context.js";
 import Fab from '@material-ui/core/Fab'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import { changeMode } from './redux/actions/changeMode.js';
@@ -23,9 +22,9 @@ import Present from "./component/present.jsx";
 import PreHenry from "./profiles/component/people/pre_henry.jsx";
 import Archive from "./component/archive.jsx";
 import Tree from "./component/tree.jsx";
-import DavidResults from './component/DavidResults.js';
-import HenryResults from './component/HenryResults.js';
-import RivaResults from './component/RivaResults.js';
+import DavidResults from './component/Results/DavidResults.js';
+import HenryResults from './component/Results/HenryResults.js';
+import RivaResults from './component/Results/RivaResults.js';
 import Results from "./component/Results.jsx";
 import Baigelman from './component/Baigelman.js';
 import LandingSpan from "./component/landing_span.jsx";
@@ -33,8 +32,6 @@ import MusicDock from './component/MusicDock.js';
 import NavBar from './component/Navbar.js';
 import Footer from './component/Footer.js';
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
-require("bootstrap");
 global.jQuery = require("jquery");
 
 const fabStyle = { position: 'fixed', top: '85%', left: '2%' };
@@ -169,7 +166,7 @@ const App = (props) => {
             path="/tree"
             render={() => (
               <div>
-                <Tree/>
+                <Tree />
                 <MDBFooter
                   class="fixed-bottom"
                   color={dark ? "dimgrey" : "grey"}
