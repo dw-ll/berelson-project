@@ -20,7 +20,6 @@
     "grunt": "^1.0.4",
     "headspace": "^0.1.1",
     "jquery": "^3.3.1",
-    "material-ui": "^1.0.0-beta.47",
     "material-ui-icons": "^1.0.0-beta.36",
     "mdbreact": "^4.19.0",
     "nodemon": "^1.19.4",

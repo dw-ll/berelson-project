@@ -17,45 +17,52 @@ const NavBar = (props) => {
     console.log(props);
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
+    const [searchInput, setSearchInput] = useState('');
+    const handleSearch = (e) => {
+        setSearchInput(e.target.value);
+    }
     return (
 
-                <Navbar className="navbar-header no-shadows" light expand="md">
-                    <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
-                    < Nav className="ml-auto" navbar >
-                        <NavItem>
-                            <Link className="nav-link" to="/tree">
-                                Family Tree
+        <Navbar className="navbar-header no-shadows" light expand="md">
+            <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
+            < Nav className="ml-auto" navbar >
+                <NavItem>
+                    <Link className="nav-link" to="/tree">
+                        Family Tree
                 </Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link className="nav-link" to="/archive">
-                                Archives
+                </NavItem>
+                <NavItem>
+                    <Link className="nav-link" to="/archive">
+                        Archives
                 </Link>
-                        </NavItem>
-                        <NavItem>
-                            <SearchBar />
-                        </NavItem>
-                        <NavItem className="toggle-container">
-                            {dark ? (
-                                <span
-                                    className="mode-toggle"
-                                    style={{ color: "pink" }}
-                                    onClick={changeMode}
-                                >
-                                    ☾
-                                </span>
-                            ) : (
-                                    <span
-                                        className="mode-toggle"
-                                        style={{ color: "darkgoldenrod" }}
-                                        onClick={changeMode}
-                                    >
-                                        ☀︎
-                                    </span>
-                                )}
-                        </NavItem>
-                    </Nav >
-                </Navbar >
+                </NavItem>
+                <NavItem>
+                    <form class='form-inline photo-search'>
+                        <input class='form-control mr-sm-2' type='search' value={searchInput} onChange={handleSearch} placeholder='Search..' aria-label='search'></input>
+                        <button class='btn btn-outline-success my-2 my-sm-0'>Search</button>
+                    </form>
+                </NavItem>
+                <NavItem className="toggle-container">
+                    {dark ? (
+                        <span
+                            className="mode-toggle"
+                            style={{ color: "pink" }}
+                            onClick={changeMode}
+                        >
+                            ☾
+                        </span>
+                    ) : (
+                            <span
+                                className="mode-toggle"
+                                style={{ color: "darkgoldenrod" }}
+                                onClick={changeMode}
+                            >
+                                ☀︎
+                            </span>
+                        )}
+                </NavItem>
+            </Nav >
+        </Navbar >
     );
 
 }

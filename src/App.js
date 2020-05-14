@@ -43,8 +43,9 @@ const App = (props) => {
   console.log(dark);
   return (
     <Router>
+      <NavBar props={props} />
 
-      <div className={dark ? "App dark-mode" : "App light-mode"} id="app">
+      <div className={dark ? "App container-fluid p-0 m-0 dark-mode" : "App container-fluid p-0 m-0 light-mode"} id="app">
         <Fab className="music-trigger"
           size="large"
           style={fabStyle}
@@ -53,7 +54,7 @@ const App = (props) => {
           onClick={changeDock}>
           <MusicNoteIcon />
         </Fab>
-        <NavBar props={props} />
+
         <Switch>
           <Route
             path="/baigelman-family"
