@@ -14,6 +14,7 @@ import Fab from '@material-ui/core/Fab'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
+import { addSearchData } from './redux/actions/addSearchData.js'
 import SearchBar from "./component/SearchBar.jsx";
 import Pre from "./component/pre.jsx";
 import WW2 from "./component/ww2.jsx";
@@ -44,7 +45,6 @@ const App = (props) => {
   return (
     <Router>
       <NavBar props={props} />
-
       <div className={dark ? "App container-fluid p-0 m-0 dark-mode" : "App container-fluid p-0 m-0 light-mode"} id="app">
         <Fab className="music-trigger"
           size="large"
@@ -226,65 +226,8 @@ const App = (props) => {
           />
           <Route
             exact
-            path="/results/"
-            render={props => (
-              <div>
-                <Results {...props} />
-                <MDBFooter
-                  class="fixed-bottom"
-                  color={dark ? "dimgrey" : "grey"}
-                  className="main-footer font-small pt-4 mt-4"
-                >
-                  <MDBContainer fluid className="text-center text-md-left">
-                    <MDBRow>
-                      <MDBCol md="4">
-                        <h5 className="title">The Berelson Project</h5>
-                        <p>
-                          An ancestral site built to display and document the
-                          Berelson lineage in an archival effort.
-                          </p>
-                      </MDBCol>
-                      <MDBCol md="4">
-                        <h5 className="title">Explore</h5>
-                        <ul>
-                          <li className="list-unstyled">
-                            <Link to="/archive/">Archive</Link>
-                          </li>
-                          <li className="list-unstyled">
-                            <Link to="/tree/">Family Tree</Link>
-                          </li>
-                        </ul>
-                      </MDBCol>
-                      <MDBCol md="4">
-                        <h5 className="title">Contact</h5>
-                        <ul>
-                          <li className="list-unstyled">
-                            <p>
-                              <i class="fas fa-home  mr-3"></i> California
-                              </p>
-                          </li>
-                          <li className="list-unstyled">
-                            <p>
-                              <i class="fas fa-envelope mr-3"></i> Email
-                              </p>
-                          </li>
-                          <li className="list-unstyled">
-                            <p>
-                              <i class="fas fa-phone mr-3"></i> Phone
-                              </p>
-                          </li>
-                        </ul>
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBContainer>
-                  <div className="footer-copyright text-center py-3">
-                    <MDBContainer fluid>
-                      &copy; {new Date().getFullYear()}
-                    </MDBContainer>
-                  </div>
-                </MDBFooter>
-              </div>
-            )}
+            path="/results"
+            component={Results}
           />
           <Route
             exact
@@ -501,4 +444,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default withRouter(connect(mapStateToProps, { changeMode, changeDock })(App));
+export default withRouter(connect(mapStateToProps, { changeMode, changeDock, addSearchData })(App));

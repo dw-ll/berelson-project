@@ -3,12 +3,13 @@ import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import {
     BrowserRouter as Router,
     Route,
-    Link,
+    Link, Redirect,
     withRouter
 } from "react-router-dom";
-import SearchBar from "./SearchBar.jsx";
+import searchData from '../json/searchData';
 import { connect } from 'react-redux';
 import { changeMode } from '../redux/actions/changeMode.js';
+import { addSearchData } from '../redux/actions/addSearchData';
 
 
 
@@ -17,10 +18,20 @@ const NavBar = (props) => {
     console.log(props);
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
+    var addSearchData = props.props.addSearchData;
+    console.log('NavProps:', props.props)
     const [searchInput, setSearchInput] = useState('');
     const handleSearch = (e) => {
         setSearchInput(e.target.value);
     }
+    const search = () => {
+        addSearchData(searchInput);
+        setSearchInput('');
+        
+    };
+
+
+
     return (
 
         <Navbar className="navbar-header no-shadows" light expand="md">
@@ -37,9 +48,8 @@ const NavBar = (props) => {
                 </Link>
                 </NavItem>
                 <NavItem>
-                    <form class='form-inline photo-search'>
-                        <input class='form-control mr-sm-2' type='search' value={searchInput} onChange={handleSearch} placeholder='Search..' aria-label='search'></input>
-                        <button class='btn btn-outline-success my-2 my-sm-0'>Search</button>
+                    <form class='form-inline photo-search' onSubmit={search}>
+                        <input class='form-control mr-sm-2' type='search' value={searchInput} onChange={handleSearch} placeholder='Search...' aria-label='search'></input>
                     </form>
                 </NavItem>
                 <NavItem className="toggle-container">
@@ -66,4 +76,4 @@ const NavBar = (props) => {
     );
 
 }
-export default withRouter(connect(null, { changeMode })(NavBar));
+export default withRouter(connect(null, { changeMode, addSearchData })(NavBar));

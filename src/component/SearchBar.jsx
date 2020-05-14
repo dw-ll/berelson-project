@@ -7,7 +7,6 @@ import {
   withRouter
 } from "react-router-dom";
 import { Switch } from "react-router";
-import { Search } from "semantic-ui-react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import searchData from "../json/searchData.js";
@@ -98,17 +97,7 @@ const SearchBar = () => {
     <Router>
       <Switch>
         <div>
-          <Search
-            className="search-bar"
-            loading={isLoading}
-            onResultSelect={handleResultSelect}
-            onSearchChange={_.debounce(handleTagChange, 500, {
-              leading: true
-            })}
-            results={filteredResults}
-            value={value}
-            size="small"
-          />
+        
           {/* {fire && (
             <Redirect
               to={{
