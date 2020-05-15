@@ -225,8 +225,8 @@ const App = (props) => {
             )}
           />
           <Route
+            path={`/results/:search`}
             exact
-            path="/results"
             component={Results}
           />
           <Route

@@ -25,9 +25,10 @@ const NavBar = (props) => {
         setSearchInput(e.target.value);
     }
     const search = () => {
-        addSearchData(searchInput);
+
+        props.history.push(`/results/${searchInput}`)
         setSearchInput('');
-        
+
     };
 
 
@@ -48,9 +49,11 @@ const NavBar = (props) => {
                 </Link>
                 </NavItem>
                 <NavItem>
+
                     <form class='form-inline photo-search' onSubmit={search}>
                         <input class='form-control mr-sm-2' type='search' value={searchInput} onChange={handleSearch} placeholder='Search...' aria-label='search'></input>
                     </form>
+
                 </NavItem>
                 <NavItem className="toggle-container">
                     {dark ? (

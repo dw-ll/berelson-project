@@ -4,12 +4,7 @@ import { useSelector, connect } from "react-redux";
 import { Switch } from "react-router";
 import Gallery from "react-grid-gallery";
 import "react-vertical-timeline-component/style.min.css";
-import Present from "./present";
-import Pre from "./pre";
-import Post from "./post";
-import WWII from "./ww2";
-import images from "../json/resultData.js";
-import SearchBar from "./SearchBar.jsx";
+import searchData from "../json/searchData";
 
 const captionStyle = {
   backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -43,35 +38,64 @@ function printTags(props) {
   return listTags;
 }
 
-const Results = () => {
-  const results =
-    useSelector((state) => state.searchResults) ||
-    localStorage.getItem("searchResult");
+const Results = (props) => {
   const [images, setImages] = useState([]);
 
-  const setCustomTags = (i) => {
-    return i.tags.map((t) => {
-      return (
-        <div key={t.value} style={customTagStyle}>
-          {t.title}
-        </div>
-      );
-    });
-  };
-  const renderResults = () => {
-    console.log("Results:" + results);
-    setImages(
-      results.map((i) => {
+  useEffect(() => {
+    const getQuery = () => {
+      console.log(props.match.params.search);
+      let query = props.match.params.search;
+      return query;
+    };
+
+    const getResults = (input) => {
+      if (input.length > 0) {
+        const query = input.toLowerCase();
+        var searchResult = [];
+        for (let i = 0; i < searchData.length; i++) {
+          for (let j = 0; j < searchData[i].tags.length; j++) {
+            if (searchData[i].tags[j].includes(query)) {
+              searchResult.push(searchData[i]);
+            }
+          }
+        }
+        console.log(searchResult);
+        return searchResult;
+      }
+    };
+
+    const renderResults = (results) => {
+      var renderedImages = results.map((i) => {
         i.customOverlay = (
           <div style={captionStyle}>
             <div>{i.caption}</div>
-            {i.hasOwnProperty("tags") && this.setCustomTags(i)}
+            {i.hasOwnProperty("tags") && setCustomTags(i)}
           </div>
         );
         return i;
-      })
-    );
-  };
+      });
+      console.log(renderedImages);
+      return renderedImages;
+    };
+
+    const setCustomTags = (i) => {
+      return i.tags.map((t) => {
+        return (
+          <div key={t.value} style={customTagStyle}>
+            {t.title}
+          </div>
+        );
+      });
+    };
+    async function onLoad() {
+      var input = getQuery();
+      var results = getResults(input);
+      var renderedImages = renderResults(results);
+      setImages(renderedImages);
+    }
+    onLoad();
+    console.log(images);
+  }, [props.match.params.id]);
 
   return (
     <Router>
@@ -80,7 +104,6 @@ const Results = () => {
           <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
           <div className="search-results">
             <div></div>
-
             <Gallery
               className="results-gallery"
               images={images}
