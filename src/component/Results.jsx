@@ -33,13 +33,9 @@ const customTagStyle = {
   margin: "2px",
 };
 
-function printTags(props) {
-  const listTags = props.tags.map((tag) => <h4>{tag},</h4>);
-  return listTags;
-}
-
 const Results = (props) => {
-  const [images, setImages] = useState([]);
+  const [galleryImages, setImages] = useState([]);
+  const [renderedImages, setRenderedImages] = useState([]);
 
   useEffect(() => {
     const getQuery = () => {
@@ -59,23 +55,22 @@ const Results = (props) => {
             }
           }
         }
-        console.log(searchResult);
         return searchResult;
       }
     };
 
     const renderResults = (results) => {
-      var renderedImages = results.map((i) => {
-        i.customOverlay = (
-          <div style={captionStyle}>
-            <div>{i.caption}</div>
-            {i.hasOwnProperty("tags") && setCustomTags(i)}
-          </div>
-        );
-        return i;
-      });
-      console.log(renderedImages);
-      return renderedImages;
+      setRenderedImages(
+        results.map((i) => {
+          i.customOverlay = (
+            <div style={captionStyle}>
+              <div>{i.caption}</div>
+              {i.hasOwnProperty("tags") && setCustomTags(i)}
+            </div>
+          );
+          return i;
+        })
+      );
     };
 
     const setCustomTags = (i) => {
@@ -87,26 +82,36 @@ const Results = (props) => {
         );
       });
     };
-    async function onLoad() {
+    function onLoad() {
       var input = getQuery();
       var results = getResults(input);
-      var renderedImages = renderResults(results);
-      setImages(renderedImages);
+      setImages(
+        results.map((i) => {
+          i.customOverlay = (
+            <div style={captionStyle}>
+              <div>{i.caption}</div>
+              {i.hasOwnProperty("tags") && setCustomTags(i)}
+            </div>
+          );
+          return i;
+        })
+      );
     }
     onLoad();
-    console.log(images);
-  }, [props.match.params.id]);
+    console.log("New Render");
+  }, []);
 
+  useEffect(() => {
+    console.log(galleryImages);
+  }, [galleryImages]);
   return (
     <Router>
       <Switch>
         <div className="App">
           <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
           <div className="search-results">
-            <div></div>
             <Gallery
-              className="results-gallery"
-              images={images}
+              images={galleryImages}
               enableImageSelection={false}
               thumbnailWidth={500}
               thumbnailHeight={500}
