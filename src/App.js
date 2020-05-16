@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -6,16 +6,14 @@ import {
   withRouter
 } from "react-router-dom";
 import { Switch } from "react-router";
-import { useSelector, useDispatch, connect } from "react-redux";
+import { connect } from "react-redux";
 import ScrollButton from "react-scroll-button";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
 import Fab from '@material-ui/core/Fab'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
 import { addSearchData } from './redux/actions/addSearchData.js'
-import SearchBar from "./component/SearchBar.jsx";
 import Pre from "./component/pre.jsx";
 import WW2 from "./component/ww2.jsx";
 import Post from "./component/post.jsx";
