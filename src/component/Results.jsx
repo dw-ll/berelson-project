@@ -29,13 +29,13 @@ const customTagStyle = {
   padding: ".2em .6em .3em",
   borderRadius: ".25em",
   color: "black",
+  overflow: "auto",
   verticalAlign: "baseline",
   margin: "2px",
 };
 
 const Results = (props) => {
   const [galleryImages, setImages] = useState([]);
-  const [renderedImages, setRenderedImages] = useState([]);
 
   useEffect(() => {
     onLoad();
@@ -45,22 +45,11 @@ const Results = (props) => {
   function onLoad() {
     var input = getQuery();
     var results = getResults(input);
-    setImages(
-      results.map((i) => {
-        i.customOverlay = (
-          <div style={captionStyle}>
-            <div>{i.caption}</div>
-            {i.hasOwnProperty("tags") && setCustomTags(i)}
-          </div>
-        );
-        return i;
-      })
-    );
+    setImages(renderResults(results));
   }
 
   const getQuery = () => {
-    let query = props.match.params.search;
-    return query;
+    
   };
 
   const getResults = (input) => {
@@ -71,11 +60,17 @@ const Results = (props) => {
         resultData[i].tags.forEach((tag) => {
           if (tag && tag.value) {
             if (!tag.value.value) {
-              if (tag.value.includes(query)) {
+              if (
+                tag.value.includes(query) &&
+                !searchResult.includes(resultData[i])
+              ) {
                 searchResult.push(resultData[i]);
               }
             } else {
-              if (tag.value.value.includes(query)) {
+              if (
+                tag.value.value.includes(query) &&
+                !searchResult.includes(resultData[i])
+              ) {
                 searchResult.push(resultData[i]);
               }
             }
@@ -87,25 +82,27 @@ const Results = (props) => {
   };
 
   const renderResults = (results) => {
-    setRenderedImages(
-      results.map((i) => {
-        i.customOverlay = (
-          <div style={captionStyle}>
-            <div>{i.caption}</div>
-            {i.hasOwnProperty("tags") && setCustomTags(i)}
-          </div>
-        );
-        return i;
-      })
-    );
+    return results.map((i) => {
+      i.customOverlay = (
+        <div class="shadow-sm" style={captionStyle}>
+          <div>{i.caption}</div>
+          {i.hasOwnProperty("tags") && setCustomTags(i)}
+        </div>
+      );
+      return i;
+    });
+  };
+  const handleTagClick = (e) => {
+    console.log("Tag Clicked");
+    props.history.push(`/results/{t.title}`);
   };
 
   const setCustomTags = (i) => {
     return i.tags.map((t) => {
       return (
-        <div key={t.value} style={customTagStyle}>
+        <a key={t.value} style={customTagStyle} onCLick={handleTagClick}>
           {t.title}
-        </div>
+        </a>
       );
     });
   };
@@ -128,7 +125,7 @@ const Results = (props) => {
   return (
     <Router>
       <Switch>
-        <div>
+        <div class="container-fluid d-flex justify-content-center">
           <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
           <div className="search-results">{galleryImages && showResults()}</div>
         </div>
