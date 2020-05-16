@@ -38,90 +38,90 @@ const Results = (props) => {
   const [renderedImages, setRenderedImages] = useState([]);
 
   useEffect(() => {
-    const getQuery = () => {
-      console.log(props.match.params.search);
-      let query = props.match.params.search;
-      return query;
-    };
-
-    const getResults = (input) => {
-      if (input.length > 0) {
-        const query = input.toLowerCase();
-        var searchResult = [];
-        for (let i = 0; i < searchData.length; i++) {
-          for (let j = 0; j < searchData[i].tags.length; j++) {
-            if (searchData[i].tags[j].includes(query)) {
-              searchResult.push(searchData[i]);
-            }
-          }
-        }
-        return searchResult;
-      }
-    };
-
-    const renderResults = (results) => {
-      setRenderedImages(
-        results.map((i) => {
-          i.customOverlay = (
-            <div style={captionStyle}>
-              <div>{i.caption}</div>
-              {i.hasOwnProperty("tags") && setCustomTags(i)}
-            </div>
-          );
-          return i;
-        })
-      );
-    };
-
-    const setCustomTags = (i) => {
-      return i.tags.map((t) => {
-        return (
-          <div key={t.value} style={customTagStyle}>
-            {t.title}
-          </div>
-        );
-      });
-    };
-    function onLoad() {
-      var input = getQuery();
-      var results = getResults(input);
-      setImages(
-        results.map((i) => {
-          i.customOverlay = (
-            <div style={captionStyle}>
-              <div>{i.caption}</div>
-              {i.hasOwnProperty("tags") && setCustomTags(i)}
-            </div>
-          );
-          return i;
-        })
-      );
-    }
     onLoad();
     console.log("New Render");
-  }, []);
+  }, [props.match.params.id]);
 
-  useEffect(() => {
-    console.log(galleryImages);
-  }, [galleryImages]);
+  function onLoad() {
+    var input = getQuery();
+    var results = getResults(input);
+    setImages(
+      results.map((i) => {
+        i.customOverlay = (
+          <div style={captionStyle}>
+            <div>{i.caption}</div>
+            {i.hasOwnProperty("tags") && setCustomTags(i)}
+          </div>
+        );
+        return i;
+      })
+    );
+  }
+
+  const getQuery = () => {
+    let query = props.match.params.search;
+    return query;
+  };
+
+  const getResults = (input) => {
+    if (input.length > 0) {
+      const query = input.toLowerCase();
+      var searchResult = [];
+      for (let i = 0; i < searchData.length; i++) {
+        for (let j = 0; j < searchData[i].tags.length; j++) {
+          if (searchData[i].tags[j].includes(query)) {
+            searchResult.push(searchData[i]);
+          }
+        }
+      }
+      return searchResult;
+    }
+  };
+
+  const renderResults = (results) => {
+    setRenderedImages(
+      results.map((i) => {
+        i.customOverlay = (
+          <div style={captionStyle}>
+            <div>{i.caption}</div>
+            {i.hasOwnProperty("tags") && setCustomTags(i)}
+          </div>
+        );
+        return i;
+      })
+    );
+  };
+
+  const setCustomTags = (i) => {
+    return i.tags.map((t) => {
+      return (
+        <div key={t.value} style={customTagStyle}>
+          {t.title}
+        </div>
+      );
+    });
+  };
+  const showResults = () => {
+    console.log("Showing:", galleryImages);
+    return (
+      <Gallery
+        images={galleryImages}
+        enableImageSelection={false}
+        thumbnailWidth={500}
+        thumbnailHeight={500}
+        tagStyle={{
+          display: "none",
+        }}
+        showLightboxThumbnails={true}
+        backdropClosesModal={true}
+      />
+    );
+  };
   return (
     <Router>
       <Switch>
-        <div className="App">
-          <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
-          <div className="search-results">
-            <Gallery
-              images={galleryImages}
-              enableImageSelection={false}
-              thumbnailWidth={500}
-              thumbnailHeight={500}
-              tagStyle={{
-                display: "none",
-              }}
-              showLightboxThumbnails={true}
-              backdropClosesModal={true}
-            />
-          </div>
+        <div>
+          <div className="search-results">{galleryImages && showResults()}</div>
         </div>
       </Switch>
     </Router>
