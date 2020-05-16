@@ -4,7 +4,7 @@ import { useSelector, connect } from "react-redux";
 import { Switch } from "react-router";
 import Gallery from "react-grid-gallery";
 import "react-vertical-timeline-component/style.min.css";
-import searchData from "../json/searchData";
+import resultData from "../json/resultData";
 
 const captionStyle = {
   backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -67,12 +67,20 @@ const Results = (props) => {
     if (input.length > 0) {
       const query = input.toLowerCase();
       var searchResult = [];
-      for (let i = 0; i < searchData.length; i++) {
-        for (let j = 0; j < searchData[i].tags.length; j++) {
-          if (searchData[i].tags[j].includes(query)) {
-            searchResult.push(searchData[i]);
+      for (let i = 0; i < resultData.length; i++) {
+        resultData[i].tags.forEach((tag) => {
+          if (tag && tag.value) {
+            if (!tag.value.value) {
+              if (tag.value.includes(query)) {
+                searchResult.push(resultData[i]);
+              }
+            } else {
+              if (tag.value.value.includes(query)) {
+                searchResult.push(resultData[i]);
+              }
+            }
           }
-        }
+        });
       }
       return searchResult;
     }
@@ -121,6 +129,7 @@ const Results = (props) => {
     <Router>
       <Switch>
         <div>
+          <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
           <div className="search-results">{galleryImages && showResults()}</div>
         </div>
       </Switch>
