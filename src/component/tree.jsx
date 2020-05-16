@@ -18,16 +18,10 @@ import Missing from "../Media/missing_profile.jpg";
 import Chana from "../Media/Pre-WWII/Chana.Fodeman025.jpeg";
 import DavidB from "../Media/Pre-WWII/David.Baigelman016.jpeg";
 import Henry from "../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
-import DavidResults from "./Results/DavidResults.js";
-import RivaResults from "./Results/RivaResults.js";
-import HenryResults from "./Results/HenryResults.js";
 import Riva from "../Media/Modern/Riva346.jpeg";
 import Jack from "../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import Results from "./Results.jsx";
-import searchData from "../json/searchData.js";
-import resultData from "../json/resultData.js";
 import MusicDock from "./MusicDock.js";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -64,57 +58,6 @@ const FamilyTree = props => {
   };
 
   return (
-    <Router>
-      <Switch>
-        <Route
-          path="/pre/henry"
-          exact
-          render={() => {
-            return <HenryP />;
-          }}
-        />
-        <Route
-          path="/pre/david"
-          exact
-          render={() => {
-            return <David />;
-          }}
-        />
-        <Route
-          path="/post/jack"
-          exact
-          render={() => {
-            return <JackPost />;
-          }}
-        />
-        <Route
-          path="/post/riva"
-          exact
-          render={() => {
-            return <RivaPost />;
-          }}
-        />
-        <Route
-          exact
-          path="/results/david"
-          render={() => {
-            return <DavidResults />;
-          }}
-        />
-        <Route
-          exact
-          path="/results/riva"
-          render={() => {
-            return <RivaResults />;
-          }}
-        />
-        <Route
-          path="/results/henry"
-          exact
-          render={() => {
-            return <HenryResults />;
-          }}
-        />
 
         <div class="top">
           <div>
@@ -1146,8 +1089,6 @@ const FamilyTree = props => {
             </div>
           </div>
         </div>
-      </Switch>
-    </Router>
   );
 };
 const mapStateToProps = state => {

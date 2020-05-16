@@ -6,10 +6,8 @@ import {
     Link, Redirect,
     withRouter
 } from "react-router-dom";
-import searchData from '../json/searchData';
 import { connect } from 'react-redux';
 import { changeMode } from '../redux/actions/changeMode.js';
-import { addSearchData } from '../redux/actions/addSearchData';
 
 
 
@@ -18,21 +16,15 @@ const NavBar = (props) => {
     console.log(props);
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
-    var addSearchData = props.props.addSearchData;
-    console.log('NavProps:', props.props)
     const [searchInput, setSearchInput] = useState('');
     const handleSearch = (e) => {
         setSearchInput(e.target.value);
     }
     const search = () => {
-
         props.history.push(`/results/${searchInput}`)
         setSearchInput('');
 
     };
-
-
-
     return (
 
         <Navbar className="navbar-header no-shadows" light expand="md">
@@ -49,11 +41,9 @@ const NavBar = (props) => {
                 </Link>
                 </NavItem>
                 <NavItem>
-
                     <form class='form-inline photo-search' onSubmit={search}>
                         <input class='form-control mr-sm-2' type='search' value={searchInput} onChange={handleSearch} placeholder='Search...' aria-label='search'></input>
                     </form>
-
                 </NavItem>
                 <NavItem className="toggle-container">
                     {dark ? (
@@ -79,4 +69,4 @@ const NavBar = (props) => {
     );
 
 }
-export default withRouter(connect(null, { changeMode, addSearchData })(NavBar));
+export default withRouter(connect(null, { changeMode})(NavBar));
