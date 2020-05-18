@@ -77,10 +77,7 @@ const list = [
             "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490640/Unknown_Instrumental_Fragment_2_fmi7kc.wav"
     }
 ];
-
 const dockStyle = { borderTop: '1.5px solid goldernrod' }
-
-
 const MusicDock = (props) => {
     var dock = props.dock;
     var changeDock = props.changeDock;

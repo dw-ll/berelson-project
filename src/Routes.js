@@ -2,98 +2,84 @@ import React from 'react';
 import { Switch } from "react-router-dom";
 import AppliedRoute from './libs/AppliedRoute';
 import Baigelman from './component/Baigelman';
-import Pre from './component/pre';
-import PreHenry from './profiles/component/people/pre_henry';
-import WW2 from './component/ww2';
-import Post from './component/post';
-import Present from './component/present';
-import Archive from './component/archive';
-import Tree from './component/tree';
+import Glazer from './component/Glazer';
+import Pre from './component/Eras/Pre';
+import PreHenry from './component/PreHenry';
+import PreDavid from './component/PreDavid';
+import WW2 from './component/Eras/WW2';
+import Post from './component/Eras/Post';
+import Present from './component/Eras/Present';
+import Archive from './component/Archive';
+import Tree from './component/FamilyTree';
 import Results from './component/Results';
 import HenryResults from './component/Results/HenryResults';
 import DavidResults from './component/Results/DavidResults';
 import RivaResults from './component/Results/RivaResults';
-import LandingSpan from './component/landing_span';
-
-
-
-
-
+import Span from './component/Landing';
 export default function Routes({ appProps }) {
     return (
         <Switch>
             <AppliedRoute
                 path="/"
                 exact
-                render={() => {
-                    return <LandingSpan />;
-                }}
+                component={Span}
                 appProps={appProps}
             />
             <AppliedRoute
                 path="/baigelman-family"
                 exact
-                render={() => {
-                    return <Baigelman />;
-                }}
+                component={Baigelman}
                 appProps={appProps}
             />
+            <AppliedRoute
+                path="/glazer-family"
+                exact
+                component={Glazer}
+                appProps={appProps}
+            />
+
 
             <AppliedRoute
                 path="/pre"
                 exact
-                render={() => {
-                    return <Pre />;
-                }}
+                component={Pre}
                 appProps={appProps}
             />
             <AppliedRoute
                 path="/pre/henry"
                 exact
-                render={() => {
-                    return <PreHenry />;
-                }}
+                component={PreHenry}
                 appProps={appProps}
             />
             <AppliedRoute
                 path={`/ww2`}
                 exact
-                render={() => {
-                    return <WW2 />;
-                }}
+                component={WW2}
                 appProps={appProps}
             />
             <AppliedRoute
                 path={`/post`}
                 exact
-                render={() => {
-                    return <Post />;
-                }}
+                component={Post}
                 appProps={appProps}
             />
             <AppliedRoute
                 path={`/present`}
                 exact
-                render={() => {
-                    return <Present />;
-                }}
+                component={Present}
                 appProps={appProps}
             />
             <AppliedRoute
-                exact
                 path="/archive/"
-                render={() => (
-                    <Archive />
-                )}
+                exact
+                component={Archive}
                 appProps={appProps}
             />
 
             <AppliedRoute
                 exact
                 path="/tree"
-                render={() => (
-                    <Tree />
-                )}
+                component={Tree}
                 appProps={appProps}
             />
             <AppliedRoute
@@ -105,26 +91,20 @@ export default function Routes({ appProps }) {
             <AppliedRoute
                 exact
                 path="/results/henry"
-                render={props => (
-                    <HenryResults />
-                )}
+                component={HenryResults}
                 appProps={appProps}
             />
             <AppliedRoute
                 exact
                 path="/results/david"
-                render={props => (
-                    <DavidResults />
-                )}
+                component={DavidResults}
                 appProps={appProps}
             />
 
             <AppliedRoute
                 exact
                 path="/results/riva"
-                render={props => (
-                    <RivaResults />
-                )}
+                component={RivaResults}
                 appProps={appProps}
             />
         </Switch >

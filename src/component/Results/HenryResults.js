@@ -4,7 +4,6 @@ import { Switch } from "react-router";
 import Gallery from "react-grid-gallery";
 
 import images from "../../json/resultData.js";
-import SearchBar from "../SearchBar.jsx";
 import henryPhotos from '../../json/henryJson.js';
 import res from '../../json/res.js';
 

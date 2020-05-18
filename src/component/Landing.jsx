@@ -1,80 +1,13 @@
 import React, { Component, createRef } from "react";
 import {
-  BrowserRouter as Router,
-  Route,
   Link,
   withRouter
 } from "react-router-dom";
-import { Button, Card } from "react-bootstrap";
-import { Switch } from "react-router";
-import Greeting from "react-lazy-hero";
-import TextLoop from "react-text-loop";
 import classNames from "classnames";
-import Lodz from "../Media/lodz.jpg";
-import Archive from "./archive.jsx";
-import Pre from "./pre.jsx";
-import WW2 from "./ww2.jsx";
-import Post from "./post.jsx";
-import Modern from "./present.jsx";
-import Tree from "./tree.jsx";
-import Slideshow from "./Slideshow.js";
-import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
-import DavidRouter from "../profiles/component/people/pre_david.jsx";
-import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119 2.jpeg";
-import HenryRouter from "../profiles/component/people/pre_henry.jsx";
-import RivaRouter from "../profiles/component/people/present_riva.jsx";
-import Baigelman from "./Baigelman.js";
-import Glazer from "./Glazer.js";
 import { connect } from "react-redux";
 import { changeDock } from "../redux/actions/changeDock.js";
-
 import $ from "jquery";
-const routes = [
-  {
-    component: Archive,
-    path: "/archive"
-  },
-  {
-    component: Tree,
-    path: "/tree"
-  },
-  {
-    component: Pre,
-    path: `${process.env.PUBLIC_URL}/pre/`
-  },
-  {
-    component: WW2,
-    path: "/ww2"
-  },
-  {
-    component: Post,
-    path: "/post"
-  },
-  {
-    component: Modern,
-    path: "/present"
-  },
-  {
-    component: DavidRouter,
-    path: "/pre/david/"
-  },
-  {
-    component: HenryRouter,
-    path: "/pre/henry/"
-  },
-  {
-    component: RivaRouter,
-    path: "/present/riva/"
-  },
-  {
-    component: Baigelman,
-    path: "/baigelman-family"
-  },
-  {
-    component: Glazer,
-    path: "/glazer-family"
-  }
-];
+
 const slides = [
   {
     city: "Baigelman",
@@ -137,7 +70,7 @@ class Span extends Component {
     super(props);
     console.log(props);
     this.scrollDiv = createRef();
-    this.changeDock = props.props.changeDock;
+    this.changeDock = props.changeDock;
     this.IMAGE_PARTS = 4;
 
     this.changeTO = null;
@@ -185,18 +118,6 @@ class Span extends Component {
     const { activeSlide, prevSlide, sliderReady } = this.state;
 
     return (
-      <Router onUpdate={() => window.scrollTo(0, 0)}>
-        <Switch>
-          {routes.map((route, i) => (
-            <Route
-              path={route.path}
-              key={i}
-              exact
-              render={() => {
-                return <route.component />;
-              }}
-            />
-          ))}
 
           <div>
             <div className="greet">
@@ -247,8 +168,6 @@ class Span extends Component {
               </div>
             </div>
           </div>
-        </Switch>
-      </Router>
     );
   }
 }

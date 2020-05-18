@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import { Switch } from "react-router";
 import Gallery from "react-grid-gallery";
-
 import images from "../../json/resultData.js";
-import SearchBar from "../SearchBar.jsx";
 import rivaPhotos from '../../json/rivaJson.js';
 
 

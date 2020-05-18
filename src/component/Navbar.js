@@ -1,19 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
-import {
-    BrowserRouter as Router,
-    Route,
-    Link, Redirect,
-    withRouter
-} from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { changeMode } from '../redux/actions/changeMode.js';
 
-
-
-
 const NavBar = (props) => {
-    console.log(props);
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
     const [searchInput, setSearchInput] = useState('');
@@ -69,4 +60,4 @@ const NavBar = (props) => {
     );
 
 }
-export default withRouter(connect(null, { changeMode})(NavBar));
+export default withRouter(connect(null, { changeMode })(NavBar));

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
-import Archive from './archive.jsx';
+import Archive from './Archive.jsx';
 import Baigelman from './Baigelman.js';
 import classNames from 'classnames';
 const routes = [

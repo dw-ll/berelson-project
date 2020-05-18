@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
-import Pre from "../../../component/pre";
-import Playlist from "../../../component/Playlist";
+import Pre from "./Eras/Pre";
 import { MediaPlayer } from "@cassette/player";
 
 const IMGURL =
