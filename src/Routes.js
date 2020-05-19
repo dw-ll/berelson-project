@@ -52,6 +52,12 @@ export default function Routes({ appProps }) {
                 appProps={appProps}
             />
             <AppliedRoute
+                path="/pre/david"
+                exact
+                component={PreDavid}
+                appProps={appProps}
+            />
+            <AppliedRoute
                 path={`/ww2`}
                 exact
                 component={WW2}

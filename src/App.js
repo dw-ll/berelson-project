@@ -20,8 +20,8 @@ const App = (props) => {
   const changeDock = props.changeDock;
   return (
     <Router>
-      <NavBar props={props} />
       <div className={dark ? "App container-fluid p-0 m-0 dark-mode" : "App container-fluid p-0 m-0 light-mode"} id="app">
+        <NavBar props={props} />
         <Fab className="music-trigger"
           size="large"
           style={fabStyle}

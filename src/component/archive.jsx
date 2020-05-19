@@ -7,16 +7,18 @@ const archiveData = images;
 class Archive extends Component {
   render() {
     return (
-      <div className="App">
-        <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
+      <div className="mx-auto">
         <div>
-          <div>
-            <h6 style={{ textAlign: "center" }}>
-              An archive of the Berelson Lineage.
-            </h6>
+          <div class="jumbotron jumbotron-fluid archive-jumbo">
+            <div class="container">
+              <h1 class="display-4">The Archives</h1>
+              <p class="lead">
+                Here you'll find Baigelman family photos and more, ranging from before the second world war up to today.
+              </p>
+            </div>
           </div>
           <MusicDock />
-          <Gallery images={archiveData} enableImageSelection={false} />
+          <Gallery class='archive-gallery' images={archiveData} enableImageSelection={false} />
         </div>
       </div>
     );

@@ -41,45 +41,29 @@ class Baigelman extends Component {
     render() {
         return (
 
-            <div class="container" style={{ marginTop: "35px" }}>
-                <h1 className='intro-text'>the baigelman family</h1>
-                <div className="intro-text-paragraph-container">
-                    <h2 className="intro-text-loop">
-                        The Baigelman (Beigelman) family of Łódź were &nbsp;
+            <div class="container p-0 mx-auto">
+                <div class="jumbotron jumbotron-fluid family-jumbo">
+                    <div class="container">
+                        <h1 className='display-3'>The Baigelman Family</h1>
+                        <div className="intro-text-paragraph-container">
+                            <h2 className="intro-text-loop">
+                                The Baigelman (Beigelman) family of Łódź were &nbsp;
                     <TextLoop>
-                            <span className="intro-text-loop">
-                                prominent musicians
+                                    <span className="intro-text-loop">
+                                        prominent musicians
                       </span>
-                            <span className="intro-text-loop"> composers</span>
-                            <span className="intro-text-loop"> conductors</span>
-                            <span className="intro-text-loop">
-                                {" "}
+                                    <span className="intro-text-loop"> composers</span>
+                                    <span className="intro-text-loop"> conductors</span>
+                                    <span className="intro-text-loop">
+                                        {" "}
                         theater performers
                       </span>
-                        </TextLoop>{" "}
-                    </h2>
-                    <h4
-                        style={{ textAlign: "left" }}
-                        className="intro-text-paragraph"
-                    >
-                        The patriarch, Simon (Szymon) Baigelman was first oboe for
-                        the Łódź Symphony Orchestra, which was populated mostly by
-                        musicians related to the family including the last names of
-                        Spielman, Mutzman, Ostrowiec, and Spaismacher. Perhaps the
-                        most famous was prodigy David (Dawid) Beigelman (1887-1945),
-                        a violinist, orchestra leader, and composer of Yiddish
-                        theater music and songs. He became director of the Łódź
-                        Yiddish Theater in 1912. Among other major accomplishments,
-                        he arranged the music for the hugely popular S. Ansky play,
-                        The Dybbuk. In 1929 he became composer and music director of
-                        the Łódź Ararat Theater.
-                        <sub>
-                            <a class='ref-link' href="https://www.taubephilanthropies.org/files/assets/pdf/2017/FieldGuide-Lodz-FINAL.pdf" rel="noopener noreferrer" target='_blank'>[1]</a>
-                        </sub>
-                    </h4>
-
-
+                                </TextLoop>{" "}
+                            </h2>
+                        </div>
+                    </div>
                 </div>
+
                 <div className='row profile-intro'>
                     <div class='col-12'>
                         <h4
@@ -87,13 +71,28 @@ class Baigelman extends Component {
                             style={{ textAlign: "center" }}
                             className="intro-text"
                         >
-                            meet the family
+                            Meet The Family
                     </h4>
+                        <h4
+                            style={{ textAlign: "left" }}
+                            className="intro-text-paragraph"
+                        >
+                            The patriarch, Simon (Szymon) Baigelman was first oboe for
+                            the Łódź Symphony Orchestra, which was populated mostly by
+                            musicians related to the family including the last names of
+                            Spielman, Mutzman, Ostrowiec, and Spaismacher. Perhaps the
+                            most famous was prodigy David (Dawid) Beigelman (1887-1945),
+                            a violinist, orchestra leader, and composer of Yiddish
+                            theater music and songs. He became director of the Łódź
+                            Yiddish Theater in 1912. Among other major accomplishments,
+                            he arranged the music for the hugely popular S. Ansky play,
+                            The Dybbuk. In 1929 he became composer and music director of
+                            the Łódź Ararat Theater.
+                        <sub>
+                                <a class='ref-link' href="https://www.taubephilanthropies.org/files/assets/pdf/2017/FieldGuide-Lodz-FINAL.pdf" rel="noopener noreferrer" target='_blank'>[1]</a>
+                            </sub>
+                        </h4>
                     </div>
-
-                    <div class="family-hover-text-container"></div>
-
-
                 </div>
                 <div class="row profiles">
 
@@ -131,25 +130,20 @@ class Baigelman extends Component {
                     </h4>
                     </div>
                 </div>
-                <div class='container'>
-                    <div class="row profiles">
-                        <div class='col-lg-5'>
-                            <div class='video-col'>
-                                <ReactPlayer url='https://www.youtube.com/watch?v=tjy7O9sA1TQ' playing={false} controls={true} />
-                                <h5 class='video-caption'>Der Dybbuk (1937)</h5>
-                            </div>
-                        </div>
-                        <div class='col-2'></div>
-                        <div class='col-lg-5'>
-                            <div class='video-col'>
-                                <ReactPlayer url='https://www.youtube.com/watch?v=MlI6mlIyavo' playing={false} controls={true} />
-                                <h5 class='video-caption'>Gangster Tango</h5>
-                            </div>
-                        </div>
+
+                <div class='baigelman-videos'>
+                    <div class='video-col'>
+                        <ReactPlayer url='https://www.youtube.com/watch?v=tjy7O9sA1TQ' playing={false} controls={true} />
+                        <h5 >Der Dybbuk (1937)</h5>
+                    </div>
 
 
+                    <div class='video-col'>
+                        <ReactPlayer url='https://www.youtube.com/watch?v=MlI6mlIyavo' playing={false} controls={true} />
+                        <h5>Gangster Tango</h5>
                     </div>
                 </div>
+
             </div>
         );
     }

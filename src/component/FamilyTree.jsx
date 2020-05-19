@@ -57,9 +57,13 @@ const FamilyTree = (props) => {
 
   return (
     <div class="top">
-      <div>
-        <h4>Berelson Family Tree</h4>
-        <h6>Explore and learn more about the Berelson ancestry.</h6>
+      <div class="jumbotron jumbotron-fluid archive-jumbo">
+        <div class="container">
+          <h1 class="display-4">The Family Tree</h1>
+          <p class="lead">
+            Explore the Baigelman-Glazer family tree.
+          </p>
+        </div>
       </div>
       <MusicDock />
       <div class="tree-wrapper overflow-hidden">

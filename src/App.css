@@ -3,19 +3,36 @@
   align-items: center;
   justify-content: center;
   display: table;
-  height: 100%;
+  height: 100vh;
   padding-top: 1px;
   margin-top: -1px;
   overflow: auto;
 }
 
+.close span {
+  color: white;
+}
 .toggle {
   position: relative;
   padding: 0 4px;
   display: flex;
   align-items: center;
 }
-
+.archive-jumbo {
+  text-align: left;
+  background-color: transparent !important;
+  margin-bottom: 0.005em !important;
+  border-bottom: 0.075em solid goldenrod;
+}
+.family-jumbo {
+  text-align: center;
+  background-color: transparent !important;
+  margin-bottom: 0.05em !important;
+  border-bottom: 0.075em solid goldenrod;
+}
+.ReactGridGallery {
+  padding: 0 10px 0 10px;
+}
 /* ARROW 1 */
 .scroll-up-button {
 }
@@ -616,11 +633,28 @@ input[type="checkbox"].checkbox + label {
   line-height: 90px;
 }
 .toggle-container {
-  display: flex;
+  padding-right: 0.25em;
   margin: 0 auto;
 }
 
+.input-search-wrapper input {
+  border-radius: 0 !important;
+}
+.input-group:focus-within {
+  outline: 0.8px solid rgba(207, 204, 204, 0.596);
+}
+
+.input-group .input-group-text:hover {
+  background-color: rgba(207, 204, 204, 0.596);
+  cursor: pointer;
+}
+.input-search-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 .mode-toggle {
+  padding-left: 0.3em;
   height: 20px;
   width: 60px;
 }
@@ -688,8 +722,8 @@ main {
 .navbar-header-brand {
   float: none;
   font-size: 25px !important;
-  font-family: Candara !important;
-  font-weight: bold;
+  font-family: "Candara";
+  font-weight: semibold;
 }
 
 .nav.navbar-nav li a {
@@ -769,15 +803,12 @@ main {
 .dark-mode .landing-card {
   background-color: #272727 !important;
 }
-.profile-intro {
-  display: block;
-}
 .intro-text-container {
   min-height: 90vh;
 }
 .intro-text {
-  font-size: 35px;
-  letter-spacing: 5px;
+  font-size: 48px;
+  letter-spacing: 2px;
   font-family: Candara;
   font-variant: small-caps;
   margin-bottom: 10px;
@@ -788,15 +819,14 @@ main {
   font-weight: bold;
 }
 .intro-text-paragraph-container {
+  text-align: center;
 }
 .dark-mode .intro-text-paragraph-container {
 }
 .intro-text-paragraph {
   font-family: "Arial";
-  font-style: italic;
   padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid goldenrod;
+  text-align: center;
 }
 .hover-prompt {
   font-family: "Candara";
@@ -819,7 +849,7 @@ main {
 .hover-text {
   font-family: "Arial";
   font-style: italic;
-  padding: 15px;
+  padding: 20px;
   border-bottom: 1px solid goldenrod;
 }
 .hover-text-click {
@@ -1377,7 +1407,21 @@ input[type="checkbox"]:checked ~ label > img {
 }
 
 .btn.btn-primary {
-  background-color: grey !important;
+  background-color: lightgray !important;
+  border-color: lightgray !important;
+}
+.btn.btn-primary:hover {
+  background-color: gray !important;
+  border-color: lightgray !important;
+}
+
+.dark-mode .btn.btn-primary {
+  background-color: gray !important;
+  border-color: gray !important;
+}
+.dark-mode .btn.btn-primary:hover {
+  background-color: lightgray !important;
+  border-color: gray !important;
 }
 
 .search-profile {
@@ -1492,6 +1536,9 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .profiles {
   margin-top: 35px;
+}
+.baigelman-videos{
+  display:block;
 }
 .profile-container {
   padding: 55px;
@@ -1668,6 +1715,9 @@ input[type="checkbox"]:checked ~ label > img {
   cursor: pointer;
   opacity: 0;
   transition: 0.5s;
+}
+.slider__slide-readmore:hover{
+  color:white !important;
 }
 .slider__slide.s--active .slider__slide-readmore {
   transition-delay: 0.65s;
@@ -1876,6 +1926,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .slider-link {
   color: white;
+  text-decoration: none !important;
 }
 .icon-link {
   z-index: 100;
@@ -1906,7 +1957,9 @@ input[type="checkbox"]:checked ~ label > img {
   max-height: 50px;
 }
 .video-col {
-  margin-left: -100px;
+  display:inline-block;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 .video-caption {
