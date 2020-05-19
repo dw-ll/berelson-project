@@ -10,8 +10,12 @@ import allReducers from './redux/reducers';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-
-const store = createStore(allReducers, {}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import { loadState, saveState } from './libs/localState';
+const persistedState = loadState()
+const store = createStore(allReducers, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+store.subscribe(() => {
+  saveState(store.getState())
+});
 
 ReactDOM.render(
   <Provider store={store}>
