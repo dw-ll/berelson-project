@@ -6,4 +6,4 @@ export default function modeReducer(state = { dark: false }, action) {
         default:
             return state
     }
-}
+} 

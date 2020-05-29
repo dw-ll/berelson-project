@@ -1,6 +1,7 @@
 {
   "name": "timeline",
   "version": "0.1.0",
+  "proxy": "http://localhost:8080",
   "private": true,
   "homepage": "https://dw-ll.github.io/",
   "dependencies": {
