@@ -1,11 +1,16 @@
 import React, { Component, createRef } from "react";
 import { Link, withRouter } from "react-router-dom";
 import classNames from "classnames";
-import { connect } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import { changeDock } from "../redux/actions/changeDock";
 import { fetchLandingPhotos } from "../redux/actions/fetchLandingPhotos";
 
-const publicIds = ["Henry251_qkb4sa"];
+const publicIds = [
+  "Baigelman.Argentina001_qbrrks",
+  "Fonia228_tvfyc7",
+  "Calendar459_h8afod",
+  "Henry251_qkb4sa",
+];
 
 class Span extends Component {
   constructor(props) {
@@ -56,7 +61,8 @@ class Span extends Component {
 
   componentDidMount() {
     this.runAutochangeTO();
-    fetchLandingPhotos(publicIds);
+    console.log("Mounting");
+    fetchLandingPhotos();
     setTimeout(() => {
       this.setState({ activeSlide: 0, sliderReady: true });
     }, 0);

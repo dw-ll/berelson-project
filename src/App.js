@@ -8,6 +8,7 @@ import Fab from '@material-ui/core/Fab'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
+import { fetchArchive } from './redux/actions/fetchArchive';
 import MusicDock from './component/MusicDock.js';
 import NavBar from './component/Navbar.js';
 import Routes from './Routes';
@@ -18,6 +19,10 @@ const fabStyle = { position: 'fixed', top: '85%', left: '2%' };
 const App = (props) => {
   const dark = props.dark.dark;
   const changeDock = props.changeDock;
+
+  useEffect(() => {
+    fetchArchive()
+  })
   return (
     <Router>
       <div className={dark ? "App container-fluid p-0 m-0 dark-mode" : "App container-fluid p-0 m-0 light-mode"} id="app">
@@ -44,4 +49,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default withRouter(connect(mapStateToProps, { changeMode, changeDock })(App));
+export default withRouter(connect(mapStateToProps, { changeMode, changeDock, fetchArchive })(App));

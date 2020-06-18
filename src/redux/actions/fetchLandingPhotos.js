@@ -1,18 +1,17 @@
 import axios from 'axios';
-export async function fetchLandingPhotos(titles) {
+export function fetchLandingPhotos() {
+    console.log('Inside fetch photos action')
+    return async dispatch => {
+        return axios.get(`http://localhost:8080/fetch-landing-photos`)
+            .then(res => {
+                console.log('fetched photos')
+                dispatch({
+                    type: 'FETCH_LANDING_PHOTOS',
+                    data: res.data.photos
+                })
+            })
+            .catch(err => console.log(err))
 
-    try {
-
-        var landingPhotos = await axios.get('/fetch-landing-photos',);
-        console.log(landingPhotos)
-
-    } catch (err) {
-        console.log(err);
     }
-    return {
-        type: 'FETCH_LANDING_PHOTOS',
-        data: landingPhotos
-    };
-
 
 }
