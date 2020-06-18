@@ -1,11 +1,10 @@
 import axios from 'axios';
-export async function fetchArchive() {
-
-    console.log('inside fetch archive');
-    var res = await axios.get('http://localhost:8080/fetch-archive');
-    return {
-        type: 'FETCH_ARCHIVE_PHOTOS',
-        data: res.data
+export function fetchArchive() {
+    return function (dispatch) {
+        console.log('Inside fetch archives.')
+        return axios.get('http://localhost:8082/fetch-archive')
+            .then(res =>
+                dispatch({ type: 'FETCH_ARCHIVE_PHOTOS', data: res.data }))
     }
 
 }

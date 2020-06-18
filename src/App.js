@@ -19,9 +19,10 @@ const fabStyle = { position: 'fixed', top: '85%', left: '2%' };
 const App = (props) => {
   const dark = props.dark.dark;
   const changeDock = props.changeDock;
+  console.log(props)
 
   useEffect(() => {
-    fetchArchive()
+    props.fetchArchive()
   })
   return (
     <Router>
@@ -47,6 +48,8 @@ const mapStateToProps = (state) => {
     dock: state.dock
   }
 }
-
+const mapDispatchToProps = () => {
+  fetchArchive()
+}
 
 export default withRouter(connect(mapStateToProps, { changeMode, changeDock, fetchArchive })(App));
