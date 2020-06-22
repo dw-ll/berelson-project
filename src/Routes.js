@@ -6,6 +6,7 @@ import Glazer from './component/Glazer';
 import Pre from './component/Eras/Pre';
 import PreHenry from './component/PreHenry';
 import PreDavid from './component/PreDavid';
+import DavidProfile from './component/DavidProfile';
 import WW2 from './component/Eras/WW2';
 import Post from './component/Eras/Post';
 import Present from './component/Eras/Present';
@@ -43,6 +44,12 @@ export default function Routes({ appProps }) {
                 path="/pre"
                 exact
                 component={Pre}
+                appProps={appProps}
+            />
+            <AppliedRoute
+                path="/david-baigelman"
+                exact
+                component={DavidProfile}
                 appProps={appProps}
             />
             <AppliedRoute
