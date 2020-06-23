@@ -1,13 +1,29 @@
 .profile-photo {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   flex-shrink: 0;
   width: 225px;
   max-height: 350px;
+}
+.profile-container {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .profile-header {
   text-align: left;
 }
 .profile-subheader {
   justify-content: space-between;
+}
+.journey-container {
+}
+.journey-options {
+  text-align: center;
+}
+.current-journey {
+  text-decoration: underline;
+}
+.journey {
+}
+a {
+  font-family: Arial, Helvetica, sans-serif;
 }
