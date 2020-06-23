@@ -930,11 +930,32 @@ main {
 .dark-mode a {
   color: #fff !important;
 }
-
-.nav-link {
+.navbar-links:nth-child(3) {
+  font-family: arial !important;
+  font-size: 14px !important;
+}
+.nav-link:nth-child(odd) {
   font-family: arial !important;
   font-size: 14px !important;
   border-right: 0.5px solid #ccc !important;
+}
+.dark-mode .dropdown-divider{
+  color: black;
+}
+.dark-mode .dropdown-menu {
+  background-color: #333;
+}
+.dark-mode .dropdown-item:hover {
+  background-color: black;
+  text-decoration: none !important;
+}
+.drop-link {
+  font-family: arial !important;
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.5);
+}
+.drop-link:hover{
+  text-decoration: none !important;
 }
 .dark-mode nav-link {
   color: black;
@@ -1536,8 +1557,8 @@ input[type="checkbox"]:checked ~ label > img {
 .profiles {
   margin-top: 35px;
 }
-.baigelman-videos{
-  display:block;
+.baigelman-videos {
+  display: block;
 }
 .profile-container {
   padding: 55px;
@@ -1715,8 +1736,8 @@ input[type="checkbox"]:checked ~ label > img {
   opacity: 0;
   transition: 0.5s;
 }
-.slider__slide-readmore:hover{
-  color:white !important;
+.slider__slide-readmore:hover {
+  color: white !important;
 }
 .slider__slide.s--active .slider__slide-readmore {
   transition-delay: 0.65s;
@@ -1956,7 +1977,7 @@ input[type="checkbox"]:checked ~ label > img {
   max-height: 50px;
 }
 .video-col {
-  display:inline-block;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
@@ -2081,7 +2102,6 @@ input[type="checkbox"]:checked ~ label > img {
 
   .navbar-header {
     top: 0;
-    width: 100vw;
   }
   .tree-wrapper {
     display: inline-block;
