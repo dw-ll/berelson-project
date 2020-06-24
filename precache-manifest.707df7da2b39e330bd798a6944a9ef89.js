@@ -1156,7 +1156,7 @@ self.__precacheManifest = [
     "url": "/berelson-project/static/css/2.d3fb8c2c.chunk.css"
   },
   {
-    "revision": "f8e701df09574b0ad90669fae553235b",
+    "revision": "cc098d1bb597a2876af12a7bb6ca3212",
     "url": "/berelson-project/index.html"
   }
 ];
