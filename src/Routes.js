@@ -13,6 +13,7 @@ import Present from './component/Eras/Present';
 import Archive from './component/Archive';
 import Tree from './component/FamilyTree';
 import Results from './component/Results';
+import Film from './component/Film';
 import HenryResults from './component/Results/HenryResults';
 import DavidResults from './component/Results/DavidResults';
 import RivaResults from './component/Results/RivaResults';
@@ -38,6 +39,13 @@ export default function Routes({ appProps }) {
                 component={Glazer}
                 appProps={appProps}
             />
+            <AppliedRoute
+                path="/film"
+                exact
+                component={Film}
+                appProps={appProps}
+            />
+
 
 
             <AppliedRoute
@@ -93,6 +101,12 @@ export default function Routes({ appProps }) {
                 exact
                 path="/tree"
                 component={Tree}
+                appProps={appProps}
+            />
+            <AppliedRoute
+                path={`/film/view/:search`}
+                exact
+                component={Results}
                 appProps={appProps}
             />
             <AppliedRoute
