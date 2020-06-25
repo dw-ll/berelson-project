@@ -93,7 +93,7 @@ class Glazer extends Component {
                     <div class="col-6">
                         <Card id="david-profile" className="landing-card">
                             <Link to="/pre/david/">
-                                <Card.Img src={DavidProfile}></Card.Img>
+                                <Card.Img src="https://res.cloudinary.com/vessel-archives/image/upload/c_scale,h_400,w_387,y_20/v1590269265/Baigelman%20Family%20Photos/David.Baigelman016_k54dof.jpg"></Card.Img>
                             </Link>
                             <Card.Body>
                                 <Card.Title>David Baigelman</Card.Title>
@@ -104,7 +104,7 @@ class Glazer extends Component {
                     <div class="col-6">
                         <Card id="henry-profile" className="landing-card">
                             <Link to="/pre/henry/">
-                                <Card.Img src={HenryProfile}></Card.Img>
+                                <Card.Img src="https://res.cloudinary.com/vessel-archives/image/upload/c_scale,w_387/v1593127392/Henry.Baigelman119_2_edbhkf.jpg"></Card.Img>
                             </Link>
                             <Card.Body>
                                 <Card.Title>Henry Baigelman</Card.Title>

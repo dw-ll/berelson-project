@@ -37,7 +37,7 @@ src/component/card.jsx
 src/component/span.jsx
 src/component/spinner.jsx
 src/component/tree_dev.jsx
-src/json/
+
 package-lock.json
 Context.js
 Cloudinary.md
