@@ -9,7 +9,7 @@ import PreDavid from './component/PreDavid';
 import WW2 from './component/Eras/WW2';
 import Post from './component/Eras/Post';
 import Present from './component/Eras/Present';
-import Archive from './component/Archive';
+import Archive from './component/archive';
 import Tree from './component/FamilyTree';
 import Results from './component/Results';
 import HenryResults from './component/Results/HenryResults';
@@ -76,7 +76,7 @@ export default function Routes({ appProps }) {
                 appProps={appProps}
             />
             <AppliedRoute
-                path="/archive/"
+                path="/archive"
                 exact
                 component={Archive}
                 appProps={appProps}

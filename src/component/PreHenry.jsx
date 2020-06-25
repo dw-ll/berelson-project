@@ -4,7 +4,7 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import { Timeline, TimelineItem } from "vertical-timeline-component-for-react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import Archive from "./Archive.jsx";
+import Archive from "./archive.jsx";
 import Tree from "./FamilyTree.jsx";
 import Pre from "./Eras/Pre";
 

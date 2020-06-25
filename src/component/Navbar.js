@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, NavbarBrand, NavItem, Nav } from "reactstrap";
+import { Navbar, NavbarBrand, NavItem, Nav, Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { changeMode } from '../redux/actions/changeMode.js';
@@ -8,6 +8,7 @@ const NavBar = (props) => {
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
     const [searchInput, setSearchInput] = useState('');
+    const [dropped, setDropped] = useState(false);
     const handleSearch = (e) => {
         setSearchInput(e.target.value);
     }
@@ -16,6 +17,9 @@ const NavBar = (props) => {
         setSearchInput('');
 
     };
+    const handleDropdown = () => {
+        setDropped(!dropped);
+    }
     return (
         <Navbar className={`${dark ? 'navbar-header dark-mode' : 'navbar-header'} no-shadows`} light expand="md">
             <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
@@ -30,6 +34,29 @@ const NavBar = (props) => {
                         Archives
                 </Link>
                 </NavItem>
+                <Dropdown nav isOpen={dropped} toggle={handleDropdown}>
+                    <DropdownToggle nav caret>
+                        Families
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <DropdownItem>
+                            <Link className="drop-link" to="/baigelman-family">
+                                Baigelman
+                            </Link>
+                        </DropdownItem>
+                        <DropdownItem>
+                            <Link className="drop-link" to="/glazer-family">
+                                Glazer
+                            </Link>
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>
+                            <Link className="drop-link" to="/tree">
+                                Family Tree
+                            </Link>
+                        </DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
                 <NavItem>
                     <form class='input-form' onSubmit={search}>
                         <div class="input-search-wrapper">
