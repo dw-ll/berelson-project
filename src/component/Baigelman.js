@@ -2,8 +2,6 @@ import React, { Component, createRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Button, Card } from "react-bootstrap";
 import TextLoop from "react-text-loop";
-import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
-import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 import ReactPlayer from 'react-player';
 
 import $ from 'jquery';
