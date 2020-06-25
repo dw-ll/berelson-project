@@ -10,13 +10,11 @@ const publicIds = ["Henry251_qkb4sa"];
 class Span extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.scrollDiv = createRef();
     this.changeDock = props.changeDock;
     this.IMAGE_PARTS = 4;
     this.changeTO = null;
     this.AUTOCHANGE_TIME = 4000;
-
     this.state = {
       activeSlide: -1,
       prevSlide: -1,
@@ -25,22 +23,26 @@ class Span extends Component {
         {
           city: "Baigelman",
           path: "/baigelman-family",
-          img: require("../Media/Modern/Baigelman.Argentina001.jpg"),
+          img:
+            "https://res.cloudinary.com/vessel-archives/image/upload/v1591053003/Baigelman%20Family%20Photos/Baigelman.Argentina001_qbrrks.jpg",
         },
         {
           city: "Glazer",
           path: "/glazer-family",
-          img: require("../Media/Modern/Sevek.Glazer003.jpg"),
+          img:
+            "https://res.cloudinary.com/vessel-archives/image/upload/v1590269227/Baigelman%20Family%20Photos/Fonia228_xg6v8q.jpg",
         },
         {
           city: "Archives",
           path: "/archive",
-          img: require("../Media/Modern/Calendar459.jpeg"),
+          img:
+            "https://res.cloudinary.com/vessel-archives/image/upload/v1590269725/Henry%20Document/Calendar459_h8afod.jpg",
         },
         {
           city: "Family Tree",
           path: "/tree",
-          img: require("../Media/Modern/Henry251.jpeg"),
+          img:
+            "https://res.cloudinary.com/vessel-archives/image/upload/v1590269284/Baigelman%20Family%20Photos/Henry251_qkb4sa.jpg",
         },
       ],
     };
@@ -56,7 +58,6 @@ class Span extends Component {
 
   componentDidMount() {
     this.runAutochangeTO();
-    fetchLandingPhotos(publicIds);
     setTimeout(() => {
       this.setState({ activeSlide: 0, sliderReady: true });
     }, 0);
@@ -133,6 +134,4 @@ class Span extends Component {
     );
   }
 }
-export default withRouter(
-  connect(null, { changeDock, fetchLandingPhotos })(Span)
-);
+export default withRouter(connect(null, { changeDock })(Span));
