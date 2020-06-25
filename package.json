@@ -17,7 +17,6 @@
     "classnames": "^2.2.6",
     "create-react-class": "^15.6.3",
     "d3": "^5.9.7",
-    "firebase": "^5.8.4",
     "grunt": "^1.0.4",
     "headspace": "^0.1.1",
     "jquery": "^3.3.1",
