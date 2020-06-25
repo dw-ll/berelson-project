@@ -16,6 +16,8 @@ import HenryResults from './component/Results/HenryResults';
 import DavidResults from './component/Results/DavidResults';
 import RivaResults from './component/Results/RivaResults';
 import Span from './component/Landing';
+import Film from './component/Film';
+
 export default function Routes({ appProps }) {
     return (
         <Switch>
@@ -35,6 +37,12 @@ export default function Routes({ appProps }) {
                 path="/glazer-family"
                 exact
                 component={Glazer}
+                appProps={appProps}
+            />
+            <AppliedRoute
+                path="/film"
+                exact
+                component={Film}
                 appProps={appProps}
             />
 

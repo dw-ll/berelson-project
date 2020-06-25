@@ -25,11 +25,6 @@ const NavBar = (props) => {
             <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
             <Nav className="ml-auto my-auto" navbar >
                 <NavItem>
-                    <Link className="nav-link" to="/tree">
-                        Family Tree
-                </Link>
-                </NavItem>
-                <NavItem>
                     <Link className="nav-link" to="/archive">
                         Archives
                 </Link>
@@ -57,6 +52,11 @@ const NavBar = (props) => {
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
+                <NavItem>
+                    <Link className="nav-link" to="/film">
+                        Film
+                </Link>
+                </NavItem>
                 <NavItem>
                     <form class='input-form' onSubmit={search}>
                         <div class="input-search-wrapper">
