@@ -13,7 +13,9 @@ import thunk from 'redux-thunk';
 import { BrowserRouter } from "react-router-dom";
 import { loadState, saveState } from './libs/localState';
 const persistedState = loadState()
-const store = createStore(allReducers, { ...persistedState }, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+const store = createStore(allReducers, { ...persistedState }, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__
+  ? window.__REDUX_DEVTOOLS_EXTENSION__()
+  : f => f));
 store.subscribe(() => {
   saveState(store.getState())
 });
