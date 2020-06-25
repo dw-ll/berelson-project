@@ -7,14 +7,54 @@ const Film = (props) => {
 
     const renderVideoThumbs = (videos) => {
         return (
+            <>
+                <section className='row'>
+                    <div className='col-12 col-md-6'>
+                        <div className="d-flex flex-column align-middle" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
+                            <h1>Lodz Documentary Part 1</h1>
+                            <h6>More information about the Lodz documentary</h6>
 
-            <div className="video-el text-left" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)" }}>
-                <h1>Lodz Documentary</h1>
-                <h6>More information about the Lodz documentary</h6>
+                            <ReactPlayer controls={true} url='https://vimeo.com/432325070' />
 
-                <ReactPlayer controls={true} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
 
-            </div >
+                        </div>
+                    </div>
+                    <div className='col-12 col-md-6'>
+                        <div className="d-flex flex-column" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
+                            <h1>Lodz Documentary Part 2</h1>
+                            <h6>More information about the Lodz documentary</h6>
+
+                            <ReactPlayer controls={true} url='https://vimeo.com/432327260' />
+
+
+                        </div>
+                    </div>
+                    <div className='col-12 col-md-6'>
+                        <div className="d-flex flex-column" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
+                            <h1>Lodz Documentary Part 3</h1>
+                            <h6>More information about the Lodz documentary</h6>
+
+                            <ReactPlayer controls={true} url='https://vimeo.com/432328942' />
+
+
+                        </div>
+                    </div>
+                    <div className='col-12 col-md-6'>
+                        <div className="d-flex flex-column" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
+                            <h1>Lodz Documentary Part 4</h1>
+                            <h6>More information about the Lodz documentary</h6>
+
+                            <ReactPlayer controls={true} url='https://vimeo.com/432330500' />
+
+
+                        </div>
+                    </div>
+
+
+
+                </section>
+            </>
+
 
         )
 
