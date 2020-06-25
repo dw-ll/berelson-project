@@ -7,10 +7,10 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import Archive from "./archive.jsx";
 import Tree from "./FamilyTree.jsx";
 import Pre from "./Eras/Pre";
+import HenryProfile from "../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
 
-const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/WWII/";
-const slideImages = `${IMGURL}Henry.Baigelman118.jpeg`;
+
+const slideImages = `https://res.cloudinary.com/vessel-archives/image/upload/c_scale,w_350/v1590269238/Baigelman%20Family%20Photos/Henry366_qbt5is.jpg`;
 const properties = {
   duration: 5000,
   transitionDuration: 500,
@@ -113,19 +113,19 @@ const Slideshow = () => {
             <div class="row">
               <img
                 className="henry_story_photos"
-                src="https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Pre-WWII/Henry.David.Baigelman006.jpeg"
+                src="https://res.cloudinary.com/vessel-archives/image/upload/v1590269284/Baigelman%20Family%20Photos/Henry253_ntwa9h.jpg"
                 alt=""
               />
 
               <img
                 className="henry_story_photos"
-                src="https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/WWII/Henry.Baigelman102.jpeg"
+                src="https://res.cloudinary.com/vessel-archives/image/upload/v1590269284/Baigelman%20Family%20Photos/Henry257_fessoc.jpg"
                 alt=""
               />
 
               <img
                 className="henry_story_photos"
-                src="https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Modern/Henry367.jpeg"
+                src="https://res.cloudinary.com/vessel-archives/image/upload/v1590269284/Baigelman%20Family%20Photos/Henry251_qkb4sa.jpg"
                 alt=""
               />
             </div>

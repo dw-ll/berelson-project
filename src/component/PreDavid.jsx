@@ -4,16 +4,15 @@ import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
 import Pre from "./Eras/Pre";
 import { MediaPlayer } from "@cassette/player";
+import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
 
-const IMGURL =
-  "https://raw.githubusercontent.com/dw-ll/Berelson-Project/master/src/Media/Pre-WWII/";
-const slideImages = [`${IMGURL}David.Baigelman016.jpeg`];
+const slideImages = `https://res.cloudinary.com/vessel-archives/image/upload/v1590269265/Baigelman%20Family%20Photos/David.Baigelman016_k54dof.jpg`;
 const properties = {
   duration: 5000,
   transitionDuration: 500,
   infinite: true,
   indicators: true,
-  arrows: true
+  arrows: true,
 };
 
 const makh = [
@@ -21,14 +20,14 @@ const makh = [
     title: "Makh Tsu Di Eygelekh",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3",
   },
   {
     title: "Makh Tsu Di Eygelekh 2",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav"
-  }
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav",
+  },
 ];
 
 const felda = [
@@ -36,8 +35,8 @@ const felda = [
     title: "Feldafing",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav"
-  }
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav",
+  },
 ];
 
 const ikhVil = [
@@ -45,70 +44,70 @@ const ikhVil = [
     title: "Ikh Vil Fargesn",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav"
-  }
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav",
+  },
 ];
 const list2 = [
   {
     title: "Makh Tsu Di Eygelekh",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490210/Makh_Tsu_Di_Eygelekh_slzclb.mp3",
   },
   {
     title: "Makh Tsu Di Eygelekh 2",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490518/Makh_tsu_di_eygelekh_Close_your_little_eyes_qo5fd3.wav",
   },
   {
     title: "Tsigaynerlid",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490511/03_Tsigaynerlid_fqfelx.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490511/03_Tsigaynerlid_fqfelx.wav",
   },
   {
     title: "Der Yungiker Shnayderl",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490550/Der_yungiker_shnayderl_The_Young_Taylor_itmlrj.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490550/Der_yungiker_shnayderl_The_Young_Taylor_itmlrj.wav",
   },
   {
     title: "Es Benkt Zikh Nokh a Heym",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490560/Es_benkt_zikh_nokh_a_heym_We_long_for_a_home_rst1da.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490560/Es_benkt_zikh_nokh_a_heym_We_long_for_a_home_rst1da.wav",
   },
   {
     title: "Feldafing",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490443/Feldafing_oeywyb.wav",
   },
   {
     title: "Grzech A Sin",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490521/Grzech_A_Sin_yvnbgy.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490521/Grzech_A_Sin_yvnbgy.wav",
   },
   {
     title: "Ikh Vil Fargesn",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490509/Ikh_vil_fargesn_I_Will_Forget_ldur41.wav",
   },
   {
     title: "Nie Gniewaj Sie",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490667/Nie_gniewaj_sie_Don_t_Sulk_My_Dear_bjqbgz.wav"
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490667/Nie_gniewaj_sie_Don_t_Sulk_My_Dear_bjqbgz.wav",
   },
   {
     title: "Untitled",
     artist: "David Baigelman",
     url:
-      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490640/Unknown_Instrumental_Fragment_2_fmi7kc.wav"
-  }
+      "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490640/Unknown_Instrumental_Fragment_2_fmi7kc.wav",
+  },
 ];
 const Slideshow = () => {
   return (
@@ -246,7 +245,7 @@ const Slideshow = () => {
                       "forwardskip",
                       "mute",
                       "spacer",
-                      "progress"
+                      "progress",
                     ]}
                   />
                 </div>
@@ -285,7 +284,7 @@ const Slideshow = () => {
                       "forwardskip",
                       "mute",
                       "spacer",
-                      "progress"
+                      "progress",
                     ]}
                   />
                 </div>
@@ -324,7 +323,7 @@ const Slideshow = () => {
                       "forwardskip",
                       "mute",
                       "spacer",
-                      "progress"
+                      "progress",
                     ]}
                   />
                 </div>
