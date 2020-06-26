@@ -29,8 +29,10 @@ const Film = (props) => {
 
                         </div>
                     </div>
-                    <div className='col-12 col-md-6'>
-                        <div className="d-flex flex-column" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
+                    <div className='col-12 col-md-6' style={{
+                        boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)"
+                    }}>
+                        <div className="d-flex flex-column mt-2" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
                             <h1>Lodz Documentary Part 3</h1>
                             <h6>More information about the Lodz documentary</h6>
 
@@ -40,7 +42,7 @@ const Film = (props) => {
                         </div>
                     </div>
                     <div className='col-12 col-md-6'>
-                        <div className="d-flex flex-column" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
+                        <div className="d-flex flex-column mt-2" style={{ boxShadow: "box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25)", alignItems: "center" }}>
                             <h1>Lodz Documentary Part 4</h1>
                             <h6>More information about the Lodz documentary</h6>
 
