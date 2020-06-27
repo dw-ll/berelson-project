@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import Gallery from "react-grid-gallery";
 import "react-vertical-timeline-component/style.min.css";
 import MusicDock from "./MusicDock.js";
+import { archiveRef } from "../libs/archiveLib";
 const Archive = (props) => {
-  console.log(props.photos);
+  console.log(props)
   const archiveData = props.photos;
   return (
     <div className="mx-auto">
@@ -21,7 +22,7 @@ const Archive = (props) => {
         <MusicDock />
         <Gallery
           class="archive-gallery"
-          images={archiveData}
+          images={archiveData ? archiveData : archiveRef}
           enableImageSelection={false}
         />
       </div>

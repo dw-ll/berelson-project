@@ -5,6 +5,9 @@ export function fetchArchive() {
         return axios.get('https://vessel-archives-server.herokuapp.com/fetch-archive')
             .then(res =>
                 dispatch({ type: 'FETCH_ARCHIVE_PHOTOS', data: res.data }))
+            .catch(err => {
+                dispatch({ type: 'FETCH_ARCHIVE_ERROR', })
+            })
     }
 
 }
