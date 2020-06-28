@@ -1615,6 +1615,7 @@ input[type="checkbox"]:checked ~ label > img {
   font-size: 60px;
   letter-spacing: 12px;
   font-family: Candara;
+  color: white !important;
 }
 .slider__slide-heading span {
   display: block;
@@ -1895,7 +1896,7 @@ input[type="checkbox"]:checked ~ label > img {
   opacity: 1;
 }
 .slider-link {
-  color: white;
+  color: white !important;
   text-decoration: none !important;
 }
 .icon-link {

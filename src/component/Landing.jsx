@@ -101,12 +101,13 @@ class Span extends Component {
                   key={slide.city}
                 >
                   <div className="slider__slide-content">
-                    <h2 className="slider__slide-heading">
-                      {slide.city.split("").map((l) => (
-                        <span>{l}</span>
-                      ))}
-                    </h2>
                     <Link className="slider-link" to={slide.path}>
+                      <h2 className="slider__slide-heading">
+                        {slide.city.split("").map((l) => (
+                          <span>{l}</span>
+                        ))}
+                      </h2>
+
                       <p className="slider__slide-readmore">Explore</p>
                     </Link>
                   </div>
