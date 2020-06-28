@@ -1,0 +1,72 @@
+.profile_title {
+  font-family: Lora;
+  font-size: 44px;
+}
+.profile_title_date {
+  font-family: "Times New Roman", Times, serif;
+}
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.single_photo {
+  width: 600px;
+  height: 500px;
+  margin-right: 20%;
+}
+.single_photo_profile {
+  width: 350px;
+  height: 400px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 20%;
+}
+.profile {
+  height: 70%;
+}
+.profile_bio {
+  position: relative;
+  margin-top: 25%;
+}
+.profile_bio_row {
+  text-align: left;
+  font-size: 15px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid goldenrod;
+}
+.profile_content_row {
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid goldenrod;
+}
+.profile_bio_subrow {
+  font-size: 15px;
+  margin-top: 1%;
+}
+.profile-text-quote {
+  font-weight: bold;
+}
+
+.henry_story_text {
+}
+.henry_story_title {
+  font-family: Lora;
+  font-size: 3rem;
+  margin-bottom: -50px;
+}
+.henry_story_photos {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 350px;
+  border: 1px solid goldenrod;
+}
+
+.henry_story {
+  text-align: left;
+  justify-content: center;
+}
