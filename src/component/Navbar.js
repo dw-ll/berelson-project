@@ -34,22 +34,22 @@ const NavBar = (props) => {
                         Families
                     </DropdownToggle>
                     <DropdownMenu>
-                        <DropdownItem>
-                            <Link className="drop-link" to="/baigelman-family">
+                        <Link className="drop-link" to="/baigelman-family">
+                            <DropdownItem style={{ color: "rgba(0, 0, 0, 0.5) !important" }}>
                                 Baigelman
-                            </Link>
-                        </DropdownItem>
-                        <DropdownItem>
-                            <Link className="drop-link" to="/glazer-family">
+                            </DropdownItem>
+                        </Link>
+                        <Link className="drop-link" to="/glazer-family">
+                            <DropdownItem>
                                 Glazer
-                            </Link>
                         </DropdownItem>
+                        </Link>
                         <DropdownItem divider />
-                        <DropdownItem>
-                            <Link className="drop-link" to="/tree">
+                        <Link className="drop-link" to="/tree">
+                            <DropdownItem>
                                 Family Tree
-                            </Link>
                         </DropdownItem>
+                        </Link>
                     </DropdownMenu>
                 </Dropdown>
                 <NavItem>

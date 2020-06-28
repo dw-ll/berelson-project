@@ -939,10 +939,20 @@ main {
   font-size: 14px !important;
   border-right: 0.5px solid #ccc !important;
 }
+.dropdown-item {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.dark-mode .dropdown-item {
+  color: white !important;
+}
 
+.dropdown-item:hover > .dropdown-item {
+  color: black !important;
+}
 .dropdown-item:active {
   background-color: #ccc;
 }
+
 .dark-mode .dropdown-divider {
   color: black;
 }
@@ -1002,7 +1012,6 @@ h1 {
   background-color: black;
   background: grey;
 }
-
 
 .david_work_title {
   font-family: Candara;
