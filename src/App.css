@@ -1939,6 +1939,7 @@ input[type="checkbox"]:checked ~ label > img {
 }
 .ref-link {
   font-size: 14px;
+  color: gray !important;
 }
 @media screen and (max-width: 768px) {
   .top {
