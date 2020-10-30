@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 
 
 const Film = (props) => {
-
     const renderVideoThumbs = (videos) => {
         return (
             <>
