@@ -1,6 +1,11 @@
 import React from 'react';
 import Gallery from "react-grid-gallery";
+import axios from 'axios';
+
+
 import resultData from '../json/resultData';
+
+
 const captionStyle = {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     maxHeight: "240px",
@@ -42,10 +47,25 @@ const setCustomTags = (i) => {
     });
 };
 
+const formatTags = tagList => {
+    return tagList.map((tag) => {
+        return { value: tag, title: tag }
+    })
+}
+
 const search = {
     getQuery: function (props) {
         let query = props.match.params.search;
         return query;
+    },
+    getCloudinaryResults: async function (input) {
+        try {
+            const res = await axios.get(`https://vessel-archives-server.herokuapp.com/search/?query=${input}`)
+            return res.data
+        } catch (e) {
+            console.log(e)
+        }
+
     },
     getResults: function (input) {
         if (input.length > 0) {
@@ -75,6 +95,24 @@ const search = {
             return searchResult;
         }
     },
+    renderCloudinaryResults: function (results) {
+        return results.data.map((i) => {
+            const rendered = {}
+            rendered.src = i.url
+            rendered.thumbnail = i.url
+            rendered.caption = i.caption || ""
+            rendered.description = i.description || ""
+            rendered.tags = formatTags(i.tags)
+            rendered.customOverlay = (
+                <div class="shadow-sm" style={captionStyle}>
+                    <div>{i.caption || ""}</div>
+                    {i.hasOwnProperty("tags") && setCustomTags(rendered)}
+                </div>
+            );
+
+            return rendered;
+        });
+    },
     renderResults: function (results) {
         return results.map((i) => {
             i.customOverlay = (
@@ -87,6 +125,7 @@ const search = {
         });
     },
     showResults: function (galleryImages) {
+        console.log(galleryImages)
         return (
             <Gallery
                 images={galleryImages}
