@@ -15,7 +15,7 @@ const Results = (props) => {
 
   async function onLoad() {
     var input = search.getQuery(props);
-    var results = search.getResults(input);
+    // var results = search.getResults(input);
     var cloudinaryResults = await search.getCloudinaryResults(input)
     setImages(search.renderCloudinaryResults(cloudinaryResults));
   }

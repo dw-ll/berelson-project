@@ -12,9 +12,7 @@ import Present from './component/Eras/Present';
 import Archive from './component/archive';
 import Tree from './component/FamilyTree';
 import Results from './component/Results';
-import HenryResults from './component/Results/HenryResults';
-import DavidResults from './component/Results/DavidResults';
-import RivaResults from './component/Results/RivaResults';
+
 import Span from './component/Landing';
 import Film from './component/Film';
 
@@ -102,25 +100,7 @@ export default function Routes({ appProps }) {
                 component={Results}
                 appProps={appProps}
             />
-            <AppliedRoute
-                exact
-                path="/results/henry"
-                component={HenryResults}
-                appProps={appProps}
-            />
-            <AppliedRoute
-                exact
-                path="/results/david"
-                component={DavidResults}
-                appProps={appProps}
-            />
-
-            <AppliedRoute
-                exact
-                path="/results/riva"
-                component={RivaResults}
-                appProps={appProps}
-            />
+        
         </Switch >
 
     );
