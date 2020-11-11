@@ -1,12 +1,27 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import Gallery from "react-grid-gallery";
 import "react-vertical-timeline-component/style.min.css";
+
+
 import MusicDock from "./MusicDock.js";
 import { archiveRef } from "../libs/archiveLib";
+import GalleryLib from '../libs/galleryLib';
+
+
+
 const Archive = (props) => {
-  console.log(props)
-  const archiveData = props.photos;
+
+  const [archiveData, setArchiveData] = useState(props.photos);
+
+  useEffect(() => {
+    onLoad();
+  }, [props.match.params.id]);
+
+  const onLoad = async () => {
+    setArchiveData(GalleryLib.renderResults(archiveData));
+  }
+
   return (
     <div className="mx-auto">
       <div>
@@ -24,6 +39,13 @@ const Archive = (props) => {
           class="archive-gallery"
           images={archiveData ? archiveData : archiveRef}
           enableImageSelection={false}
+          thumbnailWidth={500}
+          thumbnailHeight={500}
+          tagStyle={{
+            display: "none",
+          }}
+          showLightboxThumbnails={true}
+          backdropClosesModal={true}
         />
       </div>
     </div>

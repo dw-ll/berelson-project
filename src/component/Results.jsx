@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch } from "react-router";
-import axios from 'axios';
 
 import "react-vertical-timeline-component/style.min.css";
 import search from "../libs/searchLib";
@@ -15,7 +14,6 @@ const Results = (props) => {
 
   async function onLoad() {
     var input = search.getQuery(props);
-    // var results = search.getResults(input);
     var cloudinaryResults = await search.getCloudinaryResults(input)
     setImages(search.renderCloudinaryResults(cloudinaryResults));
   }
