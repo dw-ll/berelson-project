@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch } from "react-router-dom";
+
 import AppliedRoute from './libs/AppliedRoute';
+
 import Baigelman from './component/Families/Baigelman';
 import Glazer from './component/Families/Glazer';
 import Pre from './component/Eras/Pre';
@@ -12,7 +14,6 @@ import Present from './component/Eras/Present';
 import Archive from './component/Archive';
 import FamilyTree from './component/FamilyTree';
 import Search from './component/Search';
-
 import Span from './component/Landing';
 import Film from './component/Film';
 

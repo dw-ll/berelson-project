@@ -14,7 +14,6 @@ const publicIds = ["Henry251_qkb4sa"];
 class Span extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.scrollDiv = createRef();
     this.changeDock = props.changeDock;
     this.IMAGE_PARTS = 4;
