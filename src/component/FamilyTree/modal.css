@@ -1,0 +1,78 @@
+.dark-mode .modal-container {
+  background-color: #303030 !important;
+  color: black !important;
+  width: 20%;
+}
+
+.modal-container {
+  width: 1450px !important;
+}
+.fade modal-container modal show {
+  width: 1450px !important;
+  display: block;
+  padding-left: 0;
+  justify-content: center;
+}
+.modal-container modal show {
+  margin-left: 200px !important;
+}
+
+.modal-body {
+  text-align: center;
+  font-family: "Times";
+}
+
+.dark-mode .modal-body {
+  text-align: center;
+  background: #303030 !important;
+  color: white;
+  font-family: "Times";
+}
+.modal-foot {
+  justify-content: left;
+}
+.modal {
+  width: 1450px !important;
+}
+.modal-open {
+  justify-content: center;
+  text-align: center;
+  background: black;
+}
+
+.dark-mode .modal-header {
+  color: black !important;
+}
+
+.dark-mode .modal-content {
+  text-align: center;
+  background: #303030 !important;
+  color: white;
+  font-family: "Times";
+}
+.dark-mode modal-foot {
+  justify-content: left;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .modal-open .modal {
+    margin-left: 245px !important;
+  }
+}
+.modal-foot {
+  justify-content: left;
+}
+fade
+  modal-container
+  modal
+  show
+  .react-jinke-music-player
+  .music-player-controller {
+  background-color: white !important;
+  border: grey !important;
+}

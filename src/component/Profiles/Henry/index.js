@@ -4,9 +4,10 @@ import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Timeline, TimelineItem } from "vertical-timeline-component-for-react";
 
-import "./profile.css";
+import "./index.css";
+import "../index.css";
 
-const Slideshow = () => {
+const Henry = () => {
   return (
     <div>
       <Helmet>
@@ -239,4 +240,4 @@ const Slideshow = () => {
     </div>
   );
 };
-export default Slideshow;
+export default Henry;

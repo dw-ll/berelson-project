@@ -1,0 +1,17 @@
+.david_work_title {
+  font-family: Candara;
+  font-size: 25px;
+}
+.david_work_title_main {
+  font-family: Candara;
+}
+.david_work_story {
+  margin-top: 10px;
+  font-family: Arial;
+  text-align: left;
+}
+.sample_wrapper {
+  border-bottom: 2px solid goldenrod;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

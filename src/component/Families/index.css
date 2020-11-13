@@ -1,0 +1,37 @@
+.intro-text {
+  font-size: 48px;
+  letter-spacing: 2px;
+  font-family: Candara;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+  border-bottom: solid 1px goldenrod;
+}
+.intro-text-paragraph-container {
+  text-align: center;
+}
+.dark-mode .intro-text-paragraph-container {
+}
+.intro-text-paragraph {
+  font-family: "Arial";
+  padding: 15px;
+  text-align: center;
+}
+
+.intro-text-loop {
+  font-family: Candara;
+  font-weight: bold;
+}
+
+.profiles {
+  margin-top: 35px;
+}
+
+.landing-card {
+  transform: scale(0.8);
+  width: 90%;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .landing-card {
+  background-color: #272727 !important;
+}

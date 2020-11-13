@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Navbar, NavbarBrand, NavItem, Nav, Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
-import { changeMode } from '../redux/actions/changeMode.js';
+import { changeMode } from '../../redux/actions/changeMode.js';
+
+import './index.css';
 
 const NavBar = (props) => {
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
+
     const [searchInput, setSearchInput] = useState('');
     const [dropped, setDropped] = useState(false);
+
     const handleSearch = (e) => {
         setSearchInput(e.target.value);
     }
     const search = () => {
-        props.history.push(`/results/${searchInput}`)
+        props.history.push(`/search/${searchInput}`)
         setSearchInput('');
 
     };

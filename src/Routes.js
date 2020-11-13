@@ -1,17 +1,17 @@
 import React from 'react';
 import { Switch } from "react-router-dom";
 import AppliedRoute from './libs/AppliedRoute';
-import Baigelman from './component/Baigelman';
-import Glazer from './component/Glazer';
+import Baigelman from './component/Families/Baigelman';
+import Glazer from './component/Families/Glazer';
 import Pre from './component/Eras/Pre';
-import PreHenry from './component/PreHenry';
-import PreDavid from './component/PreDavid';
+import Henry from './component/Profiles/Henry';
+import David from './component/Profiles/David';
 import WW2 from './component/Eras/WW2';
 import Post from './component/Eras/Post';
 import Present from './component/Eras/Present';
-import Archive from './component/archive';
-import Tree from './component/FamilyTree';
-import Results from './component/Results';
+import Archive from './component/Archive';
+import FamilyTree from './component/FamilyTree';
+import Search from './component/Search';
 
 import Span from './component/Landing';
 import Film from './component/Film';
@@ -43,8 +43,6 @@ export default function Routes({ appProps }) {
                 component={Film}
                 appProps={appProps}
             />
-
-
             <AppliedRoute
                 path="/pre"
                 exact
@@ -52,15 +50,15 @@ export default function Routes({ appProps }) {
                 appProps={appProps}
             />
             <AppliedRoute
-                path="/pre/henry"
+                path="/profile/henry"
                 exact
-                component={PreHenry}
+                component={Henry}
                 appProps={appProps}
             />
             <AppliedRoute
-                path="/pre/david"
+                path="/profile/david"
                 exact
-                component={PreDavid}
+                component={David}
                 appProps={appProps}
             />
             <AppliedRoute
@@ -91,16 +89,16 @@ export default function Routes({ appProps }) {
             <AppliedRoute
                 exact
                 path="/tree"
-                component={Tree}
+                component={FamilyTree}
                 appProps={appProps}
             />
             <AppliedRoute
-                path={`/results/:search`}
+                path={`/search/:search`}
                 exact
-                component={Results}
+                component={Search}
                 appProps={appProps}
             />
-        
+
         </Switch >
 
     );

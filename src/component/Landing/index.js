@@ -2,8 +2,12 @@ import React, { Component, createRef } from "react";
 import { Link, withRouter } from "react-router-dom";
 import classNames from "classnames";
 import { connect } from "react-redux";
-import { changeDock } from "../redux/actions/changeDock";
-import { fetchLandingPhotos } from "../redux/actions/fetchLandingPhotos";
+
+import './index.css'
+import './slider.css'
+
+import { changeDock } from "../../redux/actions/changeDock";
+import { fetchLandingPhotos } from "../../redux/actions/fetchLandingPhotos";
 
 const publicIds = ["Henry251_qkb4sa"];
 

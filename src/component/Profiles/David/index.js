@@ -2,9 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import { Slide } from "react-slideshow-image";
-import Pre from "./Eras/Pre";
+
+import './index.css';
+import '../index.css';
+
 import { MediaPlayer } from "@cassette/player";
-import DavidProfile from "../Media/Pre-WWII/DavidProfile.jpeg";
+import DavidProfile from "../../../Media/Pre-WWII/DavidProfile.jpeg";
 
 const slideImages = `https://res.cloudinary.com/vessel-archives/image/upload/v1590269265/Baigelman%20Family%20Photos/David.Baigelman016_k54dof.jpg`;
 const properties = {
@@ -109,7 +112,7 @@ const list2 = [
       "https://res.cloudinary.com/dtu8zsq1c/video/upload/v1575490640/Unknown_Instrumental_Fragment_2_fmi7kc.wav",
   },
 ];
-const Slideshow = () => {
+const David = () => {
   return (
     <div className="container-wrapper">
       <div class="container profile-container">
@@ -167,7 +170,7 @@ const Slideshow = () => {
             Russia, and thereafter came to America.
           </h6>
         </div>
-        <div class=" david_work">
+        <div class="david_work">
           <div class="col-lg-12 ">
             <h1 class="david_work_title_main">David's Work</h1>
             <h6 className="david_work_story">
@@ -310,4 +313,4 @@ const Slideshow = () => {
     </div>
   );
 };
-export default Slideshow;
+export default David;

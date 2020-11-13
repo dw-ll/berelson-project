@@ -1,3 +1,6 @@
+.profile-container {
+  padding: 55px;
+}
 .profile_title {
   font-family: Lora;
   font-size: 44px;
@@ -52,21 +55,3 @@ h6 {
   font-weight: bold;
 }
 
-.henry_story_text {
-}
-.henry_story_title {
-  font-family: Lora;
-  font-size: 3rem;
-  margin-bottom: -50px;
-}
-.henry_story_photos {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 450px;
-  height: 350px;
-  border: 1px solid goldenrod;
-}
-
-.henry_story {
-  text-align: left;
-  justify-content: center;
-}

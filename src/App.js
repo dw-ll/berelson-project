@@ -11,11 +11,12 @@ import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
 import { fetchArchive } from './redux/actions/fetchArchive';
 
-import MusicDock from './component/MusicDock.js';
-import NavBar from './component/Navbar.js';
+import MusicDock from './component/MusicDock';
+import NavBar from './component/Navbar';
 import Routes from './Routes';
+
+
 import "./App.css";
-global.jQuery = require("jquery");
 
 const fabStyle = { position: 'fixed', top: '85%', left: '2%' };
 const App = (props) => {
@@ -48,6 +49,4 @@ const mapStateToProps = (state) => {
     dock: state.dock
   }
 }
-
-
 export default withRouter(connect(mapStateToProps, { changeMode, changeDock, fetchArchive })(App));

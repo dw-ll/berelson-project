@@ -1,0 +1,253 @@
+.tree-wrapper {
+  display: inline-block;
+  height: 3200px;
+  width: 500px;
+  transform: scale(0.105);
+  transform-origin: -1.02% 1% 0px;
+  overflow-y: hidden;
+  position: absolute;
+  margin-left: 165px;
+  transition: transform 1s;
+  left: 0;
+}
+
+.inactive {
+  pointer-events: none;
+  cursor: default;
+}
+
+.tree {
+  height: 500px;
+  position: absolute;
+}
+
+.tree-info {
+  font-size: 61px;
+  font-family: "Times New Roman", Times, serif;
+}
+.tree-profile {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  padding-bottom: 2em;
+}
+.tree-profile-modal {
+  position: relative;
+  width: 350px;
+  height: 450px;
+
+  padding-bottom: 2em;
+}
+
+.tree-photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 0.5px 0 5px;
+
+  -webkit-transition: all 0.5s;
+
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 5px solid #ccc;
+  width: 50%;
+  height: 45px;
+  z-index: -1;
+}
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 5px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+		any siblings*/
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child {
+  padding-top: 0;
+}
+
+/*Remove left connector from first child and 
+		right connector from last child*/
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+  border-right: 5px solid #ccc;
+  border-radius: 0 5px 0 0;
+
+  -webkit-transform: translateX(1px);
+  -moz-transform: translateX(1px);
+  transform: translateX(1px);
+
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  border-left: 5px solid #ccc;
+  width: 0;
+  height: 32px;
+  z-index: -1;
+}
+
+.tree li a {
+  border: 5px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  background: white;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  transition: transform 0.2s; /* Animation */
+}
+
+.dark-mode .tree li a {
+  border: 5px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  background: #121212;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  transition: transform 0.2s; /* Animation */
+}
+
+.tree li a + a {
+  margin-left: 20px;
+  position: relative;
+}
+.tree li a + a::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #8b0000;
+  top: 50%;
+  left: -21px;
+  width: 20px;
+}
+body#archive .footer {
+  display: none;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover,
+.tree li a:hover ~ ul li a {
+  background: #c8e4f8;
+  color: #000;
+  border: 0.5px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover ~ ul li::after,
+.tree li a:hover ~ ul li::before,
+.tree li a:hover ~ ul::before,
+.tree li a:hover ~ ul ul::before {
+  border-color: #94a0b4;
+}
+@media screen and (min-width: 1080px) {
+  .tree-wrapper {
+    display: inline-block;
+    height: 3200px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 165px;
+    transition: transform 1s;
+    left: 0;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .tree-wrapper {
+    display: inline-block;
+    height: 3200px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 275px;
+    transition: transform 1s;
+    left: 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tree-wrapper {
+    display: inline-block;
+    height: 3200px;
+    width: 13000px;
+    transform: scale(0.105);
+    transform-origin: -1.02% 1% 0px;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 400px !important;
+    transition: transform 1s;
+    left: 0;
+  }
+}

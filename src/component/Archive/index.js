@@ -1,12 +1,13 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import Gallery from "react-grid-gallery";
-import "react-vertical-timeline-component/style.min.css";
 
+import './index.css';
 
-import MusicDock from "./MusicDock.js";
-import { archiveRef } from "../libs/archiveLib";
-import GalleryLib from '../libs/galleryLib';
+import MusicDock from "../MusicDock";
+import { archiveRef } from "../../libs/archiveLib";
+import GalleryLib from '../../libs/galleryLib';
+
 
 
 

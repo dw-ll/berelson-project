@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch } from "react-router";
 
-import "react-vertical-timeline-component/style.min.css";
-import search from "../libs/searchLib";
+import './index.css';
+
+import search from "../../libs/searchLib";
 
 const Results = (props) => {
   const [galleryImages, setImages] = useState([]);

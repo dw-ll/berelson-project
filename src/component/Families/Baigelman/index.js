@@ -1,8 +1,12 @@
-import React, { Component, createRef } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Button, Card } from "react-bootstrap";
+import React, { Component } from "react";
+import { BrowserRouter as Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 import TextLoop from "react-text-loop";
 import ReactPlayer from 'react-player';
+
+
+import './index.css';
+import '../index.css';
 
 import $ from 'jquery';
 
@@ -97,7 +101,7 @@ class Baigelman extends Component {
 
                     <div class="col-6">
                         <Card id="david-profile" className="landing-card">
-                            <Link to="/pre/david/">
+                            <Link to="/profile/david/">
                                 <Card.Img src="https://res.cloudinary.com/vessel-archives/image/upload/c_scale,h_400,w_387,y_20/v1590269265/Baigelman%20Family%20Photos/David.Baigelman016_k54dof.jpg"></Card.Img>
                             </Link>
                             <Card.Body>
@@ -108,7 +112,7 @@ class Baigelman extends Component {
 
                     <div class="col-6">
                         <Card id="henry-profile" className="landing-card">
-                            <Link to="/pre/henry/">
+                            <Link to="/profile/henry/">
                                 <Card.Img src="https://res.cloudinary.com/vessel-archives/image/upload/c_scale,w_387/v1593127392/Henry.Baigelman119_2_edbhkf.jpg"></Card.Img>
                             </Link>
                             <Card.Body>

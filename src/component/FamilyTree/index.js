@@ -5,35 +5,36 @@ import {
   Redirect,
   withRouter,
 } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 import { Switch } from "react-router";
 import { useSelector, useDispatch, connect } from "react-redux";
 
-import { LinkContainer } from "react-router-bootstrap";
-import "react-vertical-timeline-component/style.min.css";
-import HenryP from "./PreHenry.jsx";
-import David from "./PreDavid.jsx";
-import Missing from "../Media/missing_profile.jpg";
-import Chana from "../Media/Pre-WWII/Chana.Fodeman025.jpeg";
-import DavidB from "../Media/Pre-WWII/David.Baigelman016.jpeg";
-import Henry from "../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
-import Riva from "../Media/Modern/Riva346.jpeg";
-import Jack from "../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
+import Henry from "../Profiles/Henry";
+import David from "../Profiles/David";
+import Missing from "../../Media/missing_profile.jpg";
+import Chana from "../../Media/Pre-WWII/Chana.Fodeman025.jpeg";
+import DavidB from "../../Media/Pre-WWII/David.Baigelman016.jpeg";
+import HenryPhoto from "../../Media/Post-WWII 2/Henry.Baigelman119.jpeg";
+import Riva from "../../Media/Modern/Riva346.jpeg";
+import Jack from "../../Media/Post-WWII 2/Jack.Baigelman057.jpeg";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import MusicDock from "./MusicDock.js";
+import MusicDock from "../MusicDock";
+
+import './index.css';
+import './modal.css';
+
 import "bootstrap/dist/css/bootstrap.css";
 
 require("bootstrap");
 
 const FamilyTree = (props) => {
-  console.log(props);
   const darkValue = props.dark;
   const [open, setOpen] = useState(false);
   const [davidOpen, setDavidOpen] = useState(false);
   const [jackOpen, setJackOpen] = useState(false);
   const [jackDarkModeOpen, setJackDarkModeOpen] = useState(false);
   const [rivaOpen, setRivaOpen] = useState(false);
-  console.log(darkValue);
 
   const handleOpen = () => {
     setOpen(true);
@@ -266,7 +267,7 @@ const FamilyTree = (props) => {
                     </li>
                     <li>
                       <a onClick={handleOpen} href="# ">
-                        <img alt="" class="tree-profile" src={Henry} />
+                        <img alt="" class="tree-profile" src={HenryPhoto} />
                         <div class="tree-info">Henry</div>
                       </a>
 

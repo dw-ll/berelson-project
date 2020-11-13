@@ -32,8 +32,7 @@ const customTagStyle = {
     margin: "2px",
 };
 const handleTagClick = (e, props) => {
-    console.log("Tag Clicked");
-    props.history.push(`/results/{t.title}`);
+    props.history.push(`/search/{t.title}`);
 };
 
 const setCustomTags = (i) => {
@@ -96,7 +95,6 @@ const search = {
         });
     },
     showResults: function (galleryImages) {
-        console.log(galleryImages)
         return (
             <Gallery
                 images={galleryImages}
