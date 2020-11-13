@@ -1,3 +1,21 @@
+.btn.btn-primary {
+  background-color: lightgray !important;
+  border-color: lightgray !important;
+}
+.btn.btn-primary:hover {
+  background-color: gray !important;
+  border-color: lightgray !important;
+}
+
+.dark-mode .btn.btn-primary {
+  background-color: gray !important;
+  border-color: gray !important;
+}
+.dark-mode .btn.btn-primary:hover {
+  background-color: lightgray !important;
+  border-color: gray !important;
+}
+
 .tree-wrapper {
   display: inline-block;
   height: 3200px;

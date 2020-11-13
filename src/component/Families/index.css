@@ -35,3 +35,44 @@
 .dark-mode .landing-card {
   background-color: #272727 !important;
 }
+
+.hover-prompt {
+  font-family: "Candara";
+  padding: 25px;
+  font-size: 20px;
+}
+
+.family-hover-text-container {
+  width: inherit;
+  max-height: 40px;
+  text-align: center;
+}
+.hover-text-container {
+  width: inherit;
+  max-height: 20px;
+  text-align: center;
+  margin-right: 250px;
+}
+
+.hover-text {
+  font-family: "Arial";
+  font-style: italic;
+  padding: 20px;
+  border-bottom: 1px solid goldenrod;
+}
+.hover-text-click {
+  font-family: "Arial";
+  font-style: italic;
+  padding: 15px;
+}
+
+.video-col {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.ref-link {
+  font-size: 14px;
+  color: gray !important;
+}

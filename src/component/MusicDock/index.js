@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { changeDock } from '../../redux/actions/changeDock.js';
 import Dock from 'react-dock';
 
+import './index.css';
+
 const list = [
     {
         title: "Makh Tsu Di Eygelekh",

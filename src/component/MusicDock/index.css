@@ -1,3 +1,29 @@
 .music-dock {
   max-height: 50px;
 }
+
+.dark-mode .cassette__control_bar {
+  background-color: #272727 !important;
+}
+
+.cassette__control_bar {
+  background-color: #9e9e9e !important;
+  margin-bottom: -25px !important;
+  font-size: 10px;
+  color: black !important;
+}
+
+.cassette__media_button_wrapper {
+  color: black !important;
+}
+.cassette__media_info_marquee {
+  font-size: 15px !important;
+}
+
+.cassette__media_time_progress {
+  font-size: 15px !important;
+}
+
+.music-trigger{
+  z-index: 200;
+}

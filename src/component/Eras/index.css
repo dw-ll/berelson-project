@@ -1,0 +1,460 @@
+.greeting {
+  min-height: 72vh !important;
+  transform: scale(1);
+  transform-origin: -0.5% 1% 0px;
+}
+.greeting img {
+  transform: scale(0.5);
+  color: red;
+}
+.greeting-text {
+  position: absolute;
+  left: 41%;
+  top: 2%;
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 28px;
+}
+
+.greeting-button {
+  position: absolute;
+  left: 45%;
+  top: 41%;
+  margin-top: 10px;
+  color: white;
+}
+
+.greeting-button-text {
+  color: black !important;
+}
+.greeting-greet {
+  margin-top: 5px;
+}
+
+.eras {
+  padding-top: 15px;
+  list-style-type: none;
+}
+
+.eras-title {
+  margin-bottom: 20px;
+  padding: 5px 0 5px 10px;
+  text-align: left;
+  font-family: "Euclid Flex", "Helvetica", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600;
+  letter-spacing: 1 px;
+  text-transform: uppercase;
+  border-left: 8px solid grey;
+  background-color: black;
+  color: white !important;
+}
+
+.era-span {
+  margin-bottom: 150px;
+  width: 1440px;
+  height: 400px !important;
+}
+.era {
+  margin: 0;
+}
+
+.era-text-link {
+  text-align: left;
+}
+.era-date {
+  text-align: left;
+  margin-bottom: 20px !important;
+  font-weight: 300;
+}
+.rich-text-desc {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.span-title-link {
+  color: black;
+}
+.span-title-link:hover {
+  color: grey !important;
+}
+.dark-mode .span-title-link:hover {
+  color: darkgrey !important;
+}
+
+.era-starter-info {
+  padding-top: 15px;
+}
+.greeting-text {
+  font-family: Times !important;
+  font-weight: 300 !important;
+  font-size: 1.75 em !important;
+}
+.era-span2.left {
+  margin-left: -300px;
+  width: 140px;
+  height: 400px !important;
+}
+.era-span2.right {
+  margin-left: 635px;
+  width: 140px;
+  height: 400px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    min-height: calc(75vh - 00px);
+  }
+
+  .era-span {
+    margin-bottom: 150px;
+    width: 300px;
+    height: 400px;
+  }
+  .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: 500px;
+    background-image: url("./Media/Pre-WWII/Lodz.Theatre429.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: 500px;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: 500px;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: 500px;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+  }
+
+  .span-link {
+    width: 500px;
+  }
+  .era-text-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 10px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .era-span2.left {
+    margin-left: -300px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .era-span2.right {
+    margin-left: 635px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .ui.menu:first-child {
+    margin-top: 2px;
+  }
+  .greeting {
+    min-height: 77vh !important;
+    transform: scale(1);
+    transform-origin: -0.5% 100% 0px !important;
+  }
+  .top {
+    min-height: calc(75vh - 00px);
+  }
+
+  .span-link {
+    width: 1440px;
+  }
+  .era-text-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 10px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .era-span2.left {
+    margin-left: -200px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .era-span2.right {
+    margin-left: 420px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .ui.menu:first-child {
+    margin-top: 2px;
+  }
+  .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Pre-WWII/Lodz.Theatre429.jpeg");
+    background-position: center;
+    border: solid grey 3px;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+    border: solid grey 3px;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+    border: solid grey 3px;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+    border: solid grey 3px;
+  }
+
+  [class^="image-"] {
+    display: inline-block;
+    min-height: 420px;
+    width: inherit;
+    background-position: center;
+  }
+  .era-text-link {
+    font-family: "Euclid Flex", "Helvetica", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700;
+  }
+  .era-date {
+    font-size: 18px !important;
+  }
+  .ui.cards {
+    display: -webkit-box;
+
+    margin: -0.875em -0.5em;
+    margin-left: -0.5em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin-left: 0 !important;
+    transform: scale(0.65);
+  }
+  .single-photo-landing {
+    width: 500px;
+    height: 500px;
+    margin-top: 80px;
+    margin-left: 100px;
+    cursor: pointer !important;
+  }
+  .space {
+    margin-bottom: 200px;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  .profile-slideshow {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .ui.menu:first-child {
+    margin-top: 2px;
+  }
+  .greeting {
+    min-height: 78vh !important;
+    transform: scale(1);
+    transform-origin: -0.5% 1% 0px;
+  }
+
+  .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/Pre-WWII/Lodz.Theatre429.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+  }
+
+  .era-span {
+    margin-bottom: 150px;
+    width: 1680px;
+    height: 400px;
+  }
+  .era-text-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+  .era-text-inner-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .era-text-break {
+    flex: 0 0 100px !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  .era-text {
+    flex-grow: 0.5;
+  }
+  [class^="image-"] {
+    display: inline-block;
+    min-height: 420px;
+    width: 1680px;
+    background-position: center;
+  }
+  .space {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .era-span2.left {
+    margin-left: -300px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .era-span2.right {
+    margin-left: 635px;
+    width: 140px;
+    height: 400px !important;
+  }
+  .ui.menu:first-child {
+    margin-top: 2px;
+  }
+
+  .single-photo-landing {
+    width: 500px;
+    height: 500px;
+    margin-top: 80px;
+    margin-left: 100px;
+    cursor: pointer !important;
+  }
+
+  .space {
+    margin-bottom: 200px;
+  }
+
+  .profile-slideshow {
+    padding: 10px;
+  }
+
+  .greeting-text {
+    position: absolute;
+    left: 43%;
+    top: 8%;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 30px;
+  }
+
+  .greeting {
+    min-height: 78vh !important;
+    transform: scale(1);
+    transform-origin: -0.5% 1% 0px;
+  }
+  .era-span {
+    margin-bottom: 150px;
+    width: 1440px;
+    height: 400px;
+  }
+  .era-image1 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/Pre-WWII/Lodz.Theatre429.jpeg");
+    background-position: center;
+  }
+  .era-image2 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/WWII/HappyBoys4282.jpeg");
+    background-position: center;
+  }
+  .era-image3 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/Post-WWII 2/Fonia219.jpeg");
+    background-position: center;
+  }
+  .era-image4 {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-image: url("./Media/Modern/Ed.Silver089.jpeg");
+    background-position: center;
+  }
+
+  [class^="image-"] {
+    display: inline-block;
+    min-height: 420px;
+    width: 1920px;
+    background-position: center;
+  }
+}

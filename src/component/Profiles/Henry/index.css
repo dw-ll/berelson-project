@@ -1,4 +1,3 @@
-
 .henry_story_title {
   font-family: Lora;
   font-size: 3rem;
@@ -14,4 +13,46 @@
 .henry_story {
   text-align: left;
   justify-content: center;
+}
+
+.ref-link {
+  font-size: 14px;
+  color: gray !important;
+}
+.dark-mode .vertical-timeline-element-content::before {
+  border-bottom-color: #121212;
+  border-right-color: #121212;
+}
+.dark-mode .vertical-timeline-element-content::after {
+  background: #121212;
+  border-color: #121212;
+  border-bottom-color: #121212;
+  border-right-color: #121212;
+  border: 0px 10 0 0;
+}
+
+.dark-mode .vertical-timeline-element--work {
+  border-color: #121212;
+}
+
+.dark-mode .vertical-timeline-element {
+  border-color: #121212;
+}
+.dark-mode .vertical-timeline-element-content {
+  background: #303030;
+  border-color: #121212;
+  border: 10px 10 0 0;
+  border-radius: 0.25em;
+  box-shadow: 0 0px 0 #303030;
+}
+
+.dark-mode .vertical-timeline-element-date {
+  color: #fff;
+}
+.vertical-timeline::before {
+  background: grey;
+}
+.vertical-timeline-element-content {
+  background: white;
+  color: white;
 }
