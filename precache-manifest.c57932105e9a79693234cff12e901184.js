@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/Riva287.0397ad6e.jpeg"
   },
   {
-    "revision": "02254df27c7eff87ba33",
+    "revision": "8698f14fba7f9a91d7b8",
     "url": "/static/css/main.3d61cdec.chunk.css"
   },
   {
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "url": "/static/media/Rachella150.89d7e584.jpeg"
   },
   {
-    "revision": "02254df27c7eff87ba33",
-    "url": "/static/js/main.12448df2.chunk.js"
+    "revision": "8698f14fba7f9a91d7b8",
+    "url": "/static/js/main.8f6e5296.chunk.js"
   },
   {
     "revision": "db42d47fff650ad9971709517f29819b",
@@ -220,12 +220,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.db78b935.ttf"
   },
   {
-    "revision": "a06da7f0950f9dd366fc9db9d56d618a",
-    "url": "/static/media/fa-brands-400.a06da7f0.woff2"
-  },
-  {
     "revision": "b15db15f746f29ffa02638cb455b8ec0",
     "url": "/static/media/fa-solid-900.b15db15f.woff2"
+  },
+  {
+    "revision": "a06da7f0950f9dd366fc9db9d56d618a",
+    "url": "/static/media/fa-brands-400.a06da7f0.woff2"
   },
   {
     "revision": "ec3cfddedb8bebd2d7a3fdf511f7c1cc",
@@ -236,12 +236,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-solid-900.bea989e8.woff"
   },
   {
-    "revision": "c1868c9545d2de1cf8488f1dadd8c9d0",
-    "url": "/static/media/fa-brands-400.c1868c95.eot"
-  },
-  {
     "revision": "13685372945d816a2b474fc082fd9aaa",
     "url": "/static/media/fa-brands-400.13685372.ttf"
+  },
+  {
+    "revision": "c1868c9545d2de1cf8488f1dadd8c9d0",
+    "url": "/static/media/fa-brands-400.c1868c95.eot"
   },
   {
     "revision": "89ffa3aba80d30ee0a9371b25c968bbb",
@@ -264,7 +264,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.bbd460b0.chunk.css"
   },
   {
-    "revision": "76d6c592e85d991c390402a82baf1b95",
+    "revision": "a564d6e7a6cbd0cd74253f0bea6da287",
     "url": "/index.html"
   }
 ];
