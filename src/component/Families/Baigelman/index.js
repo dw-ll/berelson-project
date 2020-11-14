@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import TextLoop from "react-text-loop";
 import ReactPlayer from 'react-player';

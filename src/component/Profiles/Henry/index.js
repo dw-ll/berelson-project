@@ -16,7 +16,7 @@ const Henry = () => {
       </Helmet>
       <div className="container">
         <div class="profile-container">
-          <div class="row d-flex flex-column ">
+          <div class="row d-flex flex-column align-items-center">
             <div class="">
               <h3 className="profile_title">Henry Baigelman</h3>
               <img
