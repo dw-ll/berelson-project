@@ -16,6 +16,8 @@ import FamilyTree from './component/FamilyTree';
 import Search from './component/Search';
 import Span from './component/Landing';
 import Film from './component/Film';
+import Missing from './component/Missing';
+import NotFound from './component/Missing/404';
 
 export default function Routes({ appProps }) {
     return (
@@ -90,13 +92,18 @@ export default function Routes({ appProps }) {
             <AppliedRoute
                 exact
                 path="/tree"
-                component={FamilyTree}
+                component={Missing}
                 appProps={appProps}
             />
             <AppliedRoute
                 path={`/search/:search`}
                 exact
                 component={Search}
+                appProps={appProps}
+            />
+            <AppliedRoute
+                exact
+                component={NotFound}
                 appProps={appProps}
             />
 
