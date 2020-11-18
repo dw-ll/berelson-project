@@ -51,11 +51,15 @@ h3 {
   text-align: center;
 }
 
+.welcome-modal-title {
+  font-family: "Candara";
+}
 .welcome-modal-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Candara";
+  color: gray;
   text-align: left !important;
 }

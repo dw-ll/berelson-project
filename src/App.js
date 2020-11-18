@@ -36,9 +36,9 @@ const App = (props) => {
     // if (!localStorage.getItem('firstTimeVisit')) {
     MySwal.fire({
       title:
-        <div className='welcome-modal-content'>
+        <div>
           <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-            <h1 className='welcome-modal-content'>Vessel Archives</h1>
+            <h1 className='welcome-modal-title'>Vessel Archives</h1>
           </Animated>
         </div>,
       html:
@@ -53,9 +53,9 @@ const App = (props) => {
       focusConfirm: true,
       confirmButtonColor: 'goldenrod',
       confirmButtonText: 'Explore',
-      imageUrl: "https://res.cloudinary.com/vessel-archives/image/upload/v1593142060/Baigelman%20Family%20%28Current%29/Fonia213_qgfdbt.jpg",
-      imageHeight: 400,
-      imageWidth: 500
+      imageUrl: "https://res.cloudinary.com/vessel-archives/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max/v1590269232/Baigelman%20Family%20Photos/Fonia224_nhif7n.jpg",
+      imageHeight: 350,
+      imageWidth: 350
 
     })
 
