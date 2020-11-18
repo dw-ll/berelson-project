@@ -236,12 +236,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.89ffa3ab.svg"
   },
   {
-    "revision": "a0369ea57eb6d3843d6474c035111f29",
-    "url": "/static/media/fa-solid-900.a0369ea5.eot"
-  },
-  {
     "revision": "1ab236ed440ee51810c56bd16628aef0",
     "url": "/static/media/fa-solid-900.1ab236ed.ttf"
+  },
+  {
+    "revision": "a0369ea57eb6d3843d6474c035111f29",
+    "url": "/static/media/fa-solid-900.a0369ea5.eot"
   },
   {
     "revision": "0cb5a5c0d251c109458c85c6afeffbaa",
