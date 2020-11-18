@@ -38,13 +38,13 @@ const App = (props) => {
       title:
         <div className='welcome-modal-content'>
           <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-            <h1>Vessel Archives</h1>
+            <h1 className='welcome-modal-content'>Vessel Archives</h1>
           </Animated>
         </div>,
       html:
         <>
           <Animated animationIn="fadeIn" animationInDelay={1000} animationOut="fadeOut" isVisible={true}>
-            <p>Some descriptive content about the Vessel Archives site and what visitors can learn about.</p>
+            <p className='welcome-modal-content'>Some descriptive content about the Vessel Archives site and what visitors can learn about.</p>
           </Animated>
         </>,
       width: 800,
