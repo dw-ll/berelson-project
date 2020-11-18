@@ -1,6 +1,8 @@
 .navbar {
+  display: flex;
   border-bottom: 1.5px solid goldenrod;
 }
+
 .navbar-header-brand {
   float: none;
   font-size: 25px !important;
@@ -62,6 +64,9 @@
   justify-content: center;
 }
 
+.toggle-container{
+  padding: 0.3rem;
+}
 .mode-toggle {
   padding-left: 0.3em;
   height: 20px;

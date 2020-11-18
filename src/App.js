@@ -7,9 +7,15 @@ import { connect } from "react-redux";
 import Fab from '@material-ui/core/Fab'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { Animated } from "react-animated-css";
+import Rodal from 'rodal';
+
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
 import { fetchArchive } from './redux/actions/fetchArchive';
+
 
 import MusicDock from './component/MusicDock';
 import NavBar from './component/Navbar';
@@ -19,16 +25,46 @@ import Routes from './Routes';
 import "./App.css";
 
 const fabStyle = { position: 'fixed', top: '85%', left: '2%' };
+
 const App = (props) => {
   const dark = props.dark.dark;
   const changeDock = props.changeDock;
+  const [isModalVisible, setIsModalVisible] = useState(true)
+  const MySwal = withReactContent(Swal)
   useEffect(() => {
     props.fetchArchive()
+    // if (!localStorage.getItem('firstTimeVisit')) {
+    MySwal.fire({
+      title:
+        <div className='welcome-modal-content'>
+          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+            <h1>Vessel Archives</h1>
+          </Animated>
+        </div>,
+      html:
+        <>
+          <Animated animationIn="fadeIn" animationInDelay={1000} animationOut="fadeOut" isVisible={true}>
+            <p>Some descriptive content about the Vessel Archives site and what visitors can learn about.</p>
+          </Animated>
+        </>,
+      width: 800,
+      showCloseButton: false,
+      showCancelButton: false,
+      focusConfirm: true,
+      confirmButtonColor: 'goldenrod',
+      confirmButtonText: 'Explore',
+      imageUrl: "https://res.cloudinary.com/vessel-archives/image/upload/v1593142060/Baigelman%20Family%20%28Current%29/Fonia213_qgfdbt.jpg",
+      imageHeight: 400,
+      imageWidth: 500
+
+    })
+
   })
   return (
     <Router>
       <div className={dark ? "App container-fluid p-0 m-0 dark-mode" : "App container-fluid p-0 m-0 light-mode"} id="app">
         <NavBar props={props} />
+
         <Fab className="music-trigger"
           size="large"
           style={fabStyle}
