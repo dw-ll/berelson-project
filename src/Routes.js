@@ -1,7 +1,10 @@
 import React from 'react';
 import { Switch } from "react-router-dom";
+import { spring, AnimatedRoute } from 'react-router-transition';
+
 
 import AppliedRoute from './libs/AppliedRoute';
+import AppliedAnimatedRoute from './libs/AppliedAnimatedRoute';
 
 import Baigelman from './component/Families/Baigelman';
 import Glazer from './component/Families/Glazer';
@@ -28,11 +31,12 @@ export default function Routes({ appProps }) {
                 component={Span}
                 appProps={appProps}
             />
-            <AppliedRoute
+            <AppliedAnimatedRoute
                 path="/baigelman-family"
                 exact
                 component={Baigelman}
                 appProps={appProps}
+              
             />
             <AppliedRoute
                 path="/glazer-family"
