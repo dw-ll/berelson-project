@@ -11,6 +11,7 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { Animated } from "react-animated-css";
 import Rodal from 'rodal';
+import { fadeIn } from 'react-animations'
 
 import { changeMode } from './redux/actions/changeMode.js';
 import { changeDock } from './redux/actions/changeDock.js';
@@ -42,12 +43,23 @@ const App = (props) => {
           </Animated>
         </div>,
       html:
-        <>
+        <div>
           <Animated animationIn="fadeIn" animationInDelay={1000} animationOut="fadeOut" isVisible={true}>
             <p className='welcome-modal-content'>Some descriptive content about the Vessel Archives site and what visitors can learn about.</p>
           </Animated>
-        </>,
-      width: 800,
+        </div>,
+      showClass: {
+        popup: 'animated fadeIn'
+
+      },
+      hideClass: {
+        popup: 'animated fadeOut',
+        backdrop: 'animated fadeOut',
+        //backdrop: 'animated fadeOut swal2-backdrop-hide'
+      },
+      width: '100%',
+      backdrop: 'white',
+      heightAuto: false,
       showCloseButton: false,
       showCancelButton: false,
       focusConfirm: true,
