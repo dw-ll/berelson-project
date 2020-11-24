@@ -39,7 +39,7 @@ const App = (props) => {
   const MySwal = withReactContent(Swal)
   useEffect(() => {
     props.fetchArchive()
-    if (location.pathname === '/#' && !localStorage.getItem('isReturn')) setIsModalVisible(true)
+    if (location.pathname === '/#' && !localStorage.getItem('isReturn') || localStorage.getItem('isReturn') === null) setIsModalVisible(true)
   })
 
   const hideModal = (e) => {
