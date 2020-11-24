@@ -8,7 +8,7 @@ import search from "../../libs/searchLib";
 
 const Results = (props) => {
   const [galleryImages, setImages] = useState([]);
- 
+
   useEffect(() => {
     onLoad();
   }, [props.match.params.id]);
@@ -23,7 +23,10 @@ const Results = (props) => {
       <Switch>
         <div class="container-fluid d-flex justify-content-center">
           <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
-          <div className="search-results">{galleryImages && search.showResults(galleryImages)}</div>
+          <div className="search-results">{galleryImages ?
+            <div className='no-results'>
+              <h3>Sorry, we couldn't find any photos for you.</h3></div>
+            : search.showResults(galleryImages)}</div>
         </div>
       </Switch>
     </Router>
