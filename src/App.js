@@ -52,7 +52,6 @@ const App = (props) => {
   const resetModal = e => {
     e.preventDefault()
     setIsModalVisible(true)
-    props.history.push('/')
   }
   return (
     <Router>

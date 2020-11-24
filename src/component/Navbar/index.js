@@ -7,6 +7,7 @@ import { changeMode } from '../../redux/actions/changeMode.js';
 import './index.css';
 
 const NavBar = (props) => {
+    const location = useLocation()
     var dark = props.props.dark.dark;
     var changeMode = props.props.changeMode;
 
@@ -24,10 +25,14 @@ const NavBar = (props) => {
     const handleDropdown = () => {
         setDropped(!dropped);
     }
-   
+
     return (
         <Navbar className={`${dark ? 'navbar-header dark-mode' : 'navbar-header'} no-shadows`} light expand="md">
-            <a className="navbar-header-brand" onClick={props.isFirstVisit}>{"Vessel Archives"}</a>
+            {location.pathname === '/' ?
+                <NavbarBrand className="navbar-header-brand" onClick={props.isFirstVisit}>{"Vessel Archives"}</NavbarBrand>
+                :
+                <NavbarBrand className="navbar-header-brand" href='/#'>{"Vessel Archives"}</NavbarBrand>
+            }
             <Nav className="ml-auto my-auto" navbar >
                 <NavItem>
                     <Link className="nav-link" to="/archive">
