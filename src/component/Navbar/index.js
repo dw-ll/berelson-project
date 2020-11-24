@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, NavbarBrand, NavItem, Nav, Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, useLocation } from "react-router-dom";
 import { connect } from 'react-redux';
 import { changeMode } from '../../redux/actions/changeMode.js';
 
@@ -24,9 +24,10 @@ const NavBar = (props) => {
     const handleDropdown = () => {
         setDropped(!dropped);
     }
+   
     return (
         <Navbar className={`${dark ? 'navbar-header dark-mode' : 'navbar-header'} no-shadows`} light expand="md">
-            <NavbarBrand className="navbar-header-brand" href="/#">{"Vessel Archives"}</NavbarBrand>
+            <a className="navbar-header-brand" onClick={props.isFirstVisit}>{"Vessel Archives"}</a>
             <Nav className="ml-auto my-auto" navbar >
                 <NavItem>
                     <Link className="nav-link" to="/archive">

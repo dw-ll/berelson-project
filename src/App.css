@@ -50,16 +50,72 @@ h1 {
 h3 {
   text-align: center;
 }
-
-.welcome-modal-title {
-  font-family: "Candara";
-}
-.welcome-modal-content {
+.welcome-modal {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("./LodzGif.gif");
+  background-size: cover;
+}
+
+.welcome-modal-photos {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: display 5500ms ease-in 2000ms;
+}
+.welcome-modal-image {
+  margin: 0.75rem;
+  border-radius: 0.25rem;
+}
+.welcome-modal-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+}
+.welcome-modal-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+}
+.welcome-modal-content {
+  display: flex;
+  align-items: center;
   font-family: "Candara";
-  color: gray;
-  text-align: left !important;
+  font-size: 1.5rem;
+  color: white;
+}
+.welcome-modal-button {
+  display: flex;
+  font-family: "Candara";
+  font-size: 1.5rem;
+  padding: 0;
+  margin-left: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.welcome-msg-text{
+  padding: 0.5rem;
+}
+
+.welcome-modal-button:hover {
+  color: rgb(245, 208, 115);
+}
+
+.welcome-modal-link {
+  display: flex;
+  align-items: center;
 }

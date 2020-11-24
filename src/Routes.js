@@ -37,7 +37,7 @@ export default function Routes({ appProps }) {
             <AppliedRoute
                 path="/glazer-family"
                 exact
-                component={Glazer}
+                component={Missing}
                 appProps={appProps}
             />
             <AppliedRoute
